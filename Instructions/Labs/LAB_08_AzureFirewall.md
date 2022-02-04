@@ -2,13 +2,8 @@
 lab:
   title: 08 – Azure Firewall
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: c87f9c52f6d113e150ef6dfff7ce40092e08dbf3
-ms.sourcegitcommit: 2eb153f2856445e5afaa218a012cb92e3d48f24b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132625647"
 ---
+
 # <a name="lab-08-azure-firewall"></a>Lab 08: Azure Firewall
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -24,7 +19,7 @@ Sie wurden aufgefordert, Azure Firewall zu installieren. Damit möchte Ihre Orga
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## <a name="lab-objectives"></a>Labziele
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -58,29 +53,29 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 
 1. Melden Sie sich beim Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
-    >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab verwenden.
+    >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, dem in dem Azure-Abonnement, das Sie für dieses Lab verwenden, die Rolle „Besitzer“ oder „Mitwirkender“ zugewiesen ist.
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Text **Benutzerdefinierte Vorlage bereitstellen** ein, und drücken Sie die **EINGABETASTE**.
+2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Text **Benutzerdefinierte Vorlage bereitstellen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** auf die Option **Eigene Vorlage im Editor erstellen**.
+3. Klicken Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** auf die Option **Eigene Vorlage im Editor erstellen**.
 
-1. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\08\\template.json**, und klicken Sie auf **Öffnen**.
+4. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\08\\template.json**, und klicken Sie auf **Öffnen**.
 
     >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und beachten Sie, dass sie eine Azure-VM bereitstellt, die Windows Server 2019 Datacenter hostet.
 
-1. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
+5. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
 
-1. Stellen Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** sicher, dass die folgenden Einstellungen konfiguriert sind (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
+6. Stellen Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** sicher, dass die folgenden Einstellungen konfiguriert sind (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
 
    |Einstellung|Wert|
    |---|---|
-   |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+   |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB08** ein.|
    |Standort|**(USA) USA, Osten**|
 
-    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
+    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/).
 
-1. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**.
+7. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. Dieser Vorgang dauert etwa zwei Minuten. 
 
@@ -90,32 +85,33 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Firewalls** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Firewalls** auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Firewalls** auf **+ Erstellen**.
 
-1. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Firewall erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Firewall erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|
    |Resource group|**AZ500LAB08**|
    |Name|**Test-FW01**|
    |Region|**(USA) USA, Osten**|
+   |Firewallebene|**Standard**|
    |Firewallverwaltung|**Use Firewall rules (classic) to manage this firewall** (Firewallregeln (klassisch) zum Verwalten dieser Firewall verwenden)|
    |Virtuelles Netzwerk auswählen|Klicken Sie auf die Option **Vorhandene verwenden**, und wählen Sie in der Dropdownliste **Test-FW-VN** aus.|
    |Öffentliche IP-Adresse|Klicken Sie auf **Neue hinzufügen**, geben Sie den Namen **TEST-FW-PIP** ein, und klicken Sie auf **OK**.|
 
-1. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**. 
+4. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**. 
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. Dieser Vorgang dauert etwa fünf Minuten. 
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
+5. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB08**.
+6. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB08**.
 
     >**Hinweis**: Überprüfen Sie auf dem Blatt mit der Ressourcengruppe **AZ500LAB08** die Liste der Ressourcen. Sie können nach **Typ** sortieren.
 
-1. Klicken Sie in der Liste der Ressourcen auf den Eintrag, der die Firewall **Test-FW01** darstellt.
+7. Klicken Sie in der Liste der Ressourcen auf den Eintrag, der die Firewall **Test-FW01** darstellt.
 
-1. Identifizieren Sie auf dem Blatt **Test-FW01** die **private IP-Adresse**, die der Firewall zugewiesen wurde. 
+8. Identifizieren Sie auf dem Blatt **Test-FW01** die **private IP-Adresse**, die der Firewall zugewiesen wurde. 
 
     >**Hinweis**: Sie benötigen diese Informationen für die nächste Aufgabe.
 
@@ -126,9 +122,9 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Routingtabellen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Routingtabellen** auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Routingtabellen** auf **+ Erstellen**.
 
-1. Legen Sie auf dem Blatt **Neue Routingtabelle erstellen** folgende Einstellungen fest:
+3. Legen Sie auf dem Blatt **Neue Routingtabelle erstellen** folgende Einstellungen fest:
 
    |Einstellung|Wert|
    |---|---|
@@ -136,13 +132,13 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
    |Region| **USA, Osten**|
    |Name|**Firewall-route**|
 
-1. Klicken Sie auf **Überprüfen + erstellen** und anschließend auf **Erstellen**. Warten Sie dann, bis die Bereitstellung abgeschlossen ist. 
+4. Klicken Sie auf **Überprüfen + erstellen** und anschließend auf **Erstellen**. Warten Sie dann, bis die Bereitstellung abgeschlossen ist. 
 
-1. Klicken Sie auf dem Blatt **Routingtabellen** auf **Aktualisieren**, und klicken Sie in der Liste der Routingtabellen auf den Eintrag **Firewall-route**.
+5. Klicken Sie auf dem Blatt **Routingtabellen** auf **Aktualisieren**, und klicken Sie in der Liste der Routingtabellen auf den Eintrag **Firewall-route**.
 
-1. Klicken Sie auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Subnetze**, und klicken Sie dann auf dem Blatt **Firewall-route \| Subnetze** auf **+ Zuordnen**.
+6. Klicken Sie auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Subnetze**, und klicken Sie dann auf dem Blatt **Firewall-route \| Subnetze** auf **+ Zuordnen**.
 
-1. Geben Sie auf dem Blatt **Subnetz zuordnen** die folgenden Einstellungen an:
+7. Geben Sie auf dem Blatt **Subnetz zuordnen** die folgenden Einstellungen an:
 
    |Einstellung|Wert|
    |---|---|
@@ -151,11 +147,11 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 
     >**Hinweis**: Stellen Sie sicher, dass für diese Route nur das Subnetz **Workload-SN** ausgewählt ist. Andernfalls funktioniert die Firewall nicht korrekt.
 
-1. Klicken Sie auf **OK**, um die Firewall dem Subnetz des virtuellen Netzwerks zuzuordnen. 
+8. Klicken Sie auf **OK**, um die Firewall dem Subnetz des virtuellen Netzwerks zuzuordnen. 
 
-1. Klicken Sie zurück auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Routen** und dann auf **+ Hinzufügen**. 
+9. Klicken Sie zurück auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Routen** und dann auf **+ Hinzufügen**. 
 
-1. Geben Sie auf dem Blatt **Route hinzufügen** die folgenden Einstellungen an:  
+10. Geben Sie auf dem Blatt **Route hinzufügen** die folgenden Einstellungen an:  
 
    |Einstellung|Wert|
    |---|---|
@@ -166,7 +162,7 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 
     >**Hinweis**: Azure Firewall ist eigentlich ein verwalteter Dienst, in dieser Situation kann aber „Virtuelles Gerät“ verwendet werden.
     
-1.  Klicken Sie auf **OK**, um die Route hinzuzufügen. 
+11.  Klicken Sie auf **OK**, um die Route hinzuzufügen. 
 
 
 #### <a name="task-4-configure-an-application-rule"></a>Aufgabe 4: Konfigurieren einer Anwendungsregel
@@ -175,11 +171,11 @@ In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff au
 
 1. Navigieren Sie im Azure-Portal zurück zur Firewall **Test-FW01**.
 
-1. Klicken Sie auf dem Blatt **Test-FW01** im Abschnitt **Einstellungen** auf **Regeln (klassisch)** .
+2. Klicken Sie auf dem Blatt **Test-FW01** im Abschnitt **Einstellungen** auf **Regeln (klassisch)** .
 
-1. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Anwendungsregelsammlung** und dann auf **+ Anwendungsregelsammlung hinzufügen**.
+3. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Anwendungsregelsammlung** und dann auf **+ Anwendungsregelsammlung hinzufügen**.
 
-1. Geben Sie auf dem Blatt **Anwendungsregelsammlung hinzufügen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+4. Geben Sie auf dem Blatt **Anwendungsregelsammlung hinzufügen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|
@@ -187,7 +183,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff au
    |Priorität|**200**|
    |Aktion|**Zulassen**|
 
-1. Erstellen Sie auf dem Blatt **Anwendungsregelsammlung hinzufügen** einen neuen Eintrag im Abschnitt **Ziel-FQDNs** mit den folgenden Einstellungen (übernehmen Sie die Standardwerte für andere Einstellungen):
+5. Erstellen Sie auf dem Blatt **Anwendungsregelsammlung hinzufügen** einen neuen Eintrag im Abschnitt **Ziel-FQDNs** mit den folgenden Einstellungen (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|
@@ -197,7 +193,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff au
    |Protokollport|**http:80, https:443**|
    |Ziel-FQDNs|**www.bing.com**|
 
-1. Klicken Sie auf **Hinzufügen**, um die auf Ziel-FQDNs basierende Anwendungsregel hinzuzufügen.
+6. Klicken Sie auf **Hinzufügen**, um die auf Ziel-FQDNs basierende Anwendungsregel hinzuzufügen.
 
     >**Hinweis**: Azure Firewall enthält eine integrierte Regelsammlung für Infrastruktur-FQDNs, die standardmäßig zulässig sind. Diese FQDNs sind plattformspezifisch und können nicht für andere Zwecke verwendet werden. 
 
@@ -207,9 +203,9 @@ In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf 
 
 1. Navigieren Sie im Azure-Portal zurück zum Blatt **Test-FW01 \|Regeln (klassisch)** .
 
-1. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Netzwerkregelsammlung** und dann auf **+ Netzwerkregelsammlung hinzufügen**.
+2. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Netzwerkregelsammlung** und dann auf **+ Netzwerkregelsammlung hinzufügen**.
 
-1. Geben Sie auf dem Blatt **Netzwerkregelsammlung hinzufügen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+3. Geben Sie auf dem Blatt **Netzwerkregelsammlung hinzufügen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|
@@ -217,7 +213,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf 
    |Priorität|**200**|
    |Aktion|**Zulassen**|
 
-1. Erstellen Sie auf dem Blatt **Netzwerkregelsammlung hinzufügen** einen neuen Eintrag im Abschnitt **IP-Adressen** mit den folgenden Einstellungen (übernehmen Sie die Standardwerte für andere Einstellungen):
+4. Erstellen Sie auf dem Blatt **Netzwerkregelsammlung hinzufügen** einen neuen Eintrag im Abschnitt **IP-Adressen** mit den folgenden Einstellungen (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|
@@ -229,7 +225,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf 
    |Destination Address (Zieladresse)|**209.244.0.3,209.244.0.4**|
    |Zielports|**53**|
 
-1. Klicken Sie auf **Hinzufügen**, um die Netzwerkregel hinzuzufügen.
+5. Klicken Sie auf **Hinzufügen**, um die Netzwerkregel hinzuzufügen.
 
     >**Hinweis**: Die in diesem Fall verwendeten Zieladressen sind bekannte öffentliche DNS-Server. 
 
@@ -239,15 +235,15 @@ In dieser Aufgabe konfigurieren Sie die primären und sekundären DNS-Adressen f
 
 1. Navigieren Sie im Azure-Portal zur Ressourcengruppe **AZ500LAB08**.
 
-1. Klicken Sie auf dem Blatt **AZ500LAB08** in der Liste der Ressourcen auf den virtuellen Computer **Srv-Work**.
+2. Klicken Sie auf dem Blatt **AZ500LAB08** in der Liste der Ressourcen auf den virtuellen Computer **Srv-Work**.
 
-1. Klicken Sie auf dem Blatt **Srv-Work** im Abschnitt **Einstellungen** auf **Netzwerk**.
+3. Klicken Sie auf dem Blatt **Srv-Work** im Abschnitt **Einstellungen** auf **Netzwerk**.
 
-1. Klicken Sie auf dem Blatt **Srv-Work \| Netzwerk** auf den Link neben dem Eintrag **Netzwerkschnittstelle**.
+4. Klicken Sie auf dem Blatt **Srv-Work \| Netzwerk** auf den Link neben dem Eintrag **Netzwerkschnittstelle**.
 
-1. Klicken Sie auf dem Blatt „Netzwerkschnittstelle“ im Abschnitt **Einstellungen** auf **DNS-Server**, wählen Sie die Option **Benutzerdefiniert** aus, fügen Sie die beiden DNS-Server hinzu, auf die in der Netzwerkregel **209.244.0.3** und **209.244.0.4** verwiesen wird, und klicken Sie auf **Speichern**, um die Änderung zu speichern.
+5. Klicken Sie auf dem Blatt „Netzwerkschnittstelle“ im Abschnitt **Einstellungen** auf **DNS-Server**, wählen Sie die Option **Benutzerdefiniert** aus, fügen Sie die beiden DNS-Server hinzu, auf die in der Netzwerkregel **209.244.0.3** und **209.244.0.4** verwiesen wird, und klicken Sie auf **Speichern**, um die Änderung zu speichern.
 
-1. Kehren Sie zur VM-Seite **Srv-Work** zurück.
+6. Kehren Sie zur VM-Seite **Srv-Work** zurück.
 
     >**Hinweis**: Warten Sie, bis die Aktualisierung abgeschlossen wurde.
 
@@ -259,11 +255,11 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
 1. Navigieren Sie im Azure-Portal zur Ressourcengruppe **AZ500LAB08**.
 
-1. Klicken Sie auf dem Blatt **AZ500LAB08** in der Liste der Ressourcen auf den virtuellen Computer **Srv-Jump**.
+2. Klicken Sie auf dem Blatt **AZ500LAB08** in der Liste der Ressourcen auf den virtuellen Computer **Srv-Jump**.
 
-1. Klicken Sie auf dem Blatt **Srv-Jump** auf **Verbinden** und dann im Dropdownmenü auf **RDP**. 
+3. Klicken Sie auf dem Blatt **Srv-Jump** auf **Verbinden** und dann im Dropdownmenü auf **RDP**. 
 
-1. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit eine Verbindung mit der Azure-VM **Srv-Jump** über Remotedesktop her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+4. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit eine Verbindung mit der Azure-VM **Srv-Jump** über Remotedesktop her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
    |Einstellung|Wert|
    |---|---|
@@ -274,13 +270,13 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
     >**Hinweis**: Sie stellen eine Verbindung mit dem virtuellen Computer **Srv-Work** her. Dies geschieht, damit wir testen können, ob der Zugriff auf die Website „bing.com“ möglich ist.  
 
-1. Klicken Sie in der Remotedesktopsitzung mit **Srv-Jump** mit der rechten Maustaste auf **Start**, klicken Sie im Kontextmenü auf **Ausführen**, und führen Sie über das Dialogfeld **Ausführen** den folgenden Code aus, um eine Verbindung mit **Srv-Work** herzustellen. 
+5. Klicken Sie in der Remotedesktopsitzung mit **Srv-Jump** mit der rechten Maustaste auf **Start**, klicken Sie im Kontextmenü auf **Ausführen**, und führen Sie über das Dialogfeld **Ausführen** den folgenden Code aus, um eine Verbindung mit **Srv-Work** herzustellen. 
 
     ```
     mstsc /v:Srv-Work
     ```
 
-1. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+6. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
    |Einstellung|Wert|
    |---|---|
@@ -289,19 +285,19 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung eingerichtet und die Server-Manager Schnittstelle geladen wurde.
 
-1. Klicken Sie in der Remotedesktopsitzung mit **Srv-Jump** unter **Server-Manager** auf **Lokaler Server** und dann auf **Verstärkte Sicherheitskonfiguration für IE**.
+7. Klicken Sie in der Remotedesktopsitzung mit **Srv-Jump** unter **Server-Manager** auf **Lokaler Server** und dann auf **Verstärkte Sicherheitskonfiguration für IE**.
 
-1. Legen Sie im Dialogfeld **Verstärkte Sicherheitskonfiguration für Internet Explorer** beide Optionen auf **Aus** fest, und klicken Sie auf **OK**.
+8. Legen Sie im Dialogfeld **Verstärkte Sicherheitskonfiguration für Internet Explorer** beide Optionen auf **Aus** fest, und klicken Sie auf **OK**.
 
-1. Starten Sie in der Remotedesktopsitzung mit **Srv-Jump** den Internet Explorer, und navigieren Sie zu **`https://www.bing.com`** . 
+9. Starten Sie in der Remotedesktopsitzung mit **Srv-Jump** den Internet Explorer, und navigieren Sie zu **`https://www.bing.com`** . 
 
     >**Hinweis**: Die Website sollte erfolgreich angezeigt werden. Die Firewall ermöglicht Ihnen den Zugriff.
 
-1. Rufen Sie **`http://www.microsoft.com/`** auf.
+10. Rufen Sie **`http://www.microsoft.com/`** auf.
 
     >**Hinweis**: Auf der Browserseite sollte eine Meldung mit etwa folgendem Text angezeigt werden: `HTTP request from 10.0.2.4:xxxxx to microsoft.com:80. Action: Deny. No rule matched. Proceeding with default action.` Dies ist zu erwarten, da die Firewall den Zugriff auf diese Website blockiert. 
 
-1. Beenden Sie beide Remotedesktopsitzungen.
+11. Beenden Sie beide Remotedesktopsitzungen.
 
 > Ergebnis: Sie haben Azure Firewall erfolgreich konfiguriert und getestet.
 
@@ -309,13 +305,13 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
 > Denken Sie daran, alle neu erstellten Azure-Ressourcen zu entfernen, die Sie nicht mehr verwenden. Durch das Entfernen nicht verwendeter Ressourcen wird sichergestellt, dass keine unerwarteten Kosten anfallen. 
 
-1. Öffnen Sie im Azure-Portal den Cloud Shell-Bereich, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
+1. Öffnen Sie im Azure-Portal den Cloud Shell-Dienst, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
 
-1. Stellen Sie sicher, dass im Dropdownmenü oben links im Cloud Shell-Bereich der Eintrag **PowerShell** ausgewählt ist.
+2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 
-1. Führen Sie im Cloud Shell-Bereich in der PowerShell-Sitzung den folgenden Code aus, um die Ressourcengruppe zu entfernen, die Sie in diesem Lab erstellt haben:
+3. Führen Sie im Cloud Shell-Bereich in der PowerShell-Sitzung den folgenden Code aus, um die Ressourcengruppe zu entfernen, die Sie in diesem Lab erstellt haben:
   
     ```powershell
     Remove-AzResourceGroup -Name "AZ500LAB08" -Force -AsJob
     ```
-1. Schließen Sie den **Cloud Shell**-Bereich. 
+4. Schließen Sie den **Cloud Shell**-Bereich. 
