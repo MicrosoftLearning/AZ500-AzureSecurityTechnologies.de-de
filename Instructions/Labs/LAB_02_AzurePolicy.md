@@ -2,12 +2,12 @@
 lab:
   title: '02: Azure Policy'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: cde2b0c001dedef2b29c2da320e2952f9766b069
-ms.sourcegitcommit: 2eb153f2856445e5afaa218a012cb92e3d48f24b
+ms.openlocfilehash: d530ee043d5cf56d6f805e597d7a35eee47b3d5e
+ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132625653"
+ms.lasthandoff: 01/27/2022
+ms.locfileid: "137818158"
 ---
 # <a name="lab-02-azure-policy"></a>Lab 02: Azure Policy
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -43,7 +43,7 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab.
 
 1. Melden Sie sich am Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
-    >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab verwenden.
+    >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab nutzen.
 
 1. Öffnen Sie Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, wählen Sie **PowerShell** und dann **Speicher erstellen** aus.
 
@@ -87,7 +87,7 @@ In dieser Aufgabe erstellen Sie eine Richtlinienzuweisung „Zulässige Standort
 
    |Einstellung|Wert|
    |---|---|
-   |Subscription|Der Name Ihres Azure-Abonnements.|
+   |Subscription|Der Name Ihres Azure-Abonnements|
    |Resource group|**AZ500LAB02**|
 
 1. Klicken Sie auf **Auswählen**.
@@ -136,9 +136,9 @@ In dieser Aufgabe  testen Sie die Richtlinienzuweisung „Zulässige Standorte�
 
     > **Hinweis**: Wenn die Warnung **Überprüfungsfehler** nicht angezeigt wird, klicken Sie auf **Zurück**, und warten Sie einige Minuten.
 
-1. Klicken Sie auf die Fehlermeldung, um das Blatt **Fehler** zu öffnen. Es wird eine ausführliche Fehlermeldung angezeigt, die besagt, dass die Bereitstellung der Ressource **myVnet** aufgrund der Richtlinie nicht zulässig war.
+1. Klicken Sie auf der Registerkarte **Grundlagen** auf den Link zur Fehlermeldung, um das Blatt **Richtlinienzuweisung** zu öffnen. Ihnen wird die Richtlinienzuweisung angezeigt, die den Speicherort einschränkt.
 
-1. Schließen Sie das Blatt **Fehler**, klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf die Registerkarte **Grundlagen**, und wählen Sie dann in der Dropdownliste **Region** die Option **(Europa) Vereinigtes Königreich, Süden** aus.
+1. Schließen Sie das Blatt **Richtlinienzuweisung**, klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf die Registerkarte **Grundlagen**, und wählen Sie dann in der Dropdownliste **Region** die Option **(Europa) Vereinigtes Königreich, Süden** aus.
 
 1. Klicken Sie auf **Überprüfen und erstellen**, bestätigen Sie, dass die Überprüfung erfolgreich war, klicken Sie auf **Erstellen**, und bestätigen Sie, dass das virtuelle Netzwerk erfolgreich erstellt wurde. 
 
