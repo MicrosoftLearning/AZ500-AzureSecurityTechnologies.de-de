@@ -2,12 +2,12 @@
 lab:
   title: 13 – Azure Monitor
   module: Module 04 - Manage security operations
-ms.openlocfilehash: 225c12f6239dfc1cbdc18727c4b21c2d03fb7bbf
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: aaffb30146595c6f0576efc74a832f9031ed3e3e
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818173"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703485"
 ---
 # <a name="lab-13-azure-monitor"></a>Lab 13: Azure Monitor
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -27,6 +27,12 @@ Sie wurden gebeten, einen Proof of Concept zur Überwachung der Leistung eines v
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
+
+## <a name="azure-monitor"></a>Azure Monitor
+
+![image](https://user-images.githubusercontent.com/91347931/157536648-0a286514-a7e2-4058-9dea-e42da21eef76.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="exercise-1-collect-data-from-an-azure-virtual-machine-with-azure-monitor"></a>Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
 
@@ -93,7 +99,7 @@ In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|**AZ500LAB131415**|
     |Name|Ein beliebiger gültiger, global eindeutiger Name|
     |Region|**(USA) USA, Osten**|
