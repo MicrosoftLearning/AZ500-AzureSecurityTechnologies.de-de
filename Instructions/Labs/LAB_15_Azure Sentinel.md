@@ -2,12 +2,12 @@
 lab:
   title: 15 – Microsoft Sentinel
   module: Module 04 - Manage Security Operations
-ms.openlocfilehash: dab51412936208c1c4f092ba931ca06c76f7bf40
-ms.sourcegitcommit: cf250c5d85d2189156f6ea2ec2a25768d564d8c1
+ms.openlocfilehash: 63a24bbc17b846d3587cf3fb83ab46b7235d5fcd
+ms.sourcegitcommit: 18aa464705a8f1e78ccbbb82d5d8f57a830b6cea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "136957523"
+ms.lasthandoff: 03/16/2022
+ms.locfileid: "140666112"
 ---
 # <a name="lab-15-microsoft-sentinel"></a>Lab 15: Microsoft Sentinel
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -29,6 +29,12 @@ Sie wurden gebeten, einen Proof of Concept für eine Microsoft Sentinel-basierte
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Implementieren von Microsoft Sentinel
+
+## <a name="microsoft-sentinel-diagram"></a>Microsoft Sentinel-Diagramm
+
+![image](https://user-images.githubusercontent.com/91347931/157538440-4953be73-90be-4edd-bd23-b678326ba637.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ## <a name="lab-files"></a>Labdateien:
 
@@ -57,6 +63,8 @@ In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und v
 
 2. Geben Sie im Azure-Portal oben auf der Azure-Portal-Seite im Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** den Begriff **Microsoft Sentinel** ein, und drücken Sie die **EINGABETASTE**.
 
+    >**Hinweis:** Wenn Sie zum ersten Mal eine Aktion mit Microsoft Sentinel im Azure-Dashboard ausführen möchten, führen Sie die folgenden Schritte durch: Geben Sie im Azure-Portal oben auf der Azure-Portal-Seite im Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** den Begriff **Microsoft Sentinel** ein, und drücken Sie die **EINGABETASTE**. Wählen Sie in der Ansicht **Dienste** die Option **Microsoft Sentinel** aus.
+  
 3. Klicken Sie auf dem Blatt **Microsoft Sentinel** auf **+ Erstellen**.
 
 4. Wählen Sie auf dem Blatt **Add Microsoft Sentinel to a workspace** (Microsoft Sentinel zu einem Arbeitsbereich hinzufügen) den Log Analytics-Arbeitsbereich aus, den Sie im Lab „Azure Monitor“ erstellt haben, und klicken Sie auf **Hinzufügen**.
@@ -139,7 +147,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|**AZ500LAB131415**|
     |Standort|**(USA) USA, Osten**|
     |Name des Playbooks|**Change-Incident-Severity** (Schweregrad des Incidents ändern)|

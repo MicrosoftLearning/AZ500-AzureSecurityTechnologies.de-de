@@ -2,12 +2,12 @@
 lab:
   title: Lab 06 – Implementieren der Verzeichnissynchronisierung
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 8aba2385b49c444ee0e9a1faa92b425d8c6ca82a
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: 96871a9f1e59adde1489533ecbab8a1e85a89fbc
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818180"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703515"
 ---
 # <a name="lab-06-implement-directory-synchronization"></a>Lab 06: Implementieren der Verzeichnissynchronisierung
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -29,6 +29,12 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 1: Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
 - Übung 2: Erstellen und Konfigurieren eines Azure Active Directory-Mandanten
 - Übung 3: Synchronisieren einer Active Directory-Gesamtstruktur mit einem Azure Active Directory-Mandanten
+
+## <a name="implement-directory-synchronization"></a>Implementieren der Verzeichnissynchronisierung
+
+![image](https://user-images.githubusercontent.com/91347931/157525374-8f740f14-c2db-47b3-98f8-7feb9bc122b5.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="exercise-1-deploy-an-azure-vm-hosting-an-active-directory-domain-controller"></a>Übung 1: Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
 

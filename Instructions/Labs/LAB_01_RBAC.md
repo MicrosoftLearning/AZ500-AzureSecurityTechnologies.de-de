@@ -2,12 +2,12 @@
 lab:
   title: '01: Rollenbasierte Zugriffssteuerung'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: de375fd6fc9dbc8fb612e4110420924b70ec1c71
-ms.sourcegitcommit: 5247ed01fe1b7396f54b04e46891a5d412f69943
+ms.openlocfilehash: da0086efa92f860f38d3bade2b18dfbcca84884c
+ms.sourcegitcommit: ff9f02863c270d4261acd5a77e8e29cf241679c5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "135528556"
+ms.lasthandoff: 03/11/2022
+ms.locfileid: "139714073"
 ---
 # <a name="lab-01-role-based-access-control"></a>Lab 01: Rollenbasierte Zugriffssteuerung
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -31,6 +31,12 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 2: Erstellen der Gruppe „Junior Admins“ mit dem Benutzerkonto Isabel Garcia als Mitglied (PowerShell).
 - Übung 3: Erstellen der Gruppe „Service Desk“ mit dem Benutzer Dylan Williams als Mitglied (Azure CLI). 
 - Übung 4: Zuweisen der Rolle „VM-Mitwirkender“ zur Gruppe „Service Desk“.
+
+## <a name="role-based-access-control-architecture-diagram"></a>Architekturdiagramm der rollenbasierten Zugriffssteuerung
+
+![image](https://user-images.githubusercontent.com/91347931/157751243-5aa6e521-9bc1-40af-839b-4fd9927479d7.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="exercise-1-create-the-senior-admins-group-with-the-user-account-joseph-price-as-its-member"></a>Übung 1: Erstellen der Gruppe „Senior Admins“ mit dem Benutzerkonto Joseph Price als Mitglied. 
 

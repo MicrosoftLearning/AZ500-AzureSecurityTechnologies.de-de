@@ -2,12 +2,12 @@
 lab:
   title: '02: Azure Policy'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: d530ee043d5cf56d6f805e597d7a35eee47b3d5e
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: a28872fa69650b18226d3da63cac7d5a0632fb43
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818158"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703569"
 ---
 # <a name="lab-02-azure-policy"></a>Lab 02: Azure Policy
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -26,6 +26,12 @@ Sie wurden aufgefordert, einen Proof of Concept zu erstellen, der zeigt, wie Azu
 In diesem Lab führen Sie die folgenden Aufgaben aus:
 
 - Übung 1: Implementieren von Azure Policy. 
+
+## <a name="azure-policy-diagram"></a>Azure Policy-Diagramm
+
+![image](https://user-images.githubusercontent.com/91347931/157511920-19c1f06c-86bd-440d-80ac-d96aa27aefff.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="exercise-1-implement-azure-policy"></a>Übung 1: Implementieren von Azure Policy
 

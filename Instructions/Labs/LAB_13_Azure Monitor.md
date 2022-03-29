@@ -2,12 +2,12 @@
 lab:
   title: 13 – Azure Monitor
   module: Module 04 - Manage security operations
-ms.openlocfilehash: aaffb30146595c6f0576efc74a832f9031ed3e3e
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: 060e7731cb8ec5d523afd62ae973aab3556dba3e
+ms.sourcegitcommit: 472a3c306cfa4b6a6c966e7eae253382135ed501
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703485"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "140804483"
 ---
 # <a name="lab-13-azure-monitor"></a>Lab 13: Azure Monitor
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -66,6 +66,19 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 5. Führen Sie in der PowerShell-Sitzung im Bereich „Cloud Shell“ Folgendes aus, um einen neuen virtuellen Azure-Computer zu erstellen: 
 
+    >**Achtung:** Der New-AzVm-Befehl funktioniert nicht in der Azure CLI-Version 4.24, und Microsoft sucht derzeit nach einer Lösung.  In diesem Lab können Sie das Problem umgehen, indem Sie die Az.Compute-Version 4.23.0 installieren und wiederherstellen, die von diesem Problem nicht betroffen ist.
+   
+    >**Anleitung:** Wiederherstellung von Az.Compute Version 4.23.0 
+  
+   #### <a name="step-1-download-the-working-version-of-the-module-4230-into-your-cloud-shell-session"></a>Schritt 1: Laden Sie die funktionsfähige Version des Moduls (4.23.0) in Ihre Cloudshellsitzung herunter. 
+   **Typ:** Install-Module -Name Az.Compute -Force -RequiredVersion 4.23.0
+
+   #### <a name="step-2-start-a-new-powershell-session-that-will-allow-the-azcompute-assembly-version-to-be-loaded"></a>Schritt 2: Starten Sie eine neue PowerShell-Sitzung, mit der die Az.Compute-Assemblyversion geladen werden kann. 
+   **Typ**: pwsh
+
+   #### <a name="step-3-verify-that-version-4230-is-loaded"></a>Schritt 3: Überprüfen Sie, ob die Version 4.23.0 geladen wurde.
+   **Typ:** Get-Module -Name Az.Compute
+   
     ```powershell
     New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
     ```

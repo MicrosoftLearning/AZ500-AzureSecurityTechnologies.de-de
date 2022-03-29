@@ -2,12 +2,12 @@
 lab:
   title: 09 – Konfigurieren und Schützen von ACR und AKS
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 1bc1e0c7430d50681f6008e619f77c7412e420a7
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: f3e03b483065cad12a6206b3ce2106441d05efe0
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818185"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703497"
 ---
 # <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Lab 09: Konfigurieren und Schützen von ACR und AKS
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -28,6 +28,12 @@ Sie wurden gebeten, einen Proof of Concept mit Azure Container Registry und Azur
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Konfigurieren und Schützen von ACR und AKS
+
+## <a name="configuring-and-securing-acr-and-aks-diagram"></a>Diagramm zum Konfigurieren und Sichern von ACR und AKS
+
+![image](https://user-images.githubusercontent.com/91347931/157532250-1104a829-792a-4b6d-beff-fe976e2d5d4b.png)
+
+## <a name="intructions"></a>Anweisungen
 
 ## <a name="lab-files"></a>Lab-Dateien:
 
@@ -137,7 +143,7 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
     |Einstellung|Wert|
     |----|----|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|**AZ500LAB09**|
     |Kubernetes-Clustername|**MyKubernetesCluster**|
     |Region|**(USA) USA, Osten**|

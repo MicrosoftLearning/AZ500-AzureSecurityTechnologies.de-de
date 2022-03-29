@@ -2,12 +2,12 @@
 lab:
   title: 07 – Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 965d8fe60718425711af3fd963a8cb8cd56f6967
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: e33f0a1f5c30a86d2b2a47069c6f4d759d60e782
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818175"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703491"
 ---
 # <a name="lab-07-network-security-groups-and-application-security-groups"></a>Lab 07: Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -30,6 +30,12 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 - Übung 1: Erstellen der virtuellen Netzwerkinfrastruktur
 - Übung 2: Bereitstellen virtueller Computer und Testen der Netzwerkfilter
+
+## <a name="network-and-application-security-groups-diagram"></a>Diagramm zu Netzwerk- und Anwendungssicherheitsgruppen
+
+![image](https://user-images.githubusercontent.com/91347931/157526438-6da4f68b-db88-4931-a041-8474e66d3fe5.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="exercise-1-create-the-virtual-networking-infrastructure"></a>Übung 1: Erstellen der virtuellen Netzwerkinfrastruktur
 
@@ -60,7 +66,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB07** ein.|
     |Name|**myVirtualNetwork**|
     |Region|**USA, Osten**|
@@ -122,7 +128,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|**AZ500LAB07**|
     |Name|**myNsg**|
     |Region|**USA, Osten**|
@@ -193,7 +199,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Erstellen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Computer**.
 
-3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Virtuellen Computer erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+3. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|

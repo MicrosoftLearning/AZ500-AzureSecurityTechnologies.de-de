@@ -2,12 +2,12 @@
 lab:
   title: 10 – Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
   module: Module 03 - Secure Data and Applications
-ms.openlocfilehash: a6af7dc4d9b6edba8ac90e2c0e51c2991446ae24
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: 5fe46941b0680e3c8581449c61f5989d10e073e1
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818167"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703581"
 ---
 # <a name="lab-10-key-vault-implementing-secure-data-by-setting-up-always-encrypted"></a>Lab 10: Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -31,6 +31,12 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 2: Konfigurieren der Key Vault-Ressource mit einem Schlüssel und einem Geheimnis
 - Übung 3: Konfigurieren einer Azure SQL-Datenbank und einer datengesteuerten Anwendung
 - Übung 4: Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
+
+## <a name="key-vault-diagram"></a>Key Vault-Diagramm
+
+![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ## <a name="lab-files"></a>Labdateien:
 

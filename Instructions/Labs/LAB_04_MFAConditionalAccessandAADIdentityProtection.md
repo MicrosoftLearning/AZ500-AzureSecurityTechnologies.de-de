@@ -2,12 +2,12 @@
 lab:
   title: '04: MFA, bedingter Zugriff und AAD Identity Protection'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 458e08c54051c09e9936d6d863933883c583f7d3
-ms.sourcegitcommit: 4a94ae2382fc99dda007add73148dd4108227ab1
+ms.openlocfilehash: c4b21d80083316c681f5916c5fe75973220695d1
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137818164"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703521"
 ---
 # <a name="lab-04-mfa-conditional-access-and-aad-identity-protection"></a>Lab 04: MFA, bedingter Zugriff und AAD Identity Protection
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -30,6 +30,12 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 2: Implementieren von Azure MFA
 - Übung 3: Implementieren von Azure AD-Richtlinien für bedingten Zugriff 
 - Übung 4: Implementieren von Azure AD Identity Protection
+
+## <a name="mfa---conditional-access---identity-protection-diagram"></a>Diagramm zu MFA, bedingter Zugriff, Identity Protection
+
+![image](https://user-images.githubusercontent.com/91347931/157518628-8b4a9efe-0086-4ec0-825e-3d062748fa63.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ## <a name="lab-files"></a>Lab-Dateien:
 

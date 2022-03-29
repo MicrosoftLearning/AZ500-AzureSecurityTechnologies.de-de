@@ -2,12 +2,12 @@
 lab:
   title: '03: Azure Resource Manager-Sperren'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 437cd9da8b6782f2b6fe4be81cc0fb1994fbee79
-ms.sourcegitcommit: 2eb153f2856445e5afaa218a012cb92e3d48f24b
+ms.openlocfilehash: 54375454646bdcf0586b249f65349691c3a3b9c3
+ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132625651"
+ms.lasthandoff: 03/09/2022
+ms.locfileid: "139703533"
 ---
 # <a name="lab-03-resource-manager-locks"></a>Lab 03: Resource Manager-Sperren
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -22,11 +22,17 @@ Sie wurden aufgefordert, einen Proof of Concept zu erstellen, der zeigt, wie Res
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
  
-## <a name="lab-objectives"></a>Ziele des Labs
+## <a name="lab-objectives"></a>Labziele
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Resource Manager-Sperren
+
+## <a name="resource-manager-locks-diagram"></a>Diagramm zu Resource Manager-Sperren
+
+![image](https://user-images.githubusercontent.com/91347931/157514986-1bf6a9ea-4c7f-4487-bcd7-542648f8dc95.png)
+
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="exercise-1-resource-manager-locks"></a>Übung 1: Resource Manager-Sperren
 
@@ -46,7 +52,7 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe und ein Speicherkonto für
 
 1. Melden Sie sich am Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
-    >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab verwenden.
+    >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab nutzen.
 
 1. Öffnen Sie Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, wählen Sie **PowerShell** und dann **Speicher erstellen** aus.
 
