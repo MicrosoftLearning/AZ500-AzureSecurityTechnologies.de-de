@@ -2,12 +2,12 @@
 lab:
   title: '05: Azure AD Privileged Identity Management'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: f0fc7615d2e2e3a26782366d7a630ed9984bd3f0
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: 6ef7c51d334587e5e4e7116194fa46f2eb5d1df0
+ms.sourcegitcommit: 1da29a6d959a7f91dbbcbabf5ec06869c98fc1f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703527"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "141267269"
 ---
 # <a name="lab-05-azure-ad-privileged-identity-management"></a>Lab 05: Azure AD Privileged Identity Management
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -372,7 +372,7 @@ In dieser Aufgabe überprüfen Sie PIM-Warnungen, Zusammenfassungsinformationen 
 
 9. Aktivieren Sie auf dem Blatt **Azure Active Directory Premium P2 – Lizenzierte Benutzer** die Kontrollkästchen der Benutzerkonten, denen Sie **Azure Active Directory Premium P2**-Lizenzen zugewiesen haben. Klicken Sie im oberen Bereich auf **Lizenz entfernen**, und wählen Sie **Ja** aus, wenn Sie zur Bestätigung aufgefordert werden.
 
-10. Navigieren Sie im Azure-Portal zum Blatt **Benutzer – Alle Benutzer (Vorschau)** , und klicken Sie auf den Eintrag, der für das Benutzerkonto **aaduser1** steht. Klicken Sie auf dem Blatt **aaduser1 – Profil** auf **Löschen**, und wählen Sie **Ja** aus, wenn Sie zur Bestätigung aufgefordert werden.
+10. Navigieren Sie im Azure-Portal zum Blatt **Benutzer - Alle Benutzer**, und klicken Sie auf den Eintrag, der das Benutzerkonto **aaduser1** darstellt. Klicken Sie auf dem Blatt **aaduser1 - Profil** auf **Löschen**, und wählen Sie **Ja** aus, wenn Sie zur Bestätigung aufgefordert werden.
 
 11. Wiederholen Sie diese Schrittfolge, um die übrigen Benutzerkonten zu löschen, die Sie erstellt haben.
 
