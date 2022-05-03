@@ -2,12 +2,12 @@
 lab:
   title: 13 – Azure Monitor
   module: Module 04 - Manage security operations
-ms.openlocfilehash: 060e7731cb8ec5d523afd62ae973aab3556dba3e
-ms.sourcegitcommit: 472a3c306cfa4b6a6c966e7eae253382135ed501
+ms.openlocfilehash: df6fbcf475fe0a5cefec130ab713f92997dcf206
+ms.sourcegitcommit: 022221e69467f2fdccf2e02bb54e6ec395570668
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "140804483"
+ms.lasthandoff: 04/21/2022
+ms.locfileid: "143988957"
 ---
 # <a name="lab-13-azure-monitor"></a>Lab 13: Azure Monitor
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -22,7 +22,7 @@ Sie wurden gebeten, einen Proof of Concept zur Überwachung der Leistung eines v
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -88,7 +88,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
     |Einstellung|Wert|
     |---|---|
     |Benutzer |**localadmin**|
-    |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. 
 
@@ -157,6 +157,7 @@ In dieser Aufgabe konfigurieren Sie die Sammlung des Windows-Systemprotokolls un
 
 6. Klicken Sie auf **Windows-Leistungsindikatoren**, anschließend auf **+ Leistungsindikator hinzufügen**, überprüfen Sie die Liste der verfügbaren Leistungsindikatoren, und fügen Sie die folgenden hinzu:
 
+    - Arbeitsspeicher(\*)\Verfügbare Arbeitsspeicher in MB
     - Prozess(\*)\%Prozessorzeit
     - Ereignisablaufverfolgung für Windows\Gesamtspeicherauslastung – nicht ausgelagerter Pool
     - Ereignisablaufverfolgung für Windows\Gesamtspeicherauslastung – ausgelagerter Pool

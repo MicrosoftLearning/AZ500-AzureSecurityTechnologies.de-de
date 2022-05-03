@@ -2,12 +2,12 @@
 lab:
   title: " 12 – Dienstendpunkte und Schützen von Speicher"
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: 197d13a2da3097d8a2b2568a0628bd74bbd7914e
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: 1bb9722fadd7d5323e8485a073f828c40bd7784b
+ms.sourcegitcommit: 7a85045fa5b0e6450a346aed7e75cd2e1cb6412a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703503"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144018072"
 ---
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Lab 12: Dienstendpunkte und Schützen von Speicher
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -22,7 +22,7 @@ Sie sollen eine Machbarkeitsstudie (Proof of Concept) erstellen, um das Schütze
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -135,9 +135,11 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
     |Einstellung|Wert|
     |---|---|
-    |`Source`|**VirtualNetwork**|
+    |`Source`|**Diensttag**|
+    |Quelldiensttag|**VirtualNetwork**|
     |Source port ranges|**\***|
-    |Destination|Wählen Sie in der Dropdownliste den Eintrag **Diensttag** aus, und klicken Sie dann auf **Storage**.|
+    |Destination|**Diensttag**|
+    |Zieldiensttag|**Storage**|
     |Zielportbereiche|**\***|
     |Protocol|**Alle**|
     |Aktion|**Zulassen**|
@@ -152,9 +154,11 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
     |Einstellung|Wert|
     |---|---|
-    |`Source`|**VirtualNetwork**|
+    |`Source`|**Diensttag**|
+    |Quelldiensttag|**VirtualNetwork**|
     |Source port ranges|**\***|
-    |Destination|Wählen Sie in der Dropdownliste den Eintrag **Diensttag** aus, und klicken Sie dann auf **Internet**.|
+    |Destination|**Diensttag**|
+    |Zieldiensttag|**Internet**|
     |Zielportbereiche|**\***|
     |Protocol|**Alle**|
     |Aktion|**Deny** (Verweigern)|
@@ -173,7 +177,8 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
     |---|---|
     |`Source`|**Alle**|
     |Source port ranges|**\***|
-    |Destination|**VirtualNetwork**|
+    |Destination|**Diensttag**|
+    |Zieldiensttag|**VirtualNetwork**|
     |Zielportbereiche|**3389**|
     |Protokoll|**TCP**|
     |Aktion|**Zulassen**|
@@ -266,9 +271,9 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Computer** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Erstellen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Computer**.
+2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Erstellen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Azure-Computer**.
 
-3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Virtuellen Computer erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+3. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
     |Einstellung|Wert|
     |---|---|
@@ -276,9 +281,9 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Resource group|**AZ500LAB12**|
     |Name des virtuellen Computers|**myVmPrivate**|
     |Region|**(USA) USA, Osten**|
-    |Image|**Windows Server 2022 Datacenter – Gen 2**|
+    |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
     |Username|**localadmin**|
-    |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
     |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
@@ -301,7 +306,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
 
     >**Hinweis**: Der zweite virtuelle Computer wird mit dem öffentlichen Subnetz verbunden.
 
-8. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Hinzufügen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Computer**.
+8. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Hinzufügen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Azure-Computer**.
 
 9. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
@@ -311,9 +316,9 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Resource group|**AZ500LAB12**|
     |Name des virtuellen Computers|**myVmPublic**|
     |Region|**(USA) USA, Osten**|
-    |Image|**Windows Server 2022 Datacenter – Gen 2**|
+    |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
     |Username|**localadmin**|
-    |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
     |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
@@ -351,7 +356,7 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
     |Einstellung|Wert|
     |---|---|
     |Benutzername|**localadmin**|
-    |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung geöffnet und Server-Manager geladen wurde.
 
@@ -401,7 +406,7 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
     |Einstellung|Wert|
     |---|---|
     |Benutzername|**localadmin**|
-    |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung geöffnet und Server-Manager geladen wurde.
 
