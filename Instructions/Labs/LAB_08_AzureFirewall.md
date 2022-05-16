@@ -2,12 +2,12 @@
 lab:
   title: 08 – Azure Firewall
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: cb13c319b70c994bed74b1079bc4ad8fe6209361
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: 1657a251f1355150d6386f8793825369be955705
+ms.sourcegitcommit: e9389f8de66fec6d456a3f303bd350e380df7ff2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703509"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "141371915"
 ---
 # <a name="lab-08-azure-firewall"></a>Lab 08: Azure Firewall
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -24,7 +24,7 @@ Sie wurden aufgefordert, Azure Firewall zu installieren. Damit möchte Ihre Orga
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -167,13 +167,14 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
    |Einstellung|Wert|
    |---|---|
    |Routenname|**FW-DG**|
-   |Adresspräfix|**0.0.0.0/0**
+   |Quelle für Adresspräfix|**IP-Adressen**|
+   |IP-Quelladressen/CIDR-Bereiche|**0.0.0.0/0**
    |Typ des nächsten Hops|**Virtuelles Gerät**|
    |Adresse des nächsten Hops|die private IP-Adresse der Firewall, die Sie in der vorherigen Aufgabe identifiziert haben|
 
     >**Hinweis**: Azure Firewall ist eigentlich ein verwalteter Dienst, in dieser Situation kann aber „Virtuelles Gerät“ verwendet werden.
     
-11.  Klicken Sie auf **OK**, um die Route hinzuzufügen. 
+11.  Klicken Sie auf **Hinzufügen**, um die Route hinzuzufügen. 
 
 
 #### <a name="task-4-configure-an-application-rule"></a>Aufgabe 4: Konfigurieren einer Anwendungsregel
@@ -316,7 +317,7 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
 > Denken Sie daran, alle neu erstellten Azure-Ressourcen zu entfernen, die Sie nicht mehr verwenden. Durch das Entfernen nicht verwendeter Ressourcen wird sichergestellt, dass keine unerwarteten Kosten anfallen. 
 
-1. Öffnen Sie im Azure-Portal den Cloud Shell-Dienst, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
+1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
 
 2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 

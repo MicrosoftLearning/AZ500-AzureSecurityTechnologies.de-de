@@ -2,12 +2,12 @@
 lab:
   title: '04: MFA, bedingter Zugriff und AAD Identity Protection'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: c4b21d80083316c681f5916c5fe75973220695d1
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: f63f8a24c0d9b7c870967ee8c83292bd80b617f9
+ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703521"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "141368701"
 ---
 # <a name="lab-04-mfa-conditional-access-and-aad-identity-protection"></a>Lab 04: MFA, bedingter Zugriff und AAD Identity Protection
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -80,6 +80,8 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 
 9. Stellen Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** sicher, dass die folgenden Einstellungen konfiguriert sind (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
 
+>**Hinweis**: Sie müssen ein eindeutiges Kennwort erstellen, das für den Rest des Kurses zum Erstellen von VMs (virtuellen Computern) verwendet wird. Das Kennwort muss mindestens 12 Zeichen umfassen und die definierten Komplexitätsanforderungen erfüllen (Das Kennwort muss drei der folgenden Zeichen enthalten: einen Kleinbuchstaben, einen Großbuchstaben, eine Zahl und ein Sonderzeichen). [VM-Kennwortanforderungen](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). Notieren Sie sich das Kennwort.
+
    |Einstellung|Wert|
    |---|---|
    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
@@ -88,10 +90,10 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
    |VM-Größe|**Standard_D2s_v3**|
    |VM-Name|**az500-04-vm1**|
    |Administratorbenutzername|**Kursteilnehmer**|
-   |Administratorkennwort|**Pa55w.rd1234**|
+   |Administratorkennwort|**Erstellen Sie Ihr eigenes Kennwort, und notieren Sie es für spätere Zwecke. Sie werden aufgefordert, dieses Kennwort für den erforderlichen Lab-Zugriff einzugeben.**|
    |Name des virtuellen Netzwerks|**az500-04-vnet1**|
 
-    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/).
+    >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
 10. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
@@ -162,7 +164,7 @@ In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator)
 
 1. Navigieren Sie zurück zum Azure Active Directory-Blatt **AdatumLab500-04**, und klicken Sie im Abschnitt **Verwalten** auf **Benutzer**.
 
-2. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer (Vorschau)** auf **+ Neuer Benutzer**. 
+2. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
 3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**:
 
@@ -179,7 +181,7 @@ In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator)
 
     >**Hinweis**: Notieren Sie sich das Kennwort des Benutzers. Sie benötigen es später in diesem Lab. 
 
-4. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer (Vorschau)** auf **+ Neuer Benutzer**. 
+4. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
 5. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen):
 
@@ -194,7 +196,7 @@ In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator)
 
     >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen und das Kennwort.
 
-6. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer (Vorschau)** auf **+ Neuer Benutzer**. 
+6. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
 7. Klicken Sie auf **Neuer Benutzer**, vervollständigen Sie die neuen Benutzerkonfigurationseinstellungen, und klicken Sie dann auf **Erstellen**.
 
@@ -215,7 +217,7 @@ In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator)
 
 In dieser Aufgabe weisen Sie jeden Benutzer der Azure Active Directory Premium P2-Lizenz zu.
 
-1. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer (Vorschau)** auf den Eintrag, der Ihr Benutzerkonto darstellt. 
+1. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf den Eintrag, der Ihr Benutzerkonto darstellt. 
 
 2. Klicken Sie auf dem Blatt, auf dem die Eigenschaften Ihres Benutzerkontos angezeigt werden, auf **Bearbeiten**.  Überprüfen Sie, ob der Nutzungsstandort auf **Vereinigte Staaten** festgelegt ist. Wenn der Nutzungsstandort nicht festgelegt ist, und klicken Sie auf **Speichern**.
 
@@ -431,7 +433,7 @@ In dieser Aufgabe zeigen Sie die Azure AD Identity Protection-Optionen im Azure
 
 3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Identity Protection**.
 
-4. Überprüfen Sie auf dem Blatt **Identity Protection \| Übersicht** die Optionen **Schützen**, **Bericht** und **Benachrichtigen**. 
+4. Überprüfen Sie auf dem Blatt **Identitätsschutz \| Übersicht** die Diagramme **Neue riskante Benutzer erkannt** und **Neue riskante Anmeldungen erkannt** sowie weitere Informationen zu riskanten Benutzern. 
 
 #### <a name="task-2-configure-a-user-risk-policy"></a>Aufgabe 2: Konfigurieren einer Benutzerrisiko-Sicherheitsrichtlinie
 
@@ -484,7 +486,7 @@ In dieser Aufgabe konfigurieren Sie eine Anmelderisiko-Richtlinie.
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**Kursteilnehmer**|
-   |Kennwort|**Pa55w.rd1234**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung und der **Server-Manager** geladen werden.  
 
