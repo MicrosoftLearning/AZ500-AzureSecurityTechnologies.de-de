@@ -2,12 +2,12 @@
 lab:
   title: 09 – Konfigurieren und Schützen von ACR und AKS
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 062531406ffcfac6e4c8e279c24cbb1959eebc43
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
+ms.openlocfilehash: 167dca080d65d97997b3a884015bfa2228c17a23
+ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "141368688"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955417"
 ---
 # <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Lab 09: Konfigurieren und Schützen von ACR und AKS
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -141,13 +141,14 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
 3. Wählen Sie auf der Registerkarte **Grundlagen** auf dem Blatt **Kubernetes-Cluster erstellen** die Option **Vordefinierte Konfiguration des Clusters** und dann **Dev/Test ($)** aus. Geben Sie nun die folgenden Einstellungen an (übernehmen Sie für andere die Standardwerte):
 
-    |Einstellung|Wert|
+    |Einstellung|value|
     |----|----|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB09**|
     |Kubernetes-Clustername|**MyKubernetesCluster**|
     |Region|**(USA) USA, Osten**|
     |Verfügbarkeitszonen |**None**|
+    |Skalierungsmethode|**Manuell**|
     |Anzahl der Knoten|**1**|
 
 4. Klicken Sie auf **Weiter: Knotenpools >** , und geben Sie auf dem Blatt **Kubernetes-Cluster erstellen** auf der Registerkarte **Knotenpools** die folgenden Einstellungen an (und übernehmen Sie die Standardwerte für die übrigen Einstellungen):
