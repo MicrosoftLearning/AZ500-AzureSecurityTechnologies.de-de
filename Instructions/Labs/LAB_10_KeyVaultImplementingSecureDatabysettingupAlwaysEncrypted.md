@@ -2,12 +2,12 @@
 lab:
   title: 10 – Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
   module: Module 03 - Secure Data and Applications
-ms.openlocfilehash: be16bd1a7538f0516ca2adba5a74431b1fbebd1c
-ms.sourcegitcommit: 2eb153f2856445e5afaa218a012cb92e3d48f24b
+ms.openlocfilehash: c31dd6e930e0f1d1b82e7c6ea502bb6fa51a7dd7
+ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2021
-ms.locfileid: "132625668"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955381"
 ---
 # <a name="lab-10-key-vault-implementing-secure-data-by-setting-up-always-encrypted"></a>Lab 10: Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -32,6 +32,12 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 3: Konfigurieren einer Azure SQL-Datenbank und einer datengesteuerten Anwendung
 - Übung 4: Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
+## <a name="key-vault-diagram"></a>Key Vault-Diagramm
+
+![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
+
+## <a name="instructions"></a>Anweisungen
+
 ## <a name="lab-files"></a>Labdateien:
 
 - **\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
@@ -52,31 +58,31 @@ In dieser Aufgabe stellen Sie einen virtuellen Azure-Computer bereit, auf dem Vi
 
 1. Melden Sie sich beim Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
-    >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab verwenden.
+    >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, dem in dem Azure-Abonnement, das Sie für dieses Lab verwenden, die Rolle „Besitzer“ oder „Mitwirkender“ zugewiesen ist.
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Text **Benutzerdefinierte Vorlage bereitstellen** ein, und drücken Sie die **EINGABETASTE**.
+2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Text **Benutzerdefinierte Vorlage bereitstellen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** auf die Option **Eigene Vorlage im Editor erstellen**.
+3. Klicken Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** auf die Option **Eigene Vorlage im Editor erstellen**.
 
-1. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**, und klicken Sie auf **Öffnen**.
+4. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**, und klicken Sie auf **Öffnen**.
 
-1. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
+5. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
 
-1. Stellen Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** unter **Bereitstellungsbereich** sicher, dass die folgenden Einstellungen konfiguriert sind (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
+6. Stellen Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** unter **Bereitstellungsbereich** sicher, dass die folgenden Einstellungen konfiguriert sind (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
 
-   |Einstellung|Wert|
+   |Einstellung|value|
    |---|---|
-   |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+   |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB10** ein.|
    |Standort|**(USA) USA, Osten**|
    |Administratorbenutzername|**Kursteilnehmer**|
-   |Administratorkennwort|**Pa55w.rd1234**|
+   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    
     >**Hinweis**: Sie können zwar die für die Anmeldung beim virtuellen Computer verwendeten Administratoranmeldeinformationen ändern, dies ist jedoch nicht erforderlich.
 
-    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
+    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/).
 
-1. Klicken Sie auf die Schaltfläche **Überprüfen und erstellen**, und bestätigen Sie die Bereitstellung, indem Sie auf die Schaltfläche **Erstellen** klicken. 
+7. Klicken Sie auf die Schaltfläche **Überprüfen und erstellen**, und bestätigen Sie die Bereitstellung, indem Sie auf die Schaltfläche **Erstellen** klicken. 
 
     >**Hinweis**: Dadurch wird die Bereitstellung des virtuellen Azure-Computers und der Azure SQL-Datenbank initiiert, die für dieses Lab erforderlich sind. 
 
@@ -98,9 +104,9 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
 
 1. Öffnen Sie den Cloud Shell-Dienst, indem Sie oben rechts im Azure-Portal auf das erste Symbol (neben der Suchleiste) klicken. Wenn Sie dazu aufgefordert werden, wählen Sie **PowerShell** und dann **Speicher erstellen** aus.
 
-1. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
+2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um in der Ressourcengruppe **AZ500LAB10** eine Azure Key Vault-Ressource zu erstellen. (Wenn Sie in diesem Lab in Aufgabe 1 einen anderen Namen für die Ressourcengruppe ausgewählt haben, verwenden Sie diesen Namen auch für diese Aufgabe.) Der Name der Key Vault-Ressource muss eindeutig sein. Merken Sie sich den Namen, den Sie ausgewählt haben. Sie benötigen ihn in diesem Lab.  
+3. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um in der Ressourcengruppe **AZ500LAB10** eine Azure Key Vault-Ressource zu erstellen. (Wenn Sie in diesem Lab in Aufgabe 1 einen anderen Namen für die Ressourcengruppe ausgewählt haben, verwenden Sie diesen Namen auch für diese Aufgabe.) Der Name der Key Vault-Ressource muss eindeutig sein. Merken Sie sich den Namen, den Sie ausgewählt haben. Sie benötigen ihn in diesem Lab.  
 
     ```powershell
     $kvName = 'az500kv' + $(Get-Random)
@@ -112,27 +118,27 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
 
     >**Hinweis**: In der Ausgabe des letzten Befehls werden der Tresorname und der Tresor-URI angezeigt. Der Tresor-URI weist das folgende Format auf: `https://<vault_name>.vault.azure.net/`
 
-1. Schließen Sie den Cloud Shell-Bereich. 
+4. Schließen Sie den Cloud Shell-Bereich. 
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
+5. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB10** (oder einen anderen Namen, den Sie zuvor für die Ressourcengruppe ausgewählt haben).
+6. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB10** (oder einen anderen Namen, den Sie zuvor für die Ressourcengruppe ausgewählt haben).
 
-1. Klicken Sie auf dem Blatt „Ressourcengruppe“ auf den Eintrag, der die neu erstellte Key Vault-Ressource darstellt. 
+7. Klicken Sie auf dem Blatt „Ressourcengruppe“ auf den Eintrag, der die neu erstellte Key Vault-Ressource darstellt. 
 
-1. Klicken Sie auf dem Blatt der Key Vault-Ressource im Abschnitt **Einstellungen** auf **Zugriffsrichtlinien** und klicken Sie dann auf **+ Zugriffsrichtlinie hinzufügen**.
+8. Klicken Sie auf dem Blatt der Key Vault-Ressource im Abschnitt **Einstellungen** auf **Zugriffsrichtlinien** und klicken Sie dann auf **+ Zugriffsrichtlinie hinzufügen**.
 
-1. Geben Sie auf dem Blatt **Zugriffsrichtlinie hinzufügen** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte): 
+9. Geben Sie auf dem Blatt **Zugriffsrichtlinie hinzufügen** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte): 
 
     |Einstellung|Wert|
     |----|----|
     |Anhand einer Vorlage konfigurieren (optional)|**Schlüssel, Geheimnisse und Zertifikate verwalten**|
-    |Schlüsselberechtigungen|Klicken Sie auf **Alle auswählen**, was zu **16 ausgewählten** Berechtigungen führt.|
+    |Schlüsselberechtigungen|Klicken Sie auf **Alles auswählen**. Dadurch werden **17 ausgewählte** Berechtigungen angezeigt. (Stellen Sie sicher, dass die Berechtigungen für **Rotationsrichtlinien-Vorgänge** **nicht aktiviert** sind.) |
     |Berechtigungen für Geheimnis|Klicken Sie auf **Alle auswählen**, was zu insgesamt **8 ausgewählten** Berechtigungen führt.|
     |Zertifikatberechtigungen|Klicken Sie auf **Alle auswählen**, was zu insgesamt **16 ausgewählten** Berechtigungen führt.|
     |Prinzipal auswählen|Klicken Sie auf **Nichts ausgewählt**, wählen Sie auf dem Blatt **Prinzipal** Ihr Benutzerkonto aus, und klicken Sie dann auf **Auswählen**.|
 
-1. Klicken Sie anschließend auf dem Blatt **Zugriffsrichtlinie hinzufügen** auf **Hinzufügen**, um die Zugriffsrichtlinie hinzuzufügen, und klicken Sie dann auf dem Blatt „Zugriffsrichtlinien“ der Key Vault-Ressource auf **Speichern**, um Ihre Änderungen zu speichern. 
+10. Klicken Sie anschließend auf dem Blatt **Zugriffsrichtlinie hinzufügen** auf **Hinzufügen**, um die Zugriffsrichtlinie hinzuzufügen, und klicken Sie dann auf dem Blatt „Zugriffsrichtlinien“ der Key Vault-Ressource auf **Speichern**, um Ihre Änderungen zu speichern. 
 
 #### <a name="task-2-add-a-key-to-key-vault"></a>Aufgabe 2: Hinzufügen eines Schlüssels zur Key Vault-Ressource
 
@@ -140,9 +146,9 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
 
 1. Öffnen Sie im Azure-Portal im Cloud Shell-Bereich eine PowerShell-Sitzung.
 
-1. Stellen Sie sicher, dass im Dropdownmenü oben links im Cloud Shell-Bereich der Eintrag **PowerShell** ausgewählt ist.
+2. Stellen Sie sicher, dass im Dropdownmenü oben links im Cloud Shell-Bereich der Eintrag **PowerShell** ausgewählt ist.
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um der Key Vault-Ressource einen softwaregeschützten Schlüssel hinzuzufügen: 
+3. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um der Key Vault-Ressource einen softwaregeschützten Schlüssel hinzuzufügen: 
 
     ```powershell
     $kv = Get-AzKeyVault -ResourceGroupName 'AZ500LAB10'
@@ -152,23 +158,23 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
 
     >**Hinweis**: Der Name des Schlüssels lautet **MyLabKey**.
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um zu überprüfen, ob der Schlüssel erstellt wurde:
+4. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um zu überprüfen, ob der Schlüssel erstellt wurde:
 
     ```powershell
     Get-AZKeyVaultKey -VaultName $kv.VaultName
     ```
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Schlüsselbezeichner anzuzeigen:
+5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Schlüsselbezeichner anzuzeigen:
 
     ```powershell
     $key.key.kid
     ```
 
-1. Minimieren Sie den Cloud Shell-Bereich. 
+6. Minimieren Sie den Cloud Shell-Bereich. 
 
-1. Klicken Sie im Azure-Portal auf dem Blatt „Key Vault“ im Abschnitt **Einstellungen** auf **Schlüssel**.
+7. Klicken Sie im Azure-Portal auf dem Blatt „Key Vault“ im Abschnitt **Einstellungen** auf **Schlüssel**.
 
-1. Klicken Sie in der Liste der Schlüssel auf den Eintrag **MyLabKey**, und klicken Sie dann auf dem Blatt **MyLabKey** auf den Eintrag, der die aktuelle Version des Schlüssels darstellt.
+8. Klicken Sie in der Liste der Schlüssel auf den Eintrag **MyLabKey**, und klicken Sie dann auf dem Blatt **MyLabKey** auf den Eintrag, der die aktuelle Version des Schlüssels darstellt.
 
     >**Hinweis**: Überprüfen Sie die Informationen zu dem von Ihnen erstellten Schlüssel.
 
@@ -179,13 +185,13 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
 
 1. Wechseln Sie zurück zum Cloud Shell-Bereich.
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Variable mit einem sicheren Zeichenfolgenwert zu erstellen:
+2. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Variable mit einem sicheren Zeichenfolgenwert zu erstellen:
 
     ```powershell
     $secretvalue = ConvertTo-SecureString 'Pa55w.rd1234' -AsPlainText -Force
     ```
 
-1.  Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um dem Tresor das Geheimnis hinzuzufügen:
+3.  Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um dem Tresor das Geheimnis hinzuzufügen:
 
     ```powershell
     $secret = Set-AZKeyVaultSecret -VaultName $kv.VaultName -Name 'SQLPassword' -SecretValue $secretvalue
@@ -193,17 +199,17 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
 
     >**Hinweis**: Der Name des Geheimnisses lautet „SQLPassword“. 
 
-1.  Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um zu überprüfen, ob das Geheimnis erstellt wurde.
+4.  Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um zu überprüfen, ob das Geheimnis erstellt wurde.
 
     ```powershell
     Get-AZKeyVaultSecret -VaultName $kv.VaultName
     ```
 
-1. Minimieren Sie den Cloud Shell-Bereich. 
+5. Minimieren Sie den Cloud Shell-Bereich. 
 
-1. Navigieren Sie im Azure-Portal zurück zum Blatt „Key Vault“, und klicken Sie im Abschnitt **Einstellungen** auf **Geheimnisse**.
+6. Navigieren Sie im Azure-Portal zurück zum Blatt „Key Vault“, und klicken Sie im Abschnitt **Einstellungen** auf **Geheimnisse**.
 
-1. Klicken Sie in der Liste der Geheimnisse auf den Eintrag **SQLPassword**, und klicken Sie dann auf dem Blatt **SQLPassword** auf den Eintrag, der die aktuelle Version des Geheimnisses darstellt.
+7. Klicken Sie in der Liste der Geheimnisse auf den Eintrag **SQLPassword**, und klicken Sie dann auf dem Blatt **SQLPassword** auf den Eintrag, der die aktuelle Version des Geheimnisses darstellt.
 
     >**Hinweis**: Überprüfen Sie die Informationen zu dem von Ihnen erstellten Geheimnis.
 
@@ -227,37 +233,37 @@ In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azu
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **App-Registrierungen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **App-Registrierungen** auf **+ Neue Registrierung**. 
+2. Klicken Sie auf dem Blatt **App-Registrierungen** auf **+ Neue Registrierung**. 
 
-1. Geben Sie auf dem Blatt **Anwendung registrieren** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
+3. Geben Sie auf dem Blatt **Anwendung registrieren** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
 
-    |Einstellung|Wert|
+    |Einstellung|value|
     |----|----|
     |Name|**sqlApp**|
     |Umleitungs-URI (optional)|**Web** und **https://sqlapp**|
 
-1. Klicken Sie auf dem Blatt **Anwendung registrieren** auf **Registrieren**. 
+4. Klicken Sie auf dem Blatt **Anwendung registrieren** auf **Registrieren**. 
 
     >**Hinweis**: Nach Abschluss der Registrierung werden Sie vom Browser automatisch zum Blatt **sqlApp** umgeleitet. 
 
-1. Identifizieren Sie auf dem Blatt **sqlApp** den Wert der **Anwendungs-ID (Client-ID)** . 
+5. Identifizieren Sie auf dem Blatt **sqlApp** den Wert der **Anwendungs-ID (Client-ID)** . 
 
     >**Hinweis**: Notieren Sie sich diesen Wert. Sie werden dies in der nächsten Aufgabe benötigen.
 
-1. Klicken Sie auf dem Blatt **sqlApp** im Abschnitt **Verwalten** auf **Zertifikate und Geheimnisse**.
+6. Klicken Sie auf dem Blatt **sqlApp** im Abschnitt **Verwalten** auf **Zertifikate und Geheimnisse**.
 
-1. Klicken Sie auf dem Blatt **sqlApp | Zertifikate und Geheimnisse** im Abschnitt **Geheime Clientschlüssel** auf **+ Neuer geheimer Clientschlüssel**.
+7. Klicken Sie auf dem Blatt **sqlApp | Zertifikate und Geheimnisse** im Abschnitt **Geheime Clientschlüssel** auf **+ Neuer geheimer Clientschlüssel**.
 
-1. Geben Sie im Bereich **Geheimen Clientschlüssel hinzufügen** die folgenden Einstellungen an:
+8. Geben Sie im Bereich **Geheimen Clientschlüssel hinzufügen** die folgenden Einstellungen an:
 
-    |Einstellung|Wert|
+    |Einstellung|value|
     |----|----|
     |BESCHREIBUNG|**Key1**|
     |Läuft ab|**12 Monate**|
     
-1. Klicken Sie auf **Hinzufügen**, um die Anmeldeinformationen der Anwendung zu aktualisieren.
+9. Klicken Sie auf **Hinzufügen**, um die Anmeldeinformationen der Anwendung zu aktualisieren.
 
-1. Identifizieren Sie auf dem Blatt **sqlApp | Zertifikate und Geheimnisse** den Wert von **Key1**.
+10. Identifizieren Sie auf dem Blatt **sqlApp | Zertifikate und Geheimnisse** den Wert von **Key1**.
 
     >**Hinweis**: Notieren Sie sich diesen Wert. Sie werden dies in der nächsten Aufgabe benötigen. 
 
@@ -270,27 +276,27 @@ In dieser Aufgabe erteilen Sie der neu registrierten App Berechtigungen für den
 
 1. Öffnen Sie im Azure-Portal im Cloud Shell-Bereich eine PowerShell-Sitzung.
 
-1. Stellen Sie sicher, dass im Dropdownmenü oben links im Cloud Shell-Bereich der Eintrag **PowerShell** ausgewählt ist.
+2. Stellen Sie sicher, dass im Dropdownmenü oben links im Cloud Shell-Bereich der Eintrag **PowerShell** ausgewählt ist.
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Variable zu erstellen, die die **Anwendungs-ID (Client-ID)** speichert, die Sie sich in der vorherigen Aufgabe notiert haben (ersetzen Sie den Platzhalter `<Azure_AD_Application_ID>` durch den Wert der **Anwendungs-ID (Client-ID)** ):
+3. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Variable zu erstellen, die die **Anwendungs-ID (Client-ID)** speichert, die Sie sich in der vorherigen Aufgabe notiert haben (ersetzen Sie den Platzhalter `<Azure_AD_Application_ID>` durch den Wert der **Anwendungs-ID (Client-ID)** ):
    
     ```powershell
     $applicationId = '<Azure_AD_Application_ID>'
     ```
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Variable zu erstellen, die den Namen der Key Vault-Ressource speichert.
+4. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Variable zu erstellen, die den Namen der Key Vault-Ressource speichert.
     ```
     $kvName = (Get-AzKeyVault -ResourceGroupName 'AZ500LAB10').VaultName
 
     $kvName
     ```
 
-1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um der Anwendung, die Sie in der vorherigen Aufgabe registriert haben, Berechtigungen für die Key Vault-Ressource zu erteilen:
+5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um der Anwendung, die Sie in der vorherigen Aufgabe registriert haben, Berechtigungen für die Key Vault-Ressource zu erteilen:
 
     ```powershell
     Set-AZKeyVaultAccessPolicy -VaultName $kvName -ResourceGroupName AZ500LAB10 -ServicePrincipalName $applicationId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
     ```
 
-1. Schließen Sie den Cloud Shell-Bereich. 
+6. Schließen Sie den Cloud Shell-Bereich. 
 
 
 #### <a name="task-3-retrieve-sql-azure-database-adonet-connection-string"></a>Aufgabe 3: Abrufen der ADO.NET-Verbindungszeichenfolge für Azure SQL-Datenbank 
@@ -299,37 +305,37 @@ Im Rahmen der ARM-Vorlagenbereitstellung in Übung 1 haben Sie eine Azure SQL 
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **SQL-Datenbanken** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie in der Liste der SQL-Datenbanken auf den Eintrag **medical(<randomsqlservername>)** .
+2. Klicken Sie in der Liste der SQL-Datenbanken auf den Eintrag **medical(<randomsqlservername>)** .
 
     >**Hinweis**: Wenn die Datenbank nicht gefunden werden kann, bedeutet dies wahrscheinlich, dass die von Ihnen in Übung 1 initiierte Bereitstellung noch nicht abgeschlossen ist. Sie können dies überprüfen, indem Sie zur Azure-Ressourcengruppe „AZ500LAB10“ (bzw. zur Ressourcengruppe mit dem von Ihnen ausgewählten Namen) navigieren und im Bereich „Einstellungen“ die Option **Bereitstellungen** auswählen.  
 
-1. Klicken Sie auf dem Blatt der SQL-Datenbank im Abschnitt **Einstellungen** auf **Verbindungszeichenfolgen**. 
+3. Klicken Sie auf dem Blatt der SQL-Datenbank im Abschnitt **Einstellungen** auf **Verbindungszeichenfolgen**. 
 
     >**Hinweis**: Die Schnittstelle enthält Verbindungszeichenfolgen für ADO.NET, JDBC, ODBC, PHP und Go. 
    
-1. Notieren Sie sich die **ADO.NET-Verbindungszeichenfolge**. Sie benötigen sie später.
+4. Notieren Sie sich die **ADO.NET-Verbindungszeichenfolge**. Sie benötigen sie später.
 
-    >**Hinweis**: Stellen Sie beim Verwenden der Verbindungszeichenfolge sicher, dass Sie den Platzhalter `{your_password}` durch **Pa55w.rd1234** ersetzen.
+    >**Hinweis:** Wenn Sie die Verbindungszeichenfolge verwenden, müssen Sie den Platzhalter `{your_password}` durch das Kennwort ersetzen, das Sie mit der Bereitstellung in Übung 1 konfiguriert haben.
 
 #### <a name="task-4-log-on-to-the-azure-vm-running-visual-studio-2019-and-sql-management-studio-2018"></a>Aufgabe 4: Anmelden bei dem virtuellen Azure-Computer, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 ausgeführt werden
 
 In dieser Aufgabe melden Sie sich bei dem virtuellen Azure-Computer an, dessen Bereitstellung Sie in Übung 1 initiiert haben. Auf diesem dem virtuellen Azure-Computer werden Visual Studio 2019 und SQL Server Management Studio 2018 gehostet.
 
->**Hinweis**: Bevor Sie mit dieser Aufgabe fortfahren, müssen Sie sicherstellen, dass die in der ersten Übung von Ihnen initiierte Bereitstellung erfolgreich abgeschlossen wurde. Sie können dies überprüfen, indem Sie zum Blatt der Azure-Ressourcengruppe „AZ500LAB10“ (bzw. der Ressourcengruppe mit dem von Ihnen ausgewählten Namen) navigieren und im Bereich „Einstellungen“ die Option **Bereitstellungen** auswählen.  
+    >**Note**: Before you proceed with this task, ensure that the deployment you initiated in the first exercise has completed successfully. You can validate this by navigating to the blade of the Azure resource group "Az500Lab10" (or other name you chose) and selecting **Deployments** from the Settings pane.  
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **virtuelle Computer** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Wählen Sie in der Liste der angezeigten virtuellen Computer den Eintrag **az500-10-vm1** aus. Notieren Sie sich die auf dem Blatt **az500-10-vm1** im Bereich **Zusammenfassung** angegebene **öffentliche IP-Adresse**. Sie verwenden diesen Wert später. 
+2. Wählen Sie in der Liste der angezeigten virtuellen Computer den Eintrag **az500-10-vm1** aus. Notieren Sie sich die auf dem Blatt **az500-10-vm1** im Bereich **Zusammenfassung** angegebene **öffentliche IP-Adresse**. Sie verwenden diesen Wert später. 
 
 #### <a name="task-5-create-a-table-in-the-sql-database-and-select-data-columns-for-encryption"></a>Aufgabe 5: Erstellen einer Tabelle in der SQL-Datenbank und Auswählen von Datenspalten für die Verschlüsselung
 
 In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Server Management Studio her und erstellen eine Tabelle. Anschließend verschlüsseln Sie zwei Datenspalten mithilfe eines automatisch generierten Schlüssels aus der Azure Key Vault-Ressource. 
 
-1. Navigieren Sie im Azure-Portal zum Blatt der SQL-Datenbank **medical**, identifizieren Sie im Abschnitt **Zusammenfassung** den Servernamen, und klicken Sie dann auf der Symbolleiste auf **Serverfirewall festlegen**.  
+1. Navigieren Sie im Azure-Portal zum Blatt der SQL-Datenbank **medical**, ermitteln Sie im Abschnitt **Essentials** den **Servernamen** (kopieren Sie ihn in die Zwischenablage), und klicken Sie dann auf der Symbolleiste auf **Serverfirewall festlegen**.  
 
     >**Hinweis**: Notieren Sie sich den Servernamen. Sie benötigen den Servernamen später in dieser Aufgabe.
 
-1. Scrollen Sie auf dem Blatt **Firewalleinstellungen** nach unten zu **Regelname**, und geben Sie die folgenden Einstellungen an: 
+2. Scrollen Sie auf dem Blatt **Firewalleinstellungen** nach unten zu **Regelname**, und geben Sie die folgenden Einstellungen an: 
 
     |Einstellung|Wert|
     |---|---|
@@ -337,26 +343,26 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Start-IP|Die öffentliche IP-Adresse von „az500-10-vm1“|
     |End-IP|Die öffentliche IP-Adresse von „az500-10-vm1“|
 
-1. Klicken Sie auf **Speichern** und dann auf **OK**, um die Änderung zu speichern und den Bestätigungsbereich zu schließen. 
+3. Klicken Sie auf **Speichern** und dann auf **OK**, um die Änderung zu speichern und den Bestätigungsbereich zu schließen. 
 
     >**Hinweis**: Dadurch werden die Firewalleinstellungen des Servers geändert, sodass Verbindungen mit der Datenbank „medical“ über die öffentliche IP-Adresse des virtuellen Azure-Computers zulässig sind, den Sie in diesem Lab bereitgestellt haben.
 
-1. Navigieren Sie zurück zum Blatt **az500-10-vm1**, und klicken Sie auf **Übersicht**. Klicken Sie auf **Verbinden**, und klicken Sie dann im Dropdownmenü auf **RDP**. 
+4. Navigieren Sie zurück zum Blatt **az500-10-vm1**, und klicken Sie auf **Übersicht**. Klicken Sie auf **Verbinden**, und klicken Sie dann im Dropdownmenü auf **RDP**. 
 
-1. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **az500-10-vm1** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+5. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **az500-10-vm1** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
     |Einstellung|Wert|
     |---|---|
     |Benutzername|**Kursteilnehmer**|
-    |Kennwort|**Pa55w.rd1234**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung und der **Server-Manager** geladen werden. Schließen Sie den Server-Manager. 
 
     >**Hinweis**: Die restlichen Schritte in diesem Lab werden in der Remotedesktopsitzung mit dem virtuellen Azure-Computer **az500-10-vm1** ausgeführt. 
 
-1. Klicken Sie auf **Start**, erweitern Sie im **Startmenü** den Ordner **Microsoft SQL Server-Tools 18**, und klicken Sie auf das Menüelement **Micosoft SQL Server Management Studio**.
+6. Klicken Sie auf **Start**, erweitern Sie im **Startmenü** den Ordner **Microsoft SQL Server-Tools 18**, und klicken Sie auf das Menüelement **Micosoft SQL Server Management Studio**.
 
-1. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Einstellungen an: 
+7. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Einstellungen an: 
 
     |Einstellung|Wert|
     |---|---|
@@ -364,15 +370,15 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Servername|Der Servername, den Sie zuvor in dieser Aufgabe identifiziert haben|
     |Authentifizierung|**SQL Server-Authentifizierung**|
     |Anmelden|**Kursteilnehmer**|
-    |Kennwort|**Pa55w.rd1234**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
-1. Klicken Sie im Dialogfeld **Verbindung mit dem Server herstellen** auf **Verbinden**.
+8. Klicken Sie im Dialogfeld **Verbindung mit dem Server herstellen** auf **Verbinden**.
 
-1. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster den Ordner **Datenbanken**.
+9. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster den Ordner **Datenbanken**.
 
-1. Klicken Sie im **Objekt-Explorer**-Fenster mit der rechten Maustaste auf die Datenbank **medical**, und klicken Sie dann auf **Neue Abfrage**.
+10. Klicken Sie im **Objekt-Explorer**-Fenster mit der rechten Maustaste auf die Datenbank **medical**, und klicken Sie dann auf **Neue Abfrage**.
 
-1. Fügen Sie den folgenden Code in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dadurch wird die Tabelle **Patients** erstellt.
+11. Fügen Sie den folgenden Code in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dadurch wird die Tabelle **Patients** erstellt.
 
      ```sql
      CREATE TABLE [dbo].[Patients](
@@ -388,23 +394,25 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
         [BirthDate] [date] NOT NULL 
      PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY] );
      ```
-1. Erweitern Sie nach der erfolgreichen Erstellung der Tabelle im **Objekt-Explorer**-Fenster den Knoten der Datenbank **medical** und den Knoten **Tabellen**, klicken Sie mit der rechten Maustaste auf den Knoten **dbo.Patients**, und klicken Sie dann auf **Spalten verschlüsseln**. 
+12. Erweitern Sie nach der erfolgreichen Erstellung der Tabelle im **Objekt-Explorer**-Fenster den Knoten der Datenbank **medical** und den Knoten **Tabellen**, klicken Sie mit der rechten Maustaste auf den Knoten **dbo.Patients**, und klicken Sie dann auf **Spalten verschlüsseln**. 
 
     >**Hinweis**: Dadurch wird der **Always Encrypted-Assistent** initiiert.
 
-1. Klicken Sie auf der Seite **Einführung** auf **Weiter**.
+13. Klicken Sie auf der Seite **Einführung** auf **Weiter**.
 
-1. Wählen Sie auf der Seite **Spaltenauswahl** die Spalten **SSN** und **Geburtsdatum** aus, legen Sie den **Verschlüsselungstyp** der Spalte **SSN** auf **Deterministisch** und den der Spalte **Geburtsdatum** auf **Zufällig** fest, und klicken Sie dann auf **Weiter**.
+14. Wählen Sie auf der Seite **Spaltenauswahl** die Spalten **SSN** und **Geburtsdatum** aus, legen Sie den **Verschlüsselungstyp** der Spalte **SSN** auf **Deterministisch** und den der Spalte **Geburtsdatum** auf **Zufällig** fest, und klicken Sie dann auf **Weiter**.
 
-1. Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** die Option **Azure Key Vault** aus, und klicken Sie auf **Anmelden**. Authentifizieren Sie sich bei entsprechender Aufforderung mit demselben Benutzerkonto, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben. Stellen Sie sicher, dass diese Key Vault-Instanz in der Dropdownliste **Azure Key Vault-Instanz auswählen** angezeigt wird, und klicken Sie auf **Weiter**.
+    >**Hinweis:** Wenn während der Verschlüsselung ein Fehler wie **Exception has been thrown by the target of an innvocation** (Eine Ausnahme wurde vom Ziel eines Aufrufs ausgelöst) im Zusammenhang mit **Rotary(Microsoft.SQLServer.Management.ServiceManagement)** ausgelöst wurde, stellen Sie sicher, dass die Werte der **Rotationsrichtlinienvorgänge** für die **Schlüsselberechtigung** **nicht aktiviert** sind. Andernfalls sollten Sie im Azure-Portal zu **Schlüsseltresor** >> **Zugriffsberechtigungen** >> **Schlüsselberechtigungen** navigieren. Deaktivieren Sie dort alle Werte unter den **Rotationsrichtlinienvorgängen** sowie unter **Vorgänge mit privilegiertem Schlüssel** die Option **Veröffentlichen**.
 
-1. Klicken Sie auf der Seite **Ausführungseinstellungen** auf **Weiter**.
+15. Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** die Option **Azure Key Vault** aus, und klicken Sie auf **Anmelden**. Authentifizieren Sie sich bei entsprechender Aufforderung mit demselben Benutzerkonto, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben. Stellen Sie sicher, dass diese Key Vault-Instanz in der Dropdownliste **Azure Key Vault-Instanz auswählen** angezeigt wird, und klicken Sie auf **Weiter**.
+
+16. Klicken Sie auf der Seite **Ausführungseinstellungen** auf **Weiter**.
     
-1. Klicken Sie auf der Seite **Zusammenfassung** auf **Fertig stellen**, um mit der Verschlüsselung fortzufahren. Melden Sie sich bei entsprechender Aufforderung erneut mit dem Benutzerkonto an, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben.
+17. Klicken Sie auf der Seite **Zusammenfassung** auf **Fertig stellen**, um mit der Verschlüsselung fortzufahren. Melden Sie sich bei entsprechender Aufforderung erneut mit dem Benutzerkonto an, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben.
 
-1. Klicken Sie nach Abschluss des Verschlüsselungsprozesses auf der Seite **Ergebnisse** auf **Schließen**.
+18. Klicken Sie nach Abschluss des Verschlüsselungsprozesses auf der Seite **Ergebnisse** auf **Schließen**.
 
-1. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster unter dem Knoten **medical** die Unterknoten **Sicherheit** und **Always Encrypted-Schlüssel**. 
+19. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster unter dem Knoten **medical** die Unterknoten **Sicherheit** und **Always Encrypted-Schlüssel**. 
 
     >**Hinweis**: Der Unterknoten **Always Encrypted-Schlüssel** enthält die Unterordner **Spaltenhauptschlüssel** und **Spaltenverschlüsselungsschlüssel**.
 
@@ -421,59 +429,59 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
 
 1. Starten Sie in der RDP-Sitzung mit **az500-10-vm1** über das **Startmenü** die Anwendung **Visual Studio 2019**.
 
-1. Wechseln Sie zu dem Fenster, in dem die Visual Studio 2019-Willkommensnachricht angezeigt wird, klicken Sie auf die Schaltfläche **Anmelden**, und geben Sie bei entsprechender Aufforderung die Anmeldeinformationen an, die Sie für die Authentifizierung bei dem in diesem Lab verwendeten Azure-Abonnement verwendet haben.
+2. Wechseln Sie zu dem Fenster, in dem die Visual Studio 2019-Willkommensnachricht angezeigt wird, klicken Sie auf die Schaltfläche **Anmelden**, und geben Sie bei entsprechender Aufforderung die Anmeldeinformationen an, die Sie für die Authentifizierung bei dem in diesem Lab verwendeten Azure-Abonnement verwendet haben.
 
-1. Klicken Sie auf der Seite **Erste Schritte** auf **Neues Projekt erstellen**. 
+3. Klicken Sie auf der Seite **Erste Schritte** auf **Neues Projekt erstellen**. 
 
-1. Suchen Sie in der Liste der Projektvorlagen nach **Konsolen-App (.NET Framework)** , klicken Sie in der Ergebnisliste auf **Konsolen-App (.NET Framework)** für **C#** , und klicken Sie dann auf **Weiter**.
+4. Suchen Sie in der Liste der Projektvorlagen nach **Konsolen-App (.NET Framework)** , klicken Sie in der Ergebnisliste auf **Konsolen-App (.NET Framework)** für **C#** , und klicken Sie dann auf **Weiter**.
 
-1. Geben Sie auf der Seite **Neues Projekt konfigurieren** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte), und klicken Sie dann auf **Erstellen**:
+5. Geben Sie auf der Seite **Neues Projekt konfigurieren** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte), und klicken Sie dann auf **Erstellen**:
 
     |Einstellung|Wert|
     |---|---|
     |Projektname|**OpsEncrypt**|
     |Projektmappenname|**OpsEncrypt**|
-    |Framework|**.NET Framework 4.7.2**|
+    |Framework|**.NET Framework 4.7.2**|
 
-1. Klicken Sie in der Visual Studio-Konsole auf das Menü **Extras**, klicken Sie im Dropdownmenü auf **NuGet-Paket-Manager**, und klicken Sie im hierarchischen Menü auf **Paket-Manager-Konsole**.
+6. Klicken Sie in der Visual Studio-Konsole auf das Menü **Extras**, klicken Sie im Dropdownmenü auf **NuGet-Paket-Manager**, und klicken Sie im hierarchischen Menü auf **Paket-Manager-Konsole**.
 
-1. Führen Sie im Bereich **Paket-Manager-Konsole** Folgendes aus, um das erste erforderliche **NuGet**-Paket zu installieren:
+7. Führen Sie im Bereich **Paket-Manager-Konsole** Folgendes aus, um das erste erforderliche **NuGet**-Paket zu installieren:
 
     ```powershell
     Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider
     ```
 
-1. Führen Sie im Bereich **Paket-Manager-Konsole** Folgendes aus, um das zweite erforderliche **NuGet**-Paket zu installieren:
+8. Führen Sie im Bereich **Paket-Manager-Konsole** Folgendes aus, um das zweite erforderliche **NuGet**-Paket zu installieren:
 
     ```powershell
     Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
     ```
     
-1. Navigieren Sie zu **\\Allfiles\\Labs\\10\\program.cs**, öffnen Sie die Datei in Editor, und kopieren Sie den Inhalt in die Zwischenablage.
+9. Minimieren Sie die RDP-Sitzung auf Ihrem virtuellen Azure-Computer. Navigieren Sie dann zu **\\Allfiles\\Labs\\10\\program.cs**, öffnen Sie die Datei in Editor, und kopieren Sie den Inhalt in die Zwischenablage.
 
-1. Wechseln Sie zur Visual Studio-Konsole, klicken Sie im Fenster **Projektmappen-Explorer** auf **Program.cs**, und ersetzen Sie den Inhalt der Datei durch den Code, den Sie in die Zwischenablage kopiert haben.
+10. Kehren Sie zur RDP-Sitzung zurück, klicken Sie in der Visual Studio-Konsole im Fenster **Projektmappen-Explorer** auf **Program.cs**, und ersetzen Sie den Inhalt der Datei durch den Code, den Sie in die Zwischenablage kopiert haben.
 
-1. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Platzhalter `{your_password}` durch `Pa55w.rd1234`.
+11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Platzhalter `{your_password}` durch `Pa55w.rd1234`. Wenn Sie die Zeichenfolge auf dem Lab-Computer gespeichert haben, müssen Sie möglicherweise die RDP-Sitzung verlassen, um die ADO-Zeichenfolge zu kopieren, und dann zum virtuellen Azure-Computer zurückkehren, um sie einzufügen.
 
-1. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 16 den Platzhalter `<client id noted earlier>` durch den Wert der **Anwendungs-ID (Client-ID)** der registrierten App, die Sie sich zuvor im Lab notiert haben. 
+12. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 16 den Platzhalter `<client id noted earlier>` durch den Wert der **Anwendungs-ID (Client-ID)** der registrierten App, die Sie sich zuvor im Lab notiert haben. 
 
-1. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 17 den Platzhalter `<key value noted earlier>` durch den Wert von **Key1** der registrierten App, den Sie sich zuvor im Lab notiert haben. 
+13. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 17 den Platzhalter `<key value noted earlier>` durch den Wert von **Key1** der registrierten App, den Sie sich zuvor im Lab notiert haben. 
 
-1. Klicken Sie in der Visual Studio-Konsole auf die Schaltfläche **Start**, um die Erstellung der Konsolenanwendung zu initiieren und um sie zu starten.
+14. Klicken Sie in der Visual Studio-Konsole auf die Schaltfläche **Start**, um die Erstellung der Konsolenanwendung zu initiieren und um sie zu starten.
 
-1. Die Anwendung wird mit einem Eingabeaufforderungsfenster gestartet. Wenn Sie zur Eingabe eines Kennworts aufgefordert werden, geben Sie **Pa55w.rd1234** ein, um eine Verbindung mit Azure SQL-Datenbank herzustellen. 
+15. Die Anwendung wird mit einem Eingabeaufforderungsfenster gestartet. Geben Sie bei entsprechender Aufforderung das Kennwort ein, das Sie in der Bereitstellung in Übung 1 angegeben haben, um eine Verbindung mit Azure SQL-Datenbank herzustellen. 
 
-1. Führen Sie die Konsolenanwendung weiterhin aus, und wechseln Sie zur **SQL Server Management Studio**-Konsole. 
+16. Führen Sie die Konsolenanwendung weiterhin aus, und wechseln Sie zur **SQL Server Management Studio**-Konsole. 
 
-1. Klicken Sie im **Objekt-Explorer**-Fenster mit der rechten Maustaste auf die Datenbank „medical“, und klicken Sie dann im Kontextmenü auf **Neue Abfrage**.
+17. Klicken Sie im **Objekt-Explorer**-Fenster mit der rechten Maustaste auf die Datenbank **medical**, und klicken Sie dann im Kontextmenü auf **Neue Abfrage**.
 
-1. Führen Sie im Abfragefenster die folgende Abfrage aus, um zu überprüfen, ob die von der Konsolen-App in die Datenbank geladenen Daten verschlüsselt sind.
+18. Führen Sie im Abfragefenster die folgende Abfrage aus, um zu überprüfen, ob die von der Konsolen-App in die Datenbank geladenen Daten verschlüsselt sind.
 
     ```sql
     SELECT FirstName, LastName, SSN, BirthDate FROM Patients;
     ```
 
-1. Wechseln Sie zurück zur Konsolenanwendung, in der Sie zur Eingabe einer gültigen SSN aufgefordert werden. Dadurch wird die verschlüsselte Spalte nach den Daten abgefragt. Geben Sie an der Eingabeaufforderung Folgendes ein, und drücken Sie die EINGABETASTE:
+19. Wechseln Sie zurück zur Konsolenanwendung, in der Sie zur Eingabe einer gültigen SSN aufgefordert werden. Dadurch wird die verschlüsselte Spalte nach den Daten abgefragt. Geben Sie an der Eingabeaufforderung Folgendes ein, und drücken Sie die EINGABETASTE:
 
     ```cmd
     999-99-0003
@@ -481,7 +489,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
 
     >**Hinweis**: Vergewissern Sie sich, dass die von der Abfrage zurückgegebenen Daten nicht verschlüsselt sind.
 
-1. Drücken Sie die EINGABETASTE, um die Konsolen-App zu beenden.
+20. Drücken Sie die EINGABETASTE, um die Konsolen-App zu beenden.
 
 **Bereinigen von Ressourcen**
 
@@ -489,12 +497,12 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
 
 1. Öffnen Sie im Azure-Portal den Cloud Shell-Dienst, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. 
 
-1. Wählen Sie im Dropdownmenü oben links im Cloud Shell-Bereich die Option **PowerShell** aus, und klicken Sie auf **Bestätigen**, wenn Sie dazu aufgefordert werden.
+2. Wählen Sie im Dropdownmenü oben links im Cloud Shell-Bereich die Option **PowerShell** aus, und klicken Sie auf **Bestätigen**, wenn Sie dazu aufgefordert werden.
 
-1. Führen Sie im Cloud Shell-Bereich in der PowerShell-Sitzung den folgenden Code aus, um die Ressourcengruppen zu entfernen, die Sie in diesem Lab erstellt haben:
+3. Führen Sie im Cloud Shell-Bereich in der PowerShell-Sitzung den folgenden Code aus, um die Ressourcengruppen zu entfernen, die Sie in diesem Lab erstellt haben:
   
     ```powershell
     Remove-AzResourceGroup -Name "AZ500LAB10" -Force -AsJob
     ```
 
-1.  Schließen Sie den **Cloud Shell**-Bereich. 
+4.  Schließen Sie den **Cloud Shell**-Bereich. 
