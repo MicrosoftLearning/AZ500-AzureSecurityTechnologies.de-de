@@ -2,12 +2,12 @@
 lab:
   title: '01: Rollenbasierte Zugriffssteuerung'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 156b27cdbdd97656e8ccd85c4ed3656c0db91937
-ms.sourcegitcommit: 46495f1eba96da4be553aff5b7521e7ab62f50b8
+ms.openlocfilehash: 9ddbfd416d9897bcdf891c9c9265d8205277c176
+ms.sourcegitcommit: 79ca7b110859fe71a3849a28fdc781cad95d1567
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "146032708"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "146381339"
 ---
 # <a name="lab-01-role-based-access-control"></a>Lab 01: Rollenbasierte Zugriffssteuerung
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
