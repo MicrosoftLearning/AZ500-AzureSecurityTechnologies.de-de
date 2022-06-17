@@ -2,12 +2,12 @@
 lab:
   title: " 12 – Dienstendpunkte und Schützen von Speicher"
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: d47890d94d7f1a008024ebedf5154d487cb35792
-ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
+ms.openlocfilehash: ef6f31230914c8c122015334e629dad5c54dfe8d
+ms.sourcegitcommit: 47a471392d8e979c08213fe7de3fcc296adc35da
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955408"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "146453860"
 ---
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Lab 12: Dienstendpunkte und Schützen von Speicher
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -62,7 +62,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk.
 
 4. Geben Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen), und klicken Sie auf **Weiter: IP-Adressen**:
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB12** ein.|
@@ -114,9 +114,9 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
 3. Geben Sie auf dem Blatt **Netzwerksicherheitsgruppe erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an: 
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|**AZ500LAB12**|
     |Name|**myNsgPrivate**|
     |Region|**USA, Osten**|
@@ -133,7 +133,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
 8. Geben Sie auf dem Blatt **Sicherheitsregel für ausgehenden Datenverkehr hinzufügen** die folgenden Einstellungen an, um ausgehenden Datenverkehr an Azure Storage explizit zuzulassen (übernehmen Sie für alle anderen Werte die Standardeinstellungen): 
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |`Source`|**Diensttag**|
     |Quelldiensttag|**VirtualNetwork**|
@@ -152,7 +152,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
 11. Geben Sie auf dem Blatt **Sicherheitsregel für ausgehenden Datenverkehr hinzufügen** die folgenden Einstellungen an, um ausgehenden Datenverkehr an das Internet explizit zu verweigern (übernehmen Sie für alle anderen Werte die Standardeinstellungen): 
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |`Source`|**Diensttag**|
     |Quelldiensttag|**VirtualNetwork**|
@@ -173,7 +173,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
 13. Geben Sie auf dem Blatt **Sicherheitsregel für eingehenden Datenverkehr hinzufügen** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte): 
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |`Source`|**Alle**|
     |Source port ranges|**\***|
@@ -196,6 +196,13 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**Privat**|
 
+16. Wählen Sie auf dem Blatt **Subnetze** die Option **+ Zuordnen** aus, geben Sie im Abschnitt **Subnetz zuordnen** die folgenden Einstellungen an, und klicken Sie dann auf **OK**:
+
+    |Einstellung|Wert|
+    |---|---|
+    |Virtuelles Netzwerk|**myVirtualNetwork**|
+    |Subnet|**Public**|
+    
 #### <a name="task-4-create-a-storage-account-with-a-file-share"></a>Aufgabe 4: Erstellen eines Speicherkontos mit einer Dateifreigabe
 
 In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und rufen den Speicherkontoschlüssel ab.  
@@ -206,9 +213,9 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
 3. Geben Sie auf dem Blatt **Speicherkonto erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Resource group|**AZ500LAB12**|
     |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
     |Location|**(USA) USA, Osten**|
@@ -229,7 +236,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
 9. Geben Sie auf dem Blatt **Neue Dateifreigabe** die folgenden Einstellungen an:
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |Name|**my-file-share**|
 
@@ -251,7 +258,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
 16. Geben Sie auf dem Blatt **Netzwerke hinzufügen** die folgenden Einstellungen an:
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
     |Virtuelle Netzwerke|**myVirtualNetwork**|
@@ -275,7 +282,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
 
 3. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB12**|
@@ -283,7 +290,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Region|**(USA) USA, Osten**|
     |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
     |Username|**localadmin**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
     |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
@@ -310,7 +317,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
 
 9. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB12**|
@@ -318,7 +325,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Region|**(USA) USA, Osten**|
     |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
     |Username|**localadmin**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
     |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
