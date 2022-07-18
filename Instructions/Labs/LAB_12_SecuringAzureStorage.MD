@@ -2,12 +2,12 @@
 lab:
   title: " 12 – Dienstendpunkte und Schützen von Speicher"
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: ef6f31230914c8c122015334e629dad5c54dfe8d
-ms.sourcegitcommit: 47a471392d8e979c08213fe7de3fcc296adc35da
+ms.openlocfilehash: 094c35e70258656693d64a816b9ed9382eade199
+ms.sourcegitcommit: 7c5e8e9a86553c6bd9b9a6651b60c6cb9676f0ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "146453860"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "147168506"
 ---
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Lab 12: Dienstendpunkte und Schützen von Speicher
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -116,7 +116,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB12**|
     |Name|**myNsgPrivate**|
     |Region|**USA, Osten**|
@@ -195,13 +195,6 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
     |---|---|
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**Privat**|
-
-16. Wählen Sie auf dem Blatt **Subnetze** die Option **+ Zuordnen** aus, geben Sie im Abschnitt **Subnetz zuordnen** die folgenden Einstellungen an, und klicken Sie dann auf **OK**:
-
-    |Einstellung|Wert|
-    |---|---|
-    |Virtuelles Netzwerk|**myVirtualNetwork**|
-    |Subnet|**Public**|
     
 #### <a name="task-4-create-a-storage-account-with-a-file-share"></a>Aufgabe 4: Erstellen eines Speicherkontos mit einer Dateifreigabe
 
@@ -215,7 +208,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB12**|
     |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
     |Location|**(USA) USA, Osten**|
