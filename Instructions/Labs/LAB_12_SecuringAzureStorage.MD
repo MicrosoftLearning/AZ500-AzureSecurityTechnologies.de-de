@@ -2,12 +2,12 @@
 lab:
   title: " 12 – Dienstendpunkte und Schützen von Speicher"
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: 1bb9722fadd7d5323e8485a073f828c40bd7784b
-ms.sourcegitcommit: 7a85045fa5b0e6450a346aed7e75cd2e1cb6412a
+ms.openlocfilehash: 96c1073571e40558a102d2fd661b6b4e3b4f48d7
+ms.sourcegitcommit: 5eaa012a52e6f14e499393257855d314a720a668
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144018072"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "147717267"
 ---
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Lab 12: Dienstendpunkte und Schützen von Speicher
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -43,10 +43,11 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 1: Erstellen eines virtuellen Netzwerks
 - Aufgabe 2: Hinzufügen eines Subnetzes zum virtuellen Netzwerk und Konfigurieren eines Speicherendpunkts
 - Aufgabe 3: Konfigurieren einer Netzwerksicherheitsgruppe zum Einschränken des Zugriffs auf das Subnetz
-- Aufgabe 4: Erstellen eines Speicherkontos mit einer Dateifreigabe
-- Aufgabe 5: Bereitstellen virtueller Computer in den angegebenen Subnetzen
-- Aufgabe 6: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
-- Aufgabe 7: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
+- Aufgabe 4: Konfigurieren einer Netzwerksicherheitsgruppe zum Zulassen von RDP im öffentlichen Subnetz
+- Aufgabe 5: Erstellen eines Speicherkontos mit einer Dateifreigabe
+- Aufgabe 6: Bereitstellen virtueller Computer in den angegebenen Subnetzen
+- Aufgabe 7: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
+- Aufgabe 8: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
 
 #### <a name="task-1-create-a-virtual-network"></a>Aufgabe 1: Erstellen eines virtuellen Netzwerks
 
@@ -64,7 +65,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk.
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB12** ein.|
     |Name|**myVirtualNetwork**|
     |Region|**(USA) USA, Osten**|
@@ -116,7 +117,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB12**|
     |Name|**myNsgPrivate**|
     |Region|**USA, Osten**|
@@ -196,7 +197,57 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**Privat**|
 
-#### <a name="task-4-create-a-storage-account-with-a-file-share"></a>Aufgabe 4: Erstellen eines Speicherkontos mit einer Dateifreigabe
+#### <a name="task-4-configure-a-network-security-group-to-allow-rdp-on-the-public-subnet"></a>Aufgabe 4: Konfigurieren einer Netzwerksicherheitsgruppe zum Zulassen von RDP im öffentlichen Subnetz
+
+In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit einer Sicherheitsregel für eingehenden Datenverkehr (RDP). Außerdem ordnen Sie die Netzwerksicherheitsgruppe dem öffentlichen Subnetz zu. Dies ermöglicht den RDP-Zugriff auf den öffentlichen virtuellen Computer.
+
+1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Netzwerksicherheitsgruppen** ein, und drücken Sie die **EINGABETASTE**.
+
+2. Klicken Sie auf dem Blatt **Netzwerksicherheitsgruppen** auf **+ Erstellen**.
+
+3. Geben Sie auf dem Blatt **Netzwerksicherheitsgruppe erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an: 
+
+    |Einstellung|Wert|
+    |---|---|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Resource group|**AZ500LAB12**|
+    |Name|**myNsgPublic**|
+    |Region|**USA, Osten**|
+
+4. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
+
+    >**Hinweis**: In den nächsten Schritten erstellen Sie eine Sicherheitsregel für ausgehenden Datenverkehr, die die Kommunikation mit dem Azure Storage-Dienst zulässt. 
+
+5. Navigieren Sie im Azure-Portal zurück zum Blatt **Netzwerksicherheitsgruppen**, und klicken Sie auf den Eintrag **myNsgPublic**.
+
+6. Klicken Sie auf dem Blatt **myNsgPublic** im Abschnitt **Einstellungen** auf **Sicherheitsregeln für eingehenden Datenverkehr**, und klicken Sie dann auf **+ Hinzufügen**.
+
+7. Geben Sie auf dem Blatt **Sicherheitsregel für eingehenden Datenverkehr hinzufügen** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte): 
+
+    |Einstellung|Wert|
+    |---|---|
+    |`Source`|**Alle**|
+    |Source port ranges|**\***|
+    |Destination|**Diensttag**|
+    |Zieldiensttag|**VirtualNetwork**|
+    |Zielportbereiche|**3389**|
+    |Protokoll|**TCP**|
+    |Aktion|**Zulassen**|
+    |Priorität|**1200**|                                                    
+    |Name|**Allow-RDP-All**|
+
+8. Klicken Sie auf dem Blatt **Sicherheitsregel für eingehenden Datenverkehr hinzufügen** auf **Hinzufügen**, um die neue Regel für eingehenden Datenverkehr zu erstellen. 
+
+    >**Hinweis**: Jetzt ordnen Sie die Netzwerksicherheitsgruppe dem öffentlichen Subnetz zu.
+
+9. Wählen Sie auf dem Blatt **Subnetze** die Option **+ Zuordnen** aus, geben Sie im Abschnitt **Subnetz zuordnen** die folgenden Einstellungen an, und klicken Sie dann auf **OK**:
+
+    |Einstellung|Wert|
+    |---|---|
+    |Virtuelles Netzwerk|**myVirtualNetwork**|
+    |Subnet|**Public**|
+    
+#### <a name="task-5-create-a-storage-account-with-a-file-share"></a>Aufgabe 5: Erstellen eines Speicherkontos mit einer Dateifreigabe
 
 In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und rufen den Speicherkontoschlüssel ab.  
 
@@ -208,7 +259,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB12**|
     |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
     |Location|**(USA) USA, Osten**|
@@ -247,7 +298,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
 14. Navigieren Sie zurück zum Blatt des Speicherkontos, und klicken Sie dann im Abschnitt **Sicherheit und Netzwerk** auf **Netzwerk**.
 
-15. Wählen Sie auf dem Blatt **Firewalls und virtuelle Netzwerke** die Option **Ausgewählte Netzwerke** aus, und klicken Sie dann auf den Link **+ Vorhandenes virtuelles Netzwerk hinzufügen**. 
+15. Wählen Sie auf dem Blatt **Firewalls und virtuelle Netzwerke** die Option **Von ausgewählten VNets und IP-Adressen aktiviert** aus, und klicken Sie auf den Link **+ Vorhandenes virtuelles Netzwerk hinzufügen**. 
 
 16. Geben Sie auf dem Blatt **Netzwerke hinzufügen** die folgenden Einstellungen an:
 
@@ -263,7 +314,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
     >**Hinweis**: An diesem Punkt im Lab haben Sie ein virtuelles Netzwerk, eine Netzwerksicherheitsgruppe und ein Speicherkonto mit einer Dateifreigabe konfiguriert. 
 
-#### <a name="task-5-deploy-virtual-machines-into-the-designated-subnets"></a>Aufgabe 5: Bereitstellen virtueller Computer in den angegebenen Subnetzen
+#### <a name="task-6-deploy-virtual-machines-into-the-designated-subnets"></a>Aufgabe 6: Bereitstellen virtueller Computer in den angegebenen Subnetzen
 
 In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subnetz und einen im öffentlichen Subnetz. 
 
@@ -341,7 +392,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
 
     >**Hinweis**: Sobald die Bereitstellung des virtuellen Azure-Computers **myVMPrivate** abgeschlossen ist, können Sie mit der nächsten Aufgabe fortfahren.
 
-#### <a name="task-6-test-the-storage-connection-from-the-private-subnet-to-confirm-that-access-is-allowed"></a>Aufgabe 6: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
+#### <a name="task-7-test-the-storage-connection-from-the-private-subnet-to-confirm-that-access-is-allowed"></a>Aufgabe 7: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
 
 In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtuellen Computer „myVMPrivate“ her und ordnen der Dateifreigabe ein Laufwerk zu. 
 
@@ -393,7 +444,7 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
 
     >**Hinweis**: Zu diesem Zeitpunkt haben Sie sichergestellt, dass der virtuelle Computer im privaten Subnetz auf das Speicherkonto zugreifen kann. 
 
-####  <a name="task-7-test-the-storage-connection-from-the-public-subnet-to-confirm-that-access-is-denied"></a>Aufgabe 7: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
+####  <a name="task-8-test-the-storage-connection-from-the-public-subnet-to-confirm-that-access-is-denied"></a>Aufgabe 8: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
 
 1. Navigieren Sie zurück zum Blatt **Virtuelle Computer**. 
 
@@ -426,7 +477,7 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
     Test-NetConnection -ComputerName www.bing.com -Port 80
     ```
 
-    >**Hinweis**: Der Test ist erfolgreich, weil dem öffentlichen Subnetz keine Netzwerksicherheitsgruppe zugeordnet ist.
+    >**Hinweis**: Der Test ist erfolgreich, da es keine Sicherheitsregel für ausgehenden Datenverkehr gibt, um das Internet im öffentlichen Subnetz zu verweigern.
 
 8. Beenden Sie die Remotedesktopsitzung mit dem virtuellen Azure-Computer **myVMPublic**.
 
@@ -448,4 +499,4 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
     ```
 
 4.  Schließen Sie den **Cloud Shell**-Bereich. 
- 
+
