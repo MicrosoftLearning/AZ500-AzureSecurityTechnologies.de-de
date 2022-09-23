@@ -2,12 +2,12 @@
 lab:
   title: 13 – Azure Monitor
   module: Module 04 - Manage security operations
-ms.openlocfilehash: df6fbcf475fe0a5cefec130ab713f92997dcf206
-ms.sourcegitcommit: 022221e69467f2fdccf2e02bb54e6ec395570668
+ms.openlocfilehash: d7418287b895ccb5af66f01b499181b321e2bc36
+ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "143988957"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "147871972"
 ---
 # <a name="lab-13-azure-monitor"></a>Lab 13: Azure Monitor
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -145,7 +145,7 @@ In dieser Aufgabe konfigurieren Sie die Sammlung des Windows-Systemprotokolls un
 
 1. Navigieren Sie im Azure-Portal zurück zu dem Log Analytics-Arbeitsbereich, den Sie weiter oben in dieser Übung erstellt haben.
 
-2. Klicken Sie auf dem Blatt „Log Analytics-Arbeitsbereich“ im Abschnitt **Einstellungen** auf **Agents-Konfiguration**.
+2. Klicken Sie auf dem Blatt „Log Analytics-Arbeitsbereich“ im Abschnitt **Einstellungen** auf **Verwaltung von Agenten einer Vorgängerversion**.
 
 3. Überprüfen Sie auf dem Blatt **Agents-Konfiguration** die konfigurierbaren Einstellungen, einschließlich „Windows-Ereignisprotokolle“, „Windows-Leistungsindikatoren“, „Linux-Leistungsindikatoren“, „IIS-Protokolle“ und „Syslog“. 
 
@@ -158,7 +158,7 @@ In dieser Aufgabe konfigurieren Sie die Sammlung des Windows-Systemprotokolls un
 6. Klicken Sie auf **Windows-Leistungsindikatoren**, anschließend auf **+ Leistungsindikator hinzufügen**, überprüfen Sie die Liste der verfügbaren Leistungsindikatoren, und fügen Sie die folgenden hinzu:
 
     - Arbeitsspeicher(\*)\Verfügbare Arbeitsspeicher in MB
-    - Prozess(\*)\%Prozessorzeit
+    - Prozess(\*)\\% Prozessorzeit
     - Ereignisablaufverfolgung für Windows\Gesamtspeicherauslastung – nicht ausgelagerter Pool
     - Ereignisablaufverfolgung für Windows\Gesamtspeicherauslastung – ausgelagerter Pool
 

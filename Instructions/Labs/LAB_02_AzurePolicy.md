@@ -2,12 +2,12 @@
 lab:
   title: '02: Azure Policy'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: a28872fa69650b18226d3da63cac7d5a0632fb43
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: d49ce05e4620310d45317fe582bddb3aa511430b
+ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703569"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955389"
 ---
 # <a name="lab-02-azure-policy"></a>Lab 02: Azure Policy
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -91,7 +91,7 @@ In dieser Aufgabe erstellen Sie eine Richtlinienzuweisung „Zulässige Standort
 
 1. Klicken Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Zulässige Standorte** neben dem Textfeld **Bereich** auf die Schaltfläche mit den Auslassungszeichen (...), und geben Sie auf dem Blatt **Bereich** die folgenden Einstellungen an:
 
-   |Einstellung|Wert|
+   |Einstellung|value|
    |---|---|
    |Subscription|Der Name Ihres Azure-Abonnements|
    |Resource group|**AZ500LAB02**|
@@ -130,7 +130,7 @@ In dieser Aufgabe  testen Sie die Richtlinienzuweisung „Zulässige Standorte�
 
 1. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Neues Netzwerk erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
-    |Einstellung|Wert|
+    |Einstellung|value|
     |---|---|
     |Resource group|**AZ500LAB02**|
     |Name|**myVnet**|
@@ -161,5 +161,12 @@ In dieser Aufgabe  testen Sie die Richtlinienzuweisung „Zulässige Standorte�
     ```powershell
     Remove-AzResourceGroup -Name "AZ500LAB02" -Force -AsJob
     ```
-
 1.  Schließen Sie den **Cloud Shell**-Bereich. 
+  
+1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcen** ein, und drücken Sie die **EINGABETASTE**.
+
+1. Wählen Sie im Abschnitt Erstellen die Option **Zuweisungen** aus.
+
+1. Wählen Sie in der Liste der Zuordnungen den Namen der Richtlinie **"Zulässige Speicherorte** " aus, die Sie in dieser Übung erstellt haben.
+
+1. Wählen Sie in der **Richtlinienzuweisung die Zuordnung "Löschen"** aus, und wählen Sie dann **"Ja**" aus.

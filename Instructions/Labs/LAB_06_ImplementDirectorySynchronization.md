@@ -2,12 +2,12 @@
 lab:
   title: Lab 06 – Implementieren der Verzeichnissynchronisierung
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 96871a9f1e59adde1489533ecbab8a1e85a89fbc
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: 00c359e1875ab915ab697d8ed33e36d956540529
+ms.sourcegitcommit: 1da29a6d959a7f91dbbcbabf5ec06869c98fc1f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703515"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "141267257"
 ---
 # <a name="lab-06-implement-directory-synchronization"></a>Lab 06: Implementieren der Verzeichnissynchronisierung
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -22,7 +22,7 @@ Sie wurden gebeten, einen Proof of Concept zu erstellen, der veranschaulicht, wi
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
@@ -77,8 +77,6 @@ In dieser Aufgabe identifizieren Sie einen DNS-Namen für Ihre Azure-VM-Bereitst
 
 In dieser Aufgabe stellen Sie eine Azure-VM bereit, die einen Active Directory-Domänencontroller hosten soll.
 
->**Hinweis**: Sie müssen ein eindeutiges Kennwort erstellen, das für den Rest des Kurses zum Erstellen von VMs (virtuellen Computern) verwendet wird. Das Kennwort muss mindestens 12 Zeichen umfassen und die definierten Komplexitätsanforderungen erfüllen (Das Kennwort muss drei der folgenden Zeichen enthalten: einen Kleinbuchstaben, einen Großbuchstaben, eine Zahl und ein Sonderzeichen). [VM-Kennwortanforderungen](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). Notieren Sie sich das Kennwort.
-
 1. Öffnen Sie in demselben Browserfenster eine andere Browserregisterkarte, und navigieren Sie zu **https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain**.
 
 2. Klicken Sie auf der Seite **Erstellen einer neuen Windows-VM und Erstellen einer neuen AD-Gesamtstruktur, einer Domäne und eines Domänencontrollers** auf **In Azure bereitstellen**. Dadurch wird der Browser automatisch zum Blatt **Azure-VM mit einer neuen AD-Gesamtstruktur erstellen** im Azure-Portal umgeleitet.
@@ -95,7 +93,7 @@ In dieser Aufgabe stellen Sie eine Azure-VM bereit, die einen Active Directory-D
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB06** ein.|
    |Region|Die Azure-Region, die Sie in der vorherigen Aufgabe identifiziert haben|
    |Administratorbenutzername|**Kursteilnehmer**|
-   |Administratorkennwort|**Verwenden Sie das im obigen Hinweis erstellte Kennwort.**|
+   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Domänenname|**adatum.com**|
    |DNS-Präfix|Der DNS-Hostname, den Sie in der vorherigen Aufgabe identifiziert haben|
    |Größe des virtuellen Computers|**Standard_D2s_v3**|
@@ -169,7 +167,7 @@ In dieser Aufgabe fügen Sie einen neuen Azure AD-Benutzer hinzu und weisen ihn
 
 1. Klicken Sie auf dem Blatt **AdatumSync** des Azure AD-Mandanten im Abschnitt **Verwalten** auf **Benutzer**.
 
-2. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer (Vorschau)** auf **+ Neuer Benutzer**. 
+2. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
 3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, geben Sie die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte), und klicken Sie auf **Erstellen**:
 
@@ -228,7 +226,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**Kursteilnehmer**|
-   |Kennwort|**Eindeutiges Kennwort, das Sie in Übung 1, Aufgabe 2 erstellt haben**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktop-Sitzung und der **Server-Manager** geladen werden.  
 
@@ -257,7 +255,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
    |Vollständiger Name|**aduser1**|
    |Benutzer-UPN-Anmeldung|**aduser1**|
    |SamAccountName-Anmeldung von Benutzer|**aduser1**|
-   |Kennwort und Kennwort bestätigen|**Pa55w.rd1234**|
+   |Kennwort und Kennwort bestätigen|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Andere Kennwortoptionen|**Kennwort läuft nie ab**|
 
 #### <a name="task-2-install-azure-ad-connect"></a>Aufgabe 2: Installieren von Azure AD Connect
@@ -293,7 +291,7 @@ In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer.
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**ADATUM\\Kursteilnehmer**|
-   |Kennwort|**Pa55w.rd1234**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 06 > Übung 1 > Aufgabe 2 erstellt haben.**|
 
 14. Stellen Sie auf der Seite **Verzeichnisse verbinden** sicher, dass der Eintrag **adatum.com** als konfiguriertes Verzeichnis angezeigt wird, und klicken Sie auf **Weiter**.
 

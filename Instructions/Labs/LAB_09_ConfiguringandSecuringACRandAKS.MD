@@ -2,12 +2,12 @@
 lab:
   title: 09 – Konfigurieren und Schützen von ACR und AKS
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: f3e03b483065cad12a6206b3ce2106441d05efe0
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: 167dca080d65d97997b3a884015bfa2228c17a23
+ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703497"
+ms.lasthandoff: 05/31/2022
+ms.locfileid: "145955417"
 ---
 # <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Lab 09: Konfigurieren und Schützen von ACR und AKS
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -23,7 +23,7 @@ Sie wurden gebeten, einen Proof of Concept mit Azure Container Registry und Azur
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -139,15 +139,16 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
 2. Klicken Sie auf dem Blatt **Kubernetes-Dienste** auf **+ Erstellen,** und dann im Dropdownmenü auf **+ Create a Kubernetes cluster** (+ Kubernetes-Cluster hinzufügen).
 
-3. Klicken Sie auf der Registerkarte **Grundlagen** des Blattes **Kubernetes-Cluster erstellen** auf die Option **Change preset configurations** (Vordefinierte Konfiguration ändern). Wählen Sie **Dev/Test ($)** aus, und klicken Sie auf **Anwenden**. Geben Sie nun die folgenden Einstellungen an (übernehmen Sie für andere die Standardwerte):
+3. Wählen Sie auf der Registerkarte **Grundlagen** auf dem Blatt **Kubernetes-Cluster erstellen** die Option **Vordefinierte Konfiguration des Clusters** und dann **Dev/Test ($)** aus. Geben Sie nun die folgenden Einstellungen an (übernehmen Sie für andere die Standardwerte):
 
-    |Einstellung|Wert|
+    |Einstellung|value|
     |----|----|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB09**|
     |Kubernetes-Clustername|**MyKubernetesCluster**|
     |Region|**(USA) USA, Osten**|
     |Verfügbarkeitszonen |**None**|
+    |Skalierungsmethode|**Manuell**|
     |Anzahl der Knoten|**1**|
 
 4. Klicken Sie auf **Weiter: Knotenpools >** , und geben Sie auf dem Blatt **Kubernetes-Cluster erstellen** auf der Registerkarte **Knotenpools** die folgenden Einstellungen an (und übernehmen Sie die Standardwerte für die übrigen Einstellungen):
@@ -155,9 +156,8 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
     |Einstellung|Wert|
     |----|----|
     |Aktivieren von virtuellen Knoten|Kontrollkästchen deaktiviert|
-    |VM-Skalierungsgruppen|Kontrollkästchen deaktiviert|
     
-5. Klicken Sie auf **Weiter: Authentifizierung >** , übernehmen Sie auf der Registerkarte **Authentifizierung** auf dem Blatt **Kubernetes-Cluster erstellen** die Standardwerte, und klicken Sie auf **Weiter: Netzwerk >** . 
+5. Klicken Sie auf **Next: Zugriff >** , übernehmen Sie auf der Registerkarte **Zugriff** auf dem Blatt **Kubernetes-Cluster erstellen** die Standardwerte, und klicken Sie auf **Weiter: Netzwerk >** aus. 
 
 6. Geben Sie auf der Registerkarte **Netzwerk** des Blatts **Kubernetes-Cluster erstellen** die folgenden Einstellungen an (und übernehmen Sie die Standardwerte für die übrigen Einstellungen):
 

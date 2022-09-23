@@ -2,12 +2,12 @@
 lab:
   title: 15 – Microsoft Sentinel
   module: Module 04 - Manage Security Operations
-ms.openlocfilehash: 63a24bbc17b846d3587cf3fb83ab46b7235d5fcd
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
+ms.openlocfilehash: 147bb0c8f6637393087c5a913f5c9bd8ca380866
+ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "141368789"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "147871963"
 ---
 # <a name="lab-15-microsoft-sentinel"></a>Lab 15: Microsoft Sentinel
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -217,7 +217,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 9. Übernehmen Sie auf der Registerkarte **Incidenteinstellungen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Automatisierte Antwort >** . 
 
-10. Aktivieren Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** in der Dropdownliste **Warnungsautomatisierung** das Kontrollkästchen neben dem Eintrag **Change-Incident-Severity**, und klicken Sie auf **Weiter: Überprüfen >** . 
+10. Aktivieren Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** in der Dropdownliste **Warnungsautomatisierung (klassisch)** das Kontrollkästchen neben dem Eintrag **Change-Incident-Severity**, und klicken Sie auf **Weiter: Überprüfen >** . 
 
 11. Klicken Sie auf der Registerkarte **Überprüfen und erstellen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** auf **Erstellen**.
 

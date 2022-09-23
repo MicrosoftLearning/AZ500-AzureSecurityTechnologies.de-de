@@ -2,12 +2,12 @@
 lab:
   title: 07 – Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: e33f0a1f5c30a86d2b2a47069c6f4d759d60e782
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: d7cfed1e861215cf32c3b51c4a07aa6886575000
+ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703491"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "141368699"
 ---
 # <a name="lab-07-network-security-groups-and-application-security-groups"></a>Lab 07: Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
@@ -24,7 +24,7 @@ Sie wurden aufgefordert, die virtuelle Netzwerkinfrastruktur Ihrer Organisation 
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
@@ -197,7 +197,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Computer** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Erstellen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Computer**.
+2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Erstellen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Azure-Computer**.
 
 3. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
@@ -207,10 +207,10 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVmWeb**|
    |Region|**(USA) USA, Osten**|
-   |Image|**Windows Server 2022 Datacenter – Gen2**|
+   |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Kennwort bestätigen|**Geben Sie Ihr Kennwort erneut ein.**|
    |Öffentliche Eingangsports|**None**|
    |Möchten Sie eine vorhandene Windows Server-Lizenz verwenden? |**Nein**|
@@ -235,9 +235,9 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsserver verwendet werden soll.
 
-1. Navigieren Sie im Azure-Portal zurück zum Blatt **Virtuelle Computer**, klicken Sie auf **+ Erstellen** und dann in der Dropdownliste auf **+ Virtueller Computer**.
+1. Navigieren Sie im Azure-Portal zurück zum Blatt **Virtuelle Computer**, klicken Sie auf **+ Erstellen** und dann in der Dropdownliste auf **+ Virtueller Azure-Computer**.
 
-2. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Virtuellen Computer erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+2. Geben Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
    |Einstellung|Wert|
    |---|---|
@@ -245,10 +245,10 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVMMgmt**|
    |Region|(USA) USA, Osten|
-   |Image|**Windows Server 2022 Datacenter – Gen 2**|
+   |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Öffentliche Eingangsports|**None**|
    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
@@ -301,7 +301,7 @@ In dieser Aufgabe testen Sie die Filter für den Netzwerkdatenverkehr. Sie sollt
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie erneut das Kennwort, das Sie im Lab des Moduls 6 (Übung 1, Aufgabe 2) erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Stellen Sie sicher, dass die Remotedesktopverbindung erfolgreich hergestellt wurde. An diesem Punkt haben Sie sich vergewissert, dass Sie eine Verbindung zu „myVMMgmt“ über Remotedesktop herstellen können.
 

@@ -2,12 +2,12 @@
 lab:
   title: 10 – Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
   module: Module 03 - Secure Data and Applications
-ms.openlocfilehash: 5fe46941b0680e3c8581449c61f5989d10e073e1
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
+ms.openlocfilehash: aa30698684cad8837b95fe823ce16a4043b63e5c
+ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703581"
+ms.lasthandoff: 04/04/2022
+ms.locfileid: "141368712"
 ---
 # <a name="lab-10-key-vault-implementing-secure-data-by-setting-up-always-encrypted"></a>Lab 10: Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
@@ -76,7 +76,7 @@ In dieser Aufgabe stellen Sie einen virtuellen Azure-Computer bereit, auf dem Vi
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB10** ein.|
    |Standort|**(USA) USA, Osten**|
    |Administratorbenutzername|**Kursteilnehmer**|
-   |Administratorkennwort|**Pa55w.rd1234**|
+   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    
     >**Hinweis**: Sie können zwar die für die Anmeldung beim virtuellen Computer verwendeten Administratoranmeldeinformationen ändern, dies ist jedoch nicht erforderlich.
 
@@ -354,7 +354,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Einstellung|Wert|
     |---|---|
     |Benutzername|**Kursteilnehmer**|
-    |Kennwort|**Pa55w.rd1234**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung und der **Server-Manager** geladen werden. Schließen Sie den Server-Manager. 
 
@@ -370,7 +370,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Servername|Der Servername, den Sie zuvor in dieser Aufgabe identifiziert haben|
     |Authentifizierung|**SQL Server-Authentifizierung**|
     |Anmelden|**Kursteilnehmer**|
-    |Kennwort|**Pa55w.rd1234**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
 8. Klicken Sie im Dialogfeld **Verbindung mit dem Server herstellen** auf **Verbinden**.
 
@@ -441,7 +441,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
     |---|---|
     |Projektname|**OpsEncrypt**|
     |Projektmappenname|**OpsEncrypt**|
-    |Framework|**.NET Framework 4.7.2**|
+    |Framework|**.NET Framework 4.7.2**|
 
 6. Klicken Sie in der Visual Studio-Konsole auf das Menü **Extras**, klicken Sie im Dropdownmenü auf **NuGet-Paket-Manager**, und klicken Sie im hierarchischen Menü auf **Paket-Manager-Konsole**.
 
@@ -457,11 +457,11 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
     Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
     ```
     
-9. Navigieren Sie zu **\\Allfiles\\Labs\\10\\program.cs**, öffnen Sie die Datei in Editor, und kopieren Sie den Inhalt in die Zwischenablage.
+9. Minimieren Sie die RDP-Sitzung auf Ihrem virtuellen Azure-Computer. Navigieren Sie dann zu **\\Allfiles\\Labs\\10\\program.cs**, öffnen Sie die Datei in Editor, und kopieren Sie den Inhalt in die Zwischenablage.
 
-10. Wechseln Sie zur Visual Studio-Konsole, klicken Sie im Fenster **Projektmappen-Explorer** auf **Program.cs**, und ersetzen Sie den Inhalt der Datei durch den Code, den Sie in die Zwischenablage kopiert haben.
+10. Kehren Sie zur RDP-Sitzung zurück, klicken Sie in der Visual Studio-Konsole im Fenster **Projektmappen-Explorer** auf **Program.cs**, und ersetzen Sie den Inhalt der Datei durch den Code, den Sie in die Zwischenablage kopiert haben.
 
-11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Platzhalter `{your_password}` durch `Pa55w.rd1234`.
+11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Platzhalter `{your_password}` durch `Pa55w.rd1234`. Wenn Sie die Zeichenfolge auf dem Lab-Computer gespeichert haben, müssen Sie möglicherweise die RDP-Sitzung verlassen, um die ADO-Zeichenfolge zu kopieren, und dann zum virtuellen Azure-Computer zurückkehren, um sie einzufügen.
 
 12. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 16 den Platzhalter `<client id noted earlier>` durch den Wert der **Anwendungs-ID (Client-ID)** der registrierten App, die Sie sich zuvor im Lab notiert haben. 
 
