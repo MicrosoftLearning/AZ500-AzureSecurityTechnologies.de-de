@@ -2,13 +2,8 @@
 lab:
   title: 15 – Microsoft Sentinel
   module: Module 04 - Manage Security Operations
-ms.openlocfilehash: 147bb0c8f6637393087c5a913f5c9bd8ca380866
-ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "147871963"
 ---
+
 # <a name="lab-15-microsoft-sentinel"></a>Lab 15: Microsoft Sentinel
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -147,7 +142,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB131415**|
     |Standort|**(USA) USA, Osten**|
     |Name des Playbooks|**Change-Incident-Severity** (Schweregrad des Incidents ändern)|

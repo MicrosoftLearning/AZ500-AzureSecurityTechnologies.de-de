@@ -2,13 +2,8 @@
 lab:
   title: '01: Rollenbasierte Zugriffssteuerung'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: da0086efa92f860f38d3bade2b18dfbcca84884c
-ms.sourcegitcommit: ff9f02863c270d4261acd5a77e8e29cf241679c5
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2022
-ms.locfileid: "139714073"
 ---
+
 # <a name="lab-01-role-based-access-control"></a>Lab 01: Rollenbasierte Zugriffssteuerung
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -247,7 +242,7 @@ In dieser Aufgabe erstellen Sie die Gruppe „Service Desk“ und weisen der Gru
 4. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um die objectId-Eigenschaft des Benutzerkontos von Dylan Williams abzurufen: 
 
     ```cli
-    OBJECTID=$(echo $USER | jq '.[].objectId' | tr -d '"')
+    OBJECTID=$(echo $USER | jq '.[].id' | tr -d '"')
     ```
 
 5. Führen Sie in der Bash-Sitzung Cloud Shell-Bereich Folgendes aus, um der Gruppe „Service Desk“ das Benutzerkonto von Dylan hinzuzufügen: 
@@ -311,7 +306,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
    |Zuweisen des Zugriffs für (unter dem Bereich „Mitglieder“)|**Benutzer, Gruppe oder Dienstprinzipal**|
    |Auswählen (+ Mitglieder auswählen)|**Service Desk**|
 
-5. Klicken Sie auf **Review + assign** (Überprüfen + zuweisen), um die Rollenzuweisung zu erstellen.
+5. Klicken Sie zweimal auf **Überprüfen und zuweisen**, um die Rollenzuweisung zu erstellen.
 
 6. Wählen Sie auf dem Blatt **Zugriffssteuerung (IAM)** die Option **Rollenzuweisungen** aus.
 

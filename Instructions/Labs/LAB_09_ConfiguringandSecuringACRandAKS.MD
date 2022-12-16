@@ -2,13 +2,8 @@
 lab:
   title: 09 – Konfigurieren und Schützen von ACR und AKS
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 167dca080d65d97997b3a884015bfa2228c17a23
-ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955417"
 ---
+
 # <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Lab 09: Konfigurieren und Schützen von ACR und AKS
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -112,7 +107,7 @@ In dieser Aufgabe erstellen Sie eine Dockerfile, erstellen ein Image aus der Doc
     ```sh
     ACRNAME=$(az acr list --resource-group AZ500LAB09 --query '[].{Name:name}' --output tsv)
 
-    az acr build --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
+    az acr build --resource-group AZ500LAB09 --image sample/nginx:v1 --registry $ACRNAME --file Dockerfile .
     ```
 
     >**Hinweis**: Warten Sie, bis der Befehl erfolgreich abgeschlossen wurde. Dies kann etwa zwei Minuten dauern.
@@ -141,7 +136,7 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
 3. Wählen Sie auf der Registerkarte **Grundlagen** auf dem Blatt **Kubernetes-Cluster erstellen** die Option **Vordefinierte Konfiguration des Clusters** und dann **Dev/Test ($)** aus. Geben Sie nun die folgenden Einstellungen an (übernehmen Sie für andere die Standardwerte):
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |----|----|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB09**|
