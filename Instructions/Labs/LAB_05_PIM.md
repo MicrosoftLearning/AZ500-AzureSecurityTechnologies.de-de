@@ -1,14 +1,9 @@
 ---
 lab:
-  title: '05: Azure AD Privileged Identity Management'
+  title: "05: Azure\_AD Privileged Identity Management"
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 6ef7c51d334587e5e4e7116194fa46f2eb5d1df0
-ms.sourcegitcommit: 1da29a6d959a7f91dbbcbabf5ec06869c98fc1f1
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "141267269"
 ---
+
 # <a name="lab-05-azure-ad-privileged-identity-management"></a>Lab 05: Azure AD Privileged Identity Management
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -125,7 +120,7 @@ In dieser Aufgabe legen Sie einen Benutzer für eine Azure AD-Verzeichnisrolle a
 
 1. Navigieren Sie im Azure-Portal zurück zum Blatt **Privileged Identity Management**, und klicken Sie auf **Azure AD-Rollen**.
 
-2. Klicken Sie auf dem Blatt **Schnellstart \| AdatumLab500-04** im Abschnitt **Verwalten** auf **Rollen**.
+2. Klicken Sie auf dem Blatt **AdatumLab500-04 \| Schnellstart** im Abschnitt **Verwalten** auf **Rollen**.
 
 3. Klicken Sie auf dem Blatt **AdatumLab500-04 \| Rollen** auf **+ Zuweisungen hinzufügen**.
 
@@ -197,7 +192,7 @@ In dieser Aufgabe aktivieren Sie eine Rolle, die Genehmigung erfordert.
 
 2. Klicken Sie auf dem Blatt **Privileged Identity Management \| Schnellstart** im Abschnitt **Aufgaben** auf **Meine Rollen**.
 
-3. Klicken Sie auf dem Blatt **Meine Rollen \| Azure AD Rollen** in der Liste **Berechtigte Zuweisungen** in der Zeile mit der Rolle **Globaler Leser** auf **Aktivieren**. 
+3. Klicken Sie auf dem Blatt **Meine Rollen \| Azure AD Rollen** in der Liste **Berechtigte Zuweisungen**in der Zeile mit der Rolle **Globaler Leser** auf **Aktivieren**. 
 
 4. Geben Sie auf dem Blatt **Aktivieren - Globaler Leser** im Textfeld **Grund** einen Text mit einer Begründung für die Aktivierung ein, und klicken Sie dann auf **Aktivieren**.
 

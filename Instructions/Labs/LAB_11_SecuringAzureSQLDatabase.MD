@@ -2,13 +2,8 @@
 lab:
   title: 11 – Schützen von Azure SQL-Datenbank
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: 1112086c681d4d81e186ad87a8a01085f42f8490
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703479"
 ---
+
 # <a name="lab-11-securing-azure-sql-database"></a>Lab 11: Schützen von Azure SQL-Datenbank
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
 
@@ -22,7 +17,7 @@ Sie sollen die Sicherheitsfeatures für Azure SQL-Datenbank überprüfen. Insbe
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -187,7 +182,7 @@ In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und 
 
 > Denken Sie daran, alle neu erstellten Azure-Ressourcen zu entfernen, die Sie nicht mehr verwenden. Durch das Entfernen nicht verwendeter Ressourcen wird sichergestellt, dass keine unerwarteten Kosten anfallen. 
 
-1. Öffnen Sie im Azure-Portal den Cloud Shell-Dienst, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
+1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
 
 2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 

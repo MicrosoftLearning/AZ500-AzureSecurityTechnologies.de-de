@@ -2,13 +2,8 @@
 lab:
   title: 08 – Azure Firewall
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: 1657a251f1355150d6386f8793825369be955705
-ms.sourcegitcommit: e9389f8de66fec6d456a3f303bd350e380df7ff2
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "141371915"
 ---
+
 # <a name="lab-08-azure-firewall"></a>Lab 08: Azure Firewall
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -84,7 +79,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB08** ein.|
    |Standort|**(USA) USA, Osten**|
 
-    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/).
+    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
 
 7. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
@@ -167,8 +162,8 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
    |Einstellung|Wert|
    |---|---|
    |Routenname|**FW-DG**|
-   |Quelle für Adresspräfix|**IP-Adressen**|
-   |IP-Quelladressen/CIDR-Bereiche|**0.0.0.0/0**
+   |Adresspräfix für das Ziel|**IP-Adresse**|
+   |Ziel-IP-Adressen/CIDR-Bereiche|**0.0.0.0/0**
    |Typ des nächsten Hops|**Virtuelles Gerät**|
    |Adresse des nächsten Hops|die private IP-Adresse der Firewall, die Sie in der vorherigen Aufgabe identifiziert haben|
 
