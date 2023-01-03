@@ -1,14 +1,9 @@
 ---
 lab:
-  title: " 12 – Dienstendpunkte und Schützen von Speicher"
+  title: ' 12 – Dienstendpunkte und Schützen von Speicher'
   module: Module 03 - Secure data and applications
-ms.openlocfilehash: 96c1073571e40558a102d2fd661b6b4e3b4f48d7
-ms.sourcegitcommit: 5eaa012a52e6f14e499393257855d314a720a668
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "147717267"
 ---
+
 # <a name="lab-12-service-endpoints-and-securing-storage"></a>Lab 12: Dienstendpunkte und Schützen von Speicher
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
 
@@ -59,7 +54,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk.
 
 2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Netzwerke** ein, und drücken Sie die **EINGABETASTE**.
 
-3. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf **+ Erstellen**.
+3. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf  **+ Erstellen**.
 
 4. Geben Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen), und klicken Sie auf **Weiter: IP-Adressen**:
 
@@ -253,9 +248,9 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Speicherkonten** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Speicherkonten** auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Speicherkonten** auf  **+ Erstellen**.
 
-3. Geben Sie auf dem Blatt **Speicherkonto erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Speicherkonto erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
     |Einstellung|Wert|
     |---|---|
@@ -336,7 +331,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Username|**localadmin**|
     |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
-    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
+    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nicht ausgewählt**|
 
     >**Hinweis**: Für öffentliche eingehende Ports verwenden wir die vorab erstellte Netzwerksicherheitsgruppe. 
 
@@ -371,7 +366,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Username|**localadmin**|
     |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
-    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
+    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nicht ausgewählt**|
 
     >**Hinweis**: Für öffentliche eingehende Ports verwenden wir die vorab erstellte Netzwerksicherheitsgruppe. 
 
@@ -428,7 +423,7 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
        Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
     }
     ```
-    >**Hinweis**: Der Platzhalter `<storage-account-name>` stellt den Namen des Speicherkontos dar, das die Dateifreigabe hostet, und `<storage_account_name>` einen zugehörigen Primärschlüssel.
+    >**Hinweis**: Der Platzhalter `<storage_account_name>` stellt den Namen des Speicherkontos dar, das die Dateifreigabe hostet, und `<storage_account_key>` einen zugehörigen Primärschlüssel.
 
 7. Starten Sie den Datei-Explorer, und überprüfen Sie, ob die Zuordnung des Laufwerks „Z:“ erfolgreich erstellt wurde.
 

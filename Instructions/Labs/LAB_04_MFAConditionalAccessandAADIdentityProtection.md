@@ -2,13 +2,8 @@
 lab:
   title: '04: MFA, bedingter Zugriff und AAD Identity Protection'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: f63f8a24c0d9b7c870967ee8c83292bd80b617f9
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "141368701"
 ---
+
 # <a name="lab-04-mfa-conditional-access-and-aad-identity-protection"></a>Lab 04: MFA, bedingter Zugriff und AAD Identity Protection
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -86,7 +81,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
    |---|---|
    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB04** ein.|
-   |Standort|**(USA) USA, Osten**|
+   |Standort|**USA, Osten**|
    |VM-Größe|**Standard_D2s_v3**|
    |VM-Name|**az500-04-vm1**|
    |Administratorbenutzername|**Kursteilnehmer**|
@@ -219,13 +214,13 @@ In dieser Aufgabe weisen Sie jeden Benutzer der Azure Active Directory Premium P
 
 1. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf den Eintrag, der Ihr Benutzerkonto darstellt. 
 
-2. Klicken Sie auf dem Blatt, auf dem die Eigenschaften Ihres Benutzerkontos angezeigt werden, auf **Bearbeiten**.  Überprüfen Sie, ob der Nutzungsstandort auf **Vereinigte Staaten** festgelegt ist. Wenn der Nutzungsstandort nicht festgelegt ist, und klicken Sie auf **Speichern**.
+2. Klicken Sie auf dem Blatt, auf dem die Eigenschaften Ihres Benutzerkontos angezeigt werden, auf **Eigenschaften bearbeiten**.  Überprüfen Sie, ob der Nutzungsstandort auf **Vereinigte Staaten** festgelegt ist. Wenn der Nutzungsstandort nicht festgelegt ist, und klicken Sie auf **Speichern**.
 
 3. Navigieren Sie zurück zum Azure Active Directory-Blatt **AdatumLab500-04**, und klicken Sie im Abschnitt **Verwalten** auf **Lizenz**.
 
 4. Klicken Sie auf dem Blatt **Lizenzen \| Übersicht** auf **Alle Produkte**, aktivieren Sie das Kontrollkästchen **Azure Active Directory Premium P2**, und klicken Sie auf **+ Zuweisen**.
 
-5. Klicken Sie auf dem Blatt **Lizenzen zuweisen** auf **+ Benutzer und Gruppen hinzufügen**.
+5. Klicken Sie auf dem Blatt **Lizenz zuweisen** auf **+ Benutzer und Gruppen hinzufügen**.
 
 6. Wählen Sie auf dem Blatt **Benutzer** die Optionen **aaduser1**, **aaduser2**, **aaduser3** und Ihr Benutzerkonto aus, und klicken Sie auf **Auswählen**.
 
@@ -245,13 +240,13 @@ In dieser Aufgabe konfigurieren Sie MFA und aktivieren MFA für aaduser1.
 
 2. Klicken Sie auf dem Blatt **AdatumLab500-04** des Azure Active Directory-Mandanten im Abschnitt **Verwalten** auf **Sicherheit**.
 
-3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Verwalten** auf **MFA**.
+3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Verwalten** auf **Multi-Faktor-Authentifizierung**.
 
-4. Klicken Sie auf dem Blatt **MFA \|Erste Schritte** auf den Link **Zusätzliche cloudbasierte MFA-Einstellungen**. 
+4. Klicken Sie auf dem Blatt **Multi-Faktor-Authentifizierung \| Erste Schritte** auf den Link **Zusätzliche cloudbasierte Multi-Faktor-Authentifizierung-Einstellungen**. 
 
-    >**Hinweis**: Dadurch wird eine neue Browserregisterkarte geöffnet, auf der die Seite für **Multi-Factor Authentication** angezeigt wird.
+    >**Hinweis**: Dadurch wird eine neue Browserregisterkarte geöffnet, auf der die Seite **Multi-Faktor-Authentifizierung** angezeigt wird.
 
-5. Klicken Sie auf der Seite **Multi-Factor Authentication** auf die Registerkarte **Diensteinstellungen**. Sehen Sie sich die **Überprüfungsoptionen** an. Beachten Sie, dass die Optionen **Textnachricht an Telefon**, **Benachrichtigung über mobile App** und **Prüfcode aus mobiler App oder Hardwaretoken** aktiviert sind. Klicken Sie auf **Speichern** und dann auf **Schließen**.
+5. Klicken Sie auf der Seite **Multi-Faktor-Authentifizierung** auf die Registerkarte **Diensteinstellungen**. Sehen Sie sich die **Überprüfungsoptionen** an. Beachten Sie, dass die Optionen **Textnachricht an Telefon**, **Benachrichtigung über mobile App** und **Prüfcode aus mobiler App oder Hardwaretoken** aktiviert sind. Klicken Sie auf **Speichern** und dann auf **Schließen**.
 
 6. Wechseln Sie zur Registerkarte **Benutzer**, klicken Sie auf den Eintrag **aaduser1**, klicken Sie auf den Link **Aktivieren**, und klicken Sie, wenn Sie dazu aufgefordert werden, auf **Multi-Factor Auth aktivieren**.
 
@@ -341,7 +336,7 @@ In dieser Aufgabe überprüfen Sie die Einstellungen der Richtlinie für bedingt
 
 3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Bedingter Zugriff**.
 
-4. Klicken Sie auf dem Blatt **Bedingter Zugriff \| Richtlinien** auf **+ Neue Richtlinie**, und wählen Sie **Neue Richtlinie erstellen** aus der Dropdownliste aus. 
+4. Klicken Sie auf dem Blatt **Bedingter Zugriff \| Richtlinien** auf **+ Neue Richtlinie**, und wählen Sie **Neue Richtlinie erstellen**aus der Dropdownliste aus. 
 
 5. Konfigurieren Sie auf dem Blatt **Neu** die folgenden Einstellungen:
 
