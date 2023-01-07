@@ -1,14 +1,9 @@
 ---
 lab:
-  title: Lab 06 – Implementieren der Verzeichnissynchronisierung
+  title: "Lab\_06\_– Implementieren der Verzeichnissynchronisierung"
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 00c359e1875ab915ab697d8ed33e36d956540529
-ms.sourcegitcommit: 1da29a6d959a7f91dbbcbabf5ec06869c98fc1f1
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "141267257"
 ---
+
 # <a name="lab-06-implement-directory-synchronization"></a>Lab 06: Implementieren der Verzeichnissynchronisierung
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -65,7 +60,7 @@ In dieser Aufgabe identifizieren Sie einen DNS-Namen für Ihre Azure-VM-Bereitst
 
     >**Hinweis**: Ersetzen Sie den Platzhalter `<custom-label>` durch einen gültigen DNS-Namen, der wahrscheinlich global eindeutig ist. Ersetzen Sie den Platzhalter `<location>` durch den Namen der Region, in der Sie die Azure-VM bereitstellen möchten. Sie soll den Active Directory-Domänencontroller hosten, den Sie in diesem Lab verwenden.
 
-    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/).
+    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
 
 5. Überprüfen Sie, ob der Befehl **True** zurückgegeben hat. Wenn das nicht zutrifft, führen Sie denselben Befehl mit einem anderen Wert für `<custom-label>` so lange erneut aus, bis der Befehl **True** zurückgibt.
 
@@ -123,7 +118,7 @@ In dieser Aufgabe erstellen Sie einen neuen Azure AD-Mandanten, der in diesem L
 
 2. Klicken Sie auf dem Blatt mit der **Übersicht** über Ihren aktuellen Azure AD-Mandanten auf **Mandanten verwalten** und dann im nächsten Bildschirm auf **+ Erstellen**.
 
-3. Stellen Sie auf dem Blatt **Verzeichnis erstellen** auf der Registerkarte **Grundlagen** sicher, dass die Option **Azure Active Directory** ausgewählt ist, und klicken Sie auf **Weiter: Konfiguration >** .
+3. Stellen Sie auf dem Blatt **Mandant erstellen** auf der Registerkarte **Grundlagen** sicher, dass die Option **Azure Active Directory** ausgewählt ist, und klicken Sie dann auf **Weiter: Konfiguration >** .
 
 4. Geben Sie auf der Registerkarte **Konfiguration** des Blatts **Verzeichnis erstellen** die folgenden Einstellungen an:
 
@@ -194,7 +189,7 @@ In dieser Aufgabe fügen Sie einen neuen Azure AD-Benutzer hinzu und weisen ihn
 
 6. Melden Sie sich als **syncadmin** ab, und schließen Sie das InPrivate-Browserfenster.
 
-> **Ergebnis**: Nach Abschluss dieser Übung haben Sie einen Azure AD-Mandanten erstellt, dem neuen Azure AD-Mandanten einen benutzerdefinierten DNS-Namen hinzugefügt und einen Azure AD-Benutzer mit der Rolle „Globaler Administrator“ erstellt.
+> **Ergebnis**: Nach Abschluss dieser Übung haben Sie einen Azure AD-Mandanten erstellt, erfahren, wie Sie dem neuen Azure AD-Mandanten einen benutzerdefinierten DNS-Namen hinzugefügen, und einen Azure AD-Benutzer mit der Rolle „Globaler Administrator“ erstellt.
 
 
 ### <a name="exercise-3-synchronize-active-directory-forest-with-an-azure-active-directory-tenant"></a>Übung 3: Synchronisieren einer Active Directory-Gesamtstruktur mit einem Azure Active Directory-Mandanten
@@ -299,7 +294,7 @@ In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer.
 
     >**Hinweis:** Wie bereits erläutert wurde, wird dies erwartet, da Sie die benutzerdefinierte Azure AD DNS-Domäne **adatum.com** nicht überprüfen konnten.
 
-16. Klicken Sie auf der Seite **Filtern von Domänen und Organisationseinheiten** auf die Option **Ausgewählte Domänen und Organisationseinheiten synchronisieren**. Der Domänenname **adatum.com** wird überprüft. Erweitern Sie **adatum.com**, um die **ToSync**-OE anzuzeigen. Deaktivieren Sie alle Kontrollkästchen. Aktivieren Sie nur das Kontrollkästchen neben der **ToSync**-OE, und klicken Sie auf **Weiter**.
+16. Klicken Sie auf der Seite **Filtern von Domänen und Organisationseinheiten** auf die Option **Ausgewählte Domänen und Organisationseinheiten synchronisieren**. Der Domänenname **adatum.com** wird überprüft. Erweitern Sie **adatum.com**, um die**ToSync**-OE anzuzeigen. Deaktivieren Sie alle Kontrollkästchen. Aktivieren Sie nur das Kontrollkästchen neben der **ToSync**-OE, und klicken Sie auf **Weiter**.
 
 17. Übernehmen Sie auf der Seite **Eindeutige Identifizierung Ihrer Benutzer** die Standardeinstellungen, und klicken Sie auf **Weiter**.
 

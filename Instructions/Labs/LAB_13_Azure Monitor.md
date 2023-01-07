@@ -1,14 +1,9 @@
 ---
 lab:
-  title: 13 – Azure Monitor
+  title: "13\_– Azure Monitor"
   module: Module 04 - Manage security operations
-ms.openlocfilehash: d7418287b895ccb5af66f01b499181b321e2bc36
-ms.sourcegitcommit: 3c178de473f4f986a3a7ea1d03c9f5ce699a05a4
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "147871972"
 ---
+
 # <a name="lab-13-azure-monitor"></a>Lab 13: Azure Monitor
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -66,23 +61,10 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 5. Führen Sie in der PowerShell-Sitzung im Bereich „Cloud Shell“ Folgendes aus, um einen neuen virtuellen Azure-Computer zu erstellen: 
 
-    >**Achtung:** Der New-AzVm-Befehl funktioniert nicht in der Azure CLI-Version 4.24, und Microsoft sucht derzeit nach einer Lösung.  In diesem Lab können Sie das Problem umgehen, indem Sie die Az.Compute-Version 4.23.0 installieren und wiederherstellen, die von diesem Problem nicht betroffen ist.
-   
-    >**Anleitung:** Wiederherstellung von Az.Compute Version 4.23.0 
-  
-   #### <a name="step-1-download-the-working-version-of-the-module-4230-into-your-cloud-shell-session"></a>Schritt 1: Laden Sie die funktionsfähige Version des Moduls (4.23.0) in Ihre Cloudshellsitzung herunter. 
-   **Typ:** Install-Module -Name Az.Compute -Force -RequiredVersion 4.23.0
-
-   #### <a name="step-2-start-a-new-powershell-session-that-will-allow-the-azcompute-assembly-version-to-be-loaded"></a>Schritt 2: Starten Sie eine neue PowerShell-Sitzung, mit der die Az.Compute-Assemblyversion geladen werden kann. 
-   **Typ**: pwsh
-
-   #### <a name="step-3-verify-that-version-4230-is-loaded"></a>Schritt 3: Überprüfen Sie, ob die Version 4.23.0 geladen wurde.
-   **Typ:** Get-Module -Name Az.Compute
-   
     ```powershell
-    New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -OpenPorts 80,3389
+    New-AzVm -ResourceGroupName "AZ500LAB131415" -Name "myVM" -Location 'EastUS' -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName   "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress" -PublicIpSku Standard -OpenPorts 80,3389 -Size Standard_DS1_v2 
     ```
-
+    
 6.  Wenn Sie zur Eingabe von Anmeldeinformationen aufgefordert werden:
 
     |Einstellung|Wert|
@@ -106,16 +88,16 @@ In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Log Analytics-Arbeitsbereiche** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Log Analytics-Arbeitsbereiche** auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Log Analytics-Arbeitsbereiche** auf  **+ Erstellen**.
 
 3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Log Analytics-Arbeitsbereiche erstellen** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte):
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB131415**|
     |Name|Ein beliebiger gültiger, global eindeutiger Name|
-    |Region|**(USA) USA, Osten**|
+    |Region|**USA, Osten**|
 
 4. Klicken Sie auf **Überprüfen + erstellen**.
 

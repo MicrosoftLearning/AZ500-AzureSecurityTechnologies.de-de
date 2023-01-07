@@ -2,13 +2,8 @@
 lab:
   title: 10 – Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
   module: Module 03 - Secure Data and Applications
-ms.openlocfilehash: aa30698684cad8837b95fe823ce16a4043b63e5c
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "141368712"
 ---
+
 # <a name="lab-10-key-vault-implementing-secure-data-by-setting-up-always-encrypted"></a>Lab 10: Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
 # <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
 
@@ -74,13 +69,13 @@ In dieser Aufgabe stellen Sie einen virtuellen Azure-Computer bereit, auf dem Vi
    |---|---|
    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB10** ein.|
-   |Standort|**(USA) USA, Osten**|
+   |Standort|**USA, Osten**|
    |Administratorbenutzername|**Kursteilnehmer**|
    |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    
     >**Hinweis**: Sie können zwar die für die Anmeldung beim virtuellen Computer verwendeten Administratoranmeldeinformationen ändern, dies ist jedoch nicht erforderlich.
 
-    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/).
+    >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
 
 7. Klicken Sie auf die Schaltfläche **Überprüfen und erstellen**, und bestätigen Sie die Bereitstellung, indem Sie auf die Schaltfläche **Erstellen** klicken. 
 
@@ -126,20 +121,22 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
 
 7. Klicken Sie auf dem Blatt „Ressourcengruppe“ auf den Eintrag, der die neu erstellte Key Vault-Ressource darstellt. 
 
-8. Klicken Sie auf dem Blatt der Key Vault-Ressource im Abschnitt **Einstellungen** auf **Zugriffsrichtlinien** und klicken Sie dann auf **+ Zugriffsrichtlinie hinzufügen**.
+8. Klicken Sie auf dem Blatt der Key Vault-Ressource im Abschnitt **Übersicht** auf **Zugriffsrichtlinien**, und klicken Sie dann auf **+ Erstellen**.
 
-9. Geben Sie auf dem Blatt **Zugriffsrichtlinie hinzufügen** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte): 
+9. Geben Sie auf dem Blatt **Zugriffsrichtlinie erstellen** die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte): 
 
     |Einstellung|Wert|
     |----|----|
     |Anhand einer Vorlage konfigurieren (optional)|**Schlüssel, Geheimnisse und Zertifikate verwalten**|
-    |Schlüsselberechtigungen|Klicken Sie auf **Alles auswählen**. Dadurch werden **16 ausgewählte** Berechtigungen angezeigt (Stellen Sie sicher, dass die Berechtigungen für **Rotationsrichtlinien-Vorgänge** **nicht aktiviert** sind). |
-    |Berechtigungen für Geheimnis|Klicken Sie auf **Alle auswählen**, was zu insgesamt **8 ausgewählten** Berechtigungen führt.|
-    |Zertifikatberechtigungen|Klicken Sie auf **Alle auswählen**, was zu insgesamt **16 ausgewählten** Berechtigungen führt.|
-    |Prinzipal auswählen|Klicken Sie auf **Nichts ausgewählt**, wählen Sie auf dem Blatt **Prinzipal** Ihr Benutzerkonto aus, und klicken Sie dann auf **Auswählen**.|
-
-10. Klicken Sie anschließend auf dem Blatt **Zugriffsrichtlinie hinzufügen** auf **Hinzufügen**, um die Zugriffsrichtlinie hinzuzufügen, und klicken Sie dann auf dem Blatt „Zugriffsrichtlinien“ der Key Vault-Ressource auf **Speichern**, um Ihre Änderungen zu speichern. 
-
+    |Schlüsselberechtigungen|Klicken Sie auf **Alles auswählen**. Dadurch werden **12 ausgewählte** Berechtigungen angezeigt. (Stellen Sie sicher, dass die Berechtigungen für **Rotationsrichtlinien-Vorgänge** **nicht aktiviert** sind.) |
+    |Berechtigungen für Geheimnis|Klicken Sie auf **Alle auswählen**, was zu insgesamt **7 ausgewählten** Berechtigungen führt.|
+    |Zertifikatberechtigungen|Klicken Sie auf **Alle auswählen**, was zu insgesamt **15 ausgewählten** Berechtigungen führt.|
+    |Prinzipal auswählen|Klicken Sie auf **Nichts ausgewählt**, wählen Sie auf dem Blatt **Prinzipal** Ihr Benutzerkonto aus, und klicken Sie dann auf **Weiter**.|
+    |Anwendung (optional)|click **Weiter**|
+    |Bewerten + erstellen|Klicken Sie auf **Erstellen**.|
+    
+    >**Hinweis**: Der vorherige Vorgang „Überprüfen + erstellen“ kehrt zur Seite „Zugriffsrichtlinien zurück“, auf der „Anwendung“, „E-Mail“, „Schlüsselberechtigungen“, „Geheimnisberechtigungen“ und „Zertifikatberechtigungen“ aufgeführt sind.
+      
 #### <a name="task-2-add-a-key-to-key-vault"></a>Aufgabe 2: Hinzufügen eines Schlüssels zur Key Vault-Ressource
 
 In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und zeigen Informationen zum Schlüssel an. 
@@ -172,7 +169,7 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
 
 6. Minimieren Sie den Cloud Shell-Bereich. 
 
-7. Klicken Sie im Azure-Portal auf dem Blatt „Key Vault“ im Abschnitt **Einstellungen** auf **Schlüssel**.
+7. Klicken Sie im Azure-Portal auf dem Blatt „Key Vault“ im Abschnitt **Objekte** auf **Schlüssel**.
 
 8. Klicken Sie in der Liste der Schlüssel auf den Eintrag **MyLabKey**, und klicken Sie dann auf dem Blatt **MyLabKey** auf den Eintrag, der die aktuelle Version des Schlüssels darstellt.
 
@@ -207,7 +204,7 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
 
 5. Minimieren Sie den Cloud Shell-Bereich. 
 
-6. Navigieren Sie im Azure-Portal zurück zum Blatt „Key Vault“, und klicken Sie im Abschnitt **Einstellungen** auf **Geheimnisse**.
+6. Navigieren Sie im Azure-Portal zurück zum Blatt „Key Vault“, und klicken Sie im Abschnitt **Objekte** auf **Geheimnisse**.
 
 7. Klicken Sie in der Liste der Geheimnisse auf den Eintrag **SQLPassword**, und klicken Sie dann auf dem Blatt **SQLPassword** auf den Eintrag, der die aktuelle Version des Geheimnisses darstellt.
 
@@ -229,7 +226,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 #### <a name="task-1-enable-a-client-application-to-access-the-azure-sql-database-service"></a>Aufgabe 1: Ermöglichen des Zugriffs einer Clientanwendung auf den Azure SQL-Datenbank-Dienst 
 
-In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azure SQL-Datenbank-Dienst. Dies erfolgt durch Einrichten der erforderlichen Authentifizierung und durch Abrufen der Anwendungs-ID und des Geheimnisses, die Sie zum Authentifizieren Ihrer Anwendung benötigen. T
+In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azure SQL-Datenbank-Dienst. Dies erfolgt durch Einrichten der erforderlichen Authentifizierung und durch Abrufen der Anwendungs-ID und des Geheimnisses, die Sie zum Authentifizieren Ihrer Anwendung benötigen.
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **App-Registrierungen** ein, und drücken Sie die **EINGABETASTE**.
 
@@ -315,7 +312,7 @@ Im Rahmen der ARM-Vorlagenbereitstellung in Übung 1 haben Sie eine Azure SQL 
    
 4. Notieren Sie sich die **ADO.NET-Verbindungszeichenfolge**. Sie benötigen sie später.
 
-    >**Hinweis**: Stellen Sie beim Verwenden der Verbindungszeichenfolge sicher, dass Sie den Platzhalter `{your_password}` durch **Pa55w.rd1234** ersetzen.
+    >**Hinweis:** Wenn Sie die Verbindungszeichenfolge verwenden, müssen Sie den Platzhalter `{your_password}` durch das Kennwort ersetzen, das Sie mit der Bereitstellung in Übung 1 konfiguriert haben.
 
 #### <a name="task-4-log-on-to-the-azure-vm-running-visual-studio-2019-and-sql-management-studio-2018"></a>Aufgabe 4: Anmelden bei dem virtuellen Azure-Computer, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 ausgeführt werden
 
@@ -402,7 +399,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
 
 14. Wählen Sie auf der Seite **Spaltenauswahl** die Spalten **SSN** und **Geburtsdatum** aus, legen Sie den **Verschlüsselungstyp** der Spalte **SSN** auf **Deterministisch** und den der Spalte **Geburtsdatum** auf **Zufällig** fest, und klicken Sie dann auf **Weiter**.
 
-    >**Hinweis**: Wenn während der Verschlüsselung ein Fehler wie **Exception has been thrown by the target of an innvocation** (Eine Ausnahme wurde vom Ziel eines Aufrufs ausgelöst) im Zusammenhang mit **Rotary(Microsoft.SQLServer.Management.ServiceManagement)** ausgelöst wurde, stellen Sie sicher, dass die **Schlüsselberechtigungs**-Werte der **Rotationsrichtlinienvorgänge** **nicht aktiviert** sind. Wenn dies nicht der Fall ist, sollten Sie im Azure-Portal zu **Schlüsseltresor** >> **Zugriffsberechtigungen** >> **Schlüsselberechtigungen** navigieren. >> Deaktivieren Sie alle Werte unter den **Rotationsrichtlinienvorgängen**. 
+    >**Hinweis:** Wenn während der Verschlüsselung ein Fehler wie **Exception has been thrown by the target of an innvocation** (Eine Ausnahme wurde vom Ziel eines Aufrufs ausgelöst) im Zusammenhang mit **Rotary(Microsoft.SQLServer.Management.ServiceManagement)** ausgelöst wurde, stellen Sie sicher, dass die Werte der **Rotationsrichtlinienvorgänge** für die **Schlüsselberechtigung** **nicht aktiviert** sind. Andernfalls sollten Sie im Azure-Portal zu **Schlüsseltresor** >> **Zugriffsberechtigungen** >> **Schlüsselberechtigungen** navigieren. Deaktivieren Sie dort alle Werte unter den **Rotationsrichtlinienvorgängen** sowie unter **Vorgänge mit privilegiertem Schlüssel** die Option **Veröffentlichen**.
 
 15. Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** die Option **Azure Key Vault** aus, und klicken Sie auf **Anmelden**. Authentifizieren Sie sich bei entsprechender Aufforderung mit demselben Benutzerkonto, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben. Stellen Sie sicher, dass diese Key Vault-Instanz in der Dropdownliste **Azure Key Vault-Instanz auswählen** angezeigt wird, und klicken Sie auf **Weiter**.
 
@@ -469,7 +466,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
 
 14. Klicken Sie in der Visual Studio-Konsole auf die Schaltfläche **Start**, um die Erstellung der Konsolenanwendung zu initiieren und um sie zu starten.
 
-15. Die Anwendung wird mit einem Eingabeaufforderungsfenster gestartet. Wenn Sie zur Eingabe eines Kennworts aufgefordert werden, geben Sie **Pa55w.rd1234** ein, um eine Verbindung mit Azure SQL-Datenbank herzustellen. 
+15. Die Anwendung wird mit einem Eingabeaufforderungsfenster gestartet. Geben Sie bei entsprechender Aufforderung das Kennwort ein, das Sie in der Bereitstellung in Übung 1 angegeben haben, um eine Verbindung mit Azure SQL-Datenbank herzustellen. 
 
 16. Führen Sie die Konsolenanwendung weiterhin aus, und wechseln Sie zur **SQL Server Management Studio**-Konsole. 
 

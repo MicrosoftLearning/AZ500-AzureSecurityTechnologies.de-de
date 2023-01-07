@@ -2,13 +2,8 @@
 lab:
   title: '03: Azure Resource Manager-Sperren'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: 54375454646bdcf0586b249f65349691c3a3b9c3
-ms.sourcegitcommit: a8470295248a6363987bd5ea47154fe39f8535c3
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2022
-ms.locfileid: "139703533"
 ---
+
 # <a name="lab-03-resource-manager-locks"></a>Lab 03: Resource Manager-Sperren
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -22,7 +17,7 @@ Sie wurden aufgefordert, einen Proof of Concept zu erstellen, der zeigt, wie Res
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
  
-## <a name="lab-objectives"></a>Labziele
+## <a name="lab-objectives"></a>Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
@@ -62,7 +57,12 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe und ein Speicherkonto für
 
     ```powershell
     New-AzResourceGroup -Name AZ500LAB03 -Location 'EastUS'
+    
+    Confirm
+    Provided resource group already exists. Are you sure you want to update it?
+    [Y] Yes [N] No [S] Suspend [?] Help (default is "Y"): Y
     ```
+1. Geben Sie in der PowerShell-Sitzung im Bereich „Cloud Shell“ **J** ein, und drücken Sie die EINGABETASTE.
 
 1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Speicherkonto in der neu erstellten Ressourcengruppe zu erstellen:
     

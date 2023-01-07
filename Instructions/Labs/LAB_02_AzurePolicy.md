@@ -2,13 +2,8 @@
 lab:
   title: '02: Azure Policy'
   module: Module 01 - Manage Identity and Access
-ms.openlocfilehash: d49ce05e4620310d45317fe582bddb3aa511430b
-ms.sourcegitcommit: 967cb50981ef07d731dd7548845a38385b3fb7fb
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2022
-ms.locfileid: "145955389"
 ---
+
 # <a name="lab-02-azure-policy"></a>Lab 02: Azure Policy
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -59,7 +54,12 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab.
 
     ```powershell
     New-AzResourceGroup -Name AZ500LAB02 -Location 'East US'
+    
+    Confirm
+    Provided resource group already exists. Are you sure you want to update it?
+    [Y] Yes [N] No [S] Suspend [?] Help (default is "Y"): Y
     ```
+1. Geben Sie in der PowerShell-Sitzung im Bereich „Cloud Shell“ **J** ein, und drücken Sie die EINGABETASTE.
 
 1. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Ressourcengruppen aufzulisten und zu bestätigen, dass die neue Ressourcengruppe erstellt wurde:
 
@@ -75,7 +75,7 @@ In dieser Aufgabe erstellen Sie eine Richtlinienzuweisung „Zulässige Standort
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcen** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Wählen Sie auf dem Blatt **Richtlinie** im Abschnitt **Erstellung** die Option **Definitionen** aus.
+1. Wählen Sie auf dem Blatt **Richtlinie** im Abschnitt **Erstellung** die Option  **Definitionen** aus.
 
 1. Nehmen Sie sich eine Minute Zeit, um die integrierten Definitionen zu durchsuchen. Verwenden Sie die Dropdownliste **Kategorie**, um die Liste der Richtlinien zu filtern.
 
@@ -83,7 +83,7 @@ In dieser Aufgabe erstellen Sie eine Richtlinienzuweisung „Zulässige Standort
 
    >**Hinweis**: Mit der Richtlinie **Zulässige Standorte** können Sie den Standort von Ressourcen (nicht von Ressourcengruppen) einschränken. Um Standorte von Ressourcengruppen einzuschränken, können Sie die Richtlinie **Zulässige Standorte für Ressourcengruppen** verwenden.
 
-1. Klicken Sie auf die Richtliniendefinition **Zulässige Standorte**, um die zugehörigen Details anzuzeigen. 
+1. Klicken Sie auf die Richtliniendefinition  **Zulässige Standorte**, um die zugehörigen Details anzuzeigen. 
 
    >**Hinweis**: Diese Richtliniendefinition verwendet ein Array von Standorten als Parameter. Eine Richtlinienregel ist eine Wenn-dann-Anweisung (if-then). Die if-Klausel überprüft, ob der Ressourcenstandort in der Parameterliste enthalten ist. Wenn dies nicht der Fall ist, verweigert die then-Klausel die Ressourcenerstellung oder markiert vorhandene Ressourcen als nicht konform.
 
@@ -91,7 +91,7 @@ In dieser Aufgabe erstellen Sie eine Richtlinienzuweisung „Zulässige Standort
 
 1. Klicken Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Zulässige Standorte** neben dem Textfeld **Bereich** auf die Schaltfläche mit den Auslassungszeichen (...), und geben Sie auf dem Blatt **Bereich** die folgenden Einstellungen an:
 
-   |Einstellung|value|
+   |Einstellung|Wert|
    |---|---|
    |Subscription|Der Name Ihres Azure-Abonnements|
    |Resource group|**AZ500LAB02**|
@@ -106,13 +106,13 @@ In dieser Aufgabe erstellen Sie eine Richtlinienzuweisung „Zulässige Standort
    |BESCHREIBUNG|**Erstellen von Ressourcen in „Vereinigtes Königreich, Süden“ nur für AZ500LAB02 zulassen**|
    |Durchsetzung von Richtlinien|**Aktiviert**|
 
-1. Klicken Sie auf **Weiter**.
+1. Klicken Sie auf  **Weiter**.
 
-1. Wählen Sie auf der Registerkarte **Parameter** des Blatts **Zulässige Standorte** in der Dropdownliste **Zulässige Standorte** die Option **Vereinigtes Königreich, Süden** als einzigen zulässigen Standort aus. 
+1. Wählen Sie auf der Registerkarte **Parameter** des Blatts **Zulässige Standorte** in der Dropdownliste **Zulässige Standorte** die Option **Vereinigtes Königreich, Süden** als einzigen zulässigen Standort aus. 
 
    >**Hinweis**: Sie können mehrere Standorte auswählen. Wenn die Richtlinie einen anderen Satz von Parametern erfordern würde, würde diese Registerkarte deren Auswahl bereitstellen. 
 
-1. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**, um die Richtlinienzuweisung zu erstellen. 
+1. Klicken Sie auf  **Überprüfen und erstellen** und dann auf  **Erstellen**, um die Richtlinienzuweisung zu erstellen. 
 
    >**Hinweis**: Es wird eine Benachrichtigung angezeigt, dass die Zuweisung erfolgreich war und ungefähr 30 Minuten bis zur Fertigstellung in Anspruch nehmen kann.
 
@@ -124,29 +124,29 @@ In dieser Aufgabe  testen Sie die Richtlinienzuweisung „Zulässige Standorte�
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Netzwerke** ein, und drücken Sie die **EINGABETASTE**.
 
-1. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf **+ Erstellen**.
+1. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf  **+ Erstellen**.
 
    >**Hinweis**: Zunächst versuchen Sie, ein virtuelles Netzwerk in „USA, Osten“ zu erstellen. Da dies kein zulässiger Standort ist, sollte die Anforderung blockiert werden. 
 
-1. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Neues Netzwerk erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+1. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Neues Netzwerk erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |---|---|
     |Resource group|**AZ500LAB02**|
     |Name|**myVnet**|
-    |Region|**(USA) USA, Osten**|
+    |Region|**USA, Osten**|
 
-1. Klicken Sie auf **Überprüfen + erstellen**. 
+1. Klicken Sie auf  **Überprüfen + erstellen**. 
 
-1. Beachten Sie auf der Registerkarte **Überprüfen und erstellen** des Blatts **Virtuelles Netzwerk erstellen** die Meldung **Überprüfungsfehler**. 
+1. Beachten Sie auf der Registerkarte **Überprüfen und erstellen** des Blatts **Virtuelles Netzwerk erstellen** die Meldung **Überprüfungsfehler**. 
 
     > **Hinweis**: Wenn die Warnung **Überprüfungsfehler** nicht angezeigt wird, klicken Sie auf **Zurück**, und warten Sie einige Minuten.
 
 1. Klicken Sie auf der Registerkarte **Grundlagen** auf den Link zur Fehlermeldung, um das Blatt **Richtlinienzuweisung** zu öffnen. Ihnen wird die Richtlinienzuweisung angezeigt, die den Speicherort einschränkt.
 
-1. Schließen Sie das Blatt **Richtlinienzuweisung**, klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf die Registerkarte **Grundlagen**, und wählen Sie dann in der Dropdownliste **Region** die Option **(Europa) Vereinigtes Königreich, Süden** aus.
+1. Schließen Sie das Blatt **Richtlinienzuweisung**, klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf die Registerkarte **Grundlagen**, und wählen Sie dann in der Dropdownliste **Region** die Option **Vereinigtes Königreich, Süden** aus.
 
-1. Klicken Sie auf **Überprüfen und erstellen**, bestätigen Sie, dass die Überprüfung erfolgreich war, klicken Sie auf **Erstellen**, und bestätigen Sie, dass das virtuelle Netzwerk erfolgreich erstellt wurde. 
+1. Klicken Sie auf  **Überprüfen und erstellen**, bestätigen Sie, dass die Überprüfung erfolgreich war, klicken Sie auf **Erstellen**, und bestätigen Sie, dass das virtuelle Netzwerk erfolgreich erstellt wurde. 
 
 > Ergebnisse der Übung: In dieser Übung haben Sie gelernt, eine Azure-Richtlinie anzuwenden, indem Sie eine integrierte Richtliniendefinition ausgewählt und sie einer Ressourcengruppe zugewiesen haben.
 
@@ -167,6 +167,6 @@ In dieser Aufgabe  testen Sie die Richtlinienzuweisung „Zulässige Standorte�
 
 1. Wählen Sie im Abschnitt Erstellen die Option **Zuweisungen** aus.
 
-1. Wählen Sie in der Liste der Zuordnungen den Namen der Richtlinie **"Zulässige Speicherorte** " aus, die Sie in dieser Übung erstellt haben.
+1. Wählen Sie in der Liste der Zuweisungen den Namen der Richtlinie **Zulässige Standorte** aus, die Sie in diesem Lab erstellt haben.
 
-1. Wählen Sie in der **Richtlinienzuweisung die Zuordnung "Löschen"** aus, und wählen Sie dann **"Ja**" aus.
+1. Wählen Sie in der Richtlinienzuweisung die Option **Zuordnung löschen** und dann **Ja** aus.

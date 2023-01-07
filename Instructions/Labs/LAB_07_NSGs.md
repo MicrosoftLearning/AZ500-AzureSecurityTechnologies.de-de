@@ -2,13 +2,8 @@
 lab:
   title: 07 – Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
   module: Module 02 - Implement Platform Protection
-ms.openlocfilehash: d7cfed1e861215cf32c3b51c4a07aa6886575000
-ms.sourcegitcommit: 2f08105eaaf0413d3ec3c12a3b078678151fd211
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2022
-ms.locfileid: "141368699"
 ---
+
 # <a name="lab-07-network-security-groups-and-application-security-groups"></a>Lab 07: Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
 # <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
 
@@ -66,7 +61,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB07** ein.|
     |Name|**myVirtualNetwork**|
     |Region|**USA, Osten**|
@@ -128,7 +123,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB07**|
     |Name|**myNsg**|
     |Region|**USA, Osten**|
@@ -146,7 +141,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**default**|
 
-#### <a name="task-4-create-inbound-nsg-security-rules-to-all-traffic-to-web-servers-and-rdp-to-the-management-servers"></a>Aufgabe 4: Erstellen von NSG-Sicherheitsregeln für den gesamten eingehenden Datenverkehr an Webserver und RDP an die Verwaltungsserver. 
+#### <a name="task-4-create-inbound-nsg-security-rules-to-all-traffic-to-web-servers-and-rdp-to-the-servers"></a>Aufgabe 4: Erstellen von NSG-Sicherheitsregeln für den gesamten eingehenden Datenverkehr an Webserver und RDP an die Server. 
 
 1. Klicken Sie auf dem Blatt **myNsg** im Abschnitt **Einstellungen** auf **Sicherheitsregeln für eingehenden Datenverkehr**.
 
@@ -223,7 +218,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 6. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-7. Klicken Sie auf **Weiter: Verwaltung >** , und überprüfen Sie auf der Registerkarte **Verwaltung** des Blatts **Virtuellen Computer erstellen** die folgende Einstellung:
+7. Klicken Sie auf **Weiter: Verwaltung >** , dann auf der Registerkarte **Überwachung** des Blatts **Virtuellen Computer erstellen** auf **Weiter: Überwachung**, und überprüfen Sie die folgende Einstellung:
 
    |Einstellung|Wert|
    |---|---|
@@ -248,7 +243,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
    |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
    |Öffentliche Eingangsports|**None**|
    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
@@ -260,7 +255,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
 
 5. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-6. Klicken Sie auf **Weiter: Verwaltung >** , und geben Sie auf der Registerkarte **Verwaltung** des Blatts **Virtuellen Computer erstellen** die folgenden Einstellungen ein.
+6. Klicken Sie auf **Weiter: Verwaltung >** , dann auf der Registerkarte **Überwachung** des Blatts **Virtuellen Computer erstellen** auf **Weiter: Überwachung**, und überprüfen Sie die folgende Einstellung:
 
    |Einstellung|Wert|
    |---|---|

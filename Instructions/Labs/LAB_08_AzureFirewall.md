@@ -67,7 +67,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 
 4. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\08\\template.json**, und klicken Sie auf **Öffnen**.
 
-    >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und beachten Sie, dass sie eine Azure-VM bereitstellt, die Windows Server 2019 Datacenter hostet.
+    >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und beachten Sie, dass sie eine Azure-VM bereitstellt, die Windows Server 2016 Datacenter hostet.
 
 5. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
 
