@@ -424,45 +424,89 @@ In dieser Aufgabe zeigen Sie die Azure AD Identity Protection-Optionen im Azure
 
     >**Hinweis**: Stellen Sie sicher, dass Sie beim Azure AD-Mandanten **AdatumLab500-04** angemeldet sind. Sie können den Filter **Verzeichnis und Abonnement** verwenden, um zwischen Azure AD-Mandanten zu wechseln. Stellen Sie sicher, dass Sie als Benutzer mit der Rolle „Globaler Administrator“ im Azure AD-Mandanten angemeldet sind.
 
-2. Klicken Sie auf dem Blatt **AdatumLab500-04** im Abschnitt **Verwalten** auf **Sicherheit**.
-
-3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Identity Protection**.
-
-4. Überprüfen Sie auf dem Blatt **Identitätsschutz \| Übersicht** die Diagramme **Neue riskante Benutzer erkannt** und **Neue riskante Anmeldungen erkannt** sowie weitere Informationen zu riskanten Benutzern. 
-
 #### <a name="task-2-configure-a-user-risk-policy"></a>Aufgabe 2: Konfigurieren einer Benutzerrisiko-Sicherheitsrichtlinie
 
 In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie. 
 
-1. Klicken Sie auf dem Blatt **Identity Protection \| Übersicht** im Abschnitt **Schützen** auf **Benutzerrisiko-Sicherheitsrichtlinie**.
+2. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff**.
 
-2. Konfigurieren Sie die **Richtlinie zum Beheben des Benutzerrisikos** mit den folgenden Einstellungen: 
+3. Klicken Sie auf **Neue Richtlinie**.
 
-   - Klicken Sie auf **Benutzer**. Stellen Sie auf der Registerkarte **Einschließen** des Blatts **Benutzer** sicher, dass die Option **Alle Benutzer** ausgewählt ist.
+4. Geben Sie den Richtliniennamen **AZ500Policy2** in das Textfeld **Name** ein.
 
-   - Wechseln Sie auf dem Blatt **Benutzer** zur Registerkarte **Ausschließen**, klicken Sie auf **Ausgeschlossene Benutzer auswählen**, wählen Sie Ihr Benutzerkonto aus, und klicken Sie dann auf **Auswählen**. 
+5. Wählen Sie unter **Zuweisungen** die Option **Benutzer** aus.
 
-   - Klicken Sie auf **Benutzerrisiko**. Wählen Sie auf dem Blatt **Benutzerrisiko** die Option **Niedrig und höher** aus,und klicken Sie dann auf **Fertig**. 
+6. Klicken Sie unter **Einschließen** auf **Benutzer und Gruppen auswählen**, und wählen Sie **aaduser2** und **aaduser3** aus.
 
-   - Klicken Sie auf **Zugriff**. Stellen Sie auf dem Blatt **Zugriff** sicher, dass die Option **Zugriff zulassen** und das Kontrollkästchen **Kennwortänderung erforderlich** aktiviert sind, und klicken Sie auf **Fertig**.
+7. Klicken Sie unter **Ausschließen** auf **Benutzer und Gruppen**, und wählen Sie **aaduser1** aus. 
 
-   - Legen Sie **Richtlinie erzwingen** auf **Ein** fest, und klicken Sie auf **Speichern**.
+8. Wählen Sie unter **Cloud-Apps oder -aktionen** > **Einschließen** die Option **Alle Cloud-Apps** aus.
 
-#### <a name="task-3-configure-sign-in-risk-policy"></a>Aufgabe 3: Konfigurieren der Anmelderisiko-Richtlinie
+9. Legen Sie unter **Bedingungen** > **Benutzerrisiko** die Option **Konfigurieren** auf **Ja**fest.
 
-In dieser Aufgabe konfigurieren Sie eine Anmelderisiko-Richtlinie. 
+10. Wählen Sie unter **Hiermit konfigurieren Sie die Benutzerrisikostufen, die für die Erzwingung der Richtlinie erforderlich sind** die Option **Hoch** aus.
 
-1. Klicken Sie auf dem Blatt **Identity Protection \| Benutzerrisiko-Sicherheitsrichtlinie** im Abschnitt **Schützen** auf **Anmelderisiko-Richtlinie**.
+11. Klicke auf **Fertig**.
 
-2. Konfigurieren Sie die **Richtlinie zum Beheben des Anmelderisikos** mit den folgenden Einstellungen: 
+12. Stellen Sie unter **Zugriffssteuerungen** sicher, dass **Zuweisung** aktiviert ist.    
 
-   - Klicken Sie auf **Benutzer**. Stellen Sie auf der Registerkarte **Einschließen** des Blatts **Benutzer** sicher, dass die Option **Alle Benutzer** ausgewählt ist.
+13. Wählen Sie **Multi-Faktor-Authentifizierung erfordern** und **Kennwortänderung erforderlich** aus.
 
-   - Klicken Sie auf **Anmelderisiko**. Wählen Sie auf dem Blatt **Anmelderisiko** die Option **Mittel und höher** aus,und klicken Sie dann auf **Fertig**. 
+14. Klicken Sie auf **Auswählen**.
 
-   - Klicken Sie auf **Zugriff**. Stellen Sie auf dem Blatt **Zugriff** sicher, dass die Option **Zugriff zulassen** und das Kontrollkästchen **Mehrstufige Authentifizierung erforderlich** aktiviert sind, und klicken Sie auf **Fertig**.
+15. Klicken Sie unter **Sitzung** auf **Anmeldehäufigkeit**, und stellen Sie sicher, dass **Immer** aktiviert ist.
 
-   - Legen Sie **Richtlinie erzwingen** auf **Ein** fest, und klicken Sie auf **Speichern**.
+16. Klicken Sie auf **Auswählen**.
+
+17. Bestätigen Sie die Einstellungen, und legen Sie **Richtlinie aktivieren** auf **Nur Bericht** fest.
+
+    >**Hinweis:** Die folgende Meldung wird unten auf der Seite angezeigt: **Sie möchten offenbar die Sicherheitskonfigurationen Ihrer Organisation verwalten. Hervorragend! Sie müssen zunächst die Sicherheitsstandards deaktivieren, um eine Richtlinie für den bedingten Zugriff zu aktivieren.**
+
+18. Klicken Sie auf den Teil der Nachricht mit folgendem Text: **Sicherheitsstandards deaktivieren**.
+
+19. Ändern Sie **Sicherheitsstandards aktivieren** von „Ja“ in **Nein**.
+
+20. Klicken Sie auf **Andere**, und geben Sie Folgendes in das Feld ein: **AZ500 lab use** (AZ500-Labnutzung).
+
+21. Klicken Sie auf **Speichern**.
+
+22. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
+
+#### <a name="task-3-configure-a-sign-in-risk-policy"></a>Aufgabe 3: Konfigurieren einer Anmelderisiko-Richtlinie
+
+1. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff**.
+
+2. Wählen Sie **Neue Richtlinie**.
+
+3. Geben Sie den Richtliniennamen **AZ500Policy3** in das Textfeld **Name** ein.
+
+4. Wählen Sie unter **Zuweisungen** die Option **Benutzer** aus.
+
+5. Klicken Sie unter **Einschließen** auf **Benutzer und Gruppen auswählen**, und wählen Sie **aaduser2** und **aaduser3** aus.
+
+6. Klicken Sie unter **Ausschließen** auf **Benutzer und Gruppen**, und wählen Sie **aaduser1** aus. 
+
+7. Wählen Sie unter **Cloud-Apps oder -aktionen** > **Einschließen** die Option **Alle Cloud-Apps** aus.
+
+8. Legen Sie unter **Bedingungen** > **Anmelderisiko** die Option **Konfigurieren** auf **Ja** fest.
+
+9. Wählen Sie unter **Hiermit wählen Sie die Anmelderisikostufe aus, auf die diese Richtlinie angewendet werden soll** die Optionen **Hoch** und **Mittel** aus.
+
+10. Klicke auf **Fertig**.
+
+11. Unter **Zugriffssteuerungen** > **Erteilen**:  
+
+12. Wählen Sie **Zugriff gewähren ** > **Multi-Faktor-Authentifizierung erfordern** aus.
+
+13. Klicken Sie auf **Auswählen**.
+
+13. Wählen Sie unter **Sitzung** die Option **Anmeldehäufigkeit** aus, und stellen Sie sicher, dass **Immer** aktiviert ist.
+
+14. Klicken Sie auf **Auswählen**.
+
+15. Bestätigen Sie die Einstellungen, und legen Sie **Richtlinie aktivieren** auf **Nur Bericht** fest.
+
+16. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
 
 #### <a name="task-4-simulate-risk-events-against-the-azure-ad-identity-protection-policies"></a>Aufgabe 4: Simulieren von Risikoereignissen für die Azure AD Identity Protection-Richtlinien 
 
