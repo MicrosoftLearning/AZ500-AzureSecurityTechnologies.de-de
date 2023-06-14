@@ -4,10 +4,10 @@ lab:
   module: Module 03 - Secure data and applications
 ---
 
-# <a name="lab-12-service-endpoints-and-securing-storage"></a>Lab 12: Dienstendpunkte und Schützen von Speicher
-# <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
+# Lab 12: Dienstendpunkte und Schützen von Speicher
+# Labhandbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie sollen eine Machbarkeitsstudie (Proof of Concept) erstellen, um das Schützen von Azure-Dateifreigaben zu veranschaulichen. Insbesondere geht es Ihnen um Folgendes:
     
@@ -17,21 +17,21 @@ Sie sollen eine Machbarkeitsstudie (Proof of Concept) erstellen, um das Schütze
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Dienstendpunkte und Sicherheitsspeicher
 
-## <a name="service-endpoints-and-securing-storage-diagram"></a>Diagramm zu Dienstendpunkten und Schützen von Speicher
+## Diagramm zu Dienstendpunkten und Schützen von Speicher
 
 ![image](https://user-images.githubusercontent.com/91347931/157534883-29664a05-85d1-4c70-99a7-f16d2360755d.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-### <a name="exercise-1-service-endpoints-and-security-storage"></a>Übung 1: Dienstendpunkte und Sicherheitsspeicher
+### Übung 1: Dienstendpunkte und Sicherheitsspeicher
 
-### <a name="estimated-timing-45-minutes"></a>Geschätzte Dauer: 45 Minuten
+### Geschätzte Dauer: 45 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -44,7 +44,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 7: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
 - Aufgabe 8: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
 
-#### <a name="task-1-create-a-virtual-network"></a>Aufgabe 1: Erstellen eines virtuellen Netzwerks
+#### Aufgabe 1: Erstellen eines virtuellen Netzwerks
 
 In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk.
 
@@ -76,7 +76,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk.
 
 7. Klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **Überprüfen und erstellen** auf **Erstellen**.
 
-#### <a name="task-2-add-a-subnet-to-the-virtual-network-and-configure-a-storage-endpoint"></a>Aufgabe 2: Hinzufügen eines Subnetzes zum virtuellen Netzwerk und Konfigurieren eines Speicherendpunkts
+#### Aufgabe 2: Hinzufügen eines Subnetzes zum virtuellen Netzwerk und Konfigurieren eines Speicherendpunkts
 
 In dieser Aufgabe erstellen Sie ein weiteres Subnetz und aktivieren einen Dienstendpunkt in diesem Subnetz. Dienstendpunkte werden pro Dienst und pro Subnetz aktiviert. 
 
@@ -100,7 +100,7 @@ In dieser Aufgabe erstellen Sie ein weiteres Subnetz und aktivieren einen Dienst
 
     >**Hinweis**: Das virtuelle Netzwerk umfasst jetzt zwei Subnetze: ein öffentliches und ein privates Subnetz. 
     
-#### <a name="task-3-configure-a-network-security-group-to-restrict-access-to-the-subnet"></a>Aufgabe 3: Konfigurieren einer Netzwerksicherheitsgruppe zum Einschränken des Zugriffs auf das Subnetz
+#### Aufgabe 3: Konfigurieren einer Netzwerksicherheitsgruppe zum Einschränken des Zugriffs auf das Subnetz
 
 In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherheitsregeln für ausgehenden Datenverkehr (Azure Storage und Internet) und einer Sicherheitsregel für eingehenden Datenverkehr (Remotedesktopprotokoll, RDP). Außerdem ordnen Sie die Netzwerksicherheitsgruppe dem privaten Subnetz zu. Dadurch wird der ausgehende Datenverkehr von den mit diesem Subnetz verbundenen Azure-VMs eingeschränkt.
 
@@ -192,7 +192,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit zwei Sicherhe
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**Privat**|
 
-#### <a name="task-4-configure-a-network-security-group-to-allow-rdp-on-the-public-subnet"></a>Aufgabe 4: Konfigurieren einer Netzwerksicherheitsgruppe zum Zulassen von RDP im öffentlichen Subnetz
+#### Aufgabe 4: Konfigurieren einer Netzwerksicherheitsgruppe zum Zulassen von RDP im öffentlichen Subnetz
 
 In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit einer Sicherheitsregel für eingehenden Datenverkehr (RDP). Außerdem ordnen Sie die Netzwerksicherheitsgruppe dem öffentlichen Subnetz zu. Dies ermöglicht den RDP-Zugriff auf den öffentlichen virtuellen Computer.
 
@@ -242,7 +242,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe mit einer Sicherh
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**Public**|
     
-#### <a name="task-5-create-a-storage-account-with-a-file-share"></a>Aufgabe 5: Erstellen eines Speicherkontos mit einer Dateifreigabe
+#### Aufgabe 5: Erstellen eines Speicherkontos mit einer Dateifreigabe
 
 In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und rufen den Speicherkontoschlüssel ab.  
 
@@ -309,7 +309,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
     >**Hinweis**: An diesem Punkt im Lab haben Sie ein virtuelles Netzwerk, eine Netzwerksicherheitsgruppe und ein Speicherkonto mit einer Dateifreigabe konfiguriert. 
 
-#### <a name="task-6-deploy-virtual-machines-into-the-designated-subnets"></a>Aufgabe 6: Bereitstellen virtueller Computer in den angegebenen Subnetzen
+#### Aufgabe 6: Bereitstellen virtueller Computer in den angegebenen Subnetzen
 
 In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subnetz und einen im öffentlichen Subnetz. 
 
@@ -329,7 +329,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Region|**(USA) USA, Osten**|
     |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
     |Username|**localadmin**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
     |Sie verfügen bereits über eine Windows Server-Lizenz|**Nicht ausgewählt**|
 
@@ -364,7 +364,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
     |Region|**(USA) USA, Osten**|
     |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
     |Username|**localadmin**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
     |Öffentliche Eingangsports|**None**|
     |Sie verfügen bereits über eine Windows Server-Lizenz|**Nicht ausgewählt**|
 
@@ -387,7 +387,7 @@ In dieser Aufgabe erstellen Sie zwei virtuelle Computer: einen im privaten Subne
 
     >**Hinweis**: Sobald die Bereitstellung des virtuellen Azure-Computers **myVMPrivate** abgeschlossen ist, können Sie mit der nächsten Aufgabe fortfahren.
 
-#### <a name="task-7-test-the-storage-connection-from-the-private-subnet-to-confirm-that-access-is-allowed"></a>Aufgabe 7: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
+#### Aufgabe 7: Testen der Speicherverbindung vom privaten Subnetz, um sicherzustellen, dass der Zugriff zulässig ist
 
 In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtuellen Computer „myVMPrivate“ her und ordnen der Dateifreigabe ein Laufwerk zu. 
 
@@ -439,7 +439,7 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
 
     >**Hinweis**: Zu diesem Zeitpunkt haben Sie sichergestellt, dass der virtuelle Computer im privaten Subnetz auf das Speicherkonto zugreifen kann. 
 
-####  <a name="task-8-test-the-storage-connection-from-the-public-subnet-to-confirm-that-access-is-denied"></a>Aufgabe 8: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
+####  Aufgabe 8: Testen der Speicherverbindung vom öffentlichen Subnetz, um sicherzustellen, dass der Zugriff verweigert wird 
 
 1. Navigieren Sie zurück zum Blatt **Virtuelle Computer**. 
 

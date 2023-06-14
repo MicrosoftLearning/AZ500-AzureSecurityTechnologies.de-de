@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-03-resource-manager-locks"></a>Lab 03: Resource Manager-Sperren
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 03: Resource Manager-Sperren
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario 
+## Labszenario 
 
 Sie wurden aufgefordert, einen Proof of Concept zu erstellen, der zeigt, wie Ressourcensperren verwendet werden können, um versehentliches Löschen oder versehentliche Änderungen zu verhindern. Insbesondere ist Folgendes erforderlich:
 
@@ -17,21 +17,21 @@ Sie wurden aufgefordert, einen Proof of Concept zu erstellen, der zeigt, wie Res
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
  
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Resource Manager-Sperren
 
-## <a name="resource-manager-locks-diagram"></a>Diagramm zu Resource Manager-Sperren
+## Diagramm zu Resource Manager-Sperren
 
 ![image](https://user-images.githubusercontent.com/91347931/157514986-1bf6a9ea-4c7f-4487-bcd7-542648f8dc95.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-### <a name="exercise-1-resource-manager-locks"></a>Übung 1: Resource Manager-Sperren
+### Übung 1: Resource Manager-Sperren
 
-#### <a name="estimated-timing-20-minutes"></a>Geschätzte Zeit: 20 Minuten
+#### Geschätzte Zeit: 20 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -41,7 +41,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 4: Entfernen der ReadOnly-Sperre und Erstellen einer Löschsperre.
 - Aufgabe 5: Testen der Löschsperre.
 
-#### <a name="task-1-create-a-resource-group-with-a-storage-account"></a>Aufgabe 1: Erstellen einer Ressourcengruppe mit einem Speicherkonto.
+#### Aufgabe 1: Erstellen einer Ressourcengruppe mit einem Speicherkonto.
 
 In dieser Aufgabe erstellen Sie eine Ressourcengruppe und ein Speicherkonto für das Lab. 
 
@@ -74,7 +74,7 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe und ein Speicherkonto für
 
 1. Schließen Sie den Cloud Shell-Bereich.
 
-#### <a name="task-2-add-a-readonly-lock-on-the-storage-account"></a>Aufgabe 2: Hinzufügen einer ReadOnly-Sperre für das Speicherkonto. 
+#### Aufgabe 2: Hinzufügen einer ReadOnly-Sperre für das Speicherkonto. 
 
 In dieser Aufgabe fügen Sie dem Speicherkonto eine Schreibschutzsperre hinzu. Dadurch wird die Ressource vor versehentlichem Löschen oder Ändern geschützt. 
 
@@ -97,7 +97,7 @@ In dieser Aufgabe fügen Sie dem Speicherkonto eine Schreibschutzsperre hinzu. D
 
    >**Hinweis**: Das Speicherkonto ist jetzt vor versehentlichem Löschen und Ändern geschützt.
 
-#### <a name="task-3-test-the-readonly-lock"></a>Aufgabe 3: Testen der ReadOnly-Sperre 
+#### Aufgabe 3: Testen der ReadOnly-Sperre 
 
 1. Klicken Sie im Abschnitt **Einstellungen** des Blatts „Speicherkonto“ auf **Konfiguration**.
 
@@ -121,7 +121,7 @@ In dieser Aufgabe fügen Sie dem Speicherkonto eine Schreibschutzsperre hinzu. D
 
    >**Hinweis**: Sie haben nun sichergestellt, dass eine ReadOnly-Sperre das versehentliche Löschen und Ändern einer Ressource verhindert.
 
-#### <a name="task-4-remove-the-readonly-lock-and-create-a-delete-lock"></a>Aufgabe 4: Entfernen der ReadOnly-Sperre und Erstellen einer Löschsperre.
+#### Aufgabe 4: Entfernen der ReadOnly-Sperre und Erstellen einer Löschsperre.
 
 In dieser Aufgabe entfernen Sie die ReadOnly-Sperre aus dem Speicherkonto und erstellen eine Löschsperre. 
 
@@ -140,7 +140,7 @@ In dieser Aufgabe entfernen Sie die ReadOnly-Sperre aus dem Speicherkonto und er
 
 1. Klicken Sie auf **OK**. 
 
-#### <a name="task-5-test-the-delete-lock"></a>Aufgabe 5: Testen der Löschsperre.
+#### Aufgabe 5: Testen der Löschsperre.
 
 In dieser Aufgabe testen Sie die Löschsperre. Sie sollten das Speicherkonto ändern, aber nicht löschen können. 
 
@@ -151,8 +151,6 @@ In dieser Aufgabe testen Sie die Löschsperre. Sie sollten das Speicherkonto än
    >**Hinweis**: Dieses Mal sollte die Änderung erfolgreich sein.
 
 1. Wählen Sie auf dem Blatt „Speicherkonto“ die Option **Übersicht** aus, und klicken Sie auf dem Blatt **Übersicht** auf **Löschen**.
-
-1. Geben Sie auf dem Blatt **Speicherkonto löschen** den Namen des Speicherkontos ein, um zu bestätigen, dass Sie fortfahren möchten, und klicken Sie dann auf **Löschen**.
 
 1. Überprüfen Sie die Benachrichtigung, die dem folgenden Text ähnelt: 
 

@@ -4,10 +4,10 @@ lab:
   module: Module 04 - Manage Security Operations
 ---
 
-# <a name="lab-15-microsoft-sentinel"></a>Lab 15: Microsoft Sentinel
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 15: Microsoft Sentinel
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 **Hinweis**: **Azure Sentinel** wurde in **Microsoft Sentinel** umbenannt. 
 
@@ -19,25 +19,25 @@ Sie wurden gebeten, einen Proof of Concept für eine Microsoft Sentinel-basierte
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Implementieren von Microsoft Sentinel
 
-## <a name="microsoft-sentinel-diagram"></a>Microsoft Sentinel-Diagramm
+## Microsoft Sentinel-Diagramm
 
 ![image](https://user-images.githubusercontent.com/91347931/157538440-4953be73-90be-4edd-bd23-b678326ba637.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-## <a name="lab-files"></a>Labdateien:
+## Labdateien:
 
 - **\\Allfiles\\Labs\\15\\changeincidentseverity.json**
 
-### <a name="exercise-1-implement-microsoft-sentinel"></a>Übung 1: Implementieren von Microsoft Sentinel
+### Übung 1: Implementieren von Microsoft Sentinel
 
-### <a name="estimated-timing-30-minutes"></a>Geschätzte Zeit: 30 Minuten
+### Geschätzte Zeit: 30 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -48,7 +48,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren des Playbooks als automatisierte Antwort
 - Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
 
-#### <a name="task-1-on-board-azure-sentinel"></a>Aufgabe 1: Durchführen des Onboardings von Azure Sentinel
+#### Aufgabe 1: Durchführen des Onboardings von Azure Sentinel
 
 In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und verbinden den Dienst mit dem Log Analytics-Arbeitsbereich. 
 
@@ -66,7 +66,7 @@ In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und v
 
     >**Hinweis**: Microsoft Sentinel hat sehr spezifische Anforderungen an Arbeitsbereiche. Beispielsweise können Arbeitsbereiche, die von Microsoft Defender für Cloud erstellt wurden, nicht verwendet werden. Weitere Informationen finden Sie unter [Schnellstart: Durchführen des Onboardings für Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/quickstart-onboard).
     
-#### <a name="task-2-configure-microsoft-sentinel-to-use-the-azure-activity-data-connector"></a>Aufgabe 2: Konfigurieren von Microsoft Sentinel zur die Verwendung des Azure-Aktivitätsdatenconnectors 
+#### Aufgabe 2: Konfigurieren von Microsoft Sentinel zur die Verwendung des Azure-Aktivitätsdatenconnectors 
 
 In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktivitätsdatenconnectors.  
 
@@ -96,7 +96,7 @@ In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktiv
 
     >**Hinweis**: Es kann länger als 15 Minuten dauern, bis der Status „Verbunden“ lautet und der Graph „Empfangene Daten“ anzeigt.
 
-#### <a name="task-3-create-a-rule-that-uses-the-azure-activity-data-connector"></a>Aufgabe 3: Erstellen einer Regel, die den Azure-Aktivitätsdatenconnector verwendet 
+#### Aufgabe 3: Erstellen einer Regel, die den Azure-Aktivitätsdatenconnector verwendet 
 
 In dieser Aufgabe überprüfen und erstellen Sie eine Regel, die den Azure-Aktivitätsdatenconnector verwendet. 
 
@@ -124,7 +124,7 @@ In dieser Aufgabe überprüfen und erstellen Sie eine Regel, die den Azure-Aktiv
 
     >**Hinweis**: Sie haben jetzt eine aktive Regel.
 
-#### <a name="task-4-create-a-playbook"></a>Aufgabe 4: Erstellen eines Playbooks
+#### Aufgabe 4: Erstellen eines Playbooks
 
 In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine Sammlung von Aufgaben, die von Microsoft Sentinel als Reaktion auf eine Warnung aufgerufen werden können. 
 
@@ -176,7 +176,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 16. Klicken Sie auf dem Blatt **Logic Apps-Designer** auf **Speichern**, um Ihre Änderungen zu speichern.
 
-#### <a name="task-5-create-a-custom-alert-and-configure-a-playbook-as-an-automated-response"></a>Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren eines Playbooks als automatisierte Antwort
+#### Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren eines Playbooks als automatisierte Antwort
 
 1. Navigieren Sie im Azure-Portal zurück zum Blatt **Microsoft Sentinel \| Übersicht**.
 
@@ -218,7 +218,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     >**Hinweis**: Sie haben jetzt die neue aktive Regel **Playbook-Demo**. Wenn ein von der Regellogik des identifiziertes Ereignis eintritt, führt dies zu einer Warnung mit mittlerem Schweregrad, die einen entsprechenden Incident generiert.
 
-#### <a name="task-6-invoke-an-incident-and-review-the-associated-actions"></a>Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
+#### Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
 
 1. Navigieren Sie im Azure-Portal zum Blatt **Microsoft Defender für Cloud \| Übersicht**.
 
@@ -258,7 +258,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 > Denken Sie daran, alle neu erstellten Azure-Ressourcen zu entfernen, die Sie nicht mehr verwenden. Durch das Entfernen nicht verwendeter Ressourcen wird sichergestellt, dass keine unerwarteten Kosten anfallen. 
 
-1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
+1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Klicken Sie bei der entsprechenden Aufforderung auf **PowerShell** und dann auf **Speicher erstellen**.
 
 2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 

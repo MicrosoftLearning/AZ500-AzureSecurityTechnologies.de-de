@@ -4,10 +4,10 @@ lab:
   module: Module 02 - Implement Platform Protection
 ---
 
-# <a name="lab-08-azure-firewall"></a>Lab 08: Azure Firewall
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 08: Azure Firewall
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie wurden aufgefordert, Azure Firewall zu installieren. Damit möchte Ihre Organisation den ein- und ausgehenden Netzwerkzugriff steuern. Dies ist ein wichtiger Bestandteil eines allgemeinen Netzwerksicherheitsplans. Insbesondere sollen Sie die folgenden Infrastrukturkomponenten erstellen und testen:
 
@@ -19,25 +19,25 @@ Sie wurden aufgefordert, Azure Firewall zu installieren. Damit möchte Ihre Orga
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
 
-## <a name="azure-firewall-diagram"></a>Azure Firewall-Diagramm
+## Azure Firewall-Diagramm
 
 ![image](https://user-images.githubusercontent.com/91347931/157529954-a1bc434b-2eca-41c1-b875-1f0c977d5e20.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-## <a name="lab-files"></a>Lab-Dateien:
+## Lab-Dateien:
 
 - **\\Allfiles\\Labs\\08\\template.json**
 
-### <a name="exercise-1-deploy-and-test-an-azure-firewall"></a>Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
+### Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
 
-### <a name="estimated-timing-40-minutes"></a>Geschätzte Zeit: 40 Minuten
+### Geschätzte Zeit: 40 Minuten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
@@ -51,7 +51,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 6: Konfigurieren von DNS-Servern.
 - Aufgabe 7: Testen der Firewall. 
 
-#### <a name="task-1-use-a-template-to-deploy-the-lab-environment"></a>Aufgabe 1: Verwenden einer Vorlage zum Bereitstellen der Labumgebung. 
+#### Aufgabe 1: Verwenden einer Vorlage zum Bereitstellen der Labumgebung. 
 
 In dieser Aufgabe überprüfen Sie die Labumgebung und stellen sie bereit. 
 
@@ -85,7 +85,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. Dieser Vorgang dauert etwa zwei Minuten. 
 
-#### <a name="task-2-deploy-the-azure-firewall"></a>Aufgabe 2: Bereitstellen der Azure-Firewall
+#### Aufgabe 2: Bereitstellen der Azure-Firewall
 
 In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit. 
 
@@ -100,7 +100,7 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
    |Resource group|**AZ500LAB08**|
    |Name|**Test-FW01**|
    |Region|**(USA) USA, Osten**|
-   |Firewallebene|**Standard**|
+   |Firewall-SKU|**Standard**|
    |Firewallverwaltung|**Use Firewall rules (classic) to manage this firewall** (Firewallregeln (klassisch) zum Verwalten dieser Firewall verwenden)|
    |Virtuelles Netzwerk auswählen|Klicken Sie auf die Option **Vorhandene verwenden**, und wählen Sie in der Dropdownliste **Test-FW-VN** aus.|
    |Öffentliche IP-Adresse|Klicken Sie auf **Neue hinzufügen**, geben Sie den Namen **TEST-FW-PIP** ein, und klicken Sie auf **OK**.|
@@ -122,7 +122,7 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
     >**Hinweis**: Sie benötigen diese Informationen für die nächste Aufgabe.
 
 
-#### <a name="task-3-create-a-default-route"></a>Aufgabe 3: Erstellen einer Standardroute
+#### Aufgabe 3: Erstellen einer Standardroute
 
 In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-SN**. Mit dieser Route wird ausgehender Datenverkehr über die Firewall konfiguriert.
 
@@ -172,7 +172,7 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 11.  Klicken Sie auf **Hinzufügen**, um die Route hinzuzufügen. 
 
 
-#### <a name="task-4-configure-an-application-rule"></a>Aufgabe 4: Konfigurieren einer Anwendungsregel
+#### Aufgabe 4: Konfigurieren einer Anwendungsregel
 
 In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff auf `www.bing.com` ermöglicht.
 
@@ -204,7 +204,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff au
 
     >**Hinweis**: Azure Firewall enthält eine integrierte Regelsammlung für Infrastruktur-FQDNs, die standardmäßig zulässig sind. Diese FQDNs sind plattformspezifisch und können nicht für andere Zwecke verwendet werden. 
 
-#### <a name="task-5-configure-a-network-rule"></a>Aufgabe 5: Konfigurieren einer Netzwerkregel
+#### Aufgabe 5: Konfigurieren einer Netzwerkregel
 
 In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf zwei IP-Adressen an Port 53 (DNS) zulässt.
 
@@ -236,7 +236,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf 
 
     >**Hinweis**: Die in diesem Fall verwendeten Zieladressen sind bekannte öffentliche DNS-Server. 
 
-#### <a name="task-6-configure-the-virtual-machine-dns-servers"></a>Aufgabe 6: Konfigurieren der DNS-Server für VMs
+#### Aufgabe 6: Konfigurieren der DNS-Server für VMs
 
 In dieser Aufgabe konfigurieren Sie die primären und sekundären DNS-Adressen für den virtuellen Computer. Dies ist keine Firewallanforderung. 
 
@@ -256,7 +256,7 @@ In dieser Aufgabe konfigurieren Sie die primären und sekundären DNS-Adressen f
 
     >**Hinweis**: Durch Aktualisieren der DNS-Server für eine Netzwerkschnittstelle wird der virtuelle Computer, an den die Schnittstelle angefügt ist, automatisch neu gestartet. Gegebenenfalls werden auch alle anderen virtuellen Computer in derselben Verfügbarkeitsgruppe neu gestartet.
 
-#### <a name="task-7-test-the-firewall"></a>Aufgabe 7: Testen der Firewall
+#### Aufgabe 7: Testen der Firewall
 
 In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie erwartet funktioniert.
 
@@ -312,7 +312,7 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
 > Denken Sie daran, alle neu erstellten Azure-Ressourcen zu entfernen, die Sie nicht mehr verwenden. Durch das Entfernen nicht verwendeter Ressourcen wird sichergestellt, dass keine unerwarteten Kosten anfallen. 
 
-1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
+1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Klicken Sie bei der entsprechenden Aufforderung auf **PowerShell** und dann auf **Speicher erstellen**.
 
 2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 
