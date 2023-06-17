@@ -4,10 +4,10 @@ lab:
   module: Module 02 - Implement Platform Protection
 ---
 
-# <a name="lab-09-configuring-and-securing-acr-and-aks"></a>Lab 09: Konfigurieren und Schützen von ACR und AKS
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 09: Konfigurieren und Schützen von ACR und AKS
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie wurden gebeten, einen Proof of Concept mit Azure Container Registry und Azure Kubernetes Service bereitzustellen. Insbesondere sollte der Proof of Concept Folgendes veranschaulichen:
 
@@ -18,26 +18,26 @@ Sie wurden gebeten, einen Proof of Concept mit Azure Container Registry und Azur
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Konfigurieren und Schützen von ACR und AKS
 
-## <a name="configuring-and-securing-acr-and-aks-diagram"></a>Diagramm zum Konfigurieren und Sichern von ACR und AKS
+## Diagramm zum Konfigurieren und Sichern von ACR und AKS
 
 ![image](https://user-images.githubusercontent.com/91347931/157532250-1104a829-792a-4b6d-beff-fe976e2d5d4b.png)
 
-## <a name="intructions"></a>Anweisungen
+## Anweisungen
 
-## <a name="lab-files"></a>Lab-Dateien:
+## Lab-Dateien:
 
 - **\\Allfiles\\Labs\\09\\nginxexternal.yaml**
 - **\\Allfiles\\Labs\\09\\nginxinternal.yaml**
 
-### <a name="exercise-1-configuring-and-securing-acr-and-aks"></a>Übung 1: Konfigurieren und Schützen von ACR und AKS
+### Übung 1: Konfigurieren und Schützen von ACR und AKS
 
-### <a name="estimated-timing-45-minutes"></a>Geschätzte Zeit: 45 Minuten
+### Geschätzte Zeit: 45 Minuten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
@@ -52,7 +52,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 7: Bereitstellen eines internen Diensts in AKS
 - Aufgabe 8: Überprüfen, ob Sie auf einen internen von AKS gehosteten Dienst zugreifen können
 
-#### <a name="task-1-create-an-azure-container-registry"></a>Aufgabe 1: Erstellen einer Azure Container Registry-Instanz
+#### Aufgabe 1: Erstellen einer Azure Container Registry-Instanz
 
 In dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab und eine Azure Container Registry-Instanz.
 
@@ -90,7 +90,7 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab und eine Azur
 
     >**Hinweis**: Notieren Sie den Namen der ACR-Instanz. Sie werden dies in der nächsten Aufgabe benötigen.
 
-#### <a name="task-2-create-a-dockerfile-build-a-container-and-push-it-to-azure-container-registry"></a>Aufgabe 2: Erstellen einer Dockerfile, Erstellen eines Containers und Übertragen per Push in Azure Container Registry
+#### Aufgabe 2: Erstellen einer Dockerfile, Erstellen eines Containers und Übertragen per Push in Azure Container Registry
 
 In dieser Aufgabe erstellen Sie eine Dockerfile, erstellen ein Image aus der Dockerfile und stellen das Image in der ACR-Instanz bereit. 
 
@@ -126,7 +126,7 @@ In dieser Aufgabe erstellen Sie eine Dockerfile, erstellen ein Image aus der Doc
 
     >**Hinweis**: Das Manifest enthält den Sha256-Digest, das Erstellungsdatum des Manifests sowie Plattformeinträge. 
 
-#### <a name="task-3-create-an-azure-kubernetes-service-cluster"></a>Aufgabe 3: Erstellen eines Azure Kubernetes Service-Clusters
+#### Aufgabe 3: Erstellen eines Azure Kubernetes Service-Clusters
 
 In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen die bereitgestellten Ressourcen. 
 
@@ -197,7 +197,7 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
     >**Hinweis**: Überprüfen Sie, ob der **Status** des Clusterknotens als **Ready** (Bereit) aufgeführt ist.
 
-#### <a name="task-4-grant-the-aks-cluster-permissions-to-access-the-acr-and-manage-its-virtual-network"></a>Aufgabe 4: Gewähren der AKS-Clusterberechtigungen für den Zugriff auf ACR und die Verwaltung des virtuellen Netzwerks
+#### Aufgabe 4: Gewähren der AKS-Clusterberechtigungen für den Zugriff auf ACR und die Verwaltung des virtuellen Netzwerks
 
 In dieser Aufgabe erteilen Sie die AKS-Clusterberechtigung für den Zugriff auf ACR und die Verwaltung des virtuellen Netzwerks. 
 
@@ -229,7 +229,7 @@ In dieser Aufgabe erteilen Sie die AKS-Clusterberechtigung für den Zugriff auf 
     az role assignment create --assignee $AKS_MANAGED_ID --role "Contributor" --scope $AKS_VNET_ID
     ```
 
-#### <a name="task-5-deploy-an-external-service-to-aks"></a>Aufgabe 5: Bereitstellen eines externen Diensts in AKS
+#### Aufgabe 5: Bereitstellen eines externen Diensts in AKS
 
 In dieser Aufgabe laden Sie die Manifestdateien herunter, bearbeiten die YAML-Datei und wenden Ihre Änderungen auf den Cluster an. 
 
@@ -268,7 +268,7 @@ In dieser Aufgabe laden Sie die Manifestdateien herunter, bearbeiten die YAML-Da
     service/nginxexternal created
     ```
 
-#### <a name="task-6-verify-the-you-can-access-an-external-aks-hosted-service"></a>Aufgabe 6: Überprüfen, ob Sie auf einen externen von AKS gehosteten Dienst zugreifen können
+#### Aufgabe 6: Überprüfen, ob Sie auf einen externen von AKS gehosteten Dienst zugreifen können
 
 Stellen Sie in dieser Aufgabe sicher, dass mithilfe der öffentlichen IP-Adresse extern auf den Container zugegriffen werden kann.
 
@@ -284,7 +284,7 @@ Stellen Sie in dieser Aufgabe sicher, dass mithilfe der öffentlichen IP-Adresse
 
 4. Stellen Si sicher, dass die Seite **Willkommen bei nginx!** angezeigt wird. 
 
-#### <a name="task-7-deploy-an-internal-service-to-aks"></a>Aufgabe 7: Bereitstellen eines internen Diensts in AKS
+#### Aufgabe 7: Bereitstellen eines internen Diensts in AKS
 
 In dieser Aufgabe stellen Sie den internen Dienst in AKS bereit. 
 
@@ -327,7 +327,7 @@ In dieser Aufgabe stellen Sie den internen Dienst in AKS bereit.
 
     >**Hinweis**: Alternativ können Sie die CLUSTER-IP-Adresse verwenden.
 
-#### <a name="task-8-verify-the-you-can-access-an-internal-aks-hosted-service"></a>Aufgabe 8: Überprüfen, ob Sie auf einen internen von AKS gehosteten Dienst zugreifen können
+#### Aufgabe 8: Überprüfen, ob Sie auf einen internen von AKS gehosteten Dienst zugreifen können
 
 In dieser Aufgabe verwenden Sie einen der Pods, die im AKS-Cluster ausgeführt werden, um auf den internen Dienst zuzugreifen. 
 
