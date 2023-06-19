@@ -4,10 +4,10 @@ lab:
   module: Module 03 - Secure data and applications
 ---
 
-# <a name="lab-11-securing-azure-sql-database"></a>Lab 11: Schützen von Azure SQL-Datenbank
-# <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
+# Lab 11: Schützen von Azure SQL-Datenbank
+# Labhandbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie sollen die Sicherheitsfeatures für Azure SQL-Datenbank überprüfen. Insbesondere interessieren Sie sich für Folgendes:
 
@@ -17,25 +17,25 @@ Sie sollen die Sicherheitsfeatures für Azure SQL-Datenbank überprüfen. Insbe
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
 
-## <a name="securing-azure-sql-database-diagram"></a>Schützen von Azure SQL-Datenbank (Diagramm)
+## Schützen von Azure SQL-Datenbank (Diagramm)
 
 ![image](https://user-images.githubusercontent.com/91347931/157533836-7250fa58-a109-4882-a55b-d3fa3baf34ab.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-## <a name="lab-files"></a>Labdateien:
+## Labdateien:
 
 - **\\Allfiles\\Labs\\11\\azuredeploy.json**
 
-### <a name="exercise-1-implement-sql-database-security-features"></a>Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
+### Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
 
-### <a name="estimated-timing-30-minutes"></a>Geschätzte Dauer: 30 Minuten
+### Geschätzte Dauer: 30 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -44,7 +44,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 3: Konfigurieren der Datenklassifizierung
 - Aufgabe 4: Konfigurieren der Überwachung
 
-#### <a name="task-1-deploy-an-azure-sql-database"></a>Aufgabe 1: Bereitstellen einer Azure SQL-Datenbank-Instanz
+#### Aufgabe 1: Bereitstellen einer Azure SQL-Datenbank-Instanz
 
 In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzustellen. 
 
@@ -74,7 +74,7 @@ In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzust
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. 
 
-#### <a name="task-2-configure-advanced-data-protection"></a>Aufgabe 2: Konfigurieren von Advanced Data Protection
+#### Aufgabe 2: Konfigurieren von Advanced Data Protection
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
 
@@ -82,24 +82,22 @@ In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzust
 
 3. Klicken Sie auf dem Blatt **AZ500LAB11** auf den Eintrag, der die neu erstellte SQL Server-Instanz darstellt.
 
-4. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf **Microsoft Defender für Cloud**. Scrollen Sie zum unteren Rand der Seite **Erste Schritte**, und wählen Sie **Upgrade** aus. Wählen Sie auf der Registerkarte **Agents installieren** die Option **Agents installieren** aus.
-
-5. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf **Microsoft Defender für Cloud**, und wählen Sie **Enable Microsoft Defender for SQL** (Microsoft Defender für SQL aktivieren) aus.
+4. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf **Microsoft Defender für Cloud**, und wählen Sie **Enable Microsoft Defender for SQL** (Microsoft Defender für SQL aktivieren) aus.
 
       >**Hinweis**: Warten Sie, bis die Benachrichtigung anzeigt, dass Azure Defender erfolgreich für SQL aktiviert wurde.
 
-6. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf der Seite **Microsoft Defender für Cloud** im Parameter **Microsoft Defender for SQL: Enabled at the server-level (Configure)** (Microsoft Defender für SQL: auf Serverebene aktiviert [Konfigurieren]) auf **(configure)** (konfigurieren).   
+5. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf der Seite **Microsoft Defender for Cloud** im Parameter **Microsoft Defender for SQL: Enabled at the subscription-level (Configure)** (Microsoft Defender für SQL: auf Abonnementebene aktiviert (Konfigurieren)) auf **(configure)** (konfigurieren).  
 
       >**Hinweis**: Aktualisieren Sie den Browser, wenn **(configure)** nicht angezeigt wird.
     
-7. Lesen Sie auf dem Blatt **Servereinstellungen** die Informationen zu Preisen und zum Testzeitraum, und überprüfen Sie die **EINSTELLUNGEN FÜR DIE SICHERHEITSRISIKOBEWERTUNG** und die **ADVANCED THREAT PROTECTION-EINSTELLUNGEN**.
+6. Lesen Sie auf dem Blatt **Servereinstellungen** die Informationen zu Preisen und zum Testzeitraum, und überprüfen Sie die **EINSTELLUNGEN FÜR DIE SICHERHEITSRISIKOBEWERTUNG** und die **ADVANCED THREAT PROTECTION-EINSTELLUNGEN**.
 
-8. Überprüfen Sie auf dem Blatt **Microsoft Defender für Cloud** die **Empfehlungen** und **Sicherheitswarnungen**.
+7. Überprüfen Sie auf dem Blatt **Microsoft Defender für Cloud** die **Empfehlungen** und **Sicherheitswarnungen**.
 
       >**Hinweis**: Es kann 10-15 Minuten dauern, bis auf dem Blatt **Microsoft Defender für Cloud** Empfehlungen angezeigt werden. Anstatt zu warten, können Sie mit der nächsten Aufgabe fortfahren. Kehren Sie aber zu diesem Blatt zurück, sobald Sie alle verbleibenden Aufgaben abgeschlossen haben.
 
 
-#### <a name="task-3-configure-data-classification"></a>Aufgabe 3: Konfigurieren der Datenklassifizierung
+#### Aufgabe 3: Konfigurieren der Datenklassifizierung
 
 In dieser Aufgabe ermitteln und klassifizieren Sie Informationen in SQL-Datenbank in Bezug auf DSGVO- und Datenschutzcompliance.
 
@@ -129,7 +127,7 @@ In dieser Aufgabe ermitteln und klassifizieren Sie Informationen in SQL-Datenban
 
 9. Beachten Sie auf dem Blatt **Data Discovery & Classification** (Datenermittlung und -klassifizierung) auf der Registerkarte **Übersicht**, dass die Aktualisierung unter Berücksichtigung der neuesten Klassifizierungsinformationen durchgeführt wurde. 
 
-#### <a name="task-4--configure-auditing"></a>Aufgabe 4: Konfigurieren der Überwachung 
+#### Aufgabe 4: Konfigurieren der Überwachung 
 
 In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und dann die Überwachung auf Datenbankebene. 
 
@@ -182,7 +180,7 @@ In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und 
 
 > Denken Sie daran, alle neu erstellten Azure-Ressourcen zu entfernen, die Sie nicht mehr verwenden. Durch das Entfernen nicht verwendeter Ressourcen wird sichergestellt, dass keine unerwarteten Kosten anfallen. 
 
-1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, klicken Sie auf **PowerShell** und dann auf **Speicher erstellen**.
+1. Öffnen Sie im Azure-Portal Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Klicken Sie bei der entsprechenden Aufforderung auf **PowerShell** und dann auf **Speicher erstellen**.
 
 2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 
