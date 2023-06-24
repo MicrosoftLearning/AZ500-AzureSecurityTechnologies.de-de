@@ -4,10 +4,10 @@ lab:
   module: Module 04 - Manage security operations
 ---
 
-# <a name="lab-13-azure-monitor"></a>Lab 13: Azure Monitor
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 13: Azure Monitor
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie wurden gebeten, einen Proof of Concept zur Überwachung der Leistung eines virtuellen Computers zu erstellen. Insbesondere möchten Sie Folgendes erledigen:
 
@@ -17,21 +17,21 @@ Sie wurden gebeten, einen Proof of Concept zur Überwachung der Leistung eines v
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgende Übung aus:
 
 - Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
 
-## <a name="azure-monitor"></a>Azure Monitor
+## Azure Monitor
 
 ![image](https://user-images.githubusercontent.com/91347931/157536648-0a286514-a7e2-4058-9dea-e42da21eef76.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-### <a name="exercise-1-collect-data-from-an-azure-virtual-machine-with-azure-monitor"></a>Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
+### Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
 
-### <a name="exercise-timing-20-minutes"></a>Übungszeitrahmen: 20 Minuten
+### Übungszeitrahmen: 20 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
@@ -41,7 +41,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 4: Sammeln von Ereignis- und Leistungsdaten für virtuelle Computer
 - Aufgabe 5: Anzeigen und Abfragen von gesammelten Daten 
 
-#### <a name="task-1-deploy-an-azure-virtual-machine"></a>Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers
+#### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers
 
 1. Melden Sie sich am Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
@@ -82,7 +82,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 8. Schließen Sie den Cloud Shell-Bereich. 
 
-#### <a name="task-2-create-a-log-analytics-workspace"></a>Aufgabe 2: Erstellen eines Log Analytics-Arbeitsbereichs
+#### Aufgabe 2: Erstellen eines Log Analytics-Arbeitsbereichs
 
 In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich. 
 
@@ -103,7 +103,7 @@ In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
 
 5. Wählen Sie auf dem Blatt **Log Analytics-Arbeitsbereich erstellen** auf der Registerkarte **Überprüfen + erstellen** die Option **Erstellen** aus.
 
-#### <a name="task-3-enable-the-log-analytics-virtual-machine-extension"></a>Aufgabe 3: Aktivieren der Log Analytics-VM-Erweiterung
+#### Aufgabe 3: Aktivieren der Log Analytics-VM-Erweiterung
 
 In dieser Aufgabe aktivieren Sie die Log Analytics-VM-Erweiterung. Diese Erweiterung installiert den Log Analytics-Agent auf virtuellen Windows- und Linux-Computern. Dieser Agent sammelt Daten vom virtuellen Computer und überträgt sie in den von Ihnen festgelegten Log Analytics-Arbeitsbereich. Sobald der Agent installiert wurde, wird für ihn automatisch ein Upgrade durchgeführt, um sicherzustellen, dass Sie immer über die neuesten Features und Hotfixes verfügen. 
 
@@ -121,7 +121,7 @@ In dieser Aufgabe aktivieren Sie die Log Analytics-VM-Erweiterung. Diese Erweite
 
     >**Hinweis**: Dies kann einige Minuten dauern. Der auf dem Blatt **myVM** angezeigte **Status** ändert sich von **Verbindung wird hergestellt mit** in **Dieser Arbeitsbereich**. 
 
-#### <a name="task-4-collect-virtual-machine-event-and-performance-data"></a>Aufgabe 4: Sammeln von Ereignis- und Leistungsdaten für virtuelle Computer
+#### Aufgabe 4: Sammeln von Ereignis- und Leistungsdaten für virtuelle Computer
 
 In dieser Aufgabe konfigurieren Sie die Sammlung des Windows-Systemprotokolls und von mehreren allgemeinen Leistungsindikatoren. Außerdem überprüfen Sie andere verfügbare Quellen.
 
@@ -148,7 +148,7 @@ In dieser Aufgabe konfigurieren Sie die Sammlung des Windows-Systemprotokolls un
   
 7. Klicken Sie auf dem Blatt **Agents-Konfiguration** auf **Anwenden**.
 
-#### <a name="task-5-view-and-query-collected-data"></a>Aufgabe 5: Anzeigen und Abfragen von gesammelten Daten
+#### Aufgabe 5: Anzeigen und Abfragen von gesammelten Daten
 
 In dieser Aufgabe führen Sie eine Protokollsuche für Ihre Datensammlung durch. 
 
@@ -192,5 +192,5 @@ In dieser Aufgabe führen Sie eine Protokollsuche für Ihre Datensammlung durch.
 
 **Bereinigen von Ressourcen**
 
->**Hinweis**: Entfernen Sie nicht die Ressourcen aus diesem Lab, da sie für das Azure Security Center-Lab und das Azure Sentinel-Lab benötigt werden.
+>**Hinweis**: Entfernen Sie nicht die Ressourcen aus diesem Lab, da sie für das Microsoft Defender for Cloud-Lab und das Microsoft Sentinel-Lab benötigt werden.
  

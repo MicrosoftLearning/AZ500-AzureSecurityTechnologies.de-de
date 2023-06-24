@@ -1,23 +1,23 @@
 ---
 lab:
-  title: '04: MFA, bedingter Zugriff und AAD Identity Protection'
+  title: '04: MFA und Bedingter Zugriff'
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-04-mfa-conditional-access-and-aad-identity-protection"></a>Lab 04: MFA, bedingter Zugriff und AAD Identity Protection
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 04: MFA und Bedingter Zugriff
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie wurden gebeten, einen Proof of Concept für Features zu erstellen, die die Azure Active Directory-Authentifizierung (Azure AD) verbessern. Insbesondere möchten Sie Folgendes auswerten:
 
 - Azure AD Multi-Factor Authentication
 - Bedingter Zugriff auf Azure AD
-- Azure AD Identity Protection
+- Risikobasierte Richtlinien für bedingten Zugriff in Azure AD
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Lab-Ziele
+## Lab-Ziele
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
@@ -26,26 +26,26 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 3: Implementieren von Azure AD-Richtlinien für bedingten Zugriff 
 - Übung 4: Implementieren von Azure AD Identity Protection
 
-## <a name="mfa---conditional-access---identity-protection-diagram"></a>Diagramm zu MFA, bedingter Zugriff, Identity Protection
+## Diagramm zu MFA, bedingter Zugriff, Identity Protection
 
 ![image](https://user-images.githubusercontent.com/91347931/157518628-8b4a9efe-0086-4ec0-825e-3d062748fa63.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-## <a name="lab-files"></a>Lab-Dateien:
+## Lab-Dateien:
 
 - **\\Allfiles\\Labs\\04\\az-500-04_azuredeploy.json**
 - **\\Allfiles\\Labs\\04\\az-500-04_azuredeploy.parameters.json** 
 
-### <a name="exercise-1-deploy-an-azure-vm-by-using-an-azure-resource-manager-template"></a>Übung 1: Bereitstellen einer Azure-VM mithilfe einer Azure Resource Manager-Vorlage
+### Übung 1: Bereitstellen einer Azure-VM mithilfe einer Azure Resource Manager-Vorlage
 
-### <a name="estimated-timing-10-minutes"></a>Geschätzte Zeit: 10 Minuten
+### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Bereitstellen einer Azure-VM mithilfe einer Azure Resource Manager-Vorlage.
 
-#### <a name="task-1-deploy-an-azure-vm-by-using-an-azure-resource-manager-template"></a>Aufgabe 1: Bereitstellen einer Azure-VM mithilfe einer Azure Resource Manager-Vorlage
+#### Aufgabe 1: Bereitstellen einer Azure-VM mithilfe einer Azure Resource Manager-Vorlage
 
 In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wird in der letzten Übung für dieses Lab verwendet. 
 
@@ -97,9 +97,9 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 > Ergebnis: Sie haben eine Vorlagenbereitstellung einer Azure-VM **az500-04-vm1** initiiert, die Sie in der letzten Übung dieses Labs verwenden werden.
 
 
-### <a name="exercise-2-implement-azure-mfa"></a>Übung 2: Implementieren von Azure MFA
+### Übung 2: Implementieren von Azure MFA
 
-### <a name="estimated-timing-30-minutes"></a>Geschätzte Zeit: 30 Minuten
+### Geschätzte Zeit: 30 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -110,7 +110,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 5: Konfigurieren von Azure MFA-Einstellungen.
 - Aufgabe 6: Überprüfen der MFA-Konfiguration
 
-#### <a name="task-1-create-a-new-azure-ad-tenant"></a>Aufgabe 1: Erstellen eines neuen Azure AD-Mandanten
+#### Aufgabe 1: Erstellen eines neuen Azure AD-Mandanten
 
 In dieser Aufgabe erstellen Sie einen neuen Azure AD-Mandanten. 
 
@@ -136,7 +136,7 @@ In dieser Aufgabe erstellen Sie einen neuen Azure AD-Mandanten.
     >**Hinweis**: Warten Sie, bis der neue Mandant erstellt wurde. Verwenden Sie das **Benachrichtigungssymbol**, um den Bereitstellungsstatus zu überwachen. 
 
 
-#### <a name="task-2-activate-azure-ad-premium-p2-trial"></a>Aufgabe 2: Aktivieren der Azure AD Premium P2-Testversion
+#### Aufgabe 2: Aktivieren der Azure AD Premium P2-Testversion
 
 In dieser Aufgabe registrieren Sie sich für die kostenlose Azure AD Premium P2-Testversion. 
 
@@ -153,19 +153,19 @@ In dieser Aufgabe registrieren Sie sich für die kostenlose Azure AD Premium P2
 5. Klicken Sie auf dem Blatt **Aktivieren** im Abschnitt „Azure AD Premium P2“ auf **Kostenlose Testversion** und dann auf **Aktivieren**.
 
 
-#### <a name="task-3-create-azure-ad-users-and-groups"></a>Aufgabe 3: Erstellen von Azure AD-Benutzern und -Gruppen.
+#### Aufgabe 3: Erstellen von Azure AD-Benutzern und -Gruppen.
 
 In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator), aaduser2 (Benutzer) und aaduser3 (Benutzer). Sie benötigen den Prinzipalnamen und das Kennwort jedes Benutzers für spätere Aufgaben. 
 
 1. Navigieren Sie zurück zum Azure Active Directory-Blatt **AdatumLab500-04**, und klicken Sie im Abschnitt **Verwalten** auf **Benutzer**.
 
-2. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
+2. Klicken Sie auf der Seite **Benutzer | Alle Benutzer**auf **+ Neuer Benutzer** und dann auf **Neuen Benutzer erstellen**. 
 
 3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**:
 
    |Einstellung|Wert|
    |---|---|
-   |Benutzername|**aaduser1**|
+   |Benutzerprinzipalname|**aaduser1**|
    |Name|**aaduser1**|
    |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
    |Gruppen|**0 Gruppen ausgewählt**|
@@ -178,37 +178,33 @@ In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator)
 
 4. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
-5. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen):
+5. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**.
 
    |Einstellung|Wert|
    |---|---|
-   |Benutzername|**aaduser2**|
+   |Benutzerprinzipalname|**aaduser2**|
    |Name|**aaduser2**|
    |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
-   |Gruppen|**0 Gruppen ausgewählt**|
-   |Rollen|**Benutzer**|
    |Nutzungsstandort|**USA**|  
 
     >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen und das Kennwort.
 
 6. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
-7. Klicken Sie auf **Neuer Benutzer**, vervollständigen Sie die neuen Benutzerkonfigurationseinstellungen, und klicken Sie dann auf **Erstellen**.
+7. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**. 
 
    |Einstellung|Wert|
    |---|---|
-   |Benutzername|**aaduser3**|
+   |Benutzerprinzipalname|**aaduser3**|
    |Name|**aaduser3**|
    |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
-   |Gruppen|**0 Gruppen ausgewählt**|
-   |Rollen|**Benutzer**|
    |Nutzungsstandort|**USA**|  
 
     >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen und das Kennwort.
 
     >**Hinweis**: Zu diesem Zeitpunkt sollten drei neue Benutzer auf der Seite **Benutzer** aufgeführt werden. 
     
-#### <a name="task-4-assign-azure-ad-premium-p2-licenses-to-azure-ad-users"></a>Aufgabe 4: Zuweisen von Azure AD Premium P2-Lizenzen zu Azure AD-Benutzern
+#### Aufgabe 4: Zuweisen von Azure AD Premium P2-Lizenzen zu Azure AD-Benutzern
 
 In dieser Aufgabe weisen Sie jeden Benutzer der Azure Active Directory Premium P2-Lizenz zu.
 
@@ -230,7 +226,7 @@ In dieser Aufgabe weisen Sie jeden Benutzer der Azure Active Directory Premium P
 
     >**Hinweis**: An diesem Punkt haben Sie allen Benutzerkonten, die Sie in diesem Lab verwenden, Azure Active Directory Premium P2-Lizenzen zugewiesen. Achten Sie darauf, dass Sie sich abmelden und dann erneut anmelden. 
 
-#### <a name="task-5-configure-azure-mfa-settings"></a>Aufgabe 5: Konfigurieren von Azure MFA-Einstellungen.
+#### Aufgabe 5: Konfigurieren von Azure MFA-Einstellungen.
 
 In dieser Aufgabe konfigurieren Sie MFA und aktivieren MFA für aaduser1. 
 
@@ -284,7 +280,7 @@ In dieser Aufgabe konfigurieren Sie MFA und aktivieren MFA für aaduser1.
 
     >**Hinweis**: Stellen Sie sicher, dass Sie beim Azure AD-Mandanten **AdatumLab500-04** angemeldet sind. Sie können den Filter **Verzeichnis und Abonnement** verwenden, um zwischen Azure AD-Mandanten zu wechseln. Stellen Sie sicher, dass Sie als Benutzer mit der Rolle „Globaler Administrator“ im Azure AD-Mandanten angemeldet sind.
 
-#### <a name="task-6-validate-mfa-configuration"></a>Aufgabe 6: Überprüfen der MFA-Konfiguration
+#### Aufgabe 6: Überprüfen der MFA-Konfiguration
 
 In dieser Aufgabe überprüfen Sie die MFA-Konfiguration, indem Sie die Anmeldung des Benutzerkontos aaduser1 testen. 
 
@@ -317,16 +313,16 @@ In dieser Aufgabe überprüfen Sie die MFA-Konfiguration, indem Sie die Anmeldun
 > Ergebnis: Sie haben einen neuen AD-Mandanten erstellt, AD-Benutzer konfiguriert, MFA konfiguriert und die MFA-Benutzeroberfläche für einen Benutzer getestet. 
 
 
-### <a name="exercise-3-implement-azure-ad-conditional-access-policies"></a>Übung 3: Implementieren von Azure AD-Richtlinien für bedingten Zugriff 
+### Übung 3: Implementieren von Azure AD-Richtlinien für bedingten Zugriff 
 
-### <a name="estimated-timing-15-minutes"></a>Geschätzte Zeit: 15 Minuten
+### Geschätzte Zeit: 15 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
 - Aufgabe 1: Konfigurieren einer Richtlinie für bedingten Zugriff.
 - Aufgabe 2: Testen der Richtlinie für bedingten Zugriff.
 
-#### <a name="task-1---configure-a-conditional-access-policy"></a>Aufgabe 1: Konfigurieren einer Richtlinie für bedingten Zugriff. 
+#### Aufgabe 1: Konfigurieren einer Richtlinie für bedingten Zugriff. 
 
 In dieser Aufgabe überprüfen Sie die Einstellungen der Richtlinie für bedingten Zugriff und erstellen eine Richtlinie, die für die Anmeldung am Azure-Portal MFA erfordert. 
 
@@ -362,7 +358,7 @@ In dieser Aufgabe überprüfen Sie die Einstellungen der Richtlinie für bedingt
 
     >**Hinweis**: An diesem Punkt verfügen Sie über eine Richtlinie für bedingten Zugriff, die MFA erfordert, um sich am Azure-Portal anzumelden. 
 
-#### <a name="task-2---test-the-conditional-access-policy"></a>Aufgabe 2: Testen der Richtlinie für bedingten Zugriff.
+#### Aufgabe 2: Testen der Richtlinie für bedingten Zugriff.
 
 In dieser Aufgabe melden Sie sich am Azure-Portal als **aaduser2** an und überprüfen, ob MFA erforderlich ist. Sie löschen die Richtlinie außerdem, bevor Sie mit der nächsten Übung fortfahren. 
 
@@ -404,9 +400,9 @@ In dieser Aufgabe melden Sie sich am Azure-Portal als **aaduser2** an und überp
 
 >Ergebnis: Sie haben bedingten Azure AD-Zugriff konfiguriert und getestet.
 
-### <a name="exercise-4-implement-azure-ad-identity-protection"></a>Übung 4: Implementieren von Azure AD Identity Protection
+### Übung 4: Bereitstellen risikobasierter Richtlinien im bedingten Zugriff
 
-### <a name="estimated-timing-30-minutes"></a>Geschätzte Zeit: 30 Minuten
+### Geschätzte Zeit: 30 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
@@ -416,7 +412,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 4: Simulieren von Risikoereignissen für die Azure AD Identity Protection-Richtlinien 
 - Aufgabe 5: Überprüfen der Azure AD Identity Protection-Berichte
 
-#### <a name="task-1-enable-azure-ad-identity-protection"></a>Aufgabe 1: Aktivieren von Azure AD Identity Protection
+#### Aufgabe 1: Aktivieren von Azure AD Identity Protection
 
 In dieser Aufgabe zeigen Sie die Azure AD Identity Protection-Optionen im Azure-Portal an. 
 
@@ -424,7 +420,7 @@ In dieser Aufgabe zeigen Sie die Azure AD Identity Protection-Optionen im Azure
 
     >**Hinweis**: Stellen Sie sicher, dass Sie beim Azure AD-Mandanten **AdatumLab500-04** angemeldet sind. Sie können den Filter **Verzeichnis und Abonnement** verwenden, um zwischen Azure AD-Mandanten zu wechseln. Stellen Sie sicher, dass Sie als Benutzer mit der Rolle „Globaler Administrator“ im Azure AD-Mandanten angemeldet sind.
 
-#### <a name="task-2-configure-a-user-risk-policy"></a>Aufgabe 2: Konfigurieren einer Benutzerrisiko-Sicherheitsrichtlinie
+#### Aufgabe 2: Konfigurieren einer Benutzerrisiko-Sicherheitsrichtlinie
 
 In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie. 
 
@@ -472,7 +468,7 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie.
 
 22. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
 
-#### <a name="task-3-configure-a-sign-in-risk-policy"></a>Aufgabe 3: Konfigurieren einer Anmelderisiko-Richtlinie
+#### Aufgabe 3: Konfigurieren einer Anmelderisiko-Richtlinie
 
 1. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff**.
 
@@ -508,7 +504,7 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie.
 
 16. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
 
-#### <a name="task-4-simulate-risk-events-against-the-azure-ad-identity-protection-policies"></a>Aufgabe 4: Simulieren von Risikoereignissen für die Azure AD Identity Protection-Richtlinien 
+#### Aufgabe 4: Simulieren von Risikoereignissen für die Azure AD Identity Protection-Richtlinien 
 
 > Bevor Sie mit dieser Aufgabe beginnen, stellen Sie sicher, dass die Vorlagenbereitstellung, die Sie in Übung 1 gestartet haben, abgeschlossen wurde. Die Bereitstellung umfasst eine Azure-VM mit dem Namen **az500-04-vm1**. 
 
@@ -559,7 +555,7 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie.
 
     >**Hinweis**: An diesem Punkt haben Sie zwei verschiedene Anmeldungen versucht. Im nächsten Schritt überprüfen Sie die Azure Identity Protection-Berichte.
 
-#### <a name="task-5-review-the-azure-ad-identity-protection-reports"></a>Aufgabe 5: Überprüfen der Azure AD Identity Protection-Berichte
+#### Aufgabe 5: Überprüfen der Azure AD Identity Protection-Berichte
 
 In dieser Aufgabe überprüfen Sie die Azure AD Identity Protection-Berichte, die aus den ToR-Browseranmeldungen generiert wurden.
 
@@ -597,11 +593,11 @@ Verwenden Sie die folgenden Schritte, um die Identity Protection-Richtlinien im 
 
 4. Klicken Sie auf dem Blatt **Identity Protection \| Übersicht** auf **Benutzerrisiko-Sicherheitsrichtlinie**.
 
-5. Legen Sie auf dem Blatt **Identity Protection \| Benutzerrisiko-Sicherheitsrichtlinie** die Option **Richtlinie erzwingen** auf **Aus** fest, und klicken Sie dann auf **Speichern**.
+5. Legen Sie auf dem Blatt **Identitätsschutz \| Benutzerrisiko-Richtlinie** die Option **Richtliniendurchsetzung** auf **Aus** fest, und klicken Sie auf **Speichern**.
 
 6. Klicken Sie auf dem Blatt **Identity Protection \| Benutzerrisiko-Sicherheitsrichtlinie** auf **Anmelderisiko-Richtlinie**.
 
-7. Legen Sie auf dem Blatt **Identity Protection \| Anmelderisiko-Richtlinie** die Option **Richtlinie erzwingen** auf **Aus** fest, und klicken Sie dann auf **Speichern**.
+7. Legen Sie auf dem Blatt **Identitätsschutz \| Anmelderisiko-Richtlinie** die Option **Richtliniendurchsetzung** auf **Aus** fest, und klicken Sie auf **Speichern**.
 
 Verwenden Sie die folgenden Schritte, um die Azure-VM zu beenden, die Sie zuvor im Lab bereitgestellt haben.
 

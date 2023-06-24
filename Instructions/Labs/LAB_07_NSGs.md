@@ -4,10 +4,10 @@ lab:
   module: Module 02 - Implement Platform Protection
 ---
 
-# <a name="lab-07-network-security-groups-and-application-security-groups"></a>Lab 07: Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 07: Einrichten von Netzwerk- und Anwendungssicherheitsgruppen
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie wurden aufgefordert, die virtuelle Netzwerkinfrastruktur Ihrer Organisation zu implementieren und zu testen, um sicherzustellen, dass sie ordnungsgemäß funktioniert. Dies gilt insbesondere für:
 
@@ -19,22 +19,22 @@ Sie wurden aufgefordert, die virtuelle Netzwerkinfrastruktur Ihrer Organisation 
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
 - Übung 1: Erstellen der virtuellen Netzwerkinfrastruktur
 - Übung 2: Bereitstellen virtueller Computer und Testen der Netzwerkfilter
 
-## <a name="network-and-application-security-groups-diagram"></a>Diagramm zu Netzwerk- und Anwendungssicherheitsgruppen
+## Diagramm zu Netzwerk- und Anwendungssicherheitsgruppen
 
 ![image](https://user-images.githubusercontent.com/91347931/157526438-6da4f68b-db88-4931-a041-8474e66d3fe5.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-### <a name="exercise-1-create-the-virtual-networking-infrastructure"></a>Übung 1: Erstellen der virtuellen Netzwerkinfrastruktur
+### Übung 1: Erstellen der virtuellen Netzwerkinfrastruktur
 
-### <a name="estimated-timing-20-minutes"></a>Geschätzte Zeit: 20 Minuten
+### Geschätzte Zeit: 20 Minuten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
@@ -45,7 +45,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 3: Erstellen einer Netzwerksicherheitsgruppe und Zuordnen der NSG zum virtuellen Netzwerksubnetz.
 - Aufgabe 4: Erstellen von NSG-Sicherheitsregeln für den gesamten eingehenden Datenverkehr an Webserver und RDP an die Verwaltungsserver.
 
-#### <a name="task-1--create-a-virtual-network"></a>Aufgabe 1: Erstellen eines virtuellen Netzwerks
+#### Aufgabe 1: Erstellen eines virtuellen Netzwerks
 
 In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit den Netzwerk- und Anwendungssicherheitsgruppen. 
 
@@ -77,7 +77,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
 
 7. Klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **Überprüfen + erstellen** auf **Erstellen**.
 
-#### <a name="task-2--create-application-security-groups"></a>Aufgabe 2: Erstellen von Anwendungssicherheitsgruppen
+#### Aufgabe 2: Erstellen von Anwendungssicherheitsgruppen
 
 In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
 
@@ -111,7 +111,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
 
 7. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
 
-#### <a name="task-3--create-a-network-security-group-and-associate-the-nsg-to-the-subnet"></a>Aufgabe 3: Erstellen einer Netzwerksicherheitsgruppe und Zuordnen der NSG zum Subnetz
+#### Aufgabe 3: Erstellen einer Netzwerksicherheitsgruppe und Zuordnen der NSG zum Subnetz
 
 In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe. 
 
@@ -141,7 +141,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
     |Virtuelles Netzwerk|**myVirtualNetwork**|
     |Subnet|**default**|
 
-#### <a name="task-4-create-inbound-nsg-security-rules-to-all-traffic-to-web-servers-and-rdp-to-the-servers"></a>Aufgabe 4: Erstellen von NSG-Sicherheitsregeln für den gesamten eingehenden Datenverkehr an Webserver und RDP an die Server. 
+#### Aufgabe 4: Erstellen von NSG-Sicherheitsregeln für den gesamten eingehenden Datenverkehr an Webserver und RDP an die Server. 
 
 1. Klicken Sie auf dem Blatt **myNsg** im Abschnitt **Einstellungen** auf **Sicherheitsregeln für eingehenden Datenverkehr**.
 
@@ -175,9 +175,9 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
 > Ergebnis: Sie haben ein virtuelles Netzwerk, Netzwerksicherheit mit Sicherheitsregeln für eingehenden Datenverkehr und zwei Anwendungssicherheitsgruppen bereitgestellt. 
 
-### <a name="exercise-2-deploy-virtual-machines-and-test-network-filters"></a>Übung 2: Bereitstellen virtueller Computer und Testen der Netzwerkfilter
+### Übung 2: Bereitstellen virtueller Computer und Testen der Netzwerkfilter
 
-### <a name="estimated-timing-25-minutes"></a>Geschätzte Zeit: 25 Minuten
+### Geschätzte Zeit: 25 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -186,7 +186,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 3: Zuordnen der einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe.
 - Aufgabe 4: Testen der Filterung des Netzwerkdatenverkehrs.
 
-#### <a name="task-1-create-a-virtual-machine-to-use-as-a-web-server"></a>Aufgabe 1: Erstellen eines virtuellen Computers, der als Webserver verwendet werden soll.
+#### Aufgabe 1: Erstellen eines virtuellen Computers, der als Webserver verwendet werden soll.
 
 In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver verwendet werden soll.
 
@@ -202,7 +202,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVmWeb**|
    |Region|**(USA) USA, Osten**|
-   |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
@@ -218,7 +218,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 6. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-7. Klicken Sie auf **Weiter: Verwaltung >** , dann auf der Registerkarte **Überwachung** des Blatts **Virtuellen Computer erstellen** auf **Weiter: Überwachung**, und überprüfen Sie die folgende Einstellung:
+7. Klicken Sie auf **Weiter: Verwaltung >** , dann auf der Registerkarte **Überwachung** des Blatts **Virtuellen Computer erstellen** auf „Weiter: Überwachung >“, und überprüfen Sie die folgende Einstellung:
 
    |Einstellung|Wert|
    |---|---|
@@ -226,7 +226,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 8. Klicken Sie auf **Überprüfen + erstellen**. Vergewissern Sie sich auf dem Blatt **Überprüfen + erstellen**, dass die Überprüfung erfolgreich war, und klicken Sie auf **Erstellen**.
 
-#### <a name="task-2-create-a-virtual-machine-to-use-as-a-management-server"></a>Aufgabe 2: Erstellen eines virtuellen Computers, der als Verwaltungsserver verwendet werden soll. 
+#### Aufgabe 2: Erstellen eines virtuellen Computers, der als Verwaltungsserver verwendet werden soll. 
 
 In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsserver verwendet werden soll.
 
@@ -240,10 +240,10 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVMMgmt**|
    |Region|(USA) USA, Osten|
-   |Image|**Windows Server 2022 Datacenter: Azure-Edition – Gen 2**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 in der Übung 1 und dem Vorgang 1 in Schritt 9 erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Öffentliche Eingangsports|**None**|
    |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
@@ -255,7 +255,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
 
 5. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-6. Klicken Sie auf **Weiter: Verwaltung >** , dann auf der Registerkarte **Überwachung** des Blatts **Virtuellen Computer erstellen** auf **Weiter: Überwachung**, und überprüfen Sie die folgende Einstellung:
+6. Klicken Sie auf **Weiter: Verwaltung >** , dann auf der Registerkarte **Überwachung** des Blatts **Virtuellen Computer erstellen** auf „Weiter: Überwachung >“, und überprüfen Sie die folgende Einstellung:
 
    |Einstellung|Wert|
    |---|---|
@@ -265,7 +265,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
 
     >**Hinweis**: Warten Sie, bis beide virtuellen Computer bereitgestellt wurden, bevor Sie fortfahren. 
 
-#### <a name="task-3-associate-each-virtual-machines-network-interface-to-its-application-security-group"></a>Aufgabe 3: Zuordnen der einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe.
+#### Aufgabe 3: Zuordnen der einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe.
 
 In dieser Aufgabe ordnen Sie die einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe zu. Die Schnittstelle des virtuellen Computers „myVMWeb“ wird der ASG „myAsgWebServers“ zugeordnet. Die Schnittstelle des virtuellen Computers „myVMMgmt“ wird der ASG „myAsgMgmtServers“ zugeordnet. 
 
@@ -283,7 +283,7 @@ In dieser Aufgabe ordnen Sie die einzelnen Netzwerkschnittstellen virtueller Com
 
 7. Klicken Sie auf **Anwendungssicherheitsgruppen konfigurieren**, wählen Sie in der Dropdownliste **Anwendungssicherheitsgruppe** die Option **myAsgMgmtServers** aus, und klicken Sie dann auf **Speichern**.
 
-#### <a name="task-4-test-the-network-traffic-filtering"></a>Aufgabe 4: Testen der Filterung des Netzwerkdatenverkehrs
+#### Aufgabe 4: Testen der Filterung des Netzwerkdatenverkehrs
 
 In dieser Aufgabe testen Sie die Filter für den Netzwerkdatenverkehr. Sie sollten in der Lage sein, RDP in den virtuellen Computer „myVMMgmt“ zu integrieren. Sie sollten über das Internet eine Verbindung mit dem virtuellen Computer „myVMWeb“ herstellen und die IIS-Standardwebseite anzeigen können.  
 

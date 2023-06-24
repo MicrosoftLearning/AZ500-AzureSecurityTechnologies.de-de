@@ -4,10 +4,10 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# <a name="lab-06-implement-directory-synchronization"></a>Lab 06: Implementieren der Verzeichnissynchronisierung
-# <a name="student-lab-manual"></a>Lab-Handbuch für Kursteilnehmer
+# Lab 06: Implementieren der Verzeichnissynchronisierung
+# Lab-Handbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie wurden gebeten, einen Proof of Concept zu erstellen, der veranschaulicht, wie Sie eine lokale Active Directory Domain Services (AD DS)-Umgebung in einen Azure Active Directory (Azure AD)-Mandanten integrieren. Insbesondere möchten Sie Folgendes erledigen:
 
@@ -17,7 +17,7 @@ Sie wurden gebeten, einen Proof of Concept zu erstellen, der veranschaulicht, wi
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-## <a name="lab-objectives"></a>Ziele des Labs
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
@@ -25,22 +25,22 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 2: Erstellen und Konfigurieren eines Azure Active Directory-Mandanten
 - Übung 3: Synchronisieren einer Active Directory-Gesamtstruktur mit einem Azure Active Directory-Mandanten
 
-## <a name="implement-directory-synchronization"></a>Implementieren der Verzeichnissynchronisierung
+## Implementieren der Verzeichnissynchronisierung
 
 ![image](https://user-images.githubusercontent.com/91347931/157525374-8f740f14-c2db-47b3-98f8-7feb9bc122b5.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-### <a name="exercise-1-deploy-an-azure-vm-hosting-an-active-directory-domain-controller"></a>Übung 1: Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
+### Übung 1: Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
 
-### <a name="estimated-timing-10-minutes"></a>Geschätzte Zeit: 10 Minuten
+### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Identifizieren eines verfügbaren DNS-Namens für eine Azure-VM-Bereitstellung
 - Aufgabe 2: Verwenden einer ARM-Vorlage zum Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
 
-#### <a name="task-1-identify-an-available-dns-name-for-an-azure-vm-deployment"></a>Aufgabe 1: Identifizieren eines verfügbaren DNS-Namens für eine Azure-VM-Bereitstellung
+#### Aufgabe 1: Identifizieren eines verfügbaren DNS-Namens für eine Azure-VM-Bereitstellung
 
 In dieser Aufgabe identifizieren Sie einen DNS-Namen für Ihre Azure-VM-Bereitstellung. 
 
@@ -68,13 +68,13 @@ In dieser Aufgabe identifizieren Sie einen DNS-Namen für Ihre Azure-VM-Bereitst
 
 7. Schließen Sie die Cloud Shell.
 
-#### <a name="task-2-use-an-arm-template-to-deploy-an-azure-vm-hosting-an-active-directory-domain-controller"></a>Aufgabe 2: Verwenden einer ARM-Vorlage zum Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
+#### Aufgabe 2: Verwenden einer ARM-Vorlage zum Bereitstellen einer Azure-VM, die einen Active Directory-Domänencontroller hostet
 
 In dieser Aufgabe stellen Sie eine Azure-VM bereit, die einen Active Directory-Domänencontroller hosten soll.
 
 1. Öffnen Sie in demselben Browserfenster eine andere Browserregisterkarte, und navigieren Sie zu **https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain**.
 
-2. Klicken Sie auf der Seite **Erstellen einer neuen Windows-VM und Erstellen einer neuen AD-Gesamtstruktur, einer Domäne und eines Domänencontrollers** auf **In Azure bereitstellen**. Dadurch wird der Browser automatisch zum Blatt **Azure-VM mit einer neuen AD-Gesamtstruktur erstellen** im Azure-Portal umgeleitet.
+2. Klicken Sie auf der Seite **Azure-VM mit neuer AD-Gesamtstruktur erstellen** auf **Bereitstellen in Azure**. Dadurch wird der Browser automatisch zum Blatt **Azure-VM mit einer neuen AD-Gesamtstruktur erstellen** im Azure-Portal umgeleitet. 
 
 3. Klicken Sie auf dem Blatt **Azure-VM mit einer neuen AD-Gesamtstruktur erstellen** auf **Parameter bearbeiten**.
 
@@ -100,9 +100,9 @@ In dieser Aufgabe stellen Sie eine Azure-VM bereit, die einen Active Directory-D
 > Ergebnis: Nach Abschluss dieser Übung haben Sie mithilfe einer Azure Resource Manager-Vorlage die Bereitstellung einer Azure-VM initiiert, die einen Active Directory-Domänencontroller hosten soll.
 
 
-### <a name="exercise-2-create-and-configure-an-azure-active-directory-tenant"></a>Übung 2: Erstellen und Konfigurieren eines Azure Active Directory-Mandanten 
+### Übung 2: Erstellen und Konfigurieren eines Azure Active Directory-Mandanten 
 
-### <a name="estimated-timing-20-minutes"></a>Geschätzte Zeit: 20 Minuten
+### Geschätzte Zeit: 20 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -110,7 +110,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 2: Hinzufügen eines benutzerdefinierten DNS-Namens zum neuen Azure AD-Mandanten
 - Aufgabe 3: Erstellen eines Azure AD-Benutzers mit der Rolle „Globaler Administrator“
 
-#### <a name="task-1-create-an-azure-active-directory-ad-tenant"></a>Aufgabe 1: Erstellen eines Azure Active Directory (Azure AD)-Mandanten
+#### Aufgabe 1: Erstellen eines Azure Active Directory (Azure AD)-Mandanten
 
 In dieser Aufgabe erstellen Sie einen neuen Azure AD-Mandanten, der in diesem Lab verwendet werden soll. 
 
@@ -136,7 +136,7 @@ In dieser Aufgabe erstellen Sie einen neuen Azure AD-Mandanten, der in diesem L
 
     >**Hinweis**: Warten Sie, bis der neue Mandant erstellt wurde. Verwenden Sie das Symbol **Benachrichtigung** zum Überwachen des Bereitstellungsstatus. 
 
-#### <a name="task-2-add-a-custom-dns-name-to-the-new-azure-ad-tenant"></a>Aufgabe 2: Hinzufügen eines benutzerdefinierten DNS-Namens zum neuen Azure AD-Mandanten
+#### Aufgabe 2: Hinzufügen eines benutzerdefinierten DNS-Namens zum neuen Azure AD-Mandanten
 
 In dieser Aufgabe fügen Sie ihren benutzerdefinierten DNS-Namen dem neuen Azure AD-Mandanten hinzu. 
 
@@ -156,13 +156,13 @@ In dieser Aufgabe fügen Sie ihren benutzerdefinierten DNS-Namen dem neuen Azure
 
     >**Hinweis**: Sie können den Überprüfungsprozess nicht abschließen, weil Sie nicht der Besitzer des DNS-Domänennamens **adatum.com** sind. Dies hindert Sie nicht daran, die AD DS-Domäne **adatum.com** mit dem Azure AD-Mandanten zu synchronisieren. Zu diesem Zweck verwenden Sie den anfänglichen DNS-Namen des Azure AD-Mandanten (der Name endet mit dem Suffix **onmicrosoft.com**), den Sie in der vorherigen Aufgabe identifiziert haben. Bedenken Sie jedoch, dass sich infolgedessen der DNS-Domänenname der AD DS-Domäne und der DNS-Name des Azure AD-Mandanten unterscheiden werden. Dies bedeutet, dass Adatum-Benutzer unterschiedliche Namen verwenden müssen, wenn sie sich bei der AD DS-Domäne und beim Azure AD-Mandanten anmelden.
 
-#### <a name="task-3-create-an-azure-ad-user-with-the-global-administrator-role"></a>Aufgabe 3: Erstellen eines Azure AD-Benutzers mit der Rolle „Globaler Administrator“
+#### Aufgabe 3: Erstellen eines Azure AD-Benutzers mit der Rolle „Globaler Administrator“
 
 In dieser Aufgabe fügen Sie einen neuen Azure AD-Benutzer hinzu und weisen ihn der Rolle „Globaler Administrator“ zu. 
 
 1. Klicken Sie auf dem Blatt **AdatumSync** des Azure AD-Mandanten im Abschnitt **Verwalten** auf **Benutzer**.
 
-2. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
+2. Klicken Sie auf der Seite **Benutzer | Alle Benutzer**auf **+ Neuer Benutzer** und dann auf **Neuen Benutzer erstellen**.
 
 3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, geben Sie die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte), und klicken Sie auf **Erstellen**:
 
@@ -192,9 +192,9 @@ In dieser Aufgabe fügen Sie einen neuen Azure AD-Benutzer hinzu und weisen ihn
 > **Ergebnis**: Nach Abschluss dieser Übung haben Sie einen Azure AD-Mandanten erstellt, erfahren, wie Sie dem neuen Azure AD-Mandanten einen benutzerdefinierten DNS-Namen hinzugefügen, und einen Azure AD-Benutzer mit der Rolle „Globaler Administrator“ erstellt.
 
 
-### <a name="exercise-3-synchronize-active-directory-forest-with-an-azure-active-directory-tenant"></a>Übung 3: Synchronisieren einer Active Directory-Gesamtstruktur mit einem Azure Active Directory-Mandanten
+### Übung 3: Synchronisieren einer Active Directory-Gesamtstruktur mit einem Azure Active Directory-Mandanten
 
-### <a name="estimated-timing-20-minutes"></a>Geschätzte Zeit: 20 Minuten
+### Geschätzte Zeit: 20 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -202,7 +202,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 2: Installieren von Azure AD Connect
 - Aufgabe 3: Überprüfen der Verzeichnissynchronisierung
 
-#### <a name="task-1-prepare-ad-ds-for-directory-synchronization"></a>Aufgabe 1: Vorbereiten von AD DS für die Verzeichnissynchronisierung
+#### Aufgabe 1: Vorbereiten von AD DS für die Verzeichnissynchronisierung
 
 In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der AD DS-Domänencontroller ausgeführt wird, und Sie erstellen ein Verzeichnissynchronisierungskonto. 
 
@@ -253,7 +253,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
    |Kennwort und Kennwort bestätigen|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Andere Kennwortoptionen|**Kennwort läuft nie ab**|
 
-#### <a name="task-2-install-azure-ad-connect"></a>Aufgabe 2: Installieren von Azure AD Connect
+#### Aufgabe 2: Installieren von Azure AD Connect
 
 In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer. 
 
@@ -309,7 +309,7 @@ In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer.
 21. Überprüfen Sie die Informationen auf der Seite **Konfiguration abgeschlossen**, und klicken Sie auf **Beenden**, um das Fenster **Microsoft Azure Active Directory Connect** zu schließen.
 
 
-#### <a name="task-3-verify-directory-synchronization"></a>Aufgabe 3: Überprüfen der Verzeichnissynchronisierung
+#### Aufgabe 3: Überprüfen der Verzeichnissynchronisierung
 
 In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioniert. 
 
@@ -317,7 +317,7 @@ In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioni
 
 2. Beachten Sie auf dem Blatt **Benutzer \| Alle Benutzer**, dass die Liste der Benutzerobjekte das Konto **aduser1** enthält. 
 
->**Hinweis**: Möglicherweise müssen Sie einige Minuten warten und **Aktualisieren** auswählen, damit das Benutzerkonto **aduser1** angezeigt wird.
+   >**Hinweis**: Möglicherweise müssen Sie einige Minuten warten und **Aktualisieren** auswählen, damit das Benutzerkonto **aduser1** angezeigt wird.
 
 3. Wählen Sie das Konto **aduser1** aus, und beachten Sie im Abschnitt **Profil > Identität**, dass das Attribut **Quelle** auf **Windows Server AD** festgelegt wurde.
 
@@ -337,7 +337,7 @@ In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioni
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
 
-9. Wechseln Sie zum Microsoft Edge-Fenster mit dem Blatt **aduser1 \| Profil**, aktualisieren Sie die Seite, und beachten Sie, dass die Eigenschaft **Abteilung** auf **Vertrieb** festgelegt wurde.
+9. Wechseln Sie zum Microsoft Edge-Fenster mit dem Blatt **aduser1**, aktualisieren Sie die Seite, und beachten Sie, dass die Eigenschaft „Abteilung“ auf „Vertrieb“ festgelegt wurde.
 
     >**Hinweis**: Möglicherweise müssen Sie noch eine Minute warten und die Seite erneut aktualisieren, wenn das Attribut **Abteilung** noch nicht festgelegt wurde.
 

@@ -4,10 +4,10 @@ lab:
   module: Module 03 - Secure Data and Applications
 ---
 
-# <a name="lab-10-key-vault-implementing-secure-data-by-setting-up-always-encrypted"></a>Lab 10: Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
-# <a name="student-lab-manual"></a>Labhandbuch für Kursteilnehmer
+# Lab 10: Key Vault (Implementieren sicherer Daten durch Einrichten von „Always Encrypted“)
+# Labhandbuch für Kursteilnehmer
 
-## <a name="lab-scenario"></a>Labszenario
+## Labszenario
 
 Sie sollen eine Proof of Concept-Anwendung erstellen, die die Azure SQL-Datenbank-Unterstützung für die Funktion „Always Encrypted“ nutzt. Alle in diesem Szenario verwendeten Geheimnisse und Schlüssel sollten in Key Vault gespeichert werden. Die Anwendung sollte in Azure Active Directory (Azure AD) registriert werden, um ihren Sicherheitsstatus zu verbessern. Um diese Ziele zu erreichen, sollte die Machbarkeitsstudie (Proof of Concept) Folgendes umfassen:
 
@@ -18,7 +18,7 @@ Sie sollen eine Proof of Concept-Anwendung erstellen, die die Azure SQL-Datenba
 
 Um den Fokus auf die Sicherheitsaspekte von Azure im Zusammenhang mit der Erstellung dieser Proof of Concept-Anwendung zu legen, beginnen Sie mit einer automatisierten ARM-Vorlagenbereitstellung und richten einen virtuellen Computer (Virtual Machine, VM) mit Visual Studio 2019 und SQL Server Management Studio 2018 ein.
 
-## <a name="lab-objectives"></a>Labziele
+## Labziele
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
@@ -27,27 +27,27 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 - Übung 3: Konfigurieren einer Azure SQL-Datenbank und einer datengesteuerten Anwendung
 - Übung 4: Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
-## <a name="key-vault-diagram"></a>Key Vault-Diagramm
+## Key Vault-Diagramm
 
 ![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
 
-## <a name="instructions"></a>Anweisungen
+## Anweisungen
 
-## <a name="lab-files"></a>Labdateien:
+## Labdateien:
 
 - **\\Allfiles\\Labs\\10\\az-500-10_azuredeploy.json**
 
 - **\\Allfiles\\Labs\\10\\program.cs**
 
-### <a name="total-lab-time-estimate-60-minutes"></a>Geschätzte Gesamtdauer des Labs: 60 Minuten
+### Geschätzte Gesamtdauer des Labs: 60 Minuten
 
-### <a name="exercise-1-deploy-the-base-infrastructure-from-an-arm-template"></a>Übung 1: Bereitstellen der Basisinfrastruktur anhand einer ARM-Vorlage
+### Übung 1: Bereitstellen der Basisinfrastruktur anhand einer ARM-Vorlage
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers und einer Azure SQL-Datenbank
 
-#### <a name="task-1-deploy-an-azure-vm-and-an-azure-sql-database"></a>Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers und einer Azure SQL-Datenbank
+#### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers und einer Azure SQL-Datenbank
 
 In dieser Aufgabe stellen Sie einen virtuellen Azure-Computer bereit, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 als Teil der Bereitstellung automatisch installiert werden. 
 
@@ -83,7 +83,7 @@ In dieser Aufgabe stellen Sie einen virtuellen Azure-Computer bereit, auf dem Vi
 
     >**Hinweis**: Warten Sie nicht, bis die ARM-Vorlagenbereitstellung abgeschlossen ist, sondern fahren Sie stattdessen mit der nächsten Übung fort. Die Bereitstellung kann **20 bis25 Minuten** dauern. 
 
-### <a name="exercise-2-configure-the-key-vault-resource-with-a-key-and-a-secret"></a>Übung 2: Konfigurieren der Key Vault-Ressource mit einem Schlüssel und einem Geheimnis
+### Übung 2: Konfigurieren der Key Vault-Ressource mit einem Schlüssel und einem Geheimnis
 
 >**Hinweis**: Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
@@ -93,7 +93,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 2: Hinzufügen eines Schlüssels zur Key Vault-Ressource
 - Aufgabe 3: Hinzufügen eines Geheimnisses zur Key Vault-Ressource
 
-#### <a name="task-1-create-and-configure-a-key-vault"></a>Aufgabe 1: Erstellen und Konfigurieren einer Key Vault-Ressource
+#### Aufgabe 1: Erstellen und Konfigurieren einer Key Vault-Ressource
 
 In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfigurieren Sie die Azure Key Vault-Berechtigungen.
 
@@ -128,7 +128,8 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
     |Einstellung|Wert|
     |----|----|
     |Anhand einer Vorlage konfigurieren (optional)|**Schlüssel, Geheimnisse und Zertifikate verwalten**|
-    |Schlüsselberechtigungen|Klicken Sie auf **Alles auswählen**. Dadurch werden **12 ausgewählte** Berechtigungen angezeigt. (Stellen Sie sicher, dass die Berechtigungen für **Rotationsrichtlinien-Vorgänge** **nicht aktiviert** sind.) |
+    |Schlüsselberechtigungen|Klicken Sie auf **Alle auswählen**, was zu insgesamt **9 ausgewählten** Berechtigungen führt.|
+    |Schlüsselberechtigungen/Kryptografische Vorgänge|Klicken Sie auf **Signieren**, was zu insgesamt **1 ausgewählten** Berechtigung führt.|
     |Berechtigungen für Geheimnis|Klicken Sie auf **Alle auswählen**, was zu insgesamt **7 ausgewählten** Berechtigungen führt.|
     |Zertifikatberechtigungen|Klicken Sie auf **Alle auswählen**, was zu insgesamt **15 ausgewählten** Berechtigungen führt.|
     |Prinzipal auswählen|Klicken Sie auf **Nichts ausgewählt**, wählen Sie auf dem Blatt **Prinzipal** Ihr Benutzerkonto aus, und klicken Sie dann auf **Weiter**.|
@@ -137,7 +138,7 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
     
     >**Hinweis**: Der vorherige Vorgang „Überprüfen + erstellen“ kehrt zur Seite „Zugriffsrichtlinien zurück“, auf der „Anwendung“, „E-Mail“, „Schlüsselberechtigungen“, „Geheimnisberechtigungen“ und „Zertifikatberechtigungen“ aufgeführt sind.
       
-#### <a name="task-2-add-a-key-to-key-vault"></a>Aufgabe 2: Hinzufügen eines Schlüssels zur Key Vault-Ressource
+#### Aufgabe 2: Hinzufügen eines Schlüssels zur Key Vault-Ressource
 
 In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und zeigen Informationen zum Schlüssel an. 
 
@@ -178,7 +179,7 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
     >**Hinweis**: Sie können mithilfe des Schlüsselbezeichners auf einen beliebigen Schlüssel verweisen. Um die aktuelle Version abzurufen, verweisen Sie auf `https://<key_vault_name>.vault.azure.net/keys/MyLabKey`, oder rufen Sie eine bestimmte Version wie folgt ab: `https://<key_vault_name>.vault.azure.net/keys/MyLabKey/<key_version>`
 
 
-#### <a name="task-3-add-a-secret-to-key-vault"></a>Aufgabe 3: Hinzufügen eines Geheimnisses zur Key Vault-Ressource
+#### Aufgabe 3: Hinzufügen eines Geheimnisses zur Key Vault-Ressource
 
 1. Wechseln Sie zurück zum Cloud Shell-Bereich.
 
@@ -213,7 +214,7 @@ In dieser Aufgabe fügen Sie der Key Vault-Ressource einen Schlüssel hinzu und 
     >**Hinweis**: Um die aktuelle Version eines Geheimnisses abzurufen, verweisen Sie auf `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>`. Wenn Sie eine bestimmte Version abrufen möchten, verweisen Sie auf `https://<key_vault_name>.vault.azure.net/secrets/<secret_name>/<secret_version>`.
 
 
-### <a name="exercise-3-configure-an-azure-sql-database-and-a-data-driven-application"></a>Übung 3: Konfigurieren einer Azure SQL-Datenbank und einer datengesteuerten Anwendung
+### Übung 3: Konfigurieren einer Azure SQL-Datenbank und einer datengesteuerten Anwendung
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -224,7 +225,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 5: Erstellen einer Tabelle in der SQL-Datenbank und Auswählen von Datenspalten für die Verschlüsselung
 
 
-#### <a name="task-1-enable-a-client-application-to-access-the-azure-sql-database-service"></a>Aufgabe 1: Ermöglichen des Zugriffs einer Clientanwendung auf den Azure SQL-Datenbank-Dienst 
+#### Aufgabe 1: Ermöglichen des Zugriffs einer Clientanwendung auf den Azure SQL-Datenbank-Dienst 
 
 In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azure SQL-Datenbank-Dienst. Dies erfolgt durch Einrichten der erforderlichen Authentifizierung und durch Abrufen der Anwendungs-ID und des Geheimnisses, die Sie zum Authentifizieren Ihrer Anwendung benötigen.
 
@@ -267,7 +268,7 @@ In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azu
     >**Hinweis**: Kopieren Sie unbedingt diesen Wert, *bevor* Sie dieses Blatt verlassen. Nachdem Sie das Blatt verlassen haben, ist es nicht mehr möglich, den Klartextwert abzurufen.
 
 
-#### <a name="task-2-create-a-policy-allowing-the-application-access-to-the-key-vault"></a>Aufgabe 2: Erstellen einer Richtlinie, die der Anwendung den Zugriff auf die Key Vault-Ressource ermöglicht
+#### Aufgabe 2: Erstellen einer Richtlinie, die der Anwendung den Zugriff auf die Key Vault-Ressource ermöglicht
 
 In dieser Aufgabe erteilen Sie der neu registrierten App Berechtigungen für den Zugriff auf die in der Key Vault-Ressource gespeicherten Geheimnisse.
 
@@ -296,7 +297,7 @@ In dieser Aufgabe erteilen Sie der neu registrierten App Berechtigungen für den
 6. Schließen Sie den Cloud Shell-Bereich. 
 
 
-#### <a name="task-3-retrieve-sql-azure-database-adonet-connection-string"></a>Aufgabe 3: Abrufen der ADO.NET-Verbindungszeichenfolge für Azure SQL-Datenbank 
+#### Aufgabe 3: Abrufen der ADO.NET-Verbindungszeichenfolge für Azure SQL-Datenbank 
 
 Im Rahmen der ARM-Vorlagenbereitstellung in Übung 1 haben Sie eine Azure SQL Server-Instanz und eine Azure SQL-Datenbank namens **medical** bereitgestellt. Sie müssen die leere Datenbankressource mit einer neuen Tabellenstruktur aktualisieren und Datenspalten für die Verschlüsselung auswählen.
 
@@ -310,11 +311,11 @@ Im Rahmen der ARM-Vorlagenbereitstellung in Übung 1 haben Sie eine Azure SQL 
 
     >**Hinweis**: Die Schnittstelle enthält Verbindungszeichenfolgen für ADO.NET, JDBC, ODBC, PHP und Go. 
    
-4. Notieren Sie sich die **ADO.NET-Verbindungszeichenfolge**. Sie benötigen sie später.
+4. Notieren Sie sich die Verbindungszeichenfolge **ADO.NET (SQL-Authentifizierung)** . Sie benötigen sie später.
 
     >**Hinweis:** Wenn Sie die Verbindungszeichenfolge verwenden, müssen Sie den Platzhalter `{your_password}` durch das Kennwort ersetzen, das Sie mit der Bereitstellung in Übung 1 konfiguriert haben.
 
-#### <a name="task-4-log-on-to-the-azure-vm-running-visual-studio-2019-and-sql-management-studio-2018"></a>Aufgabe 4: Anmelden bei dem virtuellen Azure-Computer, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 ausgeführt werden
+#### Aufgabe 4: Anmelden bei dem virtuellen Azure-Computer, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 ausgeführt werden
 
 In dieser Aufgabe melden Sie sich bei dem virtuellen Azure-Computer an, dessen Bereitstellung Sie in Übung 1 initiiert haben. Auf diesem dem virtuellen Azure-Computer werden Visual Studio 2019 und SQL Server Management Studio 2018 gehostet.
 
@@ -324,7 +325,7 @@ In dieser Aufgabe melden Sie sich bei dem virtuellen Azure-Computer an, dessen B
 
 2. Wählen Sie in der Liste der angezeigten virtuellen Computer den Eintrag **az500-10-vm1** aus. Notieren Sie sich die auf dem Blatt **az500-10-vm1** im Bereich **Zusammenfassung** angegebene **öffentliche IP-Adresse**. Sie verwenden diesen Wert später. 
 
-#### <a name="task-5-create-a-table-in-the-sql-database-and-select-data-columns-for-encryption"></a>Aufgabe 5: Erstellen einer Tabelle in der SQL-Datenbank und Auswählen von Datenspalten für die Verschlüsselung
+#### Aufgabe 5: Erstellen einer Tabelle in der SQL-Datenbank und Auswählen von Datenspalten für die Verschlüsselung
 
 In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Server Management Studio her und erstellen eine Tabelle. Anschließend verschlüsseln Sie zwei Datenspalten mithilfe eines automatisch generierten Schlüssels aus der Azure Key Vault-Ressource. 
 
@@ -332,7 +333,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
 
     >**Hinweis**: Notieren Sie sich den Servernamen. Sie benötigen den Servernamen später in dieser Aufgabe.
 
-2. Scrollen Sie auf dem Blatt **Firewalleinstellungen** nach unten zu **Regelname**, und geben Sie die folgenden Einstellungen an: 
+2. Scrollen Sie auf dem Blatt **Firewalleinstellungen** nach unten zu „Regelname“, klicken Sie auf **+ Hinzufügen einer Firewallregel**, und geben Sie die folgenden Einstellungen an: 
 
     |Einstellung|Wert|
     |---|---|
@@ -340,7 +341,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Start-IP|Die öffentliche IP-Adresse von „az500-10-vm1“|
     |End-IP|Die öffentliche IP-Adresse von „az500-10-vm1“|
 
-3. Klicken Sie auf **Speichern** und dann auf **OK**, um die Änderung zu speichern und den Bestätigungsbereich zu schließen. 
+3. Klicken Sie auf **Speichern**, um die Änderung zu speichern und den Bestätigungsbereich zu schließen. 
 
     >**Hinweis**: Dadurch werden die Firewalleinstellungen des Servers geändert, sodass Verbindungen mit der Datenbank „medical“ über die öffentliche IP-Adresse des virtuellen Azure-Computers zulässig sind, den Sie in diesem Lab bereitgestellt haben.
 
@@ -414,13 +415,13 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     >**Hinweis**: Der Unterknoten **Always Encrypted-Schlüssel** enthält die Unterordner **Spaltenhauptschlüssel** und **Spaltenverschlüsselungsschlüssel**.
 
 
-### <a name="exercise-4-demonstrate-the-use-of-azure-key-vault-in-encrypting-the-azure-sql-database"></a>Übung 4: Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
+### Übung 4: Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
-#### <a name="task-1-run-a-data-driven-application-to-demonstrate-the-use-of-azure-key-vault-in-encrypting-the-azure-sql-database"></a>Aufgabe 1: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
+#### Aufgabe 1: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
 Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschlüsselten Spalten zu laden und dann sicher auf diese Daten zuzugreifen, indem eine Verbindungszeichenfolge verwendet wird, die auf den Schlüssel in der Key Vault-Instanz zugreift.
 
@@ -458,7 +459,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
 
 10. Kehren Sie zur RDP-Sitzung zurück, klicken Sie in der Visual Studio-Konsole im Fenster **Projektmappen-Explorer** auf **Program.cs**, und ersetzen Sie den Inhalt der Datei durch den Code, den Sie in die Zwischenablage kopiert haben.
 
-11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Platzhalter `{your_password}` durch `Pa55w.rd1234`. Wenn Sie die Zeichenfolge auf dem Lab-Computer gespeichert haben, müssen Sie möglicherweise die RDP-Sitzung verlassen, um die ADO-Zeichenfolge zu kopieren, und dann zum virtuellen Azure-Computer zurückkehren, um sie einzufügen.
+11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Placeholder `{your_password}` durch das Kennwort, das Sie in der Bereitstellung in Übung 1 angegeben haben. Wenn Sie die Zeichenfolge auf dem Lab-Computer gespeichert haben, müssen Sie möglicherweise die RDP-Sitzung verlassen, um die ADO-Zeichenfolge zu kopieren, und dann zum virtuellen Azure-Computer zurückkehren, um sie einzufügen.
 
 12. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 16 den Platzhalter `<client id noted earlier>` durch den Wert der **Anwendungs-ID (Client-ID)** der registrierten App, die Sie sich zuvor im Lab notiert haben. 
 
@@ -494,7 +495,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl
 
 1. Öffnen Sie im Azure-Portal den Cloud Shell-Dienst, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. 
 
-2. Wählen Sie im Dropdownmenü oben links im Cloud Shell-Bereich die Option **PowerShell** aus, und klicken Sie auf **Bestätigen**, wenn Sie dazu aufgefordert werden.
+2. Wählen Sie bei Bedarf im Dropdownmenü oben links im Cloud Shell-Bereich die Option **PowerShell** aus, und klicken Sie auf **Bestätigen**, wenn Sie dazu aufgefordert werden.
 
 3. Führen Sie im Cloud Shell-Bereich in der PowerShell-Sitzung den folgenden Code aus, um die Ressourcengruppen zu entfernen, die Sie in diesem Lab erstellt haben:
   
