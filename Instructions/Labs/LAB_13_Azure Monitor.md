@@ -5,41 +5,33 @@ lab:
 ---
 
 # Lab 13: Azure Monitor
+
 # Lab-Handbuch für Kursteilnehmer
 
 ## Labszenario
 
-Sie wurden gebeten, einen Proof of Concept zur Überwachung der Leistung eines virtuellen Computers zu erstellen. Insbesondere möchten Sie Folgendes erledigen:
-
-- Einen virtuellen Computer so konfigurieren, dass Telemetriedaten und Protokolle gesammelt werden können.
-- Zeigen, welche Telemetriedaten und Protokolle gesammelt werden können.
-- Zeigen, wie die Daten verwendet und abgefragt werden können. 
+Sie wurden aufgefordert, Ereignisse und Leistungsindikatoren von VMs mit dem Azure Monitor Agent zu erfassen.
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
 ## Ziele des Labs
 
-In diesem Lab führen Sie die folgende Übung aus:
+In diesem Lab führen Sie die folgenden Übungen aus:
 
-- Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
-
-## Azure Monitor
-
-![image](https://user-images.githubusercontent.com/91347931/157536648-0a286514-a7e2-4058-9dea-e42da21eef76.png)
-
+- Übung 1: Bereitstellen einer Azure-VM
+- Übung 2: Erstellen eines Log Analytics-Arbeitsbereichs
+- Übung 3: Erstellen eines Azure-Speicherkontos
+- Übung 4: Erstellen einer Datensammelregel
+  
 ## Anweisungen
 
-### Übung 1: Sammeln von Daten von einem virtuellen Azure-Computer mit Azure Monitor
+### Übung 1: Bereitstellen einer Azure-VM
 
-### Übungszeitrahmen: 20 Minuten
+### Übungszeitrahmen: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
-- Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers 
-- Aufgabe 2: Erstellen eines Log Analytics-Arbeitsbereichs
-- Aufgabe 3: Aktivieren der Log Analytics-VM-Erweiterung
-- Aufgabe 4: Sammeln von Ereignis- und Leistungsdaten für virtuelle Computer
-- Aufgabe 5: Anzeigen und Abfragen von gesammelten Daten 
+- Aufgabe 1: Bereitstellen eine Azure-VM 
 
 #### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers
 
@@ -82,7 +74,15 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 8. Schließen Sie den Cloud Shell-Bereich. 
 
-#### Aufgabe 2: Erstellen eines Log Analytics-Arbeitsbereichs
+### Übung 2: Erstellen eines Log Analytics-Arbeitsbereichs
+
+### Übungszeitrahmen: 10 Minuten
+
+In dieser Übung führen Sie die folgenden Aufgaben aus: 
+
+- Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
+
+#### Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
 
 In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich. 
 
@@ -103,94 +103,112 @@ In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
 
 5. Wählen Sie auf dem Blatt **Log Analytics-Arbeitsbereich erstellen** auf der Registerkarte **Überprüfen + erstellen** die Option **Erstellen** aus.
 
-#### Aufgabe 3: Aktivieren der Log Analytics-VM-Erweiterung
+### Übung 3: Erstellen eines Azure-Speicherkontos
 
-In dieser Aufgabe aktivieren Sie die Log Analytics-VM-Erweiterung. Diese Erweiterung installiert den Log Analytics-Agent auf virtuellen Windows- und Linux-Computern. Dieser Agent sammelt Daten vom virtuellen Computer und überträgt sie in den von Ihnen festgelegten Log Analytics-Arbeitsbereich. Sobald der Agent installiert wurde, wird für ihn automatisch ein Upgrade durchgeführt, um sicherzustellen, dass Sie immer über die neuesten Features und Hotfixes verfügen. 
+### Geschätzte Zeit: 10 Minuten
 
-1. Navigieren Sie im Azure-Portal zurück zum Blatt **Log Analytics-Arbeitsbereiche**, und klicken Sie in der Liste der Arbeitsbereiche auf den Eintrag für den Arbeitsbereich, den Sie in der vorherigen Aufgabe erstellt haben.
+In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-2. Klicken Sie auf dem Blatt „Log Analytics-Arbeitsbereich“ auf der Seite **Übersicht** im Abschnitt **Verbindung mit einer Datenquelle herstellen** auf den Eintrag **Virtuelle Azure-Computer (VMs)** .
+- Aufgabe 1: Erstellen eines Azure-Speicherkontos
 
-    >**Hinweis**: Damit der Agent erfolgreich installiert werden kann, muss der virtuelle Computer ausgeführt werden.
+#### Aufgabe 1: Erstellen eines Azure-Speicherkontos
 
-3. Suchen Sie in der Liste der virtuellen Computer den Eintrag für die Azure-VM **myVM**, die Sie in der ersten Aufgabe dieser Übung bereitgestellt haben, und beachten Sie, dass sie als **Nicht verbunden** aufgeführt wird.
+In dieser Aufgabe erstellen Sie ein Speicherkonto.
 
-4. Klicken Sie auf den Eintrag **myVM** und dann auf dem Blatt **myVM** auf **Verbinden**. 
+1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Speicherkonten** ein, und drücken Sie die **EINGABETASTE**.
 
-5. Warten Sie, bis der virtuelle Computer eine Verbindung mit dem Log Analytics-Arbeitsbereich herstellt.
+2. Klicken Sie auf dem Blatt **Speicherkonten** im Azure-Portal auf die Schaltfläche **+ Erstellen**, um ein neues Speicherkonto zu erstellen.
 
-    >**Hinweis**: Dies kann einige Minuten dauern. Der auf dem Blatt **myVM** angezeigte **Status** ändert sich von **Verbindung wird hergestellt mit** in **Dieser Arbeitsbereich**. 
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/73eb9241-d642-455a-a1ff-b504670395c0)
 
-#### Aufgabe 4: Sammeln von Ereignis- und Leistungsdaten für virtuelle Computer
+3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Speicherkonto erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
-In dieser Aufgabe konfigurieren Sie die Sammlung des Windows-Systemprotokolls und von mehreren allgemeinen Leistungsindikatoren. Außerdem überprüfen Sie andere verfügbare Quellen.
+    |Einstellung|Wert|
+    |---|---|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Resource group|**AZ500LAB131415**|
+    |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
+    |Location|**(USA) USA, Osten**|
+    |Leistung|**Standard (allgemeines v2-Konto)**|
+    |Redundanz|**Lokal redundanter Speicher (LRS)**|
 
-1. Navigieren Sie im Azure-Portal zurück zu dem Log Analytics-Arbeitsbereich, den Sie weiter oben in dieser Übung erstellt haben.
+4. Klicken Sie in der Registerkarte **Grundeinstellungen** auf dem Blatt **Speicherkonto erstellen** auf **Review**, warten Sie, bis der Überprüfungsprozess abgeschlossen ist, und klicken Sie dann auf **Erstellen**.
 
-2. Klicken Sie auf dem Blatt „Log Analytics-Arbeitsbereich“ im Abschnitt **Einstellungen** auf **Verwaltung von Agenten einer Vorgängerversion**.
+     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
 
-3. Überprüfen Sie auf dem Blatt **Agents-Konfiguration** die konfigurierbaren Einstellungen, einschließlich „Windows-Ereignisprotokolle“, „Windows-Leistungsindikatoren“, „Linux-Leistungsindikatoren“, „IIS-Protokolle“ und „Syslog“. 
+    >**Hinweis**: Warten Sie, bis das Storage-Konto erstellt wurde. Dieser Vorgang dauert etwa zwei Minuten.
 
-4. Stellen Sie sicher, dass **Windows-Ereignisprotokolle** ausgewählt ist. Klicken Sie in der Liste der Ereignisprotokolltypen auf **+ Windows-Ereignisprotokoll hinzufügen**, und wählen Sie **System** aus.
+### Übung 3: Erstellen einer Datensammlungsregel
 
-    >**Hinweis**: Auf diese Weise fügen Sie dem Arbeitsbereich Ereignisprotokolle hinzu. Andere Optionen sind z. B. **Hardwareereignisse** oder **Schlüsselverwaltungsdienst**.  
+### Geschätzte Zeit: 15 Minuten
 
-5. Deaktivieren Sie das Kontrollkästchen **Informationen**, und lassen Sie die Kontrollkästchen **Fehler** und **Warnung** aktiviert.
+In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-6. Klicken Sie auf **Windows-Leistungsindikatoren**, anschließend auf **+ Leistungsindikator hinzufügen**, überprüfen Sie die Liste der verfügbaren Leistungsindikatoren, und fügen Sie die folgenden hinzu:
+- Aufgabe 1: Erstellen einer Datensammlungsregel
 
-    - Arbeitsspeicher(\*)\Verfügbare Arbeitsspeicher in MB
-    - Prozess(\*)\\% Prozessorzeit
-    - Ereignisablaufverfolgung für Windows\Gesamtspeicherauslastung – nicht ausgelagerter Pool
-    - Ereignisablaufverfolgung für Windows\Gesamtspeicherauslastung – ausgelagerter Pool
+#### Aufgabe 1: Erstellen einer Datensammlungsregel
 
-    >**Hinweis**: Die Leistungsindikatoren werden hinzugefügt und mit einem Sammlungsstichprobenintervall von 60 Sekunden konfiguriert.
+In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
+
+1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Überwachen** ein und drücken Sie die **EINGABETASTE**.
+
+2. Klicken Sie auf dem Blatt **Überwachungseinstellungen** auf  **Datensammlungsregeln**.
+
+  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
+
+
+3. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundeinstellungen** des Blatts **Datensammlung erstellen** an:
   
-7. Klicken Sie auf dem Blatt **Agents-Konfiguration** auf **Anwenden**.
+    |Einstellung|Wert|
+    |---|---|
+    |**Regeldetails**|
+    |Regelname|**DCR1**|
+    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
+    |Ressourcengruppe|**AZ500LAB131415**|
+    |Region|**USA, Osten**|
+    |Plattformtyp|**Windows**|
+    |Datensammlungsendpunkt|*Nicht ausfüllen*|
 
-#### Aufgabe 5: Anzeigen und Abfragen von gesammelten Daten
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
 
-In dieser Aufgabe führen Sie eine Protokollsuche für Ihre Datensammlung durch. 
 
-1. Navigieren Sie im Azure-Portal zurück zu dem Log Analytics-Arbeitsbereich, den Sie weiter oben in dieser Übung erstellt haben.
+4. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ressourcen >** , um fortzufahren.
 
-2. Klicken Sie auf dem Blatt „Log Analytics-Arbeitsbereich“ im Abschnitt **Allgemein** auf **Protokolle**.
+5. Wählen Sie auf der Registerkarte **Ressourcen** die Option **+ Ressourcen hinzufügen** aus und aktivieren Sie dann **Datensammlungsendpunkte aktivieren.**
 
-3. Schließen Sie bei Bedarf das Fenster **Willkommen bei Log Analytics!** . 
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/c8388619-c254-4c80-a1ff-dde2f35ed350)
 
-4. Scrollen Sie im Bereich **Abfragen** in der Spalte **Alle Abfragen** nach unten bis zum Ende der Liste mit den Ressourcentypen, und klicken Sie auf **Virtuelle Computer**.
+6. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Sammeln und Übermitteln >** , um fortzufahren.
+
+7. Klicken Sie auf **+ Datenquelle hinzufügen** und ändern Sie dann auf der Seite **Datenquelle hinzufügen** das Dropdownmenü **Datenquellentyp** auf **Leistungsindikatoren**. Behalten Sie die folgenden Standardeinstellungen bei:
+
+    |Einstellung|Wert|
+    |---|---|
+    |**Leistungsindikator**|**Abtastrate (Sekunden)**|
+    |CPU|60|
+    |Arbeitsspeicher|60|
+    |Datenträger|60|
+    |Netzwerk|60|
+
+   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
+
+8. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ziel >** , um fortzufahren.
+  
+9. Ändern Sie das Dropdownmenü **Zieltyp** auf **Azure Monitor-Protokolle**. Stellen Sie im Fenster **Abonnement** sicher, dass Ihr *Abonnement* angezeigt wird, und ändern Sie dann das Dropdownmenü **Konto oder Namespace** auf Ihren zuvor erstellten Log Analytics-Arbeitsbereich.
+
+   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
+
+10. Wählen Sie unten auf der Seite **Datenquelle hinzufügen** aus.
     
-5. Überprüfen Sie die Liste der vordefinierten Abfragen, wählen Sie **Arbeitsspeicher- und CPU-Auslastung** aus, und klicken Sie auf die entsprechende Schaltfläche **Ausführen**.
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
 
-    >**Hinweis**: Sie können mit der Abfrage **Verfügbarer Arbeitsspeicher des virtuellen Computers** beginnen. Wenn keine Ergebnisse angezeigt werden, überprüfen Sie, ob der Bereich auf den virtuellen Computer festgelegt wurde.
+13. Klicken Sie auf **Überprüfen + Erstellen**.
 
-6. Die Abfrage wird automatisch auf einer neuen Abfrageregisterkarte geöffnet. 
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
 
-    >**Hinweis**: Log Analytics verwendet die Abfragesprache „Kusto“. Sie können die vorhandenen Abfragen anpassen oder eigene erstellen. 
+14. Klicken Sie auf **Erstellen**.
 
-    >**Hinweis**: Die Ergebnisse der ausgewählten Abfrage werden unter dem Abfragebereich automatisch angezeigt. Wenn Sie die Abfrage erneut ausführen möchten, klicken Sie **Ausführen**.
-
-    >**Hinweis**: Da dieser virtuelle Computer soeben erstellt wurde, sind möglicherweise noch keine Daten vorhanden. 
-
-    >**Hinweis**: Sie haben die Möglichkeit, Daten in verschiedenen Formaten anzuzeigen. Außerdem haben Sie die Möglichkeit, eine Warnungsregel basierend auf den Ergebnissen der Abfrage zu erstellen.
-
-    >**Hinweis**: Mit den folgenden Schritten können Sie zusätzliche Last auf der Azure-VM generieren, die Sie weiter oben in diesem Lab bereitgestellt haben:
-
-    1. Navigieren Sie zum Blatt „Azure-VM“.
-    2. Wählen Sie auf dem Blatt „Azure-VM“ im Abschnitt **Vorgänge** die Option **Befehl ausführen** aus. Geben Sie auf dem Blatt **RunPowerShellScript** das folgende Skript ein, und klicken Sie auf **Ausführen**:
-    3. 
-       ```cmd
-       cmd
-       :loop
-       dir c:\ /s > SWAP
-       goto loop
-       ```
-       
-    4. Wechseln Sie zurück zum Blatt „Log Analytics“, und führen Sie die Abfrage erneut aus. Möglicherweise müssen Sie einige Minuten warten, bis Daten gesammelt wurden, und dann die Abfrage erneut ausführen.
-
-> Ergebnisse: Sie haben mithilfe eines Log Analytics-Arbeitsbereichs Datenquellen und Abfrageprotokolle konfiguriert. 
-
-**Bereinigen von Ressourcen**
+> Ergebnisse: Sie haben eine Azure-VM, einen Log Analytics-Arbeitsbereich, ein Azure-Speicherkonto und eine Datensammlungsregel bereitgestellt, um mit dem Azure Monitor-Agent Ereignisse und Leistungsindikatoren von VMs zu sammeln.
 
 >**Hinweis**: Entfernen Sie nicht die Ressourcen aus diesem Lab, da sie für das Microsoft Defender for Cloud-Lab und das Microsoft Sentinel-Lab benötigt werden.
  
