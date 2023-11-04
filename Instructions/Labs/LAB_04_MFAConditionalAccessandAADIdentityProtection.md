@@ -75,7 +75,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 
 9. Stellen Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** sicher, dass die folgenden Einstellungen konfiguriert sind (übernehmen Sie für alle anderen Einstellungen die Standardwerte):
 
->**Hinweis**: Sie müssen ein eindeutiges Kennwort erstellen, das für den Rest des Kurses zum Erstellen von VMs (virtuellen Computern) verwendet wird. Das Kennwort muss mindestens 12 Zeichen umfassen und die definierten Komplexitätsanforderungen erfüllen (Das Kennwort muss drei der folgenden Zeichen enthalten: einen Kleinbuchstaben, einen Großbuchstaben, eine Zahl und ein Sonderzeichen). [VM-Kennwortanforderungen](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). Notieren Sie sich das Kennwort.
+   >**Hinweis**: Sie müssen ein eindeutiges Kennwort erstellen, das für den Rest des Kurses zum Erstellen von VMs (virtuellen Computern) verwendet wird. Das Kennwort muss mindestens 12 Zeichen umfassen und die definierten Komplexitätsanforderungen erfüllen (Das Kennwort muss drei der folgenden Zeichen enthalten: einen Kleinbuchstaben, einen Großbuchstaben, eine Zahl und ein Sonderzeichen). [VM-Kennwortanforderungen](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/faq#what-are-the-password-requirements-when-creating-a-vm-). Notieren Sie sich das Kennwort.
 
    |Einstellung|Wert|
    |---|---|
@@ -88,7 +88,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
    |Administratorkennwort|**Erstellen Sie Ihr eigenes Kennwort, und notieren Sie es für spätere Zwecke. Sie werden aufgefordert, dieses Kennwort für den erforderlichen Lab-Zugriff einzugeben.**|
    |Name des virtuellen Netzwerks|**az500-04-vnet1**|
 
-    >**Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+   >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
 
 10. Klicken Sie auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
@@ -155,52 +155,55 @@ In dieser Aufgabe registrieren Sie sich für die kostenlose Azure AD Premium P2
 
 #### Aufgabe 3: Erstellen von Azure AD-Benutzern und -Gruppen.
 
-In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator), aaduser2 (Benutzer) und aaduser3 (Benutzer). Sie benötigen den Prinzipalnamen und das Kennwort jedes Benutzers für spätere Aufgaben. 
+In dieser Aufgabe erstellen Sie drei Benutzer: aaduser1 (Globaler Administrator), aaduser2 (Benutzer) und aaduser3 (Benutzer). Sie benötigen den Benutzerprinzipalnamen und das Kennwort aller Benutzer*innen für spätere Aufgaben. 
 
 1. Navigieren Sie zurück zum Azure Active Directory-Blatt **AdatumLab500-04**, und klicken Sie im Abschnitt **Verwalten** auf **Benutzer**.
 
-2. Klicken Sie auf der Seite **Benutzer | Alle Benutzer**auf **+ Neuer Benutzer** und dann auf **Neuen Benutzer erstellen**. 
+2. Klicken Sie auf der Seite **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer** und dann auf **Neuen Benutzer erstellen**. 
 
-3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**:
+3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen). Klicken Sie dann auf **Erstellen**:
 
    |Einstellung|Wert|
    |---|---|
    |Benutzerprinzipalname|**aaduser1**|
    |Name|**aaduser1**|
-   |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
-   |Gruppen|**0 Gruppen ausgewählt**|
-   |Rollen|Klicken Sie auf **Benutzer**, anschließend auf **Globaler Administrator** und dann auf **Auswählen**.|
-   |Nutzungsstandort|**USA**|  
+   |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist.|
+   
+      >**Hinweis**: Notieren Sie den vollständigen Benutzerprinzipalnamen. Sie können den Wert kopieren, indem Sie auf der rechten Seite der Dropdownliste, die den Domänennamen anzeigt, auf die Schaltfläche **In Zwischenablage kopieren** klicken. Sie benötigen es später in diesem Lab.
+   
+      >**Hinweis**: Notieren Sie sich das Kennwort des Benutzers. Sie können den Wert kopieren, indem Sie auf der rechten Seite des Textfelds auf die Schaltfläche **In Zwischenablage kopieren** klicken. Sie benötigen es später in diesem Lab. 
+   
+4. Scrollen Sie auf der Registerkarte **Eigenschaften** nach unten, und geben Sie den Nutzungsstandort **USA** an (behalten Sie alle anderen Standardwerte bei). Klicken Sie dann auf **Weiter: Zuweisungen >** .
 
-    >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen. Sie können den Wert kopieren, indem Sie auf der rechten Seite der Dropdownliste, die den Domänennamen anzeigt, auf die Schaltfläche **In Zwischenablage kopieren** klicken. 
+5. Klicken Sie auf der Registerkarte **Zuweisungen** auf **+ Rolle hinzufügen**, suchen Sie nach **Globaler Administrator**, und wählen Sie diese Option aus. Klicken Sie auf **Auswählen**, dann auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
-    >**Hinweis**: Notieren Sie sich das Kennwort des Benutzers. Sie benötigen es später in diesem Lab. 
+6. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
-4. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
-
-5. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**.
+7. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Weiter: Eigenschaften >** :
 
    |Einstellung|Wert|
    |---|---|
    |Benutzerprinzipalname|**aaduser2**|
    |Name|**aaduser2**|
-   |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
-   |Nutzungsstandort|**USA**|  
+   |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist.| 
 
-    >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen und das Kennwort.
+    >**Hinweis**: Notieren Sie sich den vollständigen Benutzerprinzipalnamen und das Kennwort.
 
-6. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
+8. Scrollen Sie auf der Registerkarte **Eigenschaften** nach unten, und geben Sie den Nutzungsstandort **USA** an (behalten Sie alle anderen Standardwerte bei). Klicken Sie dann auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
-7. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Erstellen**. 
+9. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf **+ Neuer Benutzer**. 
 
-   |Einstellung|Wert|
-   |---|---|
-   |Benutzerprinzipalname|**aaduser3**|
-   |Name|**aaduser3**|
-   |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
-   |Nutzungsstandort|**USA**|  
+10. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an (übernehmen Sie die Standardwerte für alle anderen Einstellungen), und klicken Sie auf **Weiter: Eigenschaften >** :
 
-    >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen und das Kennwort.
+    |Einstellung|Wert|
+    |---|---|
+    |Benutzerprinzipalname|**aaduser3**|
+    |Name|**aaduser3**|
+    |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist.|
+
+    >**Hinweis**: Notieren Sie sich den vollständigen Benutzerprinzipalnamen und das Kennwort.
+
+11. Scrollen Sie auf der Registerkarte **Eigenschaften** nach unten, und geben Sie den Nutzungsstandort **USA** an (behalten Sie alle anderen Standardwerte bei). Klicken Sie dann auf **Überprüfen und erstellen** und dann auf **Erstellen**.
 
     >**Hinweis**: Zu diesem Zeitpunkt sollten drei neue Benutzer auf der Seite **Benutzer** aufgeführt werden. 
     
@@ -210,7 +213,7 @@ In dieser Aufgabe weisen Sie jeden Benutzer der Azure Active Directory Premium P
 
 1. Klicken Sie auf dem Blatt **Benutzer \| Alle Benutzer** auf den Eintrag, der Ihr Benutzerkonto darstellt. 
 
-2. Klicken Sie auf dem Blatt, auf dem die Eigenschaften Ihres Benutzerkontos angezeigt werden, auf **Eigenschaften bearbeiten**.  Überprüfen Sie, ob der Nutzungsstandort auf **Vereinigte Staaten** festgelegt ist. Wenn der Nutzungsstandort nicht festgelegt ist, und klicken Sie auf **Speichern**.
+2. Klicken Sie auf dem Blatt, auf dem die Eigenschaften Ihres Benutzerkontos angezeigt werden, auf **Eigenschaften bearbeiten**.  Vergewissern Sie sich, dass der Nutzungsstandort auf **USA** festgelegt ist. Legen Sie andernfalls den Nutzungsstandort fest, und klicken Sie auf **Speichern**.
 
 3. Navigieren Sie zurück zum Azure Active Directory-Blatt **AdatumLab500-04**, und klicken Sie im Abschnitt **Verwalten** auf **Lizenz**.
 
@@ -220,7 +223,7 @@ In dieser Aufgabe weisen Sie jeden Benutzer der Azure Active Directory Premium P
 
 6. Wählen Sie auf dem Blatt **Benutzer** die Optionen **aaduser1**, **aaduser2**, **aaduser3** und Ihr Benutzerkonto aus, und klicken Sie auf **Auswählen**.
 
-7. Klicken Sie auf dem Blatt **Lizenzen zuweisen** auf **Zuweisungsoptionen**, stellen Sie sicher, dass alle Optionen aktiviert sind, klicken Sie auf **Überprüfen und zuweisen**, und klicken Sie auf **Zuweisen**.
+7. Klicken Sie auf dem Blatt **Lizenzen zuweisen** auf **Zuweisungsoptionen**, stellen Sie sicher, dass alle Optionen aktiviert sind, klicken Sie auf **Überprüfen und zuweisen**, und klicken Sie dann auf **Zuweisen**.
 
 8. Melden Sie sich vom Azure-Portal ab, und melden Sie sich mit demselben Konto erneut an. Dieser Schritt ist erforderlich, damit die Lizenzzuweisung wirksam wird.
 
@@ -244,7 +247,7 @@ In dieser Aufgabe konfigurieren Sie MFA und aktivieren MFA für aaduser1.
 
 5. Klicken Sie auf der Seite **Multi-Faktor-Authentifizierung** auf die Registerkarte **Diensteinstellungen**. Sehen Sie sich die **Überprüfungsoptionen** an. Beachten Sie, dass die Optionen **Textnachricht an Telefon**, **Benachrichtigung über mobile App** und **Prüfcode aus mobiler App oder Hardwaretoken** aktiviert sind. Klicken Sie auf **Speichern** und dann auf **Schließen**.
 
-6. Wechseln Sie zur Registerkarte **Benutzer**, klicken Sie auf den Eintrag **aaduser1**, klicken Sie auf den Link **Aktivieren**, und klicken Sie, wenn Sie dazu aufgefordert werden, auf **Multi-Factor Auth aktivieren**.
+6. Wechseln Sie zur Registerkarte **Benutzer**, klicken Sie auf den Eintrag **aaduser1**, klicken Sie auf den Link **Aktivieren**, und klicken Sie, wenn Sie dazu aufgefordert werden, auf **Multi-Faktor-Authentifizierung aktivieren**. Klicken Sie dann auf **Schließen**.
 
 7. Beachten Sie, dass die Spalte **Multi-Factor Auth-Status** für **aaduser1** jetzt **Aktiviert** ist.
 
@@ -260,23 +263,23 @@ In dieser Aufgabe konfigurieren Sie MFA und aktivieren MFA für aaduser1.
 
    - Wiederherstellen von mehrstufiger Authentifizierung für alle gespeicherten Geräte.
 
-10. Klicken Sie auf **Abbrechen**, und wechseln Sie zurück zur Browserregisterkarte, auf der das Blatt **Multi-Factor Authentication \| Erste Schritte** im Azure-Portal angezeigt wird.
+10. Klicken Sie auf **Abbrechen**, und wechseln Sie zurück zur Browserregisterkarte, auf der das Blatt **Multi-Faktor-Authentifizierung \| Erste Schritte** im Azure-Portal angezeigt wird.
 
 11. Klicken Sie im Abschnitt **Einstellungen** auf **Betrugswarnung**.
 
 12. Konfigurieren Sie auf dem Blatt **Multi-Factor Authentication \| Betrugswarnung** die folgenden Einstellungen:
 
-   |Einstellung|Wert|
-   |---|---|
-   |Benutzern das Übermitteln von Betrugswarnungen erlauben|**Ein**|
-   |Benutzer, die Betrugsversuche melden, automatisch blockieren|**Ein**|
-   |Code zum Melden von Betrugsversuchen während der Begrüßung|**0**|
+    |Einstellung|Wert|
+    |---|---|
+    |Benutzern das Übermitteln von Betrugswarnungen erlauben|**Ein**|
+    |Benutzer, die Betrugsversuche melden, automatisch blockieren|**Ein**|
+    |Code zum Melden von Betrugsversuchen während der Begrüßung|**0**|
 
 13. Klicken Sie unten auf der Seite auf **Speichern**.
 
     >**Hinweis**: An diesem Punkt haben Sie MFA für aaduser1 aktiviert und Einstellungen für Betrugswarnungen eingerichtet. 
 
-14. Navigieren Sie zurück zum Blatt **AdatumLab500-04** des Azure Active Directory-Mandanten, und klicken Sie im Abschnitt **Verwalten** auf **Eigenschaften**. Klicken Sie anschließend unten auf dem Blatt auf den Link **Sicherheitseinstellungen verwalten**. Klicken Sie auf dem Blatt **Sicherheitsstandards aktivieren** auf **Nein**. Wählen Sie **Meine Organisation verwendet bedingten Zugriff** als Grund aus, und klicken Sie dann auf **Speichern**.
+14. Navigieren Sie zurück zum Blatt **AdatumLab500-04** des Azure Active Directory-Mandanten, und klicken Sie im Abschnitt **Verwalten** auf **Eigenschaften**. Klicken Sie anschließend unten auf dem Blatt auf den Link **Sicherheitseinstellungen verwalten**. Klicken Sie auf dem Blatt **Sicherheitsstandards aktivieren** auf **Deaktiviert**. Wählen Sie **Meine Organisation verwendet bedingten Zugriff** als *Grund für die Deaktivierung* aus, klicken Sie auf **Speichern**, lesen Sie die Warnung, und klicken Sie dann auf **Deaktivieren**.
 
     >**Hinweis**: Stellen Sie sicher, dass Sie beim Azure AD-Mandanten **AdatumLab500-04** angemeldet sind. Sie können den Filter **Verzeichnis und Abonnement** verwenden, um zwischen Azure AD-Mandanten zu wechseln. Stellen Sie sicher, dass Sie als Benutzer mit der Rolle „Globaler Administrator“ im Azure AD-Mandanten angemeldet sind.
 
@@ -286,7 +289,7 @@ In dieser Aufgabe überprüfen Sie die MFA-Konfiguration, indem Sie die Anmeldun
 
 1. Öffnen Sie ein Browserfenster im InPrivate-Modus.
 
-2. Navigieren Sie zum Azure-Portal, und melden Sie sich mit dem Benutzerkonto **aaduser1** an. 
+2. Navigieren Sie zum Azure-Portal ( **`https://portal.azure.com/`** ), und melden Sie sich mit dem Benutzerkonto **aaduser1** an. 
 
     >**Hinweis**: Für die Anmeldung müssen Sie einen vollqualifizierten Namen des Benutzerkontos **aaduser1** angeben, einschließlich des DNS-Domänennamens des Azure AD-Mandanten, den Sie sich zuvor in diesem Lab notiert haben. Dieser Benutzername weist das Format aaduser1@`<your_tenant_name>`.onmicrosoft.com auf, wobei `<your_tenant_name>` der Platzhalter ist, der Ihren eindeutigen Azure AD-Mandantennamen darstellt. 
 
@@ -302,7 +305,7 @@ In dieser Aufgabe überprüfen Sie die MFA-Konfiguration, indem Sie die Anmeldun
 
 7. Stellen Sie auf der Seite **Schützen Sie Ihr Konto** sicher, dass die Überprüfung erfolgreich war, und klicken Sie auf **Weiter**.
 
-8. Klicken Sie auf der Seite **Schützen Sie Ihr Konto** auf **Ich möchte eine andere Methode verwenden**, wählen Sie in der Dropdownliste **E-Mail** aus, klicken Sie auf **Bestätigen**, geben Sie die E-Mail-Adresse an, die Sie verwenden möchten, und klicken Sie dann auf **Weiter**. Nachdem Sie die entsprechende E-Mail erhalten haben, identifizieren Sie den Code im E-Mail-Text, geben Sie ihn an, und klicken Sie dann auf **Fertig**.
+8. Wenn Sie aufgefordert werden, eine zusätzliche Authentifizierungsmethode hinzuzufügen, klicken Sie auf **Ich möchte eine andere Methode verwenden**, wählen Sie in der Dropdownliste **E-Mail** aus, klicken Sie auf **Bestätigen**, geben Sie die E-Mail-Adresse an, die Sie verwenden möchten, und klicken Sie dann auf **Weiter**. Nachdem Sie die entsprechende E-Mail erhalten haben, identifizieren Sie den Code im E-Mail-Text, geben Sie ihn an, und klicken Sie dann auf **Fertig**.
 
 9. Ändern Sie Ihr Kennwort, wenn Sie dazu aufgefordert werden. Denken Sie daran, sich das neue Kennwort zu notieren.
 
@@ -330,27 +333,27 @@ In dieser Aufgabe überprüfen Sie die Einstellungen der Richtlinie für bedingt
 
 2. Klicken Sie auf dem Blatt **AdatumLab500-04** im Abschnitt **Verwalten** auf **Sicherheit**.
 
-3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Bedingter Zugriff**.
+3. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Bedingter Zugriff**. Klicken Sie im linken Navigationspanel auf **Richtlinien**.
 
-4. Klicken Sie auf dem Blatt **Bedingter Zugriff \| Richtlinien** auf **+ Neue Richtlinie**, und wählen Sie **Neue Richtlinie erstellen**aus der Dropdownliste aus. 
+4. Klicken Sie auf dem Blatt **Bedingter Zugriff \| Richtlinien** Auf **+ Neue Richtlinie**. 
 
 5. Konfigurieren Sie auf dem Blatt **Neu** die folgenden Einstellungen:
 
    - Geben Sie **AZ500Policy1** im Textfeld **Name** ein.
     
-   - Klicken Sie auf **Users or workload identities selected** (Ausgewählte Benutzer oder Workloadidentitäten). Aktivieren Sie auf der rechten Seite unter „What does this policy apply to“ (Wofür gilt diese Richtlinie) >> „Benutzer und Gruppen“ >> Einschließen >> **Benutzer und Gruppen auswählen**. >> Aktivieren Sie das Kontrollkästchen **Benutzer und Gruppen**, und klicken Sie auf dem Blatt **Auswählen** auf **aaduser2** und auf **Auswählen**.
+   - Klicken Sie unter **Benutzer** auf **0 Ausgewählte Benutzer und Gruppen**. Wählen Sie auf der rechten Seite unter „Einschließen“ die Option **Benutzer und Gruppen auswählen** aus. Aktivieren Sie das Kontrollkästchen **Benutzer und Gruppen**, und aktivieren Sie auf dem Blatt **Benutzer und Gruppen auswählen** das Kontrollkästchen **aaduser2**. Klicken Sie dann auf **Auswählen**.
     
-   - Klicken Sie auf **Cloud-Apps oder Aktionen**, klicken Sie auf **Apps auswählen**, klicken Sie auf dem Blatt **Auswählen** auf **Microsoft Azure-Verwaltung**, und klicken Sie dann auf **Auswählen**. 
+   - Klicken Sie unter **Zielressourcen** auf **Keine Zielressourcen ausgewählt**. Klicken Sie dann auf **Apps auswählen** und unter „Auswählen“ auf **Keine**. Aktivieren Sie auf dem Blatt **Auswählen** das Kontrollkästchen **Microsoft Azure-Verwaltung**, und klicken Sie auf **Auswählen**. 
 
-    >**Hinweis**: Überprüfen Sie die Warnung, dass sich diese Richtlinie auf den Zugriff auf das Azure-Portal auswirkt.
+     >**Hinweis**: Überprüfen Sie die Warnung, dass sich diese Richtlinie auf den Zugriff auf das Azure-Portal auswirkt.
     
-   - Klicken Sie auf **Bedingungen**, klicken Sie auf **Anmelderisiko**. Überprüfen Sie auf dem Blatt **Anmelderisiko** die Risikostufen, nehmen Sie jedoch keine Änderungen vor, und schließen Sie das Blatt **Anmelderisiko**.
+   - Klicken Sie unter **Bedingungen** auf **0 Bedingungen ausgewählt**, und klicken Sie unter **Anmelderisiko** auf **Nicht konfiguriert**. Überprüfen Sie auf dem Blatt **Anmelderisiko** die Risikostufen, nehmen Sie jedoch keine Änderungen vor, und schließen Sie das Blatt **Anmelderisiko**.
     
-   - Klicken Sie auf **Geräteplattformen**, überprüfen Sie die Geräteplattformen, die eingeschlossen werden können, und klicken Sie auf **Fertig**.
+   - Klicken Sie unter **Geräteplattformen** auf **Nicht konfiguriert**, überprüfen Sie die Geräteplattformen, die eingeschlossen werden können, aber nehmen Sie keine Änderungen vor, und klicken Sie auf **Fertig**.
     
-   - Klicken Sie auf **Standorte**, und überprüfen Sie die Standortoptionen, ohne Änderungen vorzunehmen.
+   - Klicken Sie unter **Standorte** auf **Nicht konfiguriert**, und überprüfen Sie die Standortoptionen, ohne Änderungen vorzunehmen.
     
-   - Klicken Sie im Abschnitt **Zugriffssteuerungen** auf **Erteilen**, aktivieren Sie auf dem Blatt **Erteilen** das Kontrollkästchen **Mehrstufige Authentifizierung erforderlich**, und klicken Sie auf **Auswählen**.
+   - Klicken Sie unter **Gewähren** im Abschnitt **Zugriffssteuerungen** auf **0 Steuerungen ausgewählt**. Aktivieren Sie auf dem Blatt **Gewähren** das Kontrollkästchen **Multi-Faktor-Authentifizierung erforderlich**, und klicken Sie auf **Auswählen**.
     
    - Legen Sie **Richtlinie aktivieren** auf **Ein** fest.
 
@@ -364,7 +367,7 @@ In dieser Aufgabe melden Sie sich am Azure-Portal als **aaduser2** an und überp
 
 1. Öffnen Sie ein Microsoft Edge-InPrivate-Fenster.
 
-2. Navigieren Sie im neuen Browserfenster zum Azure-Portal, und melden Sie sich mit dem Benutzerkonto **aaduser2** an.
+2. Navigieren Sie im neuen Browserfenster zum Azure-Portal ( **`https://portal.azure.com/`** ), und melden Sie sich mit dem Benutzerkonto **aaduser2** an.
 
 3. Wenn Sie dazu aufgefordert werden, klicken Sie im Dialogfeld **Weitere Informationen erforderlich** auf **Weiter**.
 
@@ -392,7 +395,7 @@ In dieser Aufgabe melden Sie sich am Azure-Portal als **aaduser2** an und überp
 
 13. Klicken Sie auf dem Blatt **AdatumLab500-04** im Abschnitt **Verwalten** auf **Sicherheit**.
 
-14. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Bedingter Zugriff**.
+14. Klicken Sie auf dem Blatt **Sicherheit \| Erste Schritte** im Abschnitt **Schützen** auf **Bedingter Zugriff**. Klicken Sie im linken Navigationspanel auf **Richtlinien**.
 
 15. Klicken Sie auf dem Blatt **Bedingter Zugriff \| Richtlinien** auf die Auslassungszeichen neben **AZ500Policy1**, klicken Sie auf **Löschen**, und klicken Sie auf **Ja**, wenn Sie zur Bestätigung aufgefordert werden.
 
@@ -404,7 +407,7 @@ In dieser Aufgabe melden Sie sich am Azure-Portal als **aaduser2** an und überp
 
 ### Geschätzte Zeit: 30 Minuten
 
-In dieser Übung führen Sie die folgenden Aufgaben aus: 
+In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Anzeigen der Azure AD Identity Protection-Optionen im Azure-Portal
 - Aufgabe 2: Konfigurieren einer Benutzerrisiko-Sicherheitsrichtlinie
@@ -424,85 +427,75 @@ In dieser Aufgabe zeigen Sie die Azure AD Identity Protection-Optionen im Azure
 
 In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie. 
 
-2. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff**.
+1. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff** > **Richtlinien**.
 
-3. Klicken Sie auf **Neue Richtlinie**.
+2. Klicken Sie auf **+ Neue Richtlinie**.
 
-4. Geben Sie den Richtliniennamen **AZ500Policy2** in das Textfeld **Name** ein.
+3. Geben Sie den Richtliniennamen **AZ500Policy2** in das Textfeld **Name** ein.
 
-5. Wählen Sie unter **Zuweisungen** die Option **Benutzer** aus.
+4. Klicken Sie unter **Zuweisungen** > **Benutzer** auf **0 Benutzer und Gruppen ausgewählt**.
 
-6. Klicken Sie unter **Einschließen** auf **Benutzer und Gruppen auswählen**, und wählen Sie **aaduser2** und **aaduser3** aus.
+5. Klicken Sie unter **Einschließen** auf **Benutzer und Gruppen auswählen**, klicken Sie auf **Benutzer und Gruppen**, wählen Sie **aaduser2** und **aaduser3** aus, und klicken Sie dann auf **Auswählen**.
 
-7. Klicken Sie unter **Ausschließen** auf **Benutzer und Gruppen**, und wählen Sie **aaduser1** aus. 
+6. Klicken Sie unter **Ausschließen** auf **Benutzer und Gruppen**, und wählen Sie **aaduser1** aus. Klicken Sie dann auf **Auswählen**. 
 
-8. Wählen Sie unter **Cloud-Apps oder -aktionen** > **Einschließen** die Option **Alle Cloud-Apps** aus.
+7. Klicken Sie unter **Zielressourcen** auf **Keine Zielressourcen ausgewählt**, vergewissern Sie sich, dass **Cloud-Apps** in der Dropdownliste ausgewählt ist, und wählen Sie unter **Einschließen** die Option **Alle Cloud-Apps** aus.
 
-9. Legen Sie unter **Bedingungen** > **Benutzerrisiko** die Option **Konfigurieren** auf **Ja**fest.
+8. Klicken Sie unter **Bedingungen** auf **0 Bedingungen ausgewählt**, und klicken Sie unter **Benutzerrisiko** auf **Nicht konfiguriert**. Legen Sie auf dem Blatt **Benutzerrisiko** die Option **Konfigurieren** auf **Ja** fest.
 
-10. Wählen Sie unter **Hiermit konfigurieren Sie die Benutzerrisikostufen, die für die Erzwingung der Richtlinie erforderlich sind** die Option **Hoch** aus.
+9. Wählen Sie unter **Hiermit konfigurieren Sie die Benutzerrisikostufen, die für die Erzwingung der Richtlinie erforderlich sind** die Option **Hoch** aus.
 
-11. Klicke auf **Fertig**.
+10. Klicke auf **Fertig**.
 
-12. Stellen Sie unter **Zugriffssteuerungen** sicher, dass **Zuweisung** aktiviert ist.    
+11. Klicken Sie unter **Gewähren** im Abschnitt **Zugriffssteuerungen** auf **0 Steuerungen ausgewählt**. Vergewissern Sie sich, dass auf dem Blatt **Gewähren** die Option **Zugriff gewähren** ausgewählt ist.
 
-13. Wählen Sie **Multi-Faktor-Authentifizierung erfordern** und **Kennwortänderung erforderlich** aus.
+12. Wählen Sie **Multi-Faktor-Authentifizierung erfordern** und **Kennwortänderung erforderlich** aus.
 
-14. Klicken Sie auf **Auswählen**.
+13. Klicken Sie auf **Auswählen**.
 
-15. Klicken Sie unter **Sitzung** auf **Anmeldehäufigkeit**, und stellen Sie sicher, dass **Immer** aktiviert ist.
+14. Klicken Sie unter **Sitzung** auf **0 Steuerungen ausgewählt**. Wählen Sie **Anmeldehäufigkeit** und dann **Jedes Mal** aus.
 
-16. Klicken Sie auf **Auswählen**.
+15. Klicken Sie auf **Auswählen**.
 
-17. Bestätigen Sie die Einstellungen, und legen Sie **Richtlinie aktivieren** auf **Nur Bericht** fest.
+16. Vergewissern Sie sich, dass **Richtlinie aktivieren** auf **Nur melden** festgelegt ist.
 
-    >**Hinweis:** Die folgende Meldung wird unten auf der Seite angezeigt: **Sie möchten offenbar die Sicherheitskonfigurationen Ihrer Organisation verwalten. Hervorragend! Sie müssen zunächst die Sicherheitsstandards deaktivieren, um eine Richtlinie für den bedingten Zugriff zu aktivieren.**
-
-18. Klicken Sie auf den Teil der Nachricht mit folgendem Text: **Sicherheitsstandards deaktivieren**.
-
-19. Ändern Sie **Sicherheitsstandards aktivieren** von „Ja“ in **Nein**.
-
-20. Klicken Sie auf **Andere**, und geben Sie Folgendes in das Feld ein: **AZ500 lab use** (AZ500-Labnutzung).
-
-21. Klicken Sie auf **Speichern**.
-
-22. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
+17. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
 
 #### Aufgabe 3: Konfigurieren einer Anmelderisiko-Richtlinie
 
-1. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff**.
+1. Navigieren Sie zum Azure AD-Mandanten **AdatumLab500-04** und dann zu **Sicherheit** > **Bedingter Zugriff**> **Richtlinien**.
 
-2. Wählen Sie **Neue Richtlinie**.
+2. Wählen Sie **+ Neue Richtlinie** aus.
 
 3. Geben Sie den Richtliniennamen **AZ500Policy3** in das Textfeld **Name** ein.
 
-4. Wählen Sie unter **Zuweisungen** die Option **Benutzer** aus.
+4. Klicken Sie unter **Zuweisungen** > **Benutzer** auf **0 Benutzer und Gruppen ausgewählt**.
 
-5. Klicken Sie unter **Einschließen** auf **Benutzer und Gruppen auswählen**, und wählen Sie **aaduser2** und **aaduser3** aus.
+5. Klicken Sie unter **Einschließen** auf **Benutzer und Gruppen auswählen**, klicken Sie auf **Benutzer und Gruppen**, wählen Sie **aaduser2** und **aaduser3** aus, und klicken Sie auf **Auswählen**.
 
-6. Klicken Sie unter **Ausschließen** auf **Benutzer und Gruppen**, und wählen Sie **aaduser1** aus. 
+6. Klicken Sie unter **Ausschließen** auf **Benutzer und Gruppen**, und wählen Sie **aaduser1** aus. Klicken Sie dann auf **Auswählen**. 
 
-7. Wählen Sie unter **Cloud-Apps oder -aktionen** > **Einschließen** die Option **Alle Cloud-Apps** aus.
+7. Klicken Sie unter **Zielressourcen** auf **Keine Zielressourcen ausgewählt**, vergewissern Sie sich, dass **Cloud-Apps** in der Dropdownliste ausgewählt ist, und wählen Sie unter **Einschließen** die Option **Alle Cloud-Apps** aus.
 
-8. Legen Sie unter **Bedingungen** > **Anmelderisiko** die Option **Konfigurieren** auf **Ja** fest.
+8. Klicken Sie unter **Bedingungen** auf **0 Bedingungen ausgewählt**, und klicken Sie unter **Anmelderisiko** auf **Nicht konfiguriert**. Legen Sie auf dem Blatt **Anmelderisiko** die Option **Konfigurieren** auf **Ja** fest.
 
 9. Wählen Sie unter **Hiermit wählen Sie die Anmelderisikostufe aus, auf die diese Richtlinie angewendet werden soll** die Optionen **Hoch** und **Mittel** aus.
 
 10. Klicke auf **Fertig**.
 
-11. Unter **Zugriffssteuerungen** > **Erteilen**:  
+11. Klicken Sie unter **Gewähren** im Abschnitt **Zugriffssteuerungen** auf **0 Steuerungen ausgewählt**. Vergewissern Sie sich, dass auf dem Blatt **Gewähren** die Option **Zugriff gewähren** ausgewählt ist.   
 
-12. Wählen Sie **Zugriff gewähren ** > **Multi-Faktor-Authentifizierung erfordern** aus.
+12. Wählen Sie **Multi-Faktor-Authentifizierung erforderlich** aus.
 
 13. Klicken Sie auf **Auswählen**.
 
-13. Wählen Sie unter **Sitzung** die Option **Anmeldehäufigkeit** aus, und stellen Sie sicher, dass **Immer** aktiviert ist.
+14. Klicken Sie unter **Sitzung** auf **0 Steuerungen ausgewählt**. Wählen Sie **Anmeldehäufigkeit** und dann **Jedes Mal** aus.
 
-14. Klicken Sie auf **Auswählen**.
+15. Klicken Sie auf **Auswählen**.
 
-15. Bestätigen Sie die Einstellungen, und legen Sie **Richtlinie aktivieren** auf **Nur Bericht** fest.
+16. Bestätigen Sie die Einstellungen und legen Sie **Richtlinie aktivieren** auf **Ein** fest.
 
-16. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
+17. Klicken Sie auf **Erstellen**, um die Richtlinie zu aktivieren.
 
 #### Aufgabe 4: Simulieren von Risikoereignissen für die Azure AD Identity Protection-Richtlinien 
 
@@ -514,14 +507,14 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie.
 
 3. Klicken Sie auf dem Blatt **Virtuelle Computer** auf den Eintrag **az500-04-vm1**. 
 
-4. Klicken Sie auf dem Blatt **az500-04-vm1** auf **Verbinden**, und klicken Sie im Dropdownmenü auf **RDP**. 
+4. Klicken Sie auf dem Blatt **az500-04-vm1** auf **Verbinden**. Vergewissern Sie sich, dass Sie sich auf der Registerkarte **RDP** befinden.
 
 5. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit eine Verbindung mit der Azure-VM **az500-04-vm1** über Remotedesktop her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
-   |Einstellung|Wert|
-   |---|---|
-   |Benutzername|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Einstellung|Wert|
+    |---|---|
+    |Benutzername|**Kursteilnehmer**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung und der **Server-Manager** geladen werden.  
 
@@ -537,15 +530,15 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrisiko-Sicherheitsrichtlinie.
 
 10. Laden Sie die Windows-Version des ToR-Browsers herunter, und installieren Sie sie mit den Standardeinstellungen. 
 
-11. Starten Sie nach Abschluss der Installation den ToR-Browser, verwenden Sie die Option **Verbinden** auf der anfänglichen Seite, und navigieren Sie zum Anwendungszugriffsbereich unter  **https://myapps.microsoft.com** .
+11. Starten Sie nach Abschluss der Installation den ToR-Browser, verwenden Sie die Option **Verbinden** auf der Startseite, und navigieren Sie zum Anwendungszugriffsbereich unter **https://myapps.microsoft.com** .
 
 12. Wenn Sie dazu aufgefordert werden, versuchen Sie, sich mit dem Konto **aaduser3** anzumelden. 
 
-    >**Hinweis**: Ihnen wird die Meldung Ihre **Anmeldung wurde gesperrt** angezeigt. Dies ist zu erwarten, da dieses Konto nicht mit MFA konfiguriert ist, die aufgrund eines erhöhten Anmelderisikos im Zusammenhang mit der Verwendung des ToR-Browsers erforderlich ist.
+    >**Hinweis**: Ihnen wird die Meldung Ihre **Anmeldung wurde gesperrt** angezeigt. Dies ist zu erwarten, da dieses Konto nicht mit Multi-Faktor-Authentifizierung konfiguriert ist, die aufgrund eines erhöhten Anmelderisikos im Zusammenhang mit der Verwendung des ToR-Browsers erforderlich ist.
 
-13. Verwenden Sie die Option **Melden Sie sich ab, und melden Sie sich mit einem anderen Konto an**, oder wählen Sie den schwarzen Pfeil aus, um sich mit dem Konto **aaduser1** anzumelden, das Sie zuvor in diesem Lab erstellt und für die Multi-Faktor-Authentifizierung konfiguriert haben.
+13. Wählen Sie im ToR-Browser den schwarzen Pfeil aus, um sich mit dem Konto **aaduser1** anzumelden, das Sie zuvor in diesem Lab erstellt und für die Multi-Faktor-Authentifizierung konfiguriert haben.
 
-    >**Hinweis**: Dieses Mal wird die Meldung **Verdächtige Aktivität erkannt** angezeigt. Dies ist ebenfalls zu erwarten, da dieses Konto mit MFA konfiguriert ist. Angesichts des erhöhten Anmelderisikos im Zusammenhang mit der Verwendung des ToR-Browsers müssen Sie MFA verwenden.
+    >**Hinweis**: Dieses Mal wird die Meldung **Verdächtige Aktivität erkannt** angezeigt. Dies ist ebenfalls zu erwarten, da dieses Konto mit Multi-Faktor-Authentifizierung konfiguriert ist. Angesichts des erhöhten Anmelderisikos im Zusammenhang mit der Verwendung des ToR-Browsers müssen Sie MFA verwenden.
 
 14. Verwenden Sie die Option **Überprüfen**, und geben Sie an, ob Sie Ihre Identität über SMS oder Anruf überprüfen möchten.
 
@@ -575,7 +568,7 @@ In dieser Aufgabe überprüfen Sie die Azure AD Identity Protection-Berichte, d
 
 8. Überprüfen Sie den Bericht, und identifizieren Sie alle Einträge, die eine Anmeldung von einer anonymen IP-Adresse darstellen, die vom ToR-Browser generiert wurde. 
 
- >**Hinweis**: Es kann 10 bis 15 Minuten dauern, bis Risiken in den Berichten angezeigt werden.
+    >**Hinweis**: Es kann 10 bis 15 Minuten dauern, bis Risiken in den Berichten angezeigt werden.
 
 > **Ergebnis**: Sie haben Azure AD Identity Protection aktiviert, die Benutzerrisiko-Sicherheitsrichtlinie und die Anmelderisiko-Richtlinie konfiguriert sowie die Azure AD Identity Protection-Konfiguration durch Simulieren von Risikoereignissen überprüft.
 

@@ -166,12 +166,11 @@ In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und 
     >**Hinweis**: Überwachungen können in ein Azure-Speicherkonto, in einen Log Analytics-Arbeitsbereich oder in den Event Hub geschrieben werden. Sie können eine beliebige Kombination dieser Optionen konfigurieren.
 
     >**Hinweis**: Wenn die speicherbasierte Überwachung auf dem Server aktiviert ist, wird sie unabhängig von den Datenbankeinstellungen immer auf die Datenbank angewendet.
+13. Wählen Sie auf Ihrer SQL-Datenbank-Übersichtsseite im Azure-Portal im linken Menü den **Abfrage-Editor (Vorschau)** aus. Versuchen Sie, sich anzumelden. Verwenden Sie ein falsches Kennwort, versuchen Sie, die Firewallregel für Ihre IP-Adresse auszulösen – es wird alles überwacht. Testen Sie auch eine erfolgreiche Anmeldung. Führen Sie die Abfrage aus. Möglicherweise finden Sie dann weitere Details in den Überwachungsprotokollen.
 
-13. Klicken Sie auf **Überwachungsprotokolle anzeigen**.
+14. Wechseln Sie zurück zu Datenbank, Überwachung und klicken Sie auf **Überwachungsprotokolle anzeigen**.
 
-14. Beachten Sie auf dem Blatt **Überwachungsdatensätze**, dass Sie zwischen Serverüberwachung und Datenbanküberwachung wechseln können. 
-
-    >**Hinweis**: Da diese SQL Server-Instanz und diese SQL-Datenbank erst kürzlich erstellt wurden, ist es unwahrscheinlich, dass zu diesem Zeitpunkt Ereignisse verfügbar sind. 
+15. Beachten Sie auf dem Blatt **Überwachungsdatensätze**, dass Sie zwischen Serverüberwachung und Datenbanküberwachung wechseln können. 
 
 > Ergebnisse: Sie haben eine SQL Server-Instanz und eine SQL-Datenbank erstellt sowie die Datenklassifizierung und die Überwachung konfiguriert. 
 

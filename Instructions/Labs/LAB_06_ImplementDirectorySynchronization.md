@@ -164,30 +164,31 @@ In dieser Aufgabe fügen Sie einen neuen Azure AD-Benutzer hinzu und weisen ihn
 
 2. Klicken Sie auf der Seite **Benutzer | Alle Benutzer**auf **+ Neuer Benutzer** und dann auf **Neuen Benutzer erstellen**.
 
-3. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, geben Sie die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte), und klicken Sie auf **Erstellen**:
+3. Stellen Sie auf dem Blatt **Neue*r Benutzer*in** sicher, dass die Option **Benutzer*in erstellen** ausgewählt ist. Geben Sie die folgenden Einstellungen an (übernehmen Sie für alle anderen Einstellungen die Standardwerte) und klicken Sie auf **Weiter: Eigenschaften >** :
 
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**syncadmin**|
    |Name|**syncadmin**|
    |Kennwort|Stellen Sie sicher, dass die Option **Kennwort automatisch generieren** ausgewählt ist, und klicken Sie auf **Kennwort anzeigen**.|
-   |Gruppen|**0 Gruppen ausgewählt**|
-   |Rollen|Klicken Sie auf **Benutzer**, anschließend auf **Globaler Administrator** und dann auf **Auswählen**.|
-   |Nutzungsstandort|**USA**|  
 
-    >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen. Sie können den Wert kopieren, indem Sie auf der rechten Seite der Dropdownliste, die den Domänennamen anzeigt, auf die Schaltfläche **In Zwischenablage kopieren** klicken. 
+    >**Hinweis**: Notieren Sie sich den vollständigen Benutzernamen. Sie können den Wert kopieren, indem Sie auf der rechten Seite der Dropdownliste, die den Domänennamen anzeigt, auf die Schaltfläche **In Zwischenablage kopieren** klicken. Sie benötigen es später in diesem Lab.
 
-    >**Hinweis**: Notieren Sie sich das Kennwort des Benutzers. Sie benötigen es später in diesem Lab. 
+    >**Hinweis**: Notieren Sie sich das Benutzerkennwort, indem Sie auf der rechten Seite des Textfelds „Kennwort“ auf die Schaltfläche **In Zwischenablage kopieren** klicken und es in ein Editordokument einfügen. Sie benötigen es später in diesem Lab.
 
+4. Scrollen Sie auf der Registerkarte **Eigenschaften** nach unten und geben Sie den Verwendungsort **USA** an (behalten Sie alle anderen Standardwerte bei). Klicken Sie dann auf **Weiter: Zuweisungen >** .
+
+5. Klicken Sie auf der Registerkarte **Zuweisungen** auf **+ Rolle hinzufügen**, suchen Sie nach **Globale*r Administrator*in** und wählen Sie diese Option aus. Klicken Sie dann auf **Auswählen**. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
+   
     >**Hinweis**: Zum Implementieren von Azure AD Connect ist ein Azure AD-Benutzer mit der Rolle „Globaler Administrator“ erforderlich.
 
-4. Öffnen Sie ein Browserfenster im InPrivate-Modus.
+6. Öffnen Sie ein Browserfenster im InPrivate-Modus.
 
-5. Navigieren Sie zum Azure-Portal, und melden Sie sich mit dem Benutzerkonto **syncadmin** an. Ändern Sie bei der entsprechenden Aufforderung das Kennwort, das Sie sich zuvor in dieser Aufgabe notiert haben, in **Pa55w.rd1234**.
+7. Navigieren Sie zum Azure-Portal unter **`https://portal.azure.com/`** und melden Sie sich mit dem Benutzerkonto **syncadmin** an. Wenn Sie dazu aufgefordert werden, ändern Sie das Kennwort, das Sie zuvor in dieser Aufgabe notiert haben, in Ihr eigenes Kennwort, das den Komplexitätsanforderungen entspricht, und notieren Sie es zur späteren Referenz. Sie werden in späteren Aufgaben zur Eingabe dieses Kennworts aufgefordert.
 
     >**Hinweis**: Für die Anmeldung müssen Sie einen vollqualifizierten Namen des Benutzerkontos **syncadmin** angeben, einschließlich des DNS-Domänennamens für den Azure AD-Mandanten, den Sie sich zuvor in dieser Aufgabe notiert haben. Dieser Benutzername hat das Format „syncadmin@`<your_tenant_name>`.onmicrosoft.com“, wobei `<your_tenant_name>` der Platzhalter für Ihren eindeutigen Azure AD-Mandantennamen ist. 
 
-6. Melden Sie sich als **syncadmin** ab, und schließen Sie das InPrivate-Browserfenster.
+8. Melden Sie sich als **syncadmin** ab, und schließen Sie das InPrivate-Browserfenster.
 
 > **Ergebnis**: Nach Abschluss dieser Übung haben Sie einen Azure AD-Mandanten erstellt, erfahren, wie Sie dem neuen Azure AD-Mandanten einen benutzerdefinierten DNS-Namen hinzugefügen, und einen Azure AD-Benutzer mit der Rolle „Globaler Administrator“ erstellt.
 
@@ -216,7 +217,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
 
 4. Klicken Sie auf dem Blatt **adVM** auf **Verbinden** und dann im Dropdownmenü auf **RDP**. 
 
-5. Wählen Sie im Parameter **IP-Adresse** die **öffentliche IP-Adresse des Lastenausgleichs** aus. Klicken Sie dann auf **RDP-Datei herunterladen**, und verwenden Sie diese Datei, um über Remotedesktop eine Verbindung mit der Azure-VM **adVM** herzustellen. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+5. Wählen Sie im Dropdownmenü **IP-Adresse** die Option **Öffentliche IP-Adresse des Lastenausgleichs** aus. Klicken Sie dann auf **RDP-Datei herunterladen** und verwenden Sie diese Datei, um über Remotedesktop eine Verbindung mit der Azure-VM **adVM** herzustellen. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
    |Einstellung|Wert|
    |---|---|
@@ -225,47 +226,44 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
 
     >**Hinweis**: Warten Sie, bis die Remotedesktop-Sitzung und der **Server-Manager** geladen werden.  
 
-    >**Hinweis**: Die folgenden Schritte werden in der Remotedesktop-Sitzung für die Azure-VM **adVM** ausgeführt. 
+    >**Hinweis**: Die folgenden Schritte werden in der Remotedesktop-Sitzung für die Azure-VM **adVM** ausgeführt.
 
-6. Klicken Sie in **Server-Manager** auf **Lokaler Server** und dann auf **Verstärkte Sicherheitskonfiguration für IE**.
+    >**Hinweis**: Wenn die Option**Öffentliche IP-Adresse des Lastenausgleichs** in der Dropdownliste **IP-Adresse** auf dem Blatt RDP nicht verfügbar ist, suchen Sie im Azure-Portal nach der Option **Öffentliche IP-Adressen**, wählen Sie **adPublicIP** aus und notieren Sie sich die IP-Adresse. Klicken Sie auf die Schaltfläche Start, geben Sie **MSTSC** ein und drücken Sie die **EINGABETASTE**, um den Remotedesktopclient zu starten. Geben Sie die öffentliche IP-Adresse des Lastenausgleichs in das Textfeld **Computer:** ein und klicken Sie auf **Verbinden**.
 
-7. Legen Sie im Dialogfeld **Verstärkte Sicherheitskonfiguration für Internet Explorer** beide Optionen auf **Aus** fest, und klicken Sie auf **OK**.
+6. Klicken Sie im **Server-Manager** auf **Tools** und dann im Dropdownmenü auf **Active Directory-Verwaltungscenter**.
 
-8. Starten Sie Internet Explorer, navigieren Sie zu **https://www.microsoft.com/en-us/edge/business/download**, laden Sie Microsoft Edge-Installationsbinärdateien herunter, führen Sie die Installation durch, und konfigurieren Sie den Webbrowser mit den Standardeinstellungen.
+7. Klicken Sie im **Active Directory-Verwaltungscenter** auf **adatum (local)** . Klicken Sie im Bereich **Aufgaben** unter dem Domänennamen **adatum (local)** auf **Neu** und im hierarchischen Menü auf **Organisationseinheit**.
 
-9. Klicken Sie im **Server-Manager** auf **Tools** und dann im Dropdownmenü auf **Active Directory-Verwaltungscenter**.
+8. Geben Sie im Fenster **Organisationseinheit erstellen** im Textfeld **Name** den Namen **ToSync** ein, und klicken Sie auf **OK**.
 
-10. Klicken Sie im **Active Directory-Verwaltungscenter** auf **adatum (local)** . Klicken Sie im Bereich **Aufgaben** unter dem Domänennamen **adatum (local)** auf **Neu** und im hierarchischen Menü auf **Organisationseinheit**.
+9. Doppelklicken Sie auf die neu erstellte Organisationseinheit **ToSync**, damit deren Inhalt im Detailbereich der Konsole „Active Directory-Verwaltungscenter“ angezeigt wird. 
 
-11. Geben Sie im Fenster **Organisationseinheit erstellen** im Textfeld **Name** den Namen **ToSync** ein, und klicken Sie auf **OK**.
+10. Klicken Sie im Bereich **Aufgaben** im Abschnitt **ToSync** auf **Neu** und im kaskadierenden Menü auf **Benutzer**.
 
-12. Doppelklicken Sie auf die neu erstellte Organisationseinheit **ToSync**, damit deren Inhalt im Detailbereich der Konsole „Active Directory-Verwaltungscenter“ angezeigt wird. 
+11. Erstellen Sie im Fenster **Benutzer erstellen** ein neues Benutzerkonto mit den folgenden Einstellungen (übernehmen Sie für andere Einstellungen die vorhandenen Werte), und klicken Sie auf **OK**:
+    
+    |Einstellung|Wert|
+    |---|---|
+    |Vollständiger Name|**aduser1**|
+    |Benutzer-UPN-Anmeldung|**aduser1**|
+    |SamAccountName-Anmeldung von Benutzer|**aduser1**|
+    |Kennwort und Kennwort bestätigen|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Andere Kennwortoptionen|**Kennwort läuft nie ab**|
 
-13. Klicken Sie im Bereich **Aufgaben** im Abschnitt **ToSync** auf **Neu** und im kaskadierenden Menü auf **Benutzer**.
-
-14. Erstellen Sie im Fenster **Benutzer erstellen** ein neues Benutzerkonto mit den folgenden Einstellungen (übernehmen Sie für andere Einstellungen die vorhandenen Werte), und klicken Sie auf **OK**:
-
-   |Einstellung|Wert|
-   |---|---|
-   |Vollständiger Name|**aduser1**|
-   |Benutzer-UPN-Anmeldung|**aduser1**|
-   |SamAccountName-Anmeldung von Benutzer|**aduser1**|
-   |Kennwort und Kennwort bestätigen|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
-   |Andere Kennwortoptionen|**Kennwort läuft nie ab**|
 
 #### Aufgabe 2: Installieren von Azure AD Connect
 
 In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer. 
 
-1. Verwenden Sie in der Remotedesktop-Sitzung für **adVM** Microsoft Edge, um unter **https://portal.azure.com** zum Azure-Portal zu navigieren, und melden Sie sich mit dem Benutzerkonto **syncadmin** an, das Sie in der vorherigen Übung erstellt haben. Geben Sie bei der entsprechenden Aufforderung den vollständigen Benutzernamen, den Sie sich notiert haben, und das Kennwort **Pa55w.rd1234** an.
+1. Verwenden Sie in der Remotedesktop-Sitzung für **adVM** Microsoft Edge, um unter **https://portal.azure.com** zum Azure-Portal zu navigieren, und melden Sie sich mit dem Benutzerkonto **syncadmin** an, das Sie in der vorherigen Übung erstellt haben. Wenn Sie dazu aufgefordert werden, geben Sie den vollständigen Benutzerprinzipalnamen und das Kennwort an, die Sie in der vorherigen Übung notiert haben.
 
 2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Azure Active Directory** ein, und drücken Sie die **EINGABETASTE**.
 
-3. Klicken Sie im Azure-Portal auf dem Blatt **AdatumSync \| Übersicht** auf **Azure AD Connect**.
+3. Klicken Sie im Azure-Portal auf dem Blatt **AdatumSync \| Übersicht** im linken Navigationsbereich unter **Verwalten** auf **Azure AD Connect**.
 
-4. Klicken Sie auf dem Blatt **AdatumSync \| Azure AD Connect** auf den Link **Azure AD Connect herunterladen**. Sie werden zur Downloadseite **Microsoft Azure Active Directory Connect** umgeleitet.
+4. Klicken Sie auf dem Blatt **AAD Connect \| Erste Schritte** im linken Navigationsbereich auf **Connect-Synchronisierung** und klicken Sie dann auf den Link **Azure AD Connect herunterladen**. Sie werden auf die **Azure AD Connect**-Downloadseite weitergeleitet.
 
-5. Klicken Sie auf der Downloadseite **Microsoft Azure Active Directory Connect** auf **Herunterladen**.
+5. Klicken Sie auf der **Azure AD Connect**-Downloadseite auf **Herunterladen**.
 
 6. Klicken Sie bei der entsprechenden Aufforderung auf **Ausführen**, um den Assistenten für **Microsoft Azure Active Directory Connect** zu starten.
 
@@ -283,10 +281,10 @@ In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer.
 
 13. Stellen Sie im Fenster **AD-Gesamtstrukturkonto** sicher, dass die Option **Neues AD-Konto erstellen** ausgewählt ist, geben Sie die folgenden Anmeldeinformationen an, und klicken Sie auf **OK**:
 
-   |Einstellung|Wert|
-   |---|---|
-   |Benutzername|**ADATUM\\Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 06 > Übung 1 > Aufgabe 2 erstellt haben.**|
+    |Einstellung|Wert|
+    |---|---|
+    |Benutzername|**ADATUM\\Kursteilnehmer**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 06 > Übung 1 > Aufgabe 2 erstellt haben.**|
 
 14. Stellen Sie auf der Seite **Verzeichnisse verbinden** sicher, dass der Eintrag **adatum.com** als konfiguriertes Verzeichnis angezeigt wird, und klicken Sie auf **Weiter**.
 
@@ -294,7 +292,7 @@ In dieser Aufgabe installieren Azure AD Connect auf dem virtuellen Computer.
 
     >**Hinweis:** Wie bereits erläutert wurde, wird dies erwartet, da Sie die benutzerdefinierte Azure AD DNS-Domäne **adatum.com** nicht überprüfen konnten.
 
-16. Klicken Sie auf der Seite **Filtern von Domänen und Organisationseinheiten** auf die Option **Ausgewählte Domänen und Organisationseinheiten synchronisieren**. Der Domänenname **adatum.com** wird überprüft. Erweitern Sie **adatum.com**, um die**ToSync**-OE anzuzeigen. Deaktivieren Sie alle Kontrollkästchen. Aktivieren Sie nur das Kontrollkästchen neben der **ToSync**-OE, und klicken Sie auf **Weiter**.
+16. Klicken Sie auf der Seite **Filtern von Domänen und Organisationseinheiten** auf die Option **Ausgewählte Domänen und Organisationseinheiten synchronisieren** und entfernen Sie den Haken aus dem Kontrollkästchen neben dem Domänennamen **adatum.com**. Klicken Sie, um **adatum.com** zu erweitern, aktivieren Sie nur das Kontrollkästchen neben der Organisationseinheit **ToSync** und klicken Sie dann auf **Weiter**.
 
 17. Übernehmen Sie auf der Seite **Eindeutige Identifizierung Ihrer Benutzer** die Standardeinstellungen, und klicken Sie auf **Weiter**.
 
@@ -319,11 +317,11 @@ In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioni
 
    >**Hinweis**: Möglicherweise müssen Sie einige Minuten warten und **Aktualisieren** auswählen, damit das Benutzerkonto **aduser1** angezeigt wird.
 
-3. Wählen Sie das Konto **aduser1** aus, und beachten Sie im Abschnitt **Profil > Identität**, dass das Attribut **Quelle** auf **Windows Server AD** festgelegt wurde.
+3. Klicken Sie auf das Konto **aduser1** und wählen Sie die Registerkarte **Eigenschaften** aus. Scrollen Sie nach unten zum Abschnitt **Lokal**. Stellen Sie sicher, dass das Attribut **Lokale Synchronisierung aktiviert** auf **Ja** festgelegt ist.
 
-4. Beachten Sie auf dem Blatt **aduser1 \| Profil** im Abschnitt **Jobinformationen**, dass das Attribut **Abteilung** nicht festgelegt wurde.
+4. Stellen Sie sicher, dass auf dem Blatt **aduser1** im Abschnitt **Auftragsinformationen** das Attribut **Abteilung** nicht festgelegt wurde.
 
-5. Wechseln Sie in der Remotedesktop-Sitzung für **adVM** zum **Active Directory-Verwaltungscenter**, wählen Sie in der Liste der Objekte in der Organisationseinheit **ToSync** den Eintrag **aduser1** und dann im Bereich **Aufgaben** im Abschnitt **aduser1** die Option **Eigenschaften** aus.
+5. Wechseln Sie in der Remotedesktop-Sitzung für **adVM** zum **Active Directory-Verwaltungscenter**, wählen Sie den Eintrag **aduser1** in der Liste der Objekte in der Organisationseinheit **ToSync** und dann im Bereich **Aufgaben** im Abschnitt **aduser1** die Option **Eigenschaften** aus.
 
 6. Geben Sie im Fenster **aduser1** im Abschnitt **Organisation** im Textfeld **Abteilung** den Begriff **Vertrieb** ein, und wählen Sie **OK** aus.
 
@@ -339,7 +337,7 @@ In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioni
 
 9. Wechseln Sie zum Microsoft Edge-Fenster mit dem Blatt **aduser1**, aktualisieren Sie die Seite, und beachten Sie, dass die Eigenschaft „Abteilung“ auf „Vertrieb“ festgelegt wurde.
 
-    >**Hinweis**: Möglicherweise müssen Sie noch eine Minute warten und die Seite erneut aktualisieren, wenn das Attribut **Abteilung** noch nicht festgelegt wurde.
+    >**Hinweis**: Möglicherweise müssen Sie bis zu drei Minuten warten und die Seite erneut aktualisieren, wenn das Attribut **Abteilung** weiterhin nicht festgelegt ist.
 
 > **Ergebnis**: Nach Abschluss dieser Übung haben Sie AD DS für die Verzeichnissynchronisierung vorbereitet, Azure AD Connect installiert und die Verzeichnissynchronisierung überprüft.
 

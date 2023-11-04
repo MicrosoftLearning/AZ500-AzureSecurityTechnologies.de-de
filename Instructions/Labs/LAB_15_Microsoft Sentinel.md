@@ -27,7 +27,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Microsoft Sentinel-Diagramm
 
-![image](https://user-images.githubusercontent.com/91347931/157538440-4953be73-90be-4edd-bd23-b678326ba637.png)
+![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/509aa70d-de11-4470-a289-877fbfecbc00)
 
 ## Anweisungen
 
@@ -70,29 +70,35 @@ In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und v
 
 In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktivitätsdatenconnectors.  
 
-1. Klicken Sie im Azure-Portal auf dem Blatt **Microsoft Sentinel \| Übersicht** im Abschnitt **Konfiguration** auf **Datenconnectors**. 
+1. Klicken Sie im Azure-Portal auf dem Blatt **Microsoft Sentinel \| Übersicht** im Abschnitt **Inhaltsverwaltung** auf **Inhaltshub**.
 
-2. Überprüfen Sie auf dem Blatt **Microsoft Sentinel \| Datenconnectors** die Liste der verfügbaren Connectors, geben Sie in die Suchleiste den Begriff **Azure** ein, und wählen Sie den Eintrag für den Connector **Azure-Aktivität** aus (blenden Sie die Menüleiste auf der linken Seite bei Bedarf mit \<< aus). Überprüfen Sie die Beschreibung und den Status, und klicken Sie auf **Open connector page** (Connectorseite öffnen).
+2. Überprüfen Sie auf dem Blatt **Microsoft Sentinel \| Inhaltshub** die Liste der verfügbaren Inhalte.
 
-3. Auf dem Blatt **Azure-Aktivität** sollte die Registerkarte **Anweisungen** ausgewählt sein. Notieren Sie sich die **Voraussetzungen**, und scrollen Sie nach unten zu **Konfiguration**. Notieren Sie sich die Informationen, mit denen das Connectorupdate beschrieben wird. Weil Ihr Azure Pass-Abonnement die Legacy-Verbindungsmethode nie verwendet hat, können Sie Schritt 1 überspringen (die Schaltfläche **Alle trennen** ist abgeblendet) und mit Schritt 2 weitermachen.
+3. Geben Sie **Azure** in die Suchleiste ein, und wählen Sie den Eintrag **Azure-Aktivität** aus. Lesen Sie die Beschreibung ganz rechts, und klicken Sie dann auf **Installieren**.
 
-4. Lesen Sie in Schritt 2 **Verbinden Sie Ihre Abonnements über die Diagnoseeinstellungen „neue Pipeline“** die Anleitungen unter „Starten Sie den Azure Policy-Zuweisungs-Assistenten, und führen Sie diese Schritte aus“. Klicken Sie dann auf **Azure Policy-Zuweisungs-Assistent starten\>** .
+4. Warten Sie, bis die Benachrichtigung **Installation erfolgreich** angezeigt wird. Klicken Sie im linken Navigationspanel im Abschnitt **Konfiguration** auf **Datenconnectors**.
 
-5. Klicken Sie auf der Registerkarte **Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren** (Seite „Richtlinie zuweisen“) **Grundlagen** auf die Schaltfläche mit den Auslassungspunkten **Bereich (...)** . Wählen Sie auf der Seite **Bereich** in der Dropdownliste „Abonnement“ Ihr Azure Pass-Abonnement aus, und klicken Sie unten auf der Seite auf die Schaltfläche **Auswählen**.
+5. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Datenconnectors** auf **Aktualisieren**, und sehen Sie sich die Liste der verfügbaren Connectors an. Wählen Sie den Eintrag für den Connector **Azure-Aktivität** aus (linke Menüleiste kann bei Bedarf mit \<< ausgeblendet werden), sehen Sie sich die Beschreibung und den Status ganz rechts an, und klicken Sie dann auf **Connectorseite öffnen**.
+
+6. Auf dem Blatt **Azure-Aktivität** sollte die Registerkarte **Anweisungen** ausgewählt sein. Notieren Sie sich die **Voraussetzungen**, und scrollen Sie nach unten zu **Konfiguration**. Notieren Sie sich die Informationen, mit denen das Connectorupdate beschrieben wird. Weil Ihr Azure Pass-Abonnement die Legacy-Verbindungsmethode nie verwendet hat, können Sie Schritt 1 überspringen (die Schaltfläche **Alle trennen** ist abgeblendet) und mit Schritt 2 weitermachen.
+
+7. Lesen Sie in Schritt 2 **Verbinden Sie Ihre Abonnements über die Diagnoseeinstellungen „neue Pipeline“** die Anleitungen unter „Starten Sie den Azure Policy-Zuweisungs-Assistenten, und führen Sie diese Schritte aus“. Klicken Sie dann auf **Azure Policy-Zuweisungs-Assistent starten\>** .
+
+8. Klicken Sie auf der Registerkarte **Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren** (Seite „Richtlinie zuweisen“) **Grundlagen** auf die Schaltfläche mit den Auslassungspunkten **Bereich (...)** . Wählen Sie auf der Seite **Bereich** in der Dropdownliste „Abonnement“ Ihr Azure Pass-Abonnement aus, und klicken Sie unten auf der Seite auf die Schaltfläche **Auswählen**.
 
     >**Hinweis**:Wählen Sie *keine* Ressourcengruppe aus.
 
-6. Klicken Sie unten auf der Registerkarte **Grundlagen** auf die Schaltfläche **Weiter**, um zur Registerkarte **Parameter** zu wechseln. Klicken Sie dann auf der Registerkarte **Parameter** auf die Schaltfläche mit den Auslassungspunkten **Primärer Log Analytics-Arbeitsbereich (...)** . Vergewissern Sie sich auf der Seite **Primärer Log Analytics-Arbeitsbereich**, dass Ihr Azure Pass-Abonnement ausgewählt ist, und wählen Sie im Dropdown-Listenfeld **Arbeitsbereiche** den Log Analytics-Arbeitsbereich aus, den Sie für Sentinel verwenden. Klicken Sie anschließend unten auf der Seite auf die Schaltfläche **Auswählen**.
+9. Klicken Sie unten auf der Registerkarte **Grundeinstellungen** zweimal auf die Schaltfläche **Weiter**, um zur Registerkarte **Parameter** zu wechseln. Klicken Sie dann auf der Registerkarte **Parameter** auf die Schaltfläche mit den Auslassungspunkten **Primärer Log Analytics-Arbeitsbereich (...)** . Vergewissern Sie sich auf der Seite **Primärer Log Analytics-Arbeitsbereich**, dass Ihr Azure Pass-Abonnement ausgewählt ist, und wählen Sie im Dropdown-Listenfeld **Arbeitsbereiche** den Log Analytics-Arbeitsbereich aus, den Sie für Sentinel verwenden. Klicken Sie anschließend unten auf der Seite auf die Schaltfläche **Auswählen**.
 
-7. Klicken Sie unten auf der Registerkarte **Parameter** auf die Schaltfläche **Weiter**, um zur Registerkarte **Wartung** zu wechseln. Aktivieren Sie auf der Registerkarte **Wartung** das Kontrollkästchen **Wartungstask erstellen**. Dadurch wird in der Dropdownliste **Zu korrigierende Richtlinie** die Option „Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren“ aktiviert. Wählen Sie in der Dropdownliste **Standort der systemseitig zugewiesenen Identität** die Region (z. B. „USA, Osten“) aus, die Sie zuvor für Ihren Log Analytics-Arbeitsbereich ausgewählt haben.
+10. Klicken Sie unten auf der Registerkarte **Parameter** auf die Schaltfläche **Weiter**, um zur Registerkarte **Wartung** zu wechseln. Aktivieren Sie auf der Registerkarte **Wartung** das Kontrollkästchen **Wartungstask erstellen**. Dadurch wird in der Dropdownliste **Zu korrigierende Richtlinie** die Option „Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren“ aktiviert. Wählen Sie in der Dropdownliste **Standort der systemseitig zugewiesenen Identität** die Region (z. B. „USA, Osten“) aus, die Sie zuvor für Ihren Log Analytics-Arbeitsbereich ausgewählt haben.
 
-8. Klicken Sie unten auf der Registerkarte **Wartung** auf die Schaltfläche **Weiter**, um zur Registerkarte **Nichtkonformitätsmeldung** zu wechseln. Geben Sie bei Bedarf eine Nichtkonformitätsmeldung ein (dies ist optional), und klicken Sie unten auf der Registerkarte **Nichtkonformitätsmeldung** auf die Schaltfläche **Überprüfen + erstellen**.
+11. Klicken Sie unten auf der Registerkarte **Wartung** auf die Schaltfläche **Weiter**, um zur Registerkarte **Nichtkonformitätsmeldung** zu wechseln. Geben Sie bei Bedarf eine Nichtkonformitätsmeldung ein (dies ist optional), und klicken Sie unten auf der Registerkarte **Nichtkonformitätsmeldung** auf die Schaltfläche **Überprüfen + erstellen**.
 
-9. Klicken Sie auf die Schaltfläche **Erstellen** . Sie sollten drei Meldungen zum Status „erfolgreich“ beobachten: **„Richtlinienzuweisung erfolgreich erstellt“, „Rollenzuweisungen erfolgreich erstellt“ und „Wartungstask erfolgreich erstellt“** .
+12. Klicken Sie auf die Schaltfläche **Erstellen** . Sie sollten drei Meldungen zum Status „erfolgreich“ beobachten: **„Richtlinienzuweisung erfolgreich erstellt“, „Rollenzuweisungen erfolgreich erstellt“ und „Wartungstask erfolgreich erstellt“** .
 
     >**Hinweis**: Sie können das Glockensymbol „Benachrichtigungen“ überprüfen, um die drei erfolgreichen Aufgaben zu überprüfen.
 
-10. Vergewissern Sie sich, dass im Bereich **Azure-Aktivität** der Graph **Empfangene Daten** angezeigt wird (möglicherweise müssen Sie die Browserseite aktualisieren).  
+13. Vergewissern Sie sich, dass im Bereich **Azure-Aktivität** der Graph **Empfangene Daten** angezeigt wird (möglicherweise müssen Sie die Browserseite aktualisieren).  
 
     >**Hinweis**: Es kann länger als 15 Minuten dauern, bis der Status „Verbunden“ lautet und der Graph „Empfangene Daten“ anzeigt.
 
@@ -110,17 +116,17 @@ In dieser Aufgabe überprüfen und erstellen Sie eine Regel, die den Azure-Aktiv
 
     >**Hinweis**: Diese Regel ist für den mittleren Schweregrad vorgesehen. 
 
-4. Übernehmen Sie auf der Registerkarte **Allgemein** des Blatts **Analyseregel-Assistent – Neue Regel aus Vorlage erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Regellogik festlegen >** .
+4. Übernehmen Sie auf der Registerkarte **Allgemein** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Regellogik festlegen >** .
 
-5. Übernehmen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Create new rule from template (Neue Regel aus Vorlage erstellen)** die Standardeinstellungen, und klicken Sie auf **Weiter: Incidenteinstellungen(Vorschau) >** .
+5. Übernehmen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Incidenteinstellungen (Vorschau) >** .
 
-6. Übernehmen Sie auf der Registerkarte **Incidenteinstellungen** des Blatts **Analyseregel-Assistent – Neue Regel aus Vorlage erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Automatisierte Antwort >** . 
+6. Übernehmen Sie auf der Registerkarte **Incidenteinstellungen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Automatisierte Antwort >** . 
 
     >**Hinweis**: Hier können Sie einer Regel ein Playbook hinzufügen, das als Logik-App implementiert wird, um die Behebung eines Problems zu automatisieren.
 
-7. Übernehmen Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue Regel aus Vorlage erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Überprüfen >** . 
+7. Übernehmen Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Überprüfen und erstellen >** . 
 
-8. Klicken Sie auf der Registerkarte **Überprüfen und erstellen** des Blatts **Analyseregel-Assistent – Neue Regel aus Vorlage erstellen** auf **Erstellen**.
+8. Klicken Sie auf der Registerkarte **Überprüfen und erstellen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** auf **Speichern**.
 
     >**Hinweis**: Sie haben jetzt eine aktive Regel.
 
@@ -162,15 +168,15 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     >**Hinweis**: Auf dem Blatt **Logic Apps-Designer** wird für jede der vier Verbindungen eine Warnung angezeigt. Dies bedeutet, dass jede Verbindung überprüft und konfiguriert werden muss.
 
-11. Klicken Sie auf dem Blatt **Logic Apps-Designer** auf den ersten Schritt **Verbindungen**.
+11. Klicken Sie auf dem Blatt **Logic Apps-Designer** auf den ersten **Verbindungsschritt**.
 
 12. Klicken Sie auf **Neu hinzufügen**, stellen Sie sicher, dass der Eintrag in der Dropdownliste **Mandant** Ihren Azure AD-Mandantennamen enthält, und klicken Sie auf **Anmelden**.
 
 13. Melden Sie sich bei der entsprechenden Aufforderung mit dem Benutzerkonto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab nutzen.
 
-14. Klicken Sie auf den zweiten Schritt **Verbindungen**, und wählen Sie in der Liste der Verbindungen den zweiten Eintrag für die Verbindung aus, die Sie im vorherigen Schritt erstellt haben.
+14. Klicken Sie auf den zweiten **Verbindungsschritt**, und wählen Sie in der Liste der Verbindungen den zweiten Eintrag für die Verbindung aus, die Sie im vorherigen Schritt erstellt haben.
 
-15. Wiederholen Sie die vorherigen Schritte für die beiden verbleibenden **Verbindungen**-Schritte.
+15. Wiederholen Sie die vorherigen Schritte für die beiden verbleibenden **Verbindungsschritte**.
 
     >**Hinweis**: Stellen Sie sicher, dass bei keinem der Schritte Warnungen angezeigt werden.
 
@@ -184,7 +190,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 3. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Analysen** auf **+ Erstellen** und dann im Dropdownmenü auf **Geplante Abfrageregel**. 
 
-4. Geben Sie auf der Registerkarte **Allgemein** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte):
+4. Geben Sie auf der Registerkarte **Allgemein** des Blatts **Analyseregel-Assistent – Neue Regel geplante erstellen** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte):
 
     |Einstellung|Wert|
     |---|---|
@@ -193,7 +199,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 5. Klicken Sie auf **Weiter: Regellogik festlegen >** .
 
-6. Fügen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** im Textfeld **Regelabfrage** die folgende Regelabfrage ein. 
+6. Fügen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** im Textfeld **Regelabfrage** die folgende Regelabfrage ein. 
 
     ```
     AzureActivity
@@ -201,20 +207,26 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
      | where OperationNameValue =~ "Microsoft.Security/locations/jitNetworkAccessPolicies/delete" 
     ```
 
-    >**Hinweis**: Diese Regel identifiziert das Entfernen von Just-in-Time-VM-Zugriffsrichtlinien.
+    >**Hinweis**: Diese Regel erkennt die Entfernung von Just-in-Time-VM-Zugriffsrichtlinien.
 
     >**Hinweis**: Wenn ein Analysefehler angezeigt wird, hat IntelliSense Ihrer Abfrage möglicherweise Werte hinzugefügt. Vergewissern Sie sich, dass die Abfrage übereinstimmt. Fügen Sie andernfalls die Abfrage in Editor und dann aus Editor in die Regelabfrage ein. 
 
 
-7. Legen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** im Abschnitt **Abfrageplanung** den Wert für **Abfrage ausführen alle** auf **5 Minuten** fest.
+7. Legen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** im Abschnitt **Abfrageplanung** den Wert für **Abfrage ausführen alle** auf **5 Minuten** fest.
 
-8. Übernehmen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** die Standardwerte der verbleibenden Einstellungen, und klicken Sie auf **Weiter: Incidenteinstellungen >** .
+8. Übernehmen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** die Standardwerte der verbleibenden Einstellungen, und klicken Sie auf **Weiter: Incidenteinstellungen >** .
 
-9. Übernehmen Sie auf der Registerkarte **Incidenteinstellungen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Automatisierte Antwort >** . 
+9. Übernehmen Sie auf der Registerkarte **Incidenteinstellungen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** die Standardeinstellungen, und klicken Sie auf **Weiter: Automatisierte Antwort >** . 
 
-10. Aktivieren Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** in der Dropdownliste **Warnungsautomatisierung (klassisch)** das Kontrollkästchen neben dem Eintrag **Change-Incident-Severity**, und klicken Sie auf **Weiter: Überprüfen >** . 
+10. Klicken Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** unter **Automatisierungsregeln**auf **+ Neue hinzufügen**.
 
-11. Klicken Sie auf der Registerkarte **Überprüfen und erstellen** des Blatts **Analyseregel-Assistent – Neue Regel erstellen** auf **Erstellen**.
+11. Geben Sie im Fenster **Neue Automatisierungsregel erstellen** den Namen **Run Change-Severity Playbook** für die **Automatisierungsregel** ein. Klicken Sie dann im Feld **Trigger** auf das Dropdownmenü, und wählen Sie **Wann eine Warnung erstellt wird** aus.
+
+12. Lesen Sie im Fenster **Neue Automatisierungsregel erstellen** unter **Aktionen** den Hinweis, und klicken Sie dann auf **Playbookberechtigungen verwalten**. Aktivieren Sie im Fenster **Berechtigungen verwalten** das Kontrollkästchen neben der zuvor erstellten Ressourcengruppe **AZ500LAB1314151**, und klicken Sie dann auf **Übernehmen**.
+
+13.  Klicken Sie im Fenster **Neue Automatisierungsregel erstellen** unter **Aktionen** auf das zweite Dropdownmenü, und wählen Sie die Logik-App **Change-Incident-Severity** aus. Klicken Sie im Fenster **Neue Automatisierungsregel erstellen** auf **Übernehmen**.
+
+14. Klicken Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** auf **Weiter: Überprüfen und erstellen >** und dann auf **Speichern**.
 
     >**Hinweis**: Sie haben jetzt die neue aktive Regel **Playbook-Demo**. Wenn ein von der Regellogik des identifiziertes Ereignis eintritt, führt dies zu einer Warnung mit mittlerem Schweregrad, die einen entsprechenden Incident generiert.
 
@@ -224,27 +236,29 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     >**Hinweis**: Überprüfen Sie Ihre Sicherheitsbewertung. Jetzt sollte sie aktualisiert worden sein. 
 
-2. Klicken Sie auf dem Blatt **Microsoft Defender für Cloud \| Workload protections (Workloadschutz)** unter **Erweiterter Schutz** auf den Abschnitt **Just-in-time VM access (Just-in-Time-VM-Zugriff)** .
+2. Klicken Sie auf dem Blatt **Microsoft Defender for Cloud \| Übersicht** im linken Navigationsbereich unter **Cloudsicherheit** auf **Workloadschutz**.
 
-3. Klicken Sie auf dem Blatt **Microsoft Defender für Cloud \| Just-in-time VM access** auf der rechten Seite der Zeile, die auf den virtuellen Computer **myVM** verweist, auf die Schaltfläche mit den Auslassungspunkten ( **...** ), anschließend auf **Entfernen** und dann auf **Ja**.
+3. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \| Workloadschutz** nach unten, und klicken Sie unter **Erweiterter Schutz** auf die Kachel **Just-In-Time-VM-Zugriff**.
+
+4. Klicken Sie auf dem Blatt **Just-in-Time-VM-Zugriff** auf der rechten Seite der Zeile für die VM **myVM** auf die Schaltfläche mit den Auslassungspunkten **(...)** , anschließend auf **Entfernen** und dann auf **Ja**.
 
     >**Hinweis**: Wenn die VM nicht in **Just-in-time VMs (Just-In-Time-VMs)** aufgeführt wird, navigieren Sie zum Blatt **Virtueller Computer**, und klicken Sie auf **Konfiguration**. Klicken Sie unter **Just-in-time Vm's access (Just-In-Time-VM-Zugriff)** auf die Option **Enable the Just-in-time VMs (Just-In-Time-VMs aktivieren)** . Wiederholen Sie den obigen Schritt, um zurück zu **Microsoft Defender für Cloud** zu navigieren. Aktualisieren Sie die Seite, um die VM anzuzeigen.
 
-4. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Aktivitätsprotokoll** ein, und drücken Sie die **EINGABETASTE**.
+5. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Aktivitätsprotokoll** ein, und drücken Sie die **EINGABETASTE**.
 
-5. Navigieren Sie zum Blatt **Aktivitätsprotokoll**, und notieren Sie sich den Eintrag **JIT-Netzwerkzugriffsrichtlinien löschen**. 
+6. Navigieren Sie zum Blatt **Aktivitätsprotokoll**, und notieren Sie sich den Eintrag **JIT-Netzwerkzugriffsrichtlinien löschen**. 
 
-    >**Hinweis**: Es kann eine Minute dauern, bis dieser Eintrag angezeigt wird. 
+    >**Hinweis**: Es kann einige Minuten dauern, bis Daten angezeigt werden. **Aktualisieren** Sie die Seite, wenn sie nicht angezeigt werden.
 
-6. Navigieren Sie im Azure-Portal zurück zum Blatt **Microsoft Sentinel \| Übersicht**.
+7. Navigieren Sie im Azure-Portal zurück zum Blatt **Microsoft Sentinel \| Übersicht**.
 
-7. Überprüfen Sie auf dem Blatt **Microsoft Sentinel \| Übersicht** das Dashboard, und vergewissern Sie sich, dass dort eine Warnung bezüglich des Löschens der Just-in-Time-VM-Zugriffsrichtlinie angezeigt wird.
+8. Überprüfen Sie auf dem Blatt **Microsoft Sentinel \| Übersicht** das Dashboard, und vergewissern Sie sich, dass dort ein Incident bezüglich des Löschens der Just-in-Time-VM-Zugriffsrichtlinie angezeigt wird.
 
     >**Hinweis**: Es kann bis zu fünf Minuten dauern, bis Warnungen auf dem Blatt **Microsoft Sentinel \| Übersicht** angezeigt werden. Wenn zu diesem Zeitpunkt keine Warnung angezeigt wird, führen Sie die Abfrageregel aus, auf die in der vorherigen Aufgabe verwiesen wurde. Überprüfen Sie so, ob die Löschaktivität der Just-In-Time-Zugriffsrichtlinie an den Log Analytics-Arbeitsbereich weitergegeben wurde, der Ihrer Microsoft Sentinel-Instanz zugeordnet ist. Wenn dies nicht zutrifft, erstellen Sie die Just-in-Time-VM-Zugriffsrichtlinie neu, und löschen Sie sie wieder.
 
-8. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Übersicht** im Abschnitt **Bedrohungsverwaltung** auf **Incidents**.
+9. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Übersicht** im Abschnitt **Bedrohungsverwaltung** auf **Incidents**.
 
-9. Vergewissern Sie sich, dass auf dem Blatt ein Incident mit mittlerem oder hohem Schweregrad angezeigt wird.
+10. Vergewissern Sie sich, dass auf dem Blatt ein Incident mit mittlerem oder hohem Schweregrad angezeigt wird.
 
     >**Hinweis**: Es kann bis zu fünf Minuten dauern, bis der Incident auf dem Blatt **Microsoft Sentinel \| Incidents** angezeigt wird. 
 
@@ -252,7 +266,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     >**Hinweis**: Sie haben die Möglichkeit, einem Incident einen anderen Schweregrad und Status zuzuweisen.
 
-> Ergebnisse: Sie haben einen Microsoft Sentinel-Arbeitsbereich erstellt, ihn mit Azure-Aktivitätsprotokollen verbunden, ein Playbook und benutzerdefinierte Warnungen erstellt, die als Reaktion auf das Entfernen von Just-in-Time-VM-Zugriffsrichtlinien ausgelöst werden, und schließlich überprüft, ob die Konfiguration gültig ist.
+> Zusammenfassung: Sie haben einen Microsoft Sentinel-Arbeitsbereich erstellt, ihn mit Azure-Aktivitätsprotokollen verbunden, ein Playbook und benutzerdefinierte Warnungen erstellt, die als Reaktion auf das Entfernen von Just-in-Time-VM-Zugriffsrichtlinien ausgelöst werden, und schließlich überprüft, ob die Konfiguration gültig ist.
 
 **Bereinigen von Ressourcen**
 

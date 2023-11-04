@@ -273,29 +273,31 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
 
 8. Klicken Sie auf dem Blatt **Übersicht** des Speicherkontos auf der Registerkarte **Datenspeicher** auf **Dateifreigaben**, und klicken Sie dann auf **+ Dateifreigabe**.
 
-9. Geben Sie auf dem Blatt **Neue Dateifreigabe** die folgenden Einstellungen an:
+9. Deaktivieren Sie auf dem Blatt **Neue Dateifreigabe** in der Registerkarte Sicherung die Option **Sicherung aktivieren**. 
+
+10. Geben Sie auf dem Blatt **Neue Dateifreigabe** die folgenden Einstellungen an:
 
     |Einstellung|Wert|
     |---|---|
     |Name|**my-file-share**|
 
-10. Klicken Sie auf dem Blatt **Neue Dateifreigabe** auf **Erstellen**.
+11. Klicken Sie auf dem Blatt **Neue Dateifreigabe** auf **Erstellen**.
 
     >**Hinweis**: Rufen Sie jetzt das PowerShell-Skript ab, das eine Laufwerkzuordnung zur Azure-Dateifreigabe erstellt, und zeichnen Sie es auf. 
 
-11. Klicken Sie auf dem Blatt des Speicherkontos in der Liste der Dateifreigaben auf **my-file-share**.
+12. Klicken Sie auf dem Blatt des Speicherkontos in der Liste der Dateifreigaben auf **my-file-share**.
 
-12. Klicken Sie auf dem Blatt **my-file-share** auf **Verbinden**.
+13. Klicken Sie auf dem Blatt **my-file-share** auf **Verbinden**.
 
-13. Kopieren Sie auf dem Blatt **Verbinden** auf der Registerkarte **Windows** das PowerShell-Skript, das eine Zuordnung des Laufwerks „Z“ zur Dateifreigabe erstellt. 
+14. Kopieren Sie auf dem Blatt **Verbinden** auf der Registerkarte **Windows** das PowerShell-Skript, das eine Zuordnung des Laufwerks „Z“ zur Dateifreigabe erstellt. 
 
     >**Hinweis**: Zeichnen Sie dieses Skript auf. Sie benötigen es später in diesem Lab, um die Dateifreigabe vom virtuellen Azure-Computer im **privaten** Subnetz zuzuordnen.
 
-14. Navigieren Sie zurück zum Blatt des Speicherkontos, und klicken Sie dann im Abschnitt **Sicherheit und Netzwerk** auf **Netzwerk**.
+15. Navigieren Sie zurück zum Blatt des Speicherkontos, und klicken Sie dann im Abschnitt **Sicherheit und Netzwerk** auf **Netzwerk**.
 
-15. Wählen Sie auf dem Blatt **Firewalls und virtuelle Netzwerke** die Option **Von ausgewählten VNets und IP-Adressen aktiviert** aus, und klicken Sie auf den Link **+ Vorhandenes virtuelles Netzwerk hinzufügen**. 
+16. Wählen Sie auf dem Blatt **Firewalls und virtuelle Netzwerke** die Option **Von ausgewählten VNets und IP-Adressen aktiviert** aus, und klicken Sie auf den Link **+ Vorhandenes virtuelles Netzwerk hinzufügen**. 
 
-16. Geben Sie auf dem Blatt **Netzwerke hinzufügen** die folgenden Einstellungen an:
+17. Geben Sie auf dem Blatt **Netzwerke hinzufügen** die folgenden Einstellungen an:
 
     |Einstellung|Wert|
     |---|---|
@@ -303,9 +305,9 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto mit einer Dateifreigabe und ru
     |Virtuelle Netzwerke|**myVirtualNetwork**|
     |Subnetze|**Privat**|
 
-17. Klicken Sie auf dem Blatt **Netzwerke hinzufügen** auf **Hinzufügen**. 
+18. Klicken Sie auf dem Blatt **Netzwerke hinzufügen** auf **Hinzufügen**. 
 
-18. Klicken Sie anschließend auf dem Blatt des Speicherkontos auf **Speichern**.
+19. Klicken Sie anschließend auf dem Blatt des Speicherkontos auf **Speichern**.
 
     >**Hinweis**: An diesem Punkt im Lab haben Sie ein virtuelles Netzwerk, eine Netzwerksicherheitsgruppe und ein Speicherkonto mit einer Dateifreigabe konfiguriert. 
 

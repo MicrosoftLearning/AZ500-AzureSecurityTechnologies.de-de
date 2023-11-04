@@ -50,9 +50,9 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
     >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das in dem Azure-Abonnement, das Sie für dieses Lab verwenden, über die Rolle „Besitzer“ oder „Mitwirkender“ und die Rolle „Globaler Administrator“ im Azure AD-Mandanten verfügt, der diesem Abonnement zugeordnet ist.
 
-2. Geben Sie oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Azure Active Directory** ein, und drücken Sie die **EINGABETASTE**.
+2. Geben Sie oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Microsoft Entra ID** ein und drücken Sie die **EINGABETASTE**.
 
-3. Wählen Sie auf dem Blatt **Übersicht** des Azure Active Directory-Mandanten im Abschnitt **Verwalten** die Option **Benutzer** und dann **+ Neuer Benutzer** aus.
+3. Wählen Sie auf dem Blatt **Übersicht** des Microsoft Entra ID-Mandanten im Abschnitt **Verwalten** die Option **Benutzer*innen** und dann **+ Neue*r Benutzer*in** aus.
 
 4. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an:
 
@@ -73,7 +73,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
 In dieser Aufgabe erstellen Sie die Gruppe *Senior Admins*, fügen der Gruppe das Benutzerkonto von Joseph Price hinzu und konfigurieren es als Gruppenbesitzer.
 
-1. Navigieren Sie im Azure-Portal zurück zu dem Blatt, das Ihren Azure Active Directory-Mandanten anzeigt. 
+1. Navigieren Sie im Azure-Portal zurück zu dem Blatt, das Ihren Microsoft Entra ID-Mandanten anzeigt. 
 
 2. Klicken Sie im Abschnitt **Verwalten** auf **Gruppen**, und wählen Sie dann **+ Neue Gruppe** aus.
  
@@ -123,7 +123,7 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
     $passwordProfile.Password = "Pa55w.rd1234"
     ```
 
-5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Azure Active Directory herzustellen:
+5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Microsoft Entra ID herzustellen:
 
     ```powershell
     Connect-AzureAD

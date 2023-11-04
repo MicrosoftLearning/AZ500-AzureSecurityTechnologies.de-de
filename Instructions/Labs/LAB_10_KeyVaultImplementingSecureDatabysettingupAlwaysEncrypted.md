@@ -16,9 +16,9 @@ Sie sollen eine Proof of Concept-Anwendung erstellen, die die Azure SQL-Datenba
 
 >**Hinweis**: Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
-Um den Fokus auf die Sicherheitsaspekte von Azure im Zusammenhang mit der Erstellung dieser Proof of Concept-Anwendung zu legen, beginnen Sie mit einer automatisierten ARM-Vorlagenbereitstellung und richten einen virtuellen Computer (Virtual Machine, VM) mit Visual Studio 2019 und SQL Server Management Studio 2018 ein.
+Um den Fokus auf die Sicherheitsaspekte von Azure im Zusammenhang mit der Erstellung dieser Proof of Concept-Anwendung zu legen, beginnen Sie mit einer automatisierten ARM-Vorlagenbereitstellung und richten Sie eine VM mit Visual Studio 2019 und SQL Server Management Studio 19 ein.
 
-## Labziele
+## Ziele des Labs
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
@@ -49,7 +49,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 #### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers und einer Azure SQL-Datenbank
 
-In dieser Aufgabe stellen Sie einen virtuellen Azure-Computer bereit, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 als Teil der Bereitstellung automatisch installiert werden. 
+In dieser Aufgabe stellen Sie eine Azure-VM bereit, auf der Visual Studio 2019 und SQL Server Management Studio 19 als Teil der Bereitstellung automatisch installiert werden. 
 
 1. Melden Sie sich beim Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
@@ -221,7 +221,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 1: Ermöglichen des Zugriffs einer Clientanwendung auf den Azure SQL-Datenbank-Dienst
 - Aufgabe 2: Erstellen einer Richtlinie, die der Anwendung den Zugriff auf die Key Vault-Ressource ermöglicht
 - Aufgabe 3: Abrufen der ADO.NET-Verbindungszeichenfolge für Azure SQL-Datenbank 
-- Aufgabe 4: Anmelden bei dem virtuellen Azure-Computer, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 ausgeführt werden
+- Aufgabe 4: Anmelden bei der Azure-VM, auf der Visual Studio 2019 und SQL Server Management Studio 19 ausgeführt werden
 - Aufgabe 5: Erstellen einer Tabelle in der SQL-Datenbank und Auswählen von Datenspalten für die Verschlüsselung
 
 
@@ -315,9 +315,9 @@ Im Rahmen der ARM-Vorlagenbereitstellung in Übung 1 haben Sie eine Azure SQL 
 
     >**Hinweis:** Wenn Sie die Verbindungszeichenfolge verwenden, müssen Sie den Platzhalter `{your_password}` durch das Kennwort ersetzen, das Sie mit der Bereitstellung in Übung 1 konfiguriert haben.
 
-#### Aufgabe 4: Anmelden bei dem virtuellen Azure-Computer, auf dem Visual Studio 2019 und SQL Server Management Studio 2018 ausgeführt werden
+#### Aufgabe 4: Anmelden bei der Azure-VM, auf der Visual Studio 2019 und SQL Server Management Studio 19 ausgeführt werden
 
-In dieser Aufgabe melden Sie sich bei dem virtuellen Azure-Computer an, dessen Bereitstellung Sie in Übung 1 initiiert haben. Auf diesem dem virtuellen Azure-Computer werden Visual Studio 2019 und SQL Server Management Studio 2018 gehostet.
+In dieser Aufgabe melden Sie sich bei dem virtuellen Azure-Computer an, dessen Bereitstellung Sie in Übung 1 initiiert haben. Auf dieser Azure-VM werden Visual Studio 2019 und SQL Server Management Studio 19 gehostet.
 
     >**Note**: Before you proceed with this task, ensure that the deployment you initiated in the first exercise has completed successfully. You can validate this by navigating to the blade of the Azure resource group "Az500Lab10" (or other name you chose) and selecting **Deployments** from the Settings pane.  
 
@@ -358,7 +358,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
 
     >**Hinweis**: Die restlichen Schritte in diesem Lab werden in der Remotedesktopsitzung mit dem virtuellen Azure-Computer **az500-10-vm1** ausgeführt. 
 
-6. Klicken Sie auf **Start**, erweitern Sie im **Startmenü** den Ordner **Microsoft SQL Server-Tools 18**, und klicken Sie auf das Menüelement **Micosoft SQL Server Management Studio**.
+6. Klicken Sie auf **Start**, erweitern Sie im **Start**-Menü den Ordner **Microsoft SQL Server-Tools 19** und klicken Sie auf das Menüelement **Micosoft SQL Server Management Studio**.
 
 7. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Einstellungen an: 
 
