@@ -220,7 +220,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 10. Klicken Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** unter **Automatisierungsregeln**auf **+ Neue hinzufügen**.
 
-11. Geben Sie im Fenster **Neue Automatisierungsregel erstellen** den Namen **Run Change-Severity Playbook** für die **Automatisierungsregel** ein. Klicken Sie dann im Feld **Trigger** auf das Dropdownmenü, und wählen Sie **Wann eine Warnung erstellt wird** aus.
+11. Geben Sie im Fenster **Neue Automatisierungsregel erstellen** den Namen **Run Change-Severity Playbook** für die **Automatisierungsregel** ein. Klicken Sie dann im Feld **Trigger** auf das Dropdownmenü, und wählen Sie **Wenn eine Warnung erstellt wird** aus.
 
 12. Lesen Sie im Fenster **Neue Automatisierungsregel erstellen** unter **Aktionen** den Hinweis, und klicken Sie dann auf **Playbookberechtigungen verwalten**. Aktivieren Sie im Fenster **Berechtigungen verwalten** das Kontrollkästchen neben der zuvor erstellten Ressourcengruppe **AZ500LAB1314151**, und klicken Sie dann auf **Übernehmen**.
 
