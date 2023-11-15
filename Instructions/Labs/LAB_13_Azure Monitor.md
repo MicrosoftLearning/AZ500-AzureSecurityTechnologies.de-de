@@ -136,7 +136,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto.
 
      ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
 
-    >**Hinweis**: Warten Sie, bis das Storage-Konto erstellt wurde. Dieser Vorgang dauert etwa zwei Minuten.
+    >**Hinweis**: Warten Sie, bis das Speicherkonto erstellt wurde. Dieser Vorgang dauert etwa zwei Minuten.
 
 ### Übung 3: Erstellen einer Datensammlungsregel
 
@@ -188,7 +188,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
     |CPU|60|
     |Arbeitsspeicher|60|
     |Datenträger|60|
-    |Netzwerk|60|
+    |Network|60|
 
    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
 
@@ -202,7 +202,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
     
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
 
-13. Klicken Sie auf **Überprüfen + Erstellen**.
+13. Klicken Sie auf **Überprüfen + erstellen**.
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
 
