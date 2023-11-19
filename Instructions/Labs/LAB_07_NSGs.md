@@ -218,7 +218,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
 6. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-7. Klicken Sie auf **Weiter: Verwaltung >** und dann auf **Weiter: Überwachung >** . Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
+7. Klicken Sie auf **Next: Verwaltung >**, und klicken Sie dann auf **Weiter: Überwachung >**. Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
 
    |Einstellung|Wert|
    |---|---|
@@ -255,7 +255,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
 
 5. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-6. Klicken Sie auf **Weiter: Verwaltung >** und dann auf **Weiter: Überwachung >** . Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
+6. Klicken Sie auf **Next: Verwaltung >**, und klicken Sie dann auf **Weiter: Überwachung >**. Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
 
    |Einstellung|Wert|
    |---|---|

@@ -1,10 +1,10 @@
 ---
 lab:
-  title: 15 – Microsoft Sentinel
+  title: 16 – Microsoft Sentinel
   module: Module 04 - Manage Security Operations
 ---
 
-# Lab 15: Microsoft Sentinel
+# Lab 16: Microsoft Sentinel
 # Lab-Handbuch für Kursteilnehmer
 
 ## Labszenario
@@ -27,7 +27,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Microsoft Sentinel-Diagramm
 
-![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/509aa70d-de11-4470-a289-877fbfecbc00)
+![image](https://user-images.githubusercontent.com/91347931/157538440-4953be73-90be-4edd-bd23-b678326ba637.png)
 
 ## Anweisungen
 
