@@ -18,7 +18,7 @@ Sie sollen eine Proof of Concept-Anwendung erstellen, die die Azure SQL-Datenba
 
 Um den Fokus auf die Sicherheitsaspekte von Azure im Zusammenhang mit der Erstellung dieser Proof of Concept-Anwendung zu legen, beginnen Sie mit einer automatisierten ARM-Vorlagenbereitstellung und richten Sie eine VM mit Visual Studio 2019 und SQL Server Management Studio 19 ein.
 
-## Ziele des Labs
+## Labziele
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 

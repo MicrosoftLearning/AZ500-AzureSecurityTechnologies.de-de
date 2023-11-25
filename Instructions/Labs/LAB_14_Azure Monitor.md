@@ -1,10 +1,10 @@
 ---
 lab:
-  title: "13\_– Azure Monitor"
+  title: 14 – Azure Monitor
   module: Module 04 - Manage security operations
 ---
 
-# Lab 13: Azure Monitor
+# Lab 14: Azure Monitor
 
 # Lab-Handbuch für Kursteilnehmer
 
@@ -154,8 +154,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
 2. Klicken Sie auf dem Blatt **Überwachungseinstellungen** auf  **Datensammlungsregeln**.
 
-  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
-
+    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/2184da69-12c2-476b-b2b2-b80620e822a6)
 
 3. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundeinstellungen** des Blatts **Datensammlung erstellen** an:
   
