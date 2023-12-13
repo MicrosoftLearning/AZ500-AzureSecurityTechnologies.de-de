@@ -1,6 +1,6 @@
 ---
 lab:
-  title: 04 – Implementieren der Verzeichnissynchronisierung
+  title: "04\_– Implementieren der Verzeichnissynchronisierung"
   module: Module 01 - Manage Identity and Access
 ---
 
@@ -9,10 +9,10 @@ lab:
 
 ## Labszenario
 
-Sie wurden gebeten, einen Machbarkeitsnachweis zu erstellen, der die Integration einer lokalen Microsoft Entra Domain Services-Umgebung mit einem Microsoft Entra-Mandanten demonstriert. Insbesondere geht es Ihnen um Folgendes:
+Sie wurden gebeten, eine Machbarkeitsstudie zu erstellen, die zeigt, wie eine lokale Microsoft Entra Domain Services-Umgebung in einen Microsoft Entra-Mandanten integriert werden kann. Insbesondere geht es Ihnen um Folgendes:
 
-- Implementieren einer Microsoft Entra Domain Services-Gesamtstruktur durch Bereitstellung einer Azure VM, die einen Microsoft Entra Domain Services-Domänencontroller hostet
-- Erstellen und Konfigurieren eines Microsoft Entra-Mandanten
+- Implementierung einer Microsoft Entra Domain Services-Gesamtstruktur mit einer einzelnen Domäne durch Bereitstellung einer Azure-VM, die einen Microsoft Entra Domain Services-Domänencontroller hostet
+- Erstellen und Verwalten eines Microsoft Entra-Mandanten
 - Synchronisieren der Microsoft Entra Domain Services-Gesamtstruktur mit dem Microsoft Entra-Mandanten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
@@ -21,7 +21,7 @@ Sie wurden gebeten, einen Machbarkeitsnachweis zu erstellen, der die Integration
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
-- Übung 1: Bereitstellen einer Azure VM, die einen Microsoft Entra ID-Domänencontroller hostet
+- Übung 1: Bereitstellen einer Azure-VM zum Hosten eines Microsoft Entra ID-Domänencontrollers
 - Übung 2: Erstellen und Konfigurieren eines Microsoft Entra-Mandanten
 - Übung 3: Synchronisieren der Microsoft Entra ID-Gesamtstruktur mit einem Microsoft Entra-Mandanten
 
@@ -31,14 +31,14 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Anweisungen
 
-### Übung 1: Bereitstellen einer Azure VM, die einen Microsoft Entra ID-Domänencontroller hostet
+### Übung 1: Bereitstellen einer Azure-VM zum Hosten eines Microsoft Entra ID-Domänencontrollers
 
 ### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Identifizieren eines verfügbaren DNS-Namens für eine Azure-VM-Bereitstellung
-- Aufgabe 2: Verwenden einer ARM-Vorlage zum Bereitstellen einer Azure VM, die einen Microsoft Entra ID-Domänencontroller hostet
+- Aufgabe 2: Verwenden einer ARM-Vorlage zur Bereitstellung einer Azure-VM, die einen Microsoft Entra ID-Domänencontroller hostet
 
 #### Aufgabe 1: Identifizieren eines verfügbaren DNS-Namens für eine Azure-VM-Bereitstellung
 
@@ -68,9 +68,9 @@ In dieser Aufgabe identifizieren Sie einen DNS-Namen für Ihre Azure-VM-Bereitst
 
 7. Schließen Sie die Cloud Shell.
 
-#### Aufgabe 2: Verwenden einer ARM-Vorlage zum Bereitstellen einer Azure VM, die einen Microsoft Entra ID-Domänencontroller hostet
+#### Aufgabe 2: Verwenden einer ARM-Vorlage zur Bereitstellung einer Azure-VM, die einen Microsoft Entra ID-Domänencontroller hostet
 
-In dieser Aufgabe werden Sie eine Azure VM bereitstellen, die einen Microsoft Entra ID-Domänencontroller hosten wird
+In dieser Aufgabe werden Sie eine Azure-VM einrichten, die einen Microsoft Entra ID-Domänencontroller hosten wird.
 
 1. Öffnen Sie in demselben Browserfenster eine andere Browserregisterkarte, und navigieren Sie zu **https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain**.
 
@@ -88,7 +88,7 @@ In dieser Aufgabe werden Sie eine Azure VM bereitstellen, die einen Microsoft En
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB06** ein.|
    |Region|Die Azure-Region, die Sie in der vorherigen Aufgabe identifiziert haben|
    |Administratorbenutzername|**Kursteilnehmer**|
-   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    |Domänenname|**adatum.com**|
    |DNS-Präfix|Der DNS-Hostname, den Sie in der vorherigen Aufgabe identifiziert haben|
    |Größe des virtuellen Computers|**Standard_D2s_v3**|
@@ -97,7 +97,7 @@ In dieser Aufgabe werden Sie eine Azure VM bereitstellen, die einen Microsoft En
 
     >**Hinweis**: Warten Sie nicht, bis die Bereitstellung abgeschlossen ist, sondern führen Sie stattdessen die nächste Aufgabe aus. Die Bereitstellung kann ungefähr 15 Minuten dauern. Sie verwenden dafür den virtuellen Computer, der in dieser Aufgabe in der dritten Übung dieses Labs bereitgestellt wurde.
 
-> Ergebnis: Nach Abschluss dieser Übung haben Sie die Bereitstellung einer Azure VM, die einen Microsoft Entra ID-Domänencontroller hosten wird, unter Verwendung einer Azure Resource Manager-Vorlage initiiert.
+> Ergebnis: Nach Abschluss dieser Übung haben Sie die Bereitstellung einer Azure-VM, die einen Microsoft Entra ID-Domänencontroller hosten wird, unter Verwendung einer Azure Resource Manager-Vorlage initiiert.
 
 
 ### Übung 2: Erstellen und Konfigurieren eines Microsoft Entra-Mandanten 
@@ -107,18 +107,18 @@ In dieser Aufgabe werden Sie eine Azure VM bereitstellen, die einen Microsoft En
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Erstellen eines Microsoft Entra-Mandanten
-- Aufgabe 2: Hinzufügen eines benutzerdefinierten DNS-Namens zu dem neuen Microsoft Entra-Mandanten
+- Aufgabe 2: Hinzufügen eines benutzerdefinierten DNS-Namens zum neuen Microsoft Entra-Mandanten
 - Aufgabe 3: Erstellen eines Microsoft Entra ID-Benutzers mit der Rolle „Globaler Administrator“
 
 #### Aufgabe 1: Erstellen eines Microsoft Entra-Mandanten
 
-In dieser Aufgabe erstellen Sie einen neuen Microsoft Entra-Mandanten, den Sie in dieser Übung verwenden werden. 
+In dieser Aufgabe erstellen Sie einen neuen Microsoft Entra-Mandanten, der in diesem Lab verwendet werden soll. 
 
-1. Geben Sie im Azure-Portal in das Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** oben auf der Azure-Portalseite **Microsoft Entra ID** ein und drücken Sie die **Eingabetaste**.
+1. Geben Sie im Azure-Portal in das Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** oben auf der Azure-Portal-Seite **Microsoft Entra ID** ein, und drücken Sie die **Eingabetaste**.
 
-2. Klicken Sie auf dem Blatt mit der **Übersicht** über Ihren aktuellen Microsoft Entra-Mandanten auf **Mandanten verwalten** und dann im nächsten Bildschirm auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt mit der **Übersicht** über Ihren aktuellen Microsoft Entra-Mandanten auf **Mandanten verwalten** und dann auf dem nächsten Bildschirm auf **+ Erstellen**.
 
-3. Stellen Sie auf der Registerkarte **Grundlagen** des Blatts **Mandanten erstellen** sicher, dass die Option **Microsoft Entra ID** ausgewählt ist, und klicken Sie auf **Weiter: Konfiguration >**.
+3. Vergewissern Sie sich auf der Registerkarte **Grundlagen** des Blatts **Mandanten erstellen**, dass die Option **Microsoft Entra ID** ausgewählt ist, und klicken Sie auf **Weiter: Konfiguration >**.
 
 4. Geben Sie auf der Registerkarte **Konfiguration** des Blatts **Verzeichnis erstellen** die folgenden Einstellungen an:
 
@@ -154,9 +154,9 @@ In dieser Aufgabe fügen Sie ihren benutzerdefinierten DNS-Namen dem neuen Azure
 
 6. Überprüfen Sie auf dem Blatt **adatum.com** die Informationen, die zum Überprüfen des Microsoft Entra-Domänennamens erforderlich sind, und wählen Sie dann zweimal **Löschen** aus. 
 
-    >**Hinweis**: Sie können den Überprüfungsprozess nicht abschließen, weil Sie nicht der Besitzer des DNS-Domänennamens **adatum.com** sind. Dies verhindert nicht, dass Sie die **adatum.com** Microsoft Entra Domain Services-Domäne mit dem Microsoft Entra-Mandanten synchronisieren. Zu diesem Zweck verwenden Sie den anfänglichen DNS-Namen des Microsoft Entra-Mandanten (der Name endet mit dem Suffix **onmicrosoft.com**), den Sie in der vorherigen Aufgabe identifiziert haben. Bedenken Sie jedoch, dass sich infolgedessen der DNS-Domänenname der Microsoft Entra Domain Services-Domäne und der DNS-Name des Microsoft Entra-Mandanten unterscheiden werden. Dies bedeutet, dass Adatum-Benutzer unterschiedliche Namen verwenden müssen, wenn sie sich bei der Microsoft Entra Domain Services-Domäne und beim Microsoft Entra-Mandanten anmelden.
+    >**Hinweis**: Sie können den Überprüfungsprozess nicht abschließen, weil Sie nicht der Besitzer des DNS-Domänennamens **adatum.com** sind. Dies hindert Sie nicht daran, die **adatum.com** Microsoft Entra Domain Services-Domäne mit dem Microsoft Entra-Mandanten zu synchronisieren. Zu diesem Zweck verwenden Sie den anfänglichen DNS-Namen des Microsoft Entra-Mandanten (der Name endet mit dem Suffix **onmicrosoft.com**), den Sie in der vorherigen Aufgabe identifiziert haben. Beachten Sie jedoch, dass der DNS-Domänenname der Microsoft Entra Domain Services-Domäne und der DNS-Name des Microsoft Entra-Mandanten unterschiedlich sein werden. Das bedeutet, dass Benutzer von Adatum unterschiedliche Namen verwenden müssen, wenn sie sich bei der Microsoft Entra Domain Services-Domäne und beim Microsoft Entra-Mandanten anmelden.
 
-#### Aufgabe 3: Erstellen eines Microsoft Entra ID-Benutzers mit der Rolle „Globaler Administrator“
+#### Aufgabe 3: Erstellen eines Microsoft Entra-ID-Benutzers mit der Rolle „Globaler Administrator“
 
 In dieser Aufgabe fügen Sie einen neuen Microsoft Entra ID-Benutzer hinzu und weisen ihn der Rolle „Globaler Administrator“ zu. 
 
@@ -200,16 +200,16 @@ In dieser Aufgabe fügen Sie einen neuen Microsoft Entra ID-Benutzer hinzu und w
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Vorbereiten von Microsoft Entra Domain Services für die Verzeichnissynchronisierung
-- Aufgabe 2: Microsoft Entra Connect installieren
+- Aufgabe 2: Installieren von Microsoft Entra Connect
 - Aufgabe 3: Überprüfen der Verzeichnissynchronisierung
 
 #### Aufgabe 1: Vorbereiten von Microsoft Entra Domain Services für die Verzeichnissynchronisierung
 
-In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der Microsoft Entra Domain Services-Domänencontroller ausgeführt wird, und Sie erstellen ein Verzeichnissynchronisierungskonto. 
+In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der Microsoft Entra Domain Services-Domänencontroller ausgeführt wird, und erstellen ein Konto für die Verzeichnissynchronisierung. 
 
    > Bevor Sie mit dieser Aufgabe beginnen, vergewissern Sie sich, dass die Vorlagenbereitstellung, die Sie in der ersten Übung dieses Labs gestartet haben, abgeschlossen wurde.
 
-1. Legen Sie im Azure-Portal den Filter **Verzeichnis + Abonnement** auf den Microsoft Entra-Mandanten fest, der mit dem Azure-Abonnement verbunden ist, in das Sie die Azure-VM in der ersten Übung dieses Labs bereitgestellt haben.
+1. Legen Sie im Azure-Portal den Filter **Verzeichnis + Abonnement** auf den Microsoft Entra-Mandanten fest, der dem Azure-Abonnement zugeordnet ist, in dem Sie die Azure-VM in der ersten Übung dieses Labs bereitgestellt haben.
 
 2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Computer** ein, und drücken Sie die **EINGABETASTE**.
 
@@ -222,7 +222,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktop-Sitzung und der **Server-Manager** geladen werden.  
 
@@ -230,13 +230,13 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
 
     >**Hinweis**: Wenn die Option**Öffentliche IP-Adresse des Lastenausgleichs** in der Dropdownliste **IP-Adresse** auf dem Blatt RDP nicht verfügbar ist, suchen Sie im Azure-Portal nach der Option **Öffentliche IP-Adressen**, wählen Sie **adPublicIP** aus und notieren Sie sich die IP-Adresse. Klicken Sie auf die Schaltfläche Start, geben Sie **MSTSC** ein und drücken Sie die **EINGABETASTE**, um den Remotedesktopclient zu starten. Geben Sie die öffentliche IP-Adresse des Lastenausgleichs in das Textfeld **Computer:** ein und klicken Sie auf **Verbinden**.
 
-6. Klicken Sie im **Server Manager** auf **Tools** und im Dropdownmenü auf **Microsoft Entra ID-Verwaltungscenter**.
+6. Klicken Sie im **Server-Manager** auf **Tools** und dann im Dropdownmenü auf **Microsoft Entra ID-Verwaltungscenter**.
 
-7. Klicken Sie im **Microsoft Entra-Verwaltungscenter** auf **Adatum (lokal)**, im Bereich **Aufgaben** unter dem Domänennamen **Adatum (lokal)** auf **Neu** und im hierarchischen Menü auf **Organisationseinheit**.
+7. Klicken Sie im **Microsoft Entra-Verwaltungscenter** auf **adatum (local)**. Klicken Sie im Bereich **Aufgaben** unter dem Domänennamen **adatum (local)** auf **Neu** und im hierarchischen Menü  auf **Organisationseinheit**.
 
 8. Geben Sie im Fenster **Organisationseinheit erstellen** im Textfeld **Name** den Namen **ToSync** ein, und klicken Sie auf **OK**.
 
-9. Doppelklicken Sie auf die neu erstellte Organisationseinheit **ToSync**, sodass ihr Inhalt in der Detailansicht der Konsole des Microsoft Entra ID-Verwaltungscenters angezeigt wird. 
+9. Doppelklicken Sie auf die neu erstellte Organisationseinheit **ToSync**, sodass ihr Inhalt im Detailbereich der Konsole des Microsoft Entra ID-Verwaltungscenter angezeigt wird. 
 
 10. Klicken Sie im Bereich **Aufgaben** im Abschnitt **ToSync** auf **Neu** und im kaskadierenden Menü auf **Benutzer**.
 
@@ -247,27 +247,27 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der Azure-VM her, auf der der 
     |Vollständiger Name|**aduser1**|
     |Benutzer-UPN-Anmeldung|**aduser1**|
     |SamAccountName-Anmeldung von Benutzer|**aduser1**|
-    |Kennwort und Kennwort bestätigen|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Kennwort und Kennwort bestätigen|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
     |Andere Kennwortoptionen|**Kennwort läuft nie ab**|
 
 
-#### Aufgabe 2: Microsoft Entra Connect installieren
+#### Aufgabe 2: Installieren von Microsoft Entra Connect
 
 In dieser Aufgabe installieren Sie Microsoft Entra Connect auf dem virtuellen Computer. 
 
 1. Verwenden Sie in der Remotedesktop-Sitzung für **adVM** Microsoft Edge, um unter **https://portal.azure.com** zum Azure-Portal zu navigieren, und melden Sie sich mit dem Benutzerkonto **syncadmin** an, das Sie in der vorherigen Übung erstellt haben. Wenn Sie dazu aufgefordert werden, geben Sie den vollständigen Benutzerprinzipalnamen und das Kennwort an, die Sie in der vorherigen Übung notiert haben.
 
-2. Geben Sie im Azure-Portal in das Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** oben auf der Azure-Portalseite **Microsoft Entra ID** ein und drücken Sie die **Eingabetaste**.
+2. Geben Sie im Azure-Portal in das Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** oben auf der Azure-Portal-Seite **Microsoft Entra ID** ein, und drücken Sie die **Eingabetaste**.
 
-3. Klicken Sie im Azure-Portal im Blatt **AdatumSync \| Übersicht** in der linken Navigationsleiste unter **Verwalten** auf **Microsoft Entra Connect**.
+3. Klicken Sie im Azure-Portal auf dem Blatt **AdatumSync \| Übersicht** im linken Navigationsbereich unter **Verwalten** auf **Microsoft Entra Connect**.
 
-4. Klicken Sie im Blatt **Microsoft Entra Connect \| Erste Schritte** in der linken Navigationsleiste auf **Connect-Synchronisierung** und dann auf den Link **Microsoft Entra Connect herunterladen**. Sie werden zur Downloadseite **Microsoft Entra Connect** umgeleitet.
+4. Klicken Sie auf dem Blatt **Microsoft Entra Connect \| Erste Schritte** im linken Navigationsbereich auf **Connect-Synchronisierung**, und klicken Sie dann auf den Link **Microsoft Entra Connect herunterladen**. Sie werden zur Downloadseite **Microsoft Entra Connect** umgeleitet.
 
 5. Klicken Sie auf der Downloadseite **Microsoft Entra Connect** auf **Herunterladen**.
 
-6. Wenn Sie dazu aufgefordert werden, klicken Sie auf **Ausführen**, um den Assistenten für **Microsoft Entra Connect** zu starten.
+6. Klicken Sie bei der entsprechenden Aufforderung auf **Ausführen**, um den Assistenten für **Microsoft Entra Connect** zu starten.
 
-7. Klicken Sie auf der Seite **Willkommen bei Microsoft Entra Connect** des Assistenten für **Microsoft Entra Connect** auf das Kontrollkästchen **Ich stimme den Lizenzbedingungen und dem Datenschutzhinweis zu** und klicken Sie dann auf **Weiter**.
+7. Klicken Sie auf der Seite **Willkommen bei Microsoft Entra Connect** des Assistenten für **Microsoft Entra Connect** auf das Kontrollkästchen **Ich stimme den Lizenzbedingungen und dem Datenschutzhinweis zu** und dann auf **Weiter**.
 
 8. Klicken Sie auf der Seite **Express-Einstellungen** des Assistenten für **Microsoft Entra Connect** auf die Option **Anpassen**.
 
@@ -284,11 +284,11 @@ In dieser Aufgabe installieren Sie Microsoft Entra Connect auf dem virtuellen Co
     |Einstellung|Wert|
     |---|---|
     |Benutzername|**ADATUM\\Kursteilnehmer**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 06 > Übung 1 > Aufgabe 2 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 2 erstellt haben.**|
 
 14. Stellen Sie auf der Seite **Verzeichnisse verbinden** sicher, dass der Eintrag **adatum.com** als konfiguriertes Verzeichnis angezeigt wird, und klicken Sie auf **Weiter**.
 
-15. Beachten Sie auf der Seite **Microsoft Entra ID-Anmeldekonfiguration** die Warnung **Benutzer können sich nicht mit lokalen Anmeldeinformationen bei Microsoft Entra ID anmelden, wenn das UPN-Suffix nicht mit einem verifizierten Domänennamen übereinstimmt**, aktivieren Sie das Kontrollkästchen **Ohne Abgleich aller UPN-Suffixe mit überprüften Domänen fortfahren**, und klicken Sie auf **Weiter**.
+15. Beachten Sie auf der Seite **Microsoft Entra ID-Anmeldekonfiguration** die Warnung **Die Benutzer können sich nicht mit lokalen Anmeldeinformationen bei Microsoft Entra ID anmelden, wenn das UPN-Suffix keiner überprüften Domäne zugeordnet werden kann**, aktivieren Sie das Kontrollkästchen **Ohne Abgleich aller UPN-Suffixe mit überprüften Domänen fortfahren**, und klicken Sie auf **Weiter**.
 
     >**Hinweis:** Wie bereits erläutert wurde, wird dies erwartet, da Sie die benutzerdefinierte Microsoft Entra ID-DNS-Domäne **adatum.com** nicht überprüfen konnten.
 
@@ -344,7 +344,7 @@ In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioni
 
 **Bereinigen von Ressourcen**
 
->**Hinweis**: Starten Sie, indem Sie die Synchronisierung mit Microsoft Entra ID deaktivieren
+>**Hinweis**: Starten Sie, indem Sie die Microsoft Entra-ID-Synchronisierung deaktivieren
 
 1. Starten Sie innerhalb der Remotedesktop-Sitzung für **adVM** die Windows PowerShell als Administrator.
 
@@ -391,11 +391,11 @@ In dieser Aufgabe überprüfen Sie, ob die Verzeichnissynchronisierung funktioni
     ```
 11. Schließen Sie den **Cloud Shell**-Bereich.
 
-    >**Hinweis**: Entfernen Sie abschließend den Microsoft Entra-Mandanten
+    >**Hinweis**: Entfernen Sie schließlich den Microsoft Entra-Mandanten.
     
     >**Hinweis 2**: Weil das Löschen eines Mandanten ein sehr schwieriger Prozess ist, kann dies nie versehentlich oder böswillig geschehen.  Das bedeutet, dass das Entfernen des Mandanten im Rahmen dieses Labs oft nicht funktioniert.  Wir haben hier zwar die Schritte zum Löschen des Mandanten aufgeführt, aber sie sind für Sie nicht erforderlich zum Abschließen dieses Labs. Wenn Sie jemals einen Mandanten in der realen Welt entfernen müssen, gibt es unter „DOCS.Microsoft.com“ Artikel, die Ihnen helfen sollen.
 
-12. Verwenden Sie, wenn Sie zurück im Azure-Portal sind, den Filter **Verzeichnis + Abonnement**, um zum Microsoft Entra-Mandanten **AdatumSync** zu wechseln.
+12. Verwenden Sie im Azure-Portal den Filter **Verzeichnis + Abonnement**, um zum Microsoft Entra-Mandanten **AdatumSync** zu wechseln.
 
 13. Navigieren Sie im Azure-Portal zum Blatt **Benutzer – Alle Benutzer**, und klicken Sie auf den Eintrag für das Benutzerkonto **syncadmin**. Klicken Sie auf dem Blatt **syncadmin – Profil** auf **Löschen** und dann auf **Ja**, wenn Sie zur Bestätigung aufgefordert werden.
 
