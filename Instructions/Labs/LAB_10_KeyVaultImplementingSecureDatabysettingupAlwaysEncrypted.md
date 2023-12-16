@@ -9,7 +9,7 @@ lab:
 
 ## Labszenario
 
-Sie sollen eine Proof of Concept-Anwendung erstellen, die die Azure SQL-Datenbank-Unterstützung für die Funktion „Always Encrypted“ nutzt. Alle in diesem Szenario verwendeten Geheimnisse und Schlüssel sollten in Key Vault gespeichert werden. Die Anwendung sollte in Azure Active Directory (Azure AD) registriert werden, um ihren Sicherheitsstatus zu verbessern. Um diese Ziele zu erreichen, sollte die Machbarkeitsstudie (Proof of Concept) Folgendes umfassen:
+Sie sollen eine Proof of Concept-Anwendung erstellen, die die Azure SQL-Datenbank-Unterstützung für die Funktion „Always Encrypted“ nutzt. Alle in diesem Szenario verwendeten Geheimnisse und Schlüssel sollten in Key Vault gespeichert werden. Die Anwendung sollte in der Microsoft Entra-ID registriert werden, um ihren Sicherheitsstatus zu verbessern. Um diese Ziele zu erreichen, sollte die Machbarkeitsstudie (Proof of Concept) Folgendes umfassen:
 
 - Erstellen einer Azure Key Vault-Ressource und Speichern von Schlüsseln und Geheimnissen im Tresor
 - Erstellen einer SQL-Datenbank und Verschlüsseln des Inhalts von Spalten in Datenbanktabellen mithilfe von „Always Encrypted“.
@@ -29,7 +29,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Key Vault-Diagramm
 
-![image](https://user-images.githubusercontent.com/91347931/157532938-c724cc40-f64f-4d69-9e91-d75344c5e0a2.png)
+![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/38c4ba6d-2fc7-45e5-b9a2-d5dbb4fbbcbc)
 
 ## Anweisungen
 
@@ -71,7 +71,7 @@ In dieser Aufgabe stellen Sie eine Azure-VM bereit, auf der Visual Studio 2019
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB10** ein.|
    |Standort|**USA, Osten**|
    |Administratorbenutzername|**Kursteilnehmer**|
-   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+   |Administratorkennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
    
     >**Hinweis**: Sie können zwar die für die Anmeldung beim virtuellen Computer verwendeten Administratoranmeldeinformationen ändern, dies ist jedoch nicht erforderlich.
 
@@ -352,7 +352,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Einstellung|Wert|
     |---|---|
     |Benutzername|**Kursteilnehmer**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung und der **Server-Manager** geladen werden. Schließen Sie den Server-Manager. 
 
@@ -368,7 +368,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Servername|Der Servername, den Sie zuvor in dieser Aufgabe identifiziert haben|
     |Authentifizierung|**SQL Server-Authentifizierung**|
     |Anmelden|**Kursteilnehmer**|
-    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 04 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
 8. Klicken Sie im Dialogfeld **Verbindung mit dem Server herstellen** auf **Verbinden**.
 
