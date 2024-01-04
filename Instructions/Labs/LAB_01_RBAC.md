@@ -29,7 +29,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Architekturdiagramm der rollenbasierten Zugriffssteuerung
 
-![image](https://user-images.githubusercontent.com/91347931/157751243-5aa6e521-9bc1-40af-839b-4fd9927479d7.png)
+![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/506cde9c-5242-4438-a793-f88a5434a2b2)
 
 ## Anweisungen
 
@@ -48,7 +48,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
 1. Öffnen Sie eine Browsersitzung, und melden Sie sich beim Azure-Portal **`https://portal.azure.com/`** an.
 
-    >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das in dem Azure-Abonnement, das Sie für dieses Lab verwenden, über die Rolle „Besitzer“ oder „Mitwirkender“ und die Rolle „Globaler Administrator“ im Azure AD-Mandanten verfügt, der diesem Abonnement zugeordnet ist.
+    >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, das in dem Azure-Abonnement, das Sie für dieses Lab verwenden, über die Rolle „Besitzer“ oder „Mitwirkender“ und die Rolle „Globaler Administrator“ im Microsoft Entra-Mandanten verfügt, der diesem Abonnement zugeordnet ist.
 
 2. Geben Sie oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Microsoft Entra ID** ein und drücken Sie die **EINGABETASTE**.
 
@@ -67,7 +67,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
 7. Klicken Sie auf **Erstellen**.
 
-8. Aktualisieren Sie das Blatt **Benutzer \| Alle Benutzer**, um zu überprüfen, ob der neue Benutzer in Ihrem Azure AD-Mandanten erstellt wurde.
+8. Aktualisieren Sie das Blatt **Benutzer \| Alle Benutzer**, um zu überprüfen, ob der neue Benutzer in Ihrem Microsoft Entra-Mandanten erstellt wurde.
 
 #### Aufgabe 2: Verwenden des Azure-Portals, um eine Gruppe „Senior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Joseph Price hinzuzufügen.
 
@@ -129,7 +129,7 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
     Connect-AzureAD
     ```
       
-6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen des Azure AD-Mandanten zu identifizieren: 
+6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen des Microsoft Entra-Mandanten zu identifizieren: 
 
     ```powershell
     $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
@@ -141,7 +141,7 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
     New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
-8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Azure AD-Benutzer aufzulisten (die Konten von Joseph und Isabel sollten in der Liste angezeigt werden): 
+8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Microsoft Entra ID-Benutzer aufzulisten (die Konten von Joseph und Isabel sollten in der Liste angezeigt werden): 
 
     ```powershell
     Get-AzureADUser 
@@ -157,7 +157,7 @@ In dieser Aufgabe erstellen Sie die Gruppe „Junior Admins“ und fügen der Gr
     New-AzureADGroup -DisplayName 'Junior Admins' -MailEnabled $false -SecurityEnabled $true -MailNickName JuniorAdmins
     ```
 
-2. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Gruppen in Ihrem Azure AD-Mandanten aufzulisten (die Liste sollte die Gruppen „Senior Admins“ und „Junior Admins“ enthalten):
+2. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Gruppen in Ihrem Microsoft Entra-Mandanten aufzulisten (die Liste sollte die Gruppen „Senior Admins“ und „Junior Admins“ enthalten):
 
     ```powershell
     Get-AzureADGroup
@@ -199,7 +199,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Dylan Williams.
 
 1. Wählen Sie im Dropdownmenü oben links im Cloud Shell-Bereich die Option **Bash** aus, und klicken Sie auf **Bestätigen**, wenn Sie dazu aufgefordert werden. 
 
-2. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen Ihres Azure AD-Mandanten zu ermitteln:
+2. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen Ihres Microsoft Entra-Mandanten zu ermitteln:
 
     ```cli
     DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')
@@ -211,7 +211,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Dylan Williams.
     az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME
     ```
       
-4. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um Azure AD-Benutzerkonten aufzulisten (die Liste sollte die Benutzerkonten von Joseph, Isabel und Dylan enthalten).
+4. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um Microsoft Entra ID-Benutzerkonten aufzulisten (die Liste sollte die Benutzerkonten von Joseph, Isabel und Dylan enthalten).
     
     ```cli
     az ad user list --output table
@@ -227,7 +227,7 @@ In dieser Aufgabe erstellen Sie die Gruppe „Service Desk“ und weisen der Gru
     az ad group create --display-name "Service Desk" --mail-nickname "ServiceDesk"
     ```
  
-2. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Azure AD-Gruppen aufzulisten (die Liste sollte die Gruppen „Service Desk“, „Senior Admins“ und „Junior Admins“ enthalten):
+2. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Microsoft Entra ID-Gruppen aufzulisten (die Liste sollte die Gruppen „Service Desk“, „Senior Admins“ und „Junior Admins“ enthalten):
 
     ```cli
     az ad group list -o table

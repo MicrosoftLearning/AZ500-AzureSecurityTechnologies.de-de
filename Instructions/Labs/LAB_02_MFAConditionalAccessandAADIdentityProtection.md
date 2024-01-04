@@ -1,10 +1,10 @@
 ---
 lab:
-  title: '04: MFA und Bedingter Zugriff'
+  title: '02: MFA und bedingter Zugriff'
   module: Module 01 - Manage Identity and Access
 ---
 
-# Lab 04: MFA und Bedingter Zugriff
+# Lab 02: MFA und bedingter Zugriff
 # Lab-Handbuch für Kursteilnehmer
 
 ## Labszenario
