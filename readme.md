@@ -8,7 +8,7 @@
 
 - Um diesen Kurs zu unterstützen, müssen wir häufige Änderungen an den Kursinhalten vornehmen, um sie an die verwendeten Azure-Dienste anzupassen.  Wir veröffentlichen die Labanweisungen und Labdateien auf GitHub, um offene Beiträge zwischen den Kursautoren und MCTs zu ermöglichen und die Inhalte an aktuelle Änderungen in der Azure-Plattform anzupassen.
 
-- Wir hoffen, dass sich daraus ein beispielloses Gefühl der Zusammenarbeit in den Labs ergibt. Wenn sich Azure ändert und Ihnen dies bei einem Live-Vortrag auffällt, können Sie direkt im Lab-Quellcode eine Verbesserung vornehmen.  Helfen Sie Ihren MCT-Kollegen.
+- Wir hoffen, dass sich daraus ein beispielloses Gefühl der Zusammenarbeit in den Labs ergibt. Wenn sich Azure ändert und Ihnen dies bei einem Live-Vortrag auffällt, können Sie direkt im Lab-Quellcode eine Verbesserung vornehmen.  Helfen Sie Ihren MCTs.
 
 ## Wie kann ich diese Dateien in Bezug auf die freigegebenen MOC-Dateien verwenden?
 
