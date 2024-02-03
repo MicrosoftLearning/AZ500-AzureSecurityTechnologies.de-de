@@ -355,12 +355,13 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Username|**Kursteilnehmer**|
     |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
     
-
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung und der **Server-Manager** geladen werden. Schließen Sie den Server-Manager. 
 
-    >**Hinweis**: Die restlichen Schritte in diesem Lab werden in der Remotedesktopsitzung mit dem virtuellen Azure-Computer **az500-10-vm1** ausgeführt. 
+    >**Hinweis**: Die restlichen Schritte in diesem Lab werden in der Remotedesktopsitzung mit dem virtuellen Azure-Computer **az500-10-vm1** ausgeführt.
 
-7. Klicken Sie auf **Start**, erweitern Sie im **Start**-Menü den Ordner **Microsoft SQL Server-Tools 19** und klicken Sie auf das Menüelement **Micosoft SQL Server Management Studio**.
+6. Installieren Sie [SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?preserve-view=true&view=sql-server-2017) auf **az500-10-vm1**. Virtueller Azure-Computer
+ 
+7. Öffnen Sie **SQL Server Management Studio**.
 
 8. Geben Sie im Dialogfeld **Verbindung mit dem Server herstellen** die folgenden Einstellungen an: 
 
@@ -372,14 +373,13 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
     |Username|**Kursteilnehmer**|
     |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 2 > Aufgabe 1 > Schritt 3 erstellt haben.**|
 
+9. Klicken Sie im Dialogfeld **Verbindung mit dem Server herstellen** auf **Verbinden**.
 
-10. Klicken Sie im Dialogfeld **Verbindung mit dem Server herstellen** auf **Verbinden**.
+10. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster den Ordner **Datenbanken**.
 
-11. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster den Ordner **Datenbanken**.
+11. Klicken Sie im **Objekt-Explorer**-Fenster mit der rechten Maustaste auf die Datenbank **medical**, und klicken Sie dann auf **Neue Abfrage**.
 
-12. Klicken Sie im **Objekt-Explorer**-Fenster mit der rechten Maustaste auf die Datenbank **medical**, und klicken Sie dann auf **Neue Abfrage**.
-
-13. Fügen Sie den folgenden Code in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dadurch wird die Tabelle **Patients** erstellt.
+12. Fügen Sie den folgenden Code in das Abfragefenster ein, und klicken Sie auf **Ausführen**. Dadurch wird die Tabelle **Patients** erstellt.
 
      ```sql
      CREATE TABLE [dbo].[Patients](
@@ -395,25 +395,25 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Ser
         [BirthDate] [date] NOT NULL 
      PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY] );
      ```
-14. Erweitern Sie nach der erfolgreichen Erstellung der Tabelle im **Objekt-Explorer**-Fenster den Knoten der Datenbank **medical** und den Knoten **Tabellen**, klicken Sie mit der rechten Maustaste auf den Knoten **dbo.Patients**, und klicken Sie dann auf **Spalten verschlüsseln**. 
+13. Erweitern Sie nach der erfolgreichen Erstellung der Tabelle im **Objekt-Explorer**-Fenster den Knoten der Datenbank **medical** und den Knoten **Tabellen**, klicken Sie mit der rechten Maustaste auf den Knoten **dbo.Patients**, und klicken Sie dann auf **Spalten verschlüsseln**. 
 
     >**Hinweis**: Dadurch wird der **Always Encrypted-Assistent** initiiert.
 
-15. Klicken Sie auf der Seite **Einführung** auf **Weiter**.
+14. Klicken Sie auf der Seite **Einführung** auf **Weiter**.
 
-16. Wählen Sie auf der Seite **Spaltenauswahl** die Spalten **SSN** und **Geburtsdatum** aus, legen Sie den **Verschlüsselungstyp** der Spalte **SSN** auf **Deterministisch** und den der Spalte **Geburtsdatum** auf **Zufällig** fest, und klicken Sie dann auf **Weiter**.
+15. Wählen Sie auf der Seite **Spaltenauswahl** die Spalten **SSN** und **Geburtsdatum** aus, legen Sie den **Verschlüsselungstyp** der Spalte **SSN** auf **Deterministisch** und den der Spalte **Geburtsdatum** auf **Zufällig** fest, und klicken Sie dann auf **Weiter**.
 
     >**Hinweis:** Wenn während der Verschlüsselung ein Fehler wie **Exception has been thrown by the target of an innvocation** (Eine Ausnahme wurde vom Ziel eines Aufrufs ausgelöst) im Zusammenhang mit **Rotary(Microsoft.SQLServer.Management.ServiceManagement)** ausgelöst wurde, stellen Sie sicher, dass die Werte der **Rotationsrichtlinienvorgänge** für die **Schlüsselberechtigung** **nicht aktiviert** sind. Andernfalls sollten Sie im Azure-Portal zu **Schlüsseltresor** >> **Zugriffsberechtigungen** >> **Schlüsselberechtigungen** navigieren. Deaktivieren Sie dort alle Werte unter den **Rotationsrichtlinienvorgängen** sowie unter **Vorgänge mit privilegiertem Schlüssel** die Option **Veröffentlichen**.
 
-17. Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** die Option **Azure Key Vault** aus, und klicken Sie auf **Anmelden**. Authentifizieren Sie sich bei entsprechender Aufforderung mit demselben Benutzerkonto, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben. Stellen Sie sicher, dass diese Key Vault-Instanz in der Dropdownliste **Azure Key Vault-Instanz auswählen** angezeigt wird, und klicken Sie auf **Weiter**.
+16. Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** die Option **Azure Key Vault** aus, und klicken Sie auf **Anmelden**. Authentifizieren Sie sich bei entsprechender Aufforderung mit demselben Benutzerkonto, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben. Stellen Sie sicher, dass diese Key Vault-Instanz in der Dropdownliste **Azure Key Vault-Instanz auswählen** angezeigt wird, und klicken Sie auf **Weiter**.
 
-18. Klicken Sie auf der Seite **Ausführungseinstellungen** auf **Weiter**.
+17. Klicken Sie auf der Seite **Ausführungseinstellungen** auf **Weiter**.
     
-19. Klicken Sie auf der Seite **Zusammenfassung** auf **Fertig stellen**, um mit der Verschlüsselung fortzufahren. Melden Sie sich bei entsprechender Aufforderung erneut mit dem Benutzerkonto an, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben.
+18. Klicken Sie auf der Seite **Zusammenfassung** auf **Fertig stellen**, um mit der Verschlüsselung fortzufahren. Melden Sie sich bei entsprechender Aufforderung erneut mit dem Benutzerkonto an, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben.
 
-20. Klicken Sie nach Abschluss des Verschlüsselungsprozesses auf der Seite **Ergebnisse** auf **Schließen**.
+19. Klicken Sie nach Abschluss des Verschlüsselungsprozesses auf der Seite **Ergebnisse** auf **Schließen**.
 
-21. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster unter dem Knoten **medical** die Unterknoten **Sicherheit** und **Always Encrypted-Schlüssel**. 
+20. Erweitern Sie in der **SQL Server Management Studio**-Konsole im **Objekt-Explorer**-Fenster unter dem Knoten **medical** die Unterknoten **Sicherheit** und **Always Encrypted-Schlüssel**. 
 
     >**Hinweis**: Der Unterknoten **Always Encrypted-Schlüssel** enthält die Unterordner **Spaltenhauptschlüssel** und **Spaltenverschlüsselungsschlüssel**.
 
