@@ -240,7 +240,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 3. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \| Workloadschutz** nach unten, und klicken Sie unter **Erweiterter Schutz** auf die Kachel **Just-In-Time-VM-Zugriff**.
 
-4. Klicken Sie auf dem Blatt **Just-in-Time-VM-Zugriff** auf der rechten Seite der Zeile für die VM **myVM** auf die Schaltfläche mit den Auslassungspunkten **(...)**, anschließend auf **Entfernen** und dann auf **Ja**.
+4. Klicken Sie auf dem Blatt **Just-in-Time-VM-Zugriff** auf der rechten Seite der Zeile für die VM **myVM** auf die Schaltfläche mit den **Auslassungspunkten (...)**, anschließend auf **Entfernen** und dann auf **Ja**.
 
     >**Hinweis**: Wenn die VM nicht in **Just-in-time VMs (Just-In-Time-VMs)** aufgeführt wird, navigieren Sie zum Blatt **Virtueller Computer**, und klicken Sie auf **Konfiguration**. Klicken Sie unter **Just-in-time Vm's access (Just-In-Time-VM-Zugriff)** auf die Option **Enable the Just-in-time VMs (Just-In-Time-VMs aktivieren)** . Wiederholen Sie den obigen Schritt, um zurück zu **Microsoft Defender für Cloud** zu navigieren. Aktualisieren Sie die Seite, um die VM anzuzeigen.
 
