@@ -138,7 +138,7 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
 7. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Benutzerkonto für Isabel Garcia zu erstellen: 
 
     ```powershell
-    New-MgUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
+    New-MgUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled -MailNickName 'Isabel'
     ```
 
 8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Microsoft Entra ID-Benutzer aufzulisten (die Konten von Joseph und Isabel sollten in der Liste angezeigt werden): 
