@@ -94,7 +94,7 @@ In dieser Aufgabe erstellen Sie ein weiteres Subnetz und aktivieren einen Dienst
     |---|---|
     |Subnetzname|**Privat**|
     |Subnetzadressbereich|**10.0.1.0/24**|
-    |Dienstendpunkte|**Microsoft.Storage**|
+    |Dienstendpunkte|**Übernehmen Sie den Standardwert „Keine“.**|
 
 6. Klicken Sie auf dem Blatt **Subnetz hinzufügen** auf **Speichern**, um das neue Subnetz hinzuzufügen.
 
