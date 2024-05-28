@@ -78,6 +78,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB08** ein.|
    |Standort|**(USA) USA, Osten**|
+   |adminPassword|Ein sicheres Kennwort Ihrer Wahl für die virtuellen Computer. Merken Sie sich das Kennwort. Sie benötigen es später für die Verbindung mit den VMs.|
 
     >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
 
@@ -271,7 +272,7 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**localadmin**|
-   |Kennwort|**Pa55w.rd1234**|
+   |Kennwort|Das sichere Kennwort, das Sie während der Bereitstellung der benutzerdefinierten Vorlage in Schritt 6 von Aufgabe 1 ausgewählt haben.|
 
     >**Hinweis**: Die folgenden Schritte werden in der Remotedesktopsitzung mit der Azure-Computer-VM **Srv-Jump** ausgeführt. 
 
@@ -288,7 +289,7 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**localadmin**|
-   |Kennwort|**Pa55w.rd1234**|
+   |Kennwort|Das sichere Kennwort, das Sie während der Bereitstellung der benutzerdefinierten Vorlage in Schritt 6 von Aufgabe 1 ausgewählt haben.|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung eingerichtet und die Server-Manager Schnittstelle geladen wurde.
 
