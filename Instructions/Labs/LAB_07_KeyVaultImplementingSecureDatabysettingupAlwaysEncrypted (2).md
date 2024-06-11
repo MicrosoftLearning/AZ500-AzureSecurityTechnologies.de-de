@@ -105,7 +105,11 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
 3. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um in der Ressourcengruppe **AZ500LAB10** eine Azure Key Vault-Ressource zu erstellen. (Wenn Sie in diesem Lab in Aufgabe 1 einen anderen Namen für die Ressourcengruppe ausgewählt haben, verwenden Sie diesen Namen auch für diese Aufgabe.) Der Name der Key Vault-Ressource muss eindeutig sein. Merken Sie sich den Namen, den Sie ausgewählt haben. Sie benötigen ihn in diesem Lab.  
 
     ```powershell
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10-lod41132372' -Location $location -DisableRbacAuthorization
+    $kvName = 'az500kv' + $(Get-Random)
+
+    $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10').Location
+
+    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10' -Location $location
     ```
 
     >**Hinweis**: In der Ausgabe des letzten Befehls werden der Tresorname und der Tresor-URI angezeigt. Der Tresor-URI weist das folgende Format auf: `https://<vault_name>.vault.azure.net/`
