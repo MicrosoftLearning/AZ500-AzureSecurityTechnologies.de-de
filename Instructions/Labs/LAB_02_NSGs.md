@@ -302,7 +302,7 @@ In dieser Aufgabe testen Sie die Filter für den Netzwerkdatenverkehr. Sie sollt
 
 4. Navigieren Sie im Azure-Portal zum Blatt **myVMWeb** des virtuellen Computers.
 
-5. Klicken Sie auf dem Blatt **myVMWeb** im Abschnitt **Payload** auf **Skriptausführung**, und klicken Sie dann auf **RunPowerShellScript**.
+5. Klicken Sie auf dem Blatt **myVMWeb** im Abschnitt **Vorgänge** auf **Skriptausführung**, und klicken Sie dann auf **RunPowerShellScript**.
 
 6. Führen Sie im Bereich **Befehlsskript ausführen** Folgendes aus, um die Webserverrolle auf **myVmWeb** zu installieren:
 
