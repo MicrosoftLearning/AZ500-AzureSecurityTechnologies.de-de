@@ -109,7 +109,7 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
 
     $location = (Get-AzResourceGroup -ResourceGroupName 'AZ500LAB10').Location
 
-    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10' -Location $location
+    New-AzKeyVault -VaultName $kvName -ResourceGroupName 'AZ500LAB10' -Location $location -DisableRbacAuthorization
     ```
 
     >**Hinweis**: In der Ausgabe des letzten Befehls werden der Tresorname und der Tresor-URI angezeigt. Der Tresor-URI weist das folgende Format auf: `https://<vault_name>.vault.azure.net/`
