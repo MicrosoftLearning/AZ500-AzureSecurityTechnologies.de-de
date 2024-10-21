@@ -245,7 +245,7 @@ In dieser Aufgabe konfigurieren Sie die primären und sekundären DNS-Adressen f
 
 2. Klicken Sie auf dem Blatt **AZ500LAB08** in der Liste der Ressourcen auf den virtuellen Computer **Srv-Work**.
 
-3. Klicken Sie auf dem Blatt **Srv-Work** im Abschnitt **Einstellungen** auf **Netzwerk**.
+3. Klicken Sie auf dem Blatt **Srv-Work** auf **Netzwerke**.
 
 4. Klicken Sie auf dem Blatt **Srv-Work \| Netzwerk** auf den Link neben dem Eintrag **Netzwerkschnittstelle**.
 

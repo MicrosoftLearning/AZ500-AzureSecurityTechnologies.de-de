@@ -120,35 +120,31 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
 
 4. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Wert des Kennworts im Profilobjekt zu erstellen:
     ```powershell
-    $PasswordProfile = @{
-      Password = 'Helo123!'
-      ForceChangePasswordNextSignIn = $true
-      ForceChangePasswordNextSignInWithMfa = $true
-    }
+    $passwordProfile.Password = "Pa55w.rd1234"
     ```
 
 5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Microsoft Entra ID herzustellen:
 
     ```powershell
-    Connect-MgGraph -Scopes "User.ReadWrite.All", "Group.ReadWrite.All", "AuditLog.Read.All", "RoleManagement.Read.Directory"
+    Connect-AzureAD
     ```
       
 6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen des Microsoft Entra-Mandanten zu identifizieren: 
 
     ```powershell
-    $domainName = ((Get-MgOrganization).VerifiedDomains)[0].Name
+    $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
     ```
 
 7. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Benutzerkonto für Isabel Garcia zu erstellen: 
 
     ```powershell
-    New-MgUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -MailNickName 'Isabel' -AccountEnabled
+    New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
 8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Microsoft Entra ID-Benutzer aufzulisten (die Konten von Joseph und Isabel sollten in der Liste angezeigt werden): 
 
     ```powershell
-    Get-MgUser 
+    Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"} 
     ```
 
 #### Aufgabe 2: Verwenden von PowerShell, um die Gruppe „Junior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Isabel Garcia hinzuzufügen.
@@ -158,38 +154,32 @@ In dieser Aufgabe erstellen Sie die Gruppe „Junior Admins“ und fügen der Gr
 1. Führen Sie zum **Erstellen einer neuen Sicherheitsgruppe** mit dem Namen „Junior Admins“ in der gleichen PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus:
    
    ```powershell
-   New-MgGroup -DisplayName "Junior Admins" -MailEnabled:$false -SecurityEnabled:$true -MailNickName JuniorAdmins
+   New-AzureADGroup -DisplayName 'Junior Admins43846135' -MailEnabled $false -SecurityEnabled $true -MailNickName JuniorAdmins
    ```
    
 2. Führen Sie zum **Auflisten von Gruppen** in Ihrem Microsoft Entra-Mandanten in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus (die Liste sollte die Gruppen „Senior Admins“ und „Junior Admins“ enthalten)
    
    ```powershell
-   Get-MgGroup
+   Get-AzureADGroup
    ```
 
 3. Führen Sie zum **Abrufen eines Verweises** auf das Benutzerkonto von Isabel Garcia in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus:
 
    ```powershell
-   $user =Get-MgUser -Filter "MailNickName eq 'Isabel'"
+   $user = Get-AzureADUser -Filter "UserPrincipalName eq 'Isabel-43846135@LODSPRODMCA.onmicrosoft.com'"
    ```
 
-4. Führen Sie in der PowerShell-Sitzung im Bereich Cloud Shell den folgenden Befehl aus, um einen **Verweis auf die Gruppe Junior Admins zu erhalten**:
+4. Führen Sie in der PowerShell-Sitzung im Bereich Cloud Shell den folgenden Befehl aus, um das Benutzerkonto von Isabel zur Gruppe Junior Admins43846135 hinzuzufügen:
    ```powershell
-   $targetGroup = Get-MgGroup -ConsistencyLevel eventual -Search '"DisplayName:Junior Admins"'
+   Add-AzADGroupMember -MemberUserPrincipalName $user.userPrincipalName -TargetGroupDisplayName "Junior Admins43846135"
    ```
 
-5. Führen Sie zum **Hinzufügen des Benutzerkontos von Isabel** zur Gruppe „Junior Admins“ in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus:
+5. Führen Sie in der PowerShell-Sitzung im Bereich Cloud Shell den folgenden Befehl aus, um das Benutzerkonto von Isabel zur Gruppe Junior Admins43846135 hinzuzufügen:
    
    ```powershell
-    New-MgGroupMember -DirectoryObjectId $user.id -GroupId $targetGroup.id
+    Get-AzADGroupMember -GroupDisplayName "Junior Admins43846135"
     ```
    
-5. Führen Sie zum **Bestätigen**, dass die Gruppe „Junior Admins“ das Benutzerkonto von Isabel enthält, in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus:
-   
-    ```powershell
-    Get-MgGroupMember -GroupId $targetGroup.id
-    ```
- 
 > Ergebnis: Sie haben PowerShell verwendet, um einen Benutzer und ein Gruppenkonto zu erstellen, und das Benutzerkonto dem Gruppenkonto hinzugefügt. 
 
 ### Übung 3: Erstellen Sie eine Gruppe „Service Desk“, die das Benutzerkonto von Dylan Williams als Mitglied enthält.
