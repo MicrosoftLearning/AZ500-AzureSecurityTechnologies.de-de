@@ -9,7 +9,7 @@ lab:
 
 ## Labszenario
 
-**Hinweis**: **Azure Sentinel** wurde in **Microsoft Sentinel** umbenannt. 
+**Hinweis**: **Microsoft Sentinel** wurde in **Microsoft Sentinel** umbenannt. 
 
 Sie wurden gebeten, einen Proof of Concept für eine Microsoft Sentinel-basierte Bedrohungserkennung und die Reaktion auf Bedrohungen zu erstellen. Insbesondere geht es Ihnen um Folgendes:
 
@@ -48,7 +48,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren des Playbooks als automatisierte Antwort
 - Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
 
-#### Aufgabe 1: Durchführen des Onboardings von Azure Sentinel
+#### Aufgabe 1: Einführen von Microsoft Sentinel
 
 In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und verbinden den Dienst mit dem Log Analytics-Arbeitsbereich. 
 
@@ -64,7 +64,7 @@ In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und v
 
 4. Wählen Sie auf dem Blatt **Add Microsoft Sentinel to a workspace** (Microsoft Sentinel zu einem Arbeitsbereich hinzufügen) den Log Analytics-Arbeitsbereich aus, den Sie im Lab „Azure Monitor“ erstellt haben, und klicken Sie auf **Hinzufügen**.
 
-    >**Hinweis**: Microsoft Sentinel hat sehr spezifische Anforderungen an Arbeitsbereiche. Beispielsweise können Arbeitsbereiche, die von Microsoft Defender für Cloud erstellt wurden, nicht verwendet werden. Weitere Informationen finden Sie unter [Schnellstart: Durchführen des Onboardings für Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/quickstart-onboard).
+    >**Hinweis**: Microsoft Sentinel hat sehr spezifische Anforderungen an Arbeitsbereiche. Beispielsweise können Arbeitsbereiche, die von Microsoft Defender für Cloud erstellt wurden, nicht verwendet werden. Weitere Informationen finden Sie unter [Schnellstart: Durchführen des Onboardings für Microsoft Sentinel](https://docs.microsoft.com/en-us/microsoft/sentinel/quickstart-onboard).
     
 #### Aufgabe 2: Konfigurieren von Microsoft Sentinel zur die Verwendung des Azure-Aktivitätsdatenconnectors 
 

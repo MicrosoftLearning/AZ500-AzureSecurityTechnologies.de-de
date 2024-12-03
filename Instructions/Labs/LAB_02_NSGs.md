@@ -202,7 +202,9 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVmWeb**|
    |Region|**(USA) USA, Osten**|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
+   |Verfügbarkeitsoptionen|**Keine Infrastrukturredundanz erforderlich**
+   |Sicherheitstyp|**Standard**
+   |Abbildung|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
    |Kennwort|**Erstellen Sie Ihr eigenes Kennwort, und notieren Sie es für spätere Zwecke in den nachfolgenden Übungen**|
@@ -212,19 +214,19 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
 
     >**Hinweis**: Für öffentliche eingehende Ports verwenden wir die vorab erstellte Netzwerksicherheitsgruppe. 
 
-4. Klicken Sie auf **Weiter: Datenträger >** , und legen Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Datenträger** den **Typ des Betriebssystemdatenträgers** auf **HDD Standard** fest, und klicken Sie dann auf **Weiter: Netzwerk >** .
+5. Klicken Sie auf **Weiter: Datenträger >** , und legen Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Datenträger** den **Typ des Betriebssystemdatenträgers** auf **HDD Standard** fest, und klicken Sie dann auf **Weiter: Netzwerk >** .
 
-5. Wählen Sie auf der Registerkarte **Netzwerk** des Blatts **Virtuellen Computer erstellen** das zuvor erstellte Netzwerk **myVirtualNetwork** aus.
+6. Wählen Sie auf der Registerkarte **Netzwerk** des Blatts **Virtuellen Computer erstellen** das zuvor erstellte Netzwerk **myVirtualNetwork** aus.
 
-6. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
+7. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-7. Klicken Sie auf **Next: Verwaltung >**, und klicken Sie dann auf **Weiter: Überwachung >**. Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
+8. Klicken Sie auf **Next: Verwaltung >**, und klicken Sie dann auf **Weiter: Überwachung >**. Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
 
    |Einstellung|Wert|
    |---|---|
    |Startdiagnose|**Mit verwaltetem Speicherkonto aktiviert (empfohlen)**|
 
-8. Klicken Sie auf **Überprüfen + erstellen**. Vergewissern Sie sich auf dem Blatt **Überprüfen + erstellen**, dass die Überprüfung erfolgreich war, und klicken Sie auf **Erstellen**.
+9. Klicken Sie auf **Überprüfen + erstellen**. Vergewissern Sie sich auf dem Blatt **Überprüfen + erstellen**, dass die Überprüfung erfolgreich war, und klicken Sie auf **Erstellen**.
 
 #### Aufgabe 2: Erstellen eines virtuellen Computers, der als Verwaltungsserver verwendet werden soll. 
 
