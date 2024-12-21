@@ -11,7 +11,7 @@ lab:
 
 Sie wurden gebeten, einen Proof of Concept der Microsoft Defender für Cloud-basierten Umgebung zu erstellen. Insbesondere geht es Ihnen um Folgendes:
 
-- Sie sollen Microsoft Defender für Cloud für die Überwachung eines virtuellen Computers konfigurieren.
+- Konfigurieren von Microsoft Defender for Cloud mit erweiterten Sicherheitsfunktionen für Server zur Überwachung eines virtuellen Computers.
 - Sehen Sie sich die Empfehlungen von Microsoft Defender für Cloud für den virtuellen Computer an.
 - Implementieren Sie die Empfehlungen für die Gastkonfiguration und den Just-In-Time-VM-Zugriff. 
 - Überprüfen, wie die Sicherheitsbewertung verwendet werden kann, um den Fortschritt bei der Erstellung einer sichereren Infrastruktur zu bestimmen.
@@ -38,35 +38,23 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 - Aufgabe 2: Überprüfen der Empfehlungen von Microsoft Defender für Cloud
 - Aufgabe 3: Implementieren der Empfehlung von Microsoft Defender for Cloud zum Aktivieren des Just-in-Time-VM-Zugriffs
 
-#### Aufgabe 1: Konfigurieren von Microsoft Defender für Cloud
+#### Übung 1: Konfigurieren von Microsoft Defender for Cloud Enhanced Security Features for Servers
 
-In dieser Aufgabe werden Sie Microsoft Defender für Cloud einführen und konfigurieren.
+Bei dieser Aufgabe werden Sie Microsoft Defender für Cloud Enhanced Security Features for Servers einbinden und konfigurieren.
 
-1. Melden Sie sich beim Azure-Portal ( **`https://portal.azure.com/`** ) an.
+1. Starten Sie eine Browsersitzung und melden Sie sich bei Ihrem [Azure-Abonnement](https://azure.microsoft.com/en-us/free/?azure-portal=true) an. in dem Sie über Administratorzugriff verfügen.
 
-    >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, dem in dem Azure-Abonnement, das Sie für dieses Lab verwenden, die Rolle „Besitzer“ oder „Mitwirkender“ zugewiesen ist.
+2. Geben Sie im Azure-Portal in das Textfeld „Ressourcen, Dienste und Dokumente suchen“ oben auf der Azure-Portalseite Microsoft Defender for Cloud ein und drücken Sie dann die Eingabetaste.
 
-2. Geben Sie im Azure-Portal oben im Textfeld **Ressourcen, Dienste und Dokumente durchsuchen** **Microsoft Defender für Cloud** ein, und drücken Sie die **EINGABETASTE**.
+3. Gehen Sie auf Microsoft Defender for Cloud, Verwaltungsblatt, zu den Umgebungseinstellungen. Erweitern Sie die Ordner für die Umgebungseinstellungen, bis der Abschnitt Abonnement angezeigt wird, und klicken Sie dann auf das Abonnement, um Details anzuzeigen.
 
-3. Wählen Sie im linken Navigationsbereich **Erste Schritte** aus. Klicken Sie auf dem Blatt **Microsoft Defender for Cloud \| Erste Schritte** auf **Upgrade**.
-     
-4. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \| Erste Schritte** auf der Registerkarte „Agents installieren“ nach unten und klicken Sie auf **Agents installieren**. 
+4. Erweitern Sie im Blatt Einstellungen unter Defender-Pläne Cloud Workload Protection (CWP)“.
+  
+5. Wählen Sie in der Liste Cloud Workload Protection (CWP)-Plan die Option Server aus. Ändern Sie auf der rechten Seite den Status von Aus in Ein, und klicken Sie dann auf Speichern.
+  
+6. Um die Details von Microsoft Defender for Servers Plan 2 zu überprüfen, wählen Sie Plan ändern >.
 
-5. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \|Erste Schritte** auf der Registerkarte **Upgrade** >> so lange nach unten, bis der Abschnitt **Arbeitsbereiche mit erweiterten Sicherheitsfeatures auswählen** angezeigt wird >> aktivieren Sie den **Microsoft Defender-Tarif**, indem Sie Ihren Log Analytics-Arbeitsbereich auswählen, und klicken Sie auf die große blaue Upgrade-Schaltfläche.  
-
-    >**Hinweis**: Überprüfen Sie alle Features, die als Teil von Microsoft Defender-Tarifen verfügbar sind. 
-
-6. Navigieren Sie zu **Microsoft Defender for Cloud** und klicken Sie im linken Navigationsbereich unter dem Abschnitt Verwaltung auf **Umgebungseinstellungen**.
-
-7. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \| Umgebungseinstellungen** nach unten, erweitern Sie die Punkte, bis Ihr Abonnement angezeigt wird, und klicken Sie auf das entsprechende Abonnement. 
-
-8. Wählen Sie auf dem Blatt **Einstellungen \| Azure Defender-Pläne** die Option **Alle Pläne aktivieren** aus und klicken Sie auf **Speichern**.
-
-9. Navigieren Sie zurück zum Blatt **Microsoft Defender for Cloud \| Umgebungseinstellungen** und erweitern Sie die Punkte, bis Ihr Abonnement angezeigt wird. Klicken Sie dann auf den Eintrag des Log Analytics-Arbeitsbereichs, den Sie im vorherigen Lab erstellt haben.
-
-10. Stellen Sie auf dem Blatt **Einstellungen \| Defender-Pläne** sicher, dass alle Optionen „Ein“ sind. Klicken Sie bei Bedarf auf **Alle Pläne aktivieren** und dann auf **Speichern**.
-
-11. Wählen Sie **Datensammlung** auf dem Blatt **Einstellungen \| Defender-Pläne** aus. Klicken Sie auf **Alle Ereignisse** und dann auf **Speichern**.
+>**Hinweis**: Wenn Sie den Cloud Workload Protection (CWP)-Serverplan von „Aus“ auf „Ein“ setzen, wird der „Microsoft Defender for Servers Plan 2“ aktiviert.
 
 #### Aufgabe 2: Überprüfen der Empfehlung von Microsoft Defender für Cloud
 
