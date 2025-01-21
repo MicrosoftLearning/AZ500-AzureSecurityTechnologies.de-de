@@ -158,7 +158,7 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
     |Einstellung|Wert|
     |----|----|
-    |Netzwerkkonfiguration|**Azure CNI**|
+    |Netzwerkkonfiguration|**Azure CNI Overlay**|
     |DNS-Namenspräfix|**Behalten Sie den Standardwert bei.**|
 
     >**Hinweis**: AKS kann als privater Cluster konfiguriert werden. Dadurch wird dem API-Server eine private IP-Adresse zugewiesen, um sicherzustellen, dass der Netzwerkdatenverkehr zwischen Ihrem API-Server und den Knotenpools ausschließlich im privaten Netzwerk verbleibt. Weitere Informationen finden Sie auf der Seite [Erstellen eines privaten Azure Kubernetes Service-Clusters](https://docs.microsoft.com/en-us/azure/aks/private-clusters).
