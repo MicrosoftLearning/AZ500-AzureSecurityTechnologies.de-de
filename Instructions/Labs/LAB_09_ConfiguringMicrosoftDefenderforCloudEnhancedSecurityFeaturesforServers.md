@@ -14,13 +14,13 @@ Als Azure-Technische Fachkraft für Sicherheit für ein globales E-Commerce-Unte
 
 ## Ziele des Labs
 
-- Konfigurieren von Microsoft Defender for Cloud Enhanced Security Features für Server
+- Konfigurieren von Features von Microsoft Defender for Cloud für erhöhte Sicherheit für Server
   
 - Überprüfen der erweiterten Sicherheitsfeatures für Microsoft Defender for Server Plan 2
 
 ## Übungsanweisungen
 
-### Konfigurieren von Microsoft Defender for Cloud Enhanced Security Features für Server
+### Konfigurieren von Features von Microsoft Defender for Cloud für erhöhte Sicherheit für Server
 
 1. Geben Sie im Azure-Portal in das Textfeld „Ressourcen, Dienste und Dokumente suchen“ oben auf der Azure-Portalseite **Microsoft Defender for Cloud** ein und drücken Sie dann die **Eingabetaste**.
 
