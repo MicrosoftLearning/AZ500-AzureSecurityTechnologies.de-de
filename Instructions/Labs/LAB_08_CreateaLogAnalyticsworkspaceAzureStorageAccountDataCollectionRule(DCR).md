@@ -10,7 +10,7 @@ lab:
 
 ## Labszenario
 
-Als Technische Fachkraft für Sicherheit bei Azure für ein Finanztechnologieunternehmen werden Sie beauftragt, die Überwachung und Sicherheitssichtbarkeit auf allen Azure Virtual Machines (VMs) zu verbessern, die für die Verarbeitung von Finanztransaktionen und die Verwaltung vertraulicher Kundendaten verwendet werden. Das Sicherheitsteam benötigt detaillierte Protokolle und Leistungsmetriken von diesen VMs, um potenzielle Bedrohungen zu erkennen und die Systemleistung zu optimieren. Der Chief Information Security Officer (CISO) hat Sie gebeten, eine Lösung zu implementieren, die Sicherheitsereignisse, Systemprotokolle und Leistungsindikatoren sammelt. Ihnen wurde die Konfiguration des Azure Monitor Agent (AMA) zusammen mit Datensammlungsregeln (Data Collection Rules, DCRs) zugewiesen, um die Protokollsammlung und Leistungsüberwachung zu zentralisieren.
+Als Azure-Sicherheitsingenieur für ein Finanztechnologieunternehmen sind Sie dafür zuständig, die Überwachung und Sicherheitstransparenz auf allen Azure Virtual Machines (VMs) zu verbessern, die für die Verarbeitung von Finanztransaktionen und die Verwaltung sensibler Kundendaten verwendet werden. Das Sicherheitsteam benötigt detaillierte Protokolle und Leistungskennzahlen von diesen VMs, um potenzielle Bedrohungen zu erkennen und die Systemleistung zu optimieren. Der Chief Information Security Officer (CISO) hat Sie gebeten, eine Lösung zu implementieren, die Sicherheitsereignisse, Systemprotokolle und Leistungsindikatoren erfasst. Sie wurden beauftragt, den Azure Monitor-Agent (AMA) zusammen mit den Regeln für die Datensammlung (Data Collection Rules, DCRs) zu konfigurieren, um die Protokollsammlung und Leistungsüberwachung zu zentralisieren.
 
 
 
@@ -51,7 +51,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
     New-AzResourceGroup -Name AZ500LAB131415 -Location 'EastUS'
     ```
 
-    >**Hinweis**: Diese Ressourcengruppe wird für die Labs 8, 9 und 10 verwendet.
+    >**Hinweis:** Diese Ressourcengruppe wird für die Labs 8, 9 und 10 verwendet.
 
 5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Verschlüsselung auf dem Host (EAH) zu aktivieren.
    
@@ -165,7 +165,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
 
 
-3. Klicken Sie auf die Schaltfläche **+ Erstellen**, um die neue Datensammlungsregel zu erstellen.
+3. Klicken Sie auf die Schaltfläche **+ Erstellen**, um eine neue Regel für die Datensammlung zu erstellen.
 
 4. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundeinstellungen** des Blatts **Datensammlung erstellen** an:
   
@@ -206,7 +206,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
 11. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ziel >** , um fortzufahren.
   
-12. Klicken Sie auf  **+ Ziel hinzufügen**, ändern Sie das Dropdownmenü **Zieltyp**, um **Azure Monitor-Protokolle** anzuzeigen. Stellen Sie im Fenster **Abonnement** sicher, dass Ihr *Abonnement* angezeigt wird, und ändern Sie dann das Dropdownmenü **Konto oder Namespace** auf Ihren zuvor erstellten Log Analytics-Arbeitsbereich.
+12. Klicken Sie auf **+ Ziel hinzufügen** und ändern Sie das Dropdown-Menü **Zieltyp**, um **Azure Monitor-Protokolle anzuzeigen.** Stellen Sie im Fenster **Abonnement** sicher, dass Ihr *Abonnement* angezeigt wird, und ändern Sie dann das Dropdownmenü **Konto oder Namespace** auf Ihren zuvor erstellten Log Analytics-Arbeitsbereich.
 
    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
 
@@ -222,5 +222,5 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
 > Ergebnisse: Sie haben eine Azure-VM, einen Log Analytics-Arbeitsbereich, ein Azure-Speicherkonto und eine Datensammlungsregel bereitgestellt, um mit dem Azure Monitor-Agent Ereignisse und Leistungsindikatoren von VMs zu sammeln.
 
->**Hinweis**: Entfernen Sie nicht die Ressourcen aus diesem Lab, da sie für das Microsoft Defender for Cloud-Lab, das „Aktivieren des Just-In-Time-Zugriffs auf virtuellen Computern“-Lab und das Microsoft Sentinel-Lab benötigt werden.
+>**Hinweis**: Entfernen Sie die Ressourcen nicht aus diesem Lab, da sie für das Microsoft Defender for Cloud Lab, das Lab „Just-in-Time-Zugriff auf VMs aktivieren“ und das Microsoft Sentinel Lab benötigt werden.
  
