@@ -94,7 +94,7 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
 
 2. Klicken Sie auf dem Blatt **Firewalls** auf **+ Erstellen**.
 
-3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Firewall erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
+3. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundlagen** des Blatts **Firewall erstellen** an: 
 
    |Einstellung|Wert|
    |---|---|
@@ -104,21 +104,22 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
    |Firewall-SKU|**Standard**|
    |Firewallverwaltung|**Use Firewall rules (classic) to manage this firewall** (Firewallregeln (klassisch) zum Verwalten dieser Firewall verwenden)|
    |Virtuelles Netzwerk auswählen|Klicken Sie auf die Option **Vorhandene verwenden**, und wählen Sie in der Dropdownliste **Test-FW-VN** aus.|
+   |Firewall Management NIC|Um diese Funktion zu deaktivieren, **deaktivieren** Sie die Option **Firewall Management NIC aktivieren**.|
    |Öffentliche IP-Adresse|Klicken Sie auf **Neue hinzufügen**, geben Sie den Namen **TEST-FW-PIP** ein, und klicken Sie auf **OK**.|
 
-4. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**. 
+5. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**. 
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. Dieser Vorgang dauert etwa fünf Minuten. 
 
-5. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
+6. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
 
-6. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB08**.
+7. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB08**.
 
     >**Hinweis**: Überprüfen Sie auf dem Blatt mit der Ressourcengruppe **AZ500LAB08** die Liste der Ressourcen. Sie können nach **Typ** sortieren.
 
-7. Klicken Sie in der Liste der Ressourcen auf den Eintrag, der die Firewall **Test-FW01** darstellt.
+8. Klicken Sie in der Liste der Ressourcen auf den Eintrag, der die Firewall **Test-FW01** darstellt.
 
-8. Identifizieren Sie auf dem Blatt **Test-FW01** die **private IP-Adresse**, die der Firewall zugewiesen wurde. 
+9. Identifizieren Sie auf dem Blatt **Test-FW01** die **private IP-Adresse**, die der Firewall zugewiesen wurde. 
 
     >**Hinweis**: Sie benötigen diese Informationen für die nächste Aufgabe.
 
