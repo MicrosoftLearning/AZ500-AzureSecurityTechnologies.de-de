@@ -106,42 +106,44 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für Isabel Garcia.
 
-1. Öffnen Sie Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, wählen Sie **PowerShell** und dann **Speicher erstellen** aus.
+1. **Öffnen Sie die Cloud Shell**, indem Sie auf das **Cloud Shell-Symbol** in der oberen rechten Ecke des Azure-Portals klicken.
 
-2. Stellen Sie sicher, dass oben links im Cloud Shell-Bereich im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
+2. **Wenn Sie dazu aufgefordert werden, richten Sie Cloud Shell ein, indem Sie ein Speicherkonto erstellen.**. Dies ist **nur beim ersten Mal** erforderlich, wenn Sie Cloud Shell starten.
+
+3. Stellen Sie sicher, dass oben links im Bereich „Cloud Shell“ im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 
    >**Hinweis**: Um kopierten Text in Cloud Shell einzufügen, klicken Sie mit der rechten Maustaste im Bereichsfenster, und wählen Sie **Einfügen** aus. Alternativ können Sie die Tastenkombination **UMSCHALT+EINFÜGEN** verwenden.
 
-3. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Kennwortprofilobjekt zu erstellen:
+4. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Kennwortprofilobjekt zu erstellen:
 
     ```powershell
     $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
     ```
 
-4. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Wert des Kennworts im Profilobjekt zu erstellen:
+5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Wert des Kennworts im Profilobjekt zu erstellen:
     ```powershell
     $passwordProfile.Password = "Pa55w.rd1234"
     ```
 
-5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Microsoft Entra ID herzustellen:
+6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Microsoft Entra ID herzustellen:
 
     ```powershell
     Connect-AzureAD
     ```
       
-6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen des Microsoft Entra-Mandanten zu identifizieren: 
+7. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um den Namen des Microsoft Entra-Mandanten zu identifizieren: 
 
     ```powershell
     $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
     ```
 
-7. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Benutzerkonto für Isabel Garcia zu erstellen: 
+8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um ein Benutzerkonto für Isabel Garcia zu erstellen: 
 
     ```powershell
     New-AzureADUser -DisplayName 'Isabel Garcia' -PasswordProfile $passwordProfile -UserPrincipalName "Isabel@$domainName" -AccountEnabled $true -MailNickName 'Isabel'
     ```
 
-8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Microsoft Entra ID-Benutzer aufzulisten (die Konten von Joseph und Isabel sollten in der Liste angezeigt werden): 
+9. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um Microsoft Entra ID-Benutzer aufzulisten (die Konten von Joseph und Isabel sollten in der Liste angezeigt werden): 
 
     ```powershell
     Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"} 
@@ -296,7 +298,9 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 3. Klicken Sie auf dem Blatt **AZ500Lab01 \| Zugriffssteuerung (IAM)** auf **+ Hinzufügen** und dann im Dropdownmenü auf **Rollenzuweisung hinzufügen**.
 
-4. Geben Sie auf dem Blatt **Rollenzuweisung hinzufügen** die folgenden Einstellungen an, und klicken Sie nach jedem Schritt auf **Weiter**:
+4. Nehmen Sie auf dem Blatt **Rollenzuweisung hinzufügen** die folgenden Einstellungen vor, bevor Sie auf „Weiter“ klicken:
+
+   **Hinweis:** Klicken Sie nach Abschluss aller Schritte auf **Weiter**.
 
    |Einstellung|Wert|
    |---|---|
@@ -304,17 +308,17 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
    |Zuweisen des Zugriffs für (unter dem Bereich „Mitglieder“)|**Benutzer, Gruppe oder Dienstprinzipal**|
    |Auswählen (+ Mitglieder auswählen)|**Service Desk**|
 
-5. Klicken Sie zweimal auf **Überprüfen und zuweisen**, um die Rollenzuweisung zu erstellen.
+6. Klicken Sie zweimal auf **Überprüfen und zuweisen**, um die Rollenzuweisung zu erstellen.
 
-6. Wählen Sie auf dem Blatt **Zugriffssteuerung (IAM)** die Option **Rollenzuweisungen** aus.
+7. Wählen Sie auf dem Blatt **Zugriffssteuerung (IAM)** die Option **Rollenzuweisungen** aus.
 
-7. Geben Sie auf dem Blatt **AZ500Lab01 \| Zugriffssteuerung (IAM)** auf der Registerkarte **Zugriff überprüfen** im Textfeld **Nach Name oder E-Mail-Adresse suchen** die Angabe **Dylan Williams** ein.
+8. Geben Sie auf dem Blatt **AZ500Lab01 \| Zugriffssteuerung (IAM)** auf der Registerkarte **Zugriff überprüfen** im Textfeld **Nach Name oder E-Mail-Adresse suchen** die Angabe **Dylan Williams** ein.
 
-8. Wählen Sie in der Liste der Suchergebnisse das Benutzerkonto von Dylan Williams aus, und zeigen Sie auf dem Blatt **Dylan Williams Zuweisungen - AZ500Lab01** die neu erstellte Zuweisung an.
+9. Wählen Sie in der Liste der Suchergebnisse das Benutzerkonto von Dylan Williams aus, und zeigen Sie auf dem Blatt **Dylan Williams Zuweisungen - AZ500Lab01** die neu erstellte Zuweisung an.
 
-9. Schließen Sie das Blatt **Dylan Williams Zuweisungen - AZ500Lab01**.
+10. Schließen Sie das Blatt **Dylan Williams Zuweisungen - AZ500Lab01**.
 
-10. Wiederholen Sie die beiden letzten Schritte, um den Zugriff für **Joseph Price** zu überprüfen. 
+11. Wiederholen Sie die beiden letzten Schritte, um den Zugriff für **Joseph Price** zu überprüfen. 
 
 > Ergebnis: Sie haben RBAC-Berechtigungen zugewiesen und überprüft. 
 
