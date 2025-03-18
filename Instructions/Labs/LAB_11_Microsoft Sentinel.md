@@ -4,7 +4,7 @@ lab:
   module: Module 04 - Configure and manage security monitoring and automation solutions
 ---
 
-# Lab 11: Microsoft Sentinel
+# Lab 11: Microsoft Sentinel
 # Lab-Handbuch für Kursteilnehmende
 
 ## Labszenario
@@ -23,7 +23,7 @@ Sie wurden gebeten, einen Proof of Concept für eine Microsoft Sentinel-basierte
 
 In diesem Lab führen Sie die folgende Übung aus:
 
-- Übung 1: Implementieren von Microsoft Sentinel
+- Übung 1: Implementieren von Microsoft Sentinel
 
 ## Microsoft Sentinel-Diagramm
 
@@ -35,20 +35,20 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 - **\\Allfiles\\Labs\\15\\changeincidentseverity.json**
 
-### Übung 1: Implementieren von Microsoft Sentinel
+### Übung 1: Implementieren von Microsoft Sentinel
 
-### Geschätzte Zeit: 30 Minuten
+### Geschätzte Zeit: 30 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Einführen von Microsoft Sentinel
-- Aufgabe 2: Verbinden von Azure-Aktivität mit Sentinel
-- Aufgabe 3: Erstellen einer Regel, die den Azure-Aktivitätsdatenconnector verwendet 
-- Aufgabe 4: Erstellen eines Playbooks
+- Aufgabe 1: Einführen von Microsoft Sentinel
+- Aufgabe 2: Verbinden von Azure-Aktivität mit Sentinel
+- Aufgabe 3: Erstellen einer Regel, die den Azure-Aktivitätsdatenconnector verwendet 
+- Aufgabe 4: Erstellen eines Playbooks
 - Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren des Playbooks als automatisierte Antwort
-- Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
+- Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
 
-#### Aufgabe 1: Einführen von Microsoft Sentinel
+#### Aufgabe 1: Einführen von Microsoft Sentinel
 
 In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und verbinden den Dienst mit dem Log Analytics-Arbeitsbereich. 
 
@@ -66,7 +66,7 @@ In dieser Aufgabe führen Sie das Onboarding für Microsoft Sentinel durch und v
 
     >**Hinweis**: Microsoft Sentinel hat sehr spezifische Anforderungen an Arbeitsbereiche. Beispielsweise können Arbeitsbereiche, die von Microsoft Defender für Cloud erstellt wurden, nicht verwendet werden. Weitere Informationen finden Sie unter [Schnellstart: Durchführen des Onboardings für Microsoft Sentinel](https://docs.microsoft.com/en-us/microsoft/sentinel/quickstart-onboard).
     
-#### Aufgabe 2: Konfigurieren von Microsoft Sentinel zur die Verwendung des Azure-Aktivitätsdatenconnectors 
+#### Aufgabe 2: Konfigurieren von Microsoft Sentinel zur die Verwendung des Azure-Aktivitätsdatenconnectors 
 
 In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktivitätsdatenconnectors.  
 
@@ -80,19 +80,19 @@ In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktiv
 
 5. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Datenconnectors** auf **Aktualisieren**, und sehen Sie sich die Liste der verfügbaren Connectors an. Wählen Sie den Eintrag für den Connector **Azure-Aktivität** aus (linke Menüleiste kann bei Bedarf mit \<< ausgeblendet werden), sehen Sie sich die Beschreibung und den Status ganz rechts an, und klicken Sie dann auf **Connectorseite öffnen**.
 
-6. Auf dem Blatt **Azure-Aktivität** sollte die Registerkarte **Anweisungen** ausgewählt sein. Notieren Sie sich die **Voraussetzungen**, und scrollen Sie nach unten zu **Konfiguration**. Notieren Sie sich die Informationen, mit denen das Connectorupdate beschrieben wird. Weil Ihr Azure Pass-Abonnement die Legacy-Verbindungsmethode nie verwendet hat, können Sie Schritt 1 überspringen (die Schaltfläche **Alle trennen** ist abgeblendet) und mit Schritt 2 weitermachen.
+6. Auf dem Blatt **Azure-Aktivität** sollte die Registerkarte **Anweisungen** ausgewählt sein. Notieren Sie sich die **Voraussetzungen**, und scrollen Sie nach unten zu **Konfiguration**. Notieren Sie sich die Informationen, mit denen das Connectorupdate beschrieben wird. Ihr Abonnement hat nie die Legacy-Verbindungsmethode verwendet, sodass Sie Schritt 1 überspringen können (die Schaltfläche **Alle trennen** ist ausgegraut) und mit Schritt 2 fortfahren können.
 
-7. Lesen Sie in Schritt 2 **Verbinden Sie Ihre Abonnements über die Diagnoseeinstellungen „neue Pipeline“** die Anleitungen unter „Starten Sie den Azure Policy-Zuweisungs-Assistenten, und führen Sie diese Schritte aus“. Klicken Sie dann auf **Azure Policy-Zuweisungs-Assistent starten\>** .
+7. Lesen Sie in Schritt 2 **Verbinden Sie Ihre Abonnements über die Diagnoseeinstellungen „neue Pipeline“** die Anleitungen unter „Starten Sie den Azure Policy-Zuweisungs-Assistenten, und führen Sie diese Schritte aus“. Klicken Sie dann auf **Azure Policy-Zuweisungs-Assistent starten\>** .
 
-8. Klicken Sie auf der Registerkarte **Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren** (Seite „Richtlinie zuweisen“) **Grundlagen** auf die Schaltfläche mit den Auslassungspunkten **Bereich (...)** . Wählen Sie auf der Seite **Bereich** in der Dropdownliste „Abonnement“ Ihr Azure Pass-Abonnement aus, und klicken Sie unten auf der Seite auf die Schaltfläche **Auswählen**.
+8. Klicken Sie auf der Registerkarte **Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren** (Seite „Richtlinie zuweisen“) **Grundlagen** auf die Schaltfläche mit den Auslassungspunkten **Bereich (...)** . Wählen Sie auf der Seite **Bereich** in der Dropdownliste „Abonnement“ Ihr Abonnement aus, und klicken Sie unten auf der Seite auf die Schaltfläche **Auswählen**.
 
     >**Hinweis**:Wählen Sie *keine* Ressourcengruppe aus.
 
-9. Klicken Sie am unteren Rand der Registerkarte **Grundlagen** zweimal auf die Schaltfläche **Weiter**, um zur Registerkarte **Parameter** zu wechseln. Klicken Sie auf der Registerkarte **Parameter** auf die Schaltfläche **Primärer Log Analytics-Arbeitsbereich Auslassungspunkte (...)**. Vergewissern Sie sich auf der Seite **Primärer Log Analytics-Arbeitsbereich**, dass Ihr Azure Pass-Abonnement ausgewählt ist, und wählen Sie im Dropdown-Listenfeld **Arbeitsbereiche** den Log Analytics-Arbeitsbereich aus, den Sie für Sentinel verwenden. Klicken Sie anschließend unten auf der Seite auf die Schaltfläche **Auswählen**.
+9. Klicken Sie am unteren Rand der Registerkarte **Grundlagen** zweimal auf die Schaltfläche **Weiter**, um zur Registerkarte **Parameter** zu wechseln. Klicken Sie auf der Registerkarte **Parameter** auf die Schaltfläche **Primärer Log Analytics-Arbeitsbereich Auslassungspunkte (...)**. Vergewissern Sie sich auf der Seite **Primärer Log Analytics-Arbeitsbereich**, dass Ihr Abonnement ausgewählt ist, und wählen Sie im Dropdown-Listenfeld **Arbeitsbereiche** den Log Analytics-Arbeitsbereich aus, den Sie für Sentinel verwenden. Klicken Sie anschließend unten auf der Seite auf die Schaltfläche **Auswählen**.
 
-10. Klicken Sie unten auf der Registerkarte **Parameter** auf die Schaltfläche **Weiter**, um zur Registerkarte **Wartung** zu wechseln. Aktivieren Sie auf der Registerkarte **Wartung** das Kontrollkästchen **Wartungstask erstellen**. Dadurch wird in der Dropdownliste **Zu korrigierende Richtlinie** die Option „Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren“ aktiviert. Wählen Sie in der Dropdownliste **Standort der systemseitig zugewiesenen Identität** die Region (z. B. „USA, Osten“) aus, die Sie zuvor für Ihren Log Analytics-Arbeitsbereich ausgewählt haben.
+10. Klicken Sie unten auf der Registerkarte **Parameter** auf die Schaltfläche **Weiter**, um zur Registerkarte **Wartung** zu wechseln. Aktivieren Sie auf der Registerkarte **Wartung** das Kontrollkästchen **Wartungstask erstellen**. Dadurch wird in der Dropdownliste **Zu korrigierende Richtlinie** die Option „Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren“ aktiviert. Wählen Sie in der Dropdownliste **Standort der systemseitig zugewiesenen Identität** die Region (z. B. „USA, Osten“) aus, die Sie zuvor für Ihren Log Analytics-Arbeitsbereich ausgewählt haben.
 
-11. Klicken Sie unten auf der Registerkarte **Wartung** auf die Schaltfläche **Weiter**, um zur Registerkarte **Nichtkonformitätsmeldung** zu wechseln. Geben Sie bei Bedarf eine Nichtkonformitätsmeldung ein (dies ist optional), und klicken Sie unten auf der Registerkarte **Nichtkonformitätsmeldung** auf die Schaltfläche **Überprüfen + erstellen**.
+11. Klicken Sie unten auf der Registerkarte **Wartung** auf die Schaltfläche **Weiter**, um zur Registerkarte **Nichtkonformitätsmeldung** zu wechseln. Geben Sie bei Bedarf eine Nichtkonformitätsmeldung ein (dies ist optional), und klicken Sie unten auf der Registerkarte **Nichtkonformitätsmeldung** auf die Schaltfläche **Überprüfen + erstellen**.
 
 12. Klicken Sie auf die Schaltfläche **Erstellen** . Sie sollten drei Meldungen zum Status „erfolgreich“ beobachten: **„Richtlinienzuweisung erfolgreich erstellt“, „Rollenzuweisungen erfolgreich erstellt“ und „Wartungstask erfolgreich erstellt“** .
 
@@ -100,9 +100,9 @@ In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktiv
 
 13. Vergewissern Sie sich, dass im Bereich **Azure-Aktivität** der Graph **Empfangene Daten** angezeigt wird (möglicherweise müssen Sie die Browserseite aktualisieren).  
 
-    >**Hinweis**: Es kann länger als 15 Minuten dauern, bis der Status „Verbunden“ lautet und der Graph „Empfangene Daten“ anzeigt.
+    >**Hinweis**: Es kann länger als 15 Minuten dauern, bis der Status „Verbunden“ lautet und der Graph „Empfangene Daten“ anzeigt.
 
-#### Aufgabe 3: Erstellen einer Regel, die den Azure-Aktivitätsdatenconnector verwendet 
+#### Aufgabe 3: Erstellen einer Regel, die den Azure-Aktivitätsdatenconnector verwendet 
 
 In dieser Aufgabe überprüfen und erstellen Sie eine Regel, die den Azure-Aktivitätsdatenconnector verwendet. 
 
@@ -130,7 +130,7 @@ In dieser Aufgabe überprüfen und erstellen Sie eine Regel, die den Azure-Aktiv
 
     >**Hinweis**: Sie haben jetzt eine aktive Regel.
 
-#### Aufgabe 4: Erstellen eines Playbooks
+#### Aufgabe 4: Erstellen eines Playbooks
 
 In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine Sammlung von Aufgaben, die von Microsoft Sentinel als Reaktion auf eine Warnung aufgerufen werden können. 
 
@@ -170,7 +170,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 11. Klicken Sie auf dem Blatt **Logic Apps-Designer** auf den ersten **Verbindungsschritt**.
 
-12. Klicken Sie auf **Neu hinzufügen**, stellen Sie sicher, dass der Eintrag in der Dropdownliste **Mandant** Ihren Azure AD-Mandantennamen enthält, und klicken Sie auf **Anmelden**.
+12. Klicken Sie auf **Neu hinzufügen**, stellen Sie sicher, dass der Eintrag in der Dropdownliste **Mandant** Ihren Azure AD-Mandantennamen enthält, und klicken Sie auf **Anmelden**.
 
 13. Melden Sie sich bei der entsprechenden Aufforderung mit dem Benutzerkonto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab nutzen.
 
@@ -182,13 +182,13 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 16. Klicken Sie auf dem Blatt **Logic Apps-Designer** auf **Speichern**, um Ihre Änderungen zu speichern.
 
-#### Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren eines Playbooks als automatisierte Antwort
+#### Aufgabe 5: Erstellen einer benutzerdefinierten Warnung und Konfigurieren eines Playbooks als automatisierte Antwort
 
 1. Navigieren Sie im Azure-Portal zurück zum Blatt **Microsoft Sentinel \| Übersicht**.
 
 2. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Übersicht** im Abschnitt **Konfiguration** auf **Analysen**.
 
-3. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Analysen** auf **+ Erstellen** und dann im Dropdownmenü auf **Geplante Abfrageregel**. 
+3. Klicken Sie auf dem Blatt **Microsoft Sentinel \| Analysen** auf **+ Erstellen** und dann im Dropdownmenü auf **Geplante Abfrageregel**. 
 
 4. Geben Sie auf der Registerkarte **Allgemein** des Blatts **Analyseregel-Assistent – Neue Regel geplante erstellen** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte):
 
@@ -212,7 +212,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
     >**Hinweis**: Wenn ein Analysefehler angezeigt wird, hat IntelliSense Ihrer Abfrage möglicherweise Werte hinzugefügt. Vergewissern Sie sich, dass die Abfrage übereinstimmt. Fügen Sie andernfalls die Abfrage in Editor und dann aus Editor in die Regelabfrage ein. 
 
 
-7. Legen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** im Abschnitt **Abfrageplanung** den Wert für **Abfrage ausführen alle** auf **5 Minuten** fest.
+7. Legen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregel-Assistent – Neue geplante Regel erstellen** im Abschnitt **Abfrageplanung** den Wert für **Abfrage ausführen alle** auf **5 Minuten** fest.
 
 8. Übernehmen Sie auf der Registerkarte **Regellogik festlegen** des Blatts **Analyseregelassistent – Neue geplante Regel erstellen** die Standardwerte der verbleibenden Einstellungen, und klicken Sie auf **Weiter: Vorfallseinstellungen >**.
 
@@ -230,7 +230,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
     >**Hinweis**: Sie haben jetzt die neue aktive Regel **Playbook-Demo**. Wenn ein von der Regellogik des identifiziertes Ereignis eintritt, führt dies zu einer Warnung mit mittlerem Schweregrad, die einen entsprechenden Incident generiert.
 
-#### Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
+#### Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
 
 1. Navigieren Sie im Azure-Portal zum Blatt **Microsoft Defender für Cloud \| Übersicht**.
 
@@ -238,7 +238,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 2. Klicken Sie auf dem Blatt **Microsoft Defender for Cloud \| Übersicht** im linken Navigationsbereich unter **Cloudsicherheit** auf **Workloadschutz**.
 
-3. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \| Workloadschutz** nach unten, und klicken Sie unter **Erweiterter Schutz** auf die Kachel **Just-In-Time-VM-Zugriff**.
+3. Scrollen Sie auf dem Blatt **Microsoft Defender for Cloud \| Workloadschutz** nach unten, und klicken Sie unter **Erweiterter Schutz** auf die Kachel **Just-In-Time-VM-Zugriff**.
 
 4. Klicken Sie auf dem Blatt **Just-in-Time-VM-Zugriff** auf der rechten Seite der Zeile für die VM **myVM** auf die Schaltfläche mit den **Auslassungspunkten (...)**, anschließend auf **Entfernen** und dann auf **Ja**.
 
