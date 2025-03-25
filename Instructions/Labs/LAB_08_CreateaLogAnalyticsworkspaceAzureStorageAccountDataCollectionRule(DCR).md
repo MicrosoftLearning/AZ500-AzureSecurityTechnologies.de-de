@@ -20,22 +20,22 @@ Als Azure-Sicherheitsingenieur für ein Finanztechnologieunternehmen sind Sie da
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
-- Übung 1: Bereitstellen einer Azure-VM
-- Übung 2: Erstellen eines Log Analytics-Arbeitsbereichs
-- Übung 3: Erstellen eines Azure-Speicherkontos
-- Übung 4: Erstellen einer Datensammelregel
+- Übung 1: Bereitstellen einer Azure-VM
+- Übung 2: Erstellen eines Log Analytics-Arbeitsbereichs
+- Übung 3: Erstellen eines Azure-Speicherkontos
+- Übung 4: Erstellen einer Datensammelregel
   
 ## Anweisungen
 
-### Übung 1: Bereitstellen einer Azure-VM
+### Übung 1: Bereitstellen einer Azure-VM
 
-### Übungszeitrahmen: 10 Minuten
+### Übungszeitrahmen: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
-- Aufgabe 1: Bereitstellen eine Azure-VM 
+- Aufgabe 1: Bereitstellen eine Azure-VM 
 
-#### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers
+#### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers
 
 1. Melden Sie sich am Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
@@ -82,21 +82,21 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 8. Schließen Sie den Cloud Shell-Bereich. 
 
-### Übung 2: Erstellen eines Log Analytics-Arbeitsbereichs
+### Übung 2: Erstellen eines Log Analytics-Arbeitsbereichs
 
-### Übungszeitrahmen: 10 Minuten
+### Übungszeitrahmen: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
-- Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
+- Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
 
-#### Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
+#### Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
 
 In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich. 
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Log Analytics-Arbeitsbereiche** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Log Analytics-Arbeitsbereiche** auf  **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Log Analytics-Arbeitsbereiche** auf  **+ Erstellen**.
 
 3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Log Analytics-Arbeitsbereiche erstellen** die folgenden Einstellungen an (übernehmen Sie für andere Einstellungen die Standardwerte):
 
@@ -109,17 +109,17 @@ In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
 
 4. Klicken Sie auf **Überprüfen + erstellen**.
 
-5. Wählen Sie auf dem Blatt **Log Analytics-Arbeitsbereich erstellen** auf der Registerkarte **Überprüfen + erstellen** die Option **Erstellen** aus.
+5. Wählen Sie auf dem Blatt **Log Analytics-Arbeitsbereich erstellen** auf der Registerkarte **Überprüfen + erstellen** die Option **Erstellen** aus.
 
-### Übung 3: Erstellen eines Azure-Speicherkontos
+### Übung 3: Erstellen eines Azure-Speicherkontos
 
-### Geschätzte Zeit: 10 Minuten
+### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Erstellen eines Azure-Speicherkontos
+- Aufgabe 1: Erstellen eines Azure-Speicherkontos
 
-#### Aufgabe 1: Erstellen eines Azure-Speicherkontos
+#### Aufgabe 1: Erstellen eines Azure-Speicherkontos
 
 In dieser Aufgabe erstellen Sie ein Speicherkonto.
 
@@ -135,7 +135,7 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto.
     |---|---|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB131415**|
-    |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
+    |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
     |Location|**(USA) USA, Osten**|
     |Leistung|**Standard (allgemeines v2-Konto)**|
     |Redundanz|**Lokal redundanter Speicher (LRS)**|
@@ -146,9 +146,9 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto.
 
     >**Hinweis**: Warten Sie, bis das Speicherkonto erstellt wurde. Dieser Vorgang dauert etwa zwei Minuten.
 
-### Übung 3: Erstellen einer Datensammlungsregel
+### Übung 4: Erstellen einer Datensammlungsregel
 
-### Geschätzte Zeit: 15 Minuten
+### Geschätzte Zeit: 15 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -182,13 +182,13 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
 
 
-4. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ressourcen >** , um fortzufahren.
+4. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ressourcen >** , um fortzufahren.
    
 6. Wählen Sie auf der Registerkarte „Ressourcen“ die Option **+ Ressourcen hinzufügen**, und aktivieren Sie **Datensammlungsendpunkte aktivieren**. Aktivieren Sie in der Vorlage „Bereich auswählen“ **AZ500LAB131415**, und klicken Sie auf **Anwenden**.
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
 
-10. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Sammeln und Übermitteln >** , um fortzufahren.
+10. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Sammeln und Übermitteln >** , um fortzufahren.
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/8294d300-f910-4757-ad52-43c7594ac822)
 
@@ -204,9 +204,9 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
 
-11. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ziel >** , um fortzufahren.
+11. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ziel >** , um fortzufahren.
   
-12. Klicken Sie auf **+ Ziel hinzufügen** und ändern Sie das Dropdown-Menü **Zieltyp**, um **Azure Monitor-Protokolle anzuzeigen.** Stellen Sie im Fenster **Abonnement** sicher, dass Ihr *Abonnement* angezeigt wird, und ändern Sie dann das Dropdownmenü **Konto oder Namespace** auf Ihren zuvor erstellten Log Analytics-Arbeitsbereich.
+12. Klicken Sie auf **+ Ziel hinzufügen** und ändern Sie das Dropdown-Menü **Zieltyp**, um **Azure Monitor-Protokolle anzuzeigen.** Stellen Sie im Fenster **Abonnement** sicher, dass Ihr *Abonnement* angezeigt wird, und ändern Sie dann das Dropdownmenü **Konto oder Namespace** auf Ihren zuvor erstellten Log Analytics-Arbeitsbereich.
 
    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
 
@@ -220,7 +220,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
 14. Klicken Sie auf **Erstellen**.
 
-> Ergebnisse: Sie haben eine Azure-VM, einen Log Analytics-Arbeitsbereich, ein Azure-Speicherkonto und eine Datensammlungsregel bereitgestellt, um mit dem Azure Monitor-Agent Ereignisse und Leistungsindikatoren von VMs zu sammeln.
+> Ergebnisse: Sie haben eine Azure-VM, einen Log Analytics-Arbeitsbereich, ein Azure-Speicherkonto und eine Datensammlungsregel bereitgestellt, um mit dem Azure Monitor-Agent Ereignisse und Leistungsindikatoren von VMs zu sammeln.
 
 >**Hinweis**: Entfernen Sie die Ressourcen nicht aus diesem Lab, da sie für das Microsoft Defender for Cloud Lab, das Lab „Just-in-Time-Zugriff auf VMs aktivieren“ und das Microsoft Sentinel Lab benötigt werden.
  
