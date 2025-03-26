@@ -23,7 +23,7 @@ Sie wurden aufgefordert, Azure Firewall zu installieren. Damit möchte Ihre Orga
 
 In diesem Lab führen Sie die folgende Übung aus:
 
-- Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
+- Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
 
 ## Azure Firewall-Diagramm
 
@@ -35,21 +35,21 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 - **\\Allfiles\\Labs\\08\\template.json**
 
-### Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
+### Übung 1: Bereitstellen und Testen einer Azure Firewall-Instanz
 
-### Geschätzte Zeit: 40 Minuten
+### Geschätzte Zeit: 40 Minuten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Verwenden einer Vorlage zum Bereitstellen der Labumgebung. 
-- Aufgabe 2: Bereitstellen einer Azure Firewall-Instanz.
-- Aufgabe 3: Erstellen einer Standardroute.
-- Aufgabe 4: Konfigurieren einer Anwendungsregel.
-- Aufgabe 5: Konfigurieren einer Netzwerkregel. 
+- Aufgabe 2: Bereitstellen einer Azure Firewall-Instanz.
+- Aufgabe 3: Erstellen einer Standardroute.
+- Aufgabe 4: Konfigurieren einer Anwendungsregel.
+- Aufgabe 5: Konfigurieren einer Netzwerkregel. 
 - Aufgabe 6: Konfigurieren von DNS-Servern.
-- Aufgabe 7: Testen der Firewall. 
+- Aufgabe 7: Testen der Firewall. 
 
 #### Aufgabe 1: Verwenden einer Vorlage zum Bereitstellen der Labumgebung. 
 
@@ -67,7 +67,7 @@ In dieser Aufgabe erstellen Sie eine VM mithilfe einer ARM-Vorlage. Diese VM wir
 
 4. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\08\\template.json**, und klicken Sie auf **Öffnen**.
 
-    >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und beachten Sie, dass sie eine Azure-VM bereitstellt, die Windows Server 2016 Datacenter hostet.
+    >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und beachten Sie, dass sie eine Azure-VM bereitstellt, die Windows Server 2016 Datacenter hostet.
 
 5. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
 
@@ -92,7 +92,7 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Firewalls** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Firewalls** auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Firewalls** auf **+ Erstellen**.
 
 3. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundlagen** des Blatts **Firewall erstellen** an: 
 
@@ -124,13 +124,13 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
     >**Hinweis**: Sie benötigen diese Informationen für die nächste Aufgabe.
 
 
-#### Aufgabe 3: Erstellen einer Standardroute
+#### Aufgabe 3: Erstellen einer Standardroute
 
 In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-SN**. Mit dieser Route wird ausgehender Datenverkehr über die Firewall konfiguriert.
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Routingtabellen** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Routingtabellen** auf **+ Erstellen**.
+2. Klicken Sie auf dem Blatt **Routingtabellen** auf **+ Erstellen**.
 
 3. Legen Sie auf dem Blatt **Neue Routingtabelle erstellen** folgende Einstellungen fest:
 
@@ -144,7 +144,7 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 
 5. Klicken Sie auf dem Blatt **Routingtabellen** auf **Aktualisieren**, und klicken Sie in der Liste der Routingtabellen auf den Eintrag **Firewall-route**.
 
-6. Klicken Sie auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Subnetze**, und klicken Sie dann auf dem Blatt **Firewall-route \| Subnetze** auf **+ Zuordnen**.
+6. Klicken Sie auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Subnetze**, und klicken Sie dann auf dem Blatt **Firewall-route \| Subnetze** auf **+ Zuordnen**.
 
 7. Geben Sie auf dem Blatt **Subnetz zuordnen** die folgenden Einstellungen an:
 
@@ -157,14 +157,14 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 
 8. Klicken Sie auf **OK**, um die Firewall dem Subnetz des virtuellen Netzwerks zuzuordnen. 
 
-9. Klicken Sie zurück auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Routen** und dann auf **+ Hinzufügen**. 
+9. Klicken Sie zurück auf dem Blatt **Firewall-route** im Abschnitt **Einstellungen** auf **Routen** und dann auf **+ Hinzufügen**. 
 
 10. Geben Sie auf dem Blatt **Route hinzufügen** die folgenden Einstellungen an:  
 
    |Einstellung|Wert|
    |---|---|
    |Routenname|**FW-DG**|
-   |Adresspräfix für das Ziel|**IP-Adresse**|
+   |Zieltyp|**IP-Adresse**|
    |Ziel-IP-Adressen/CIDR-Bereiche|**0.0.0.0/0**
    |Typ des nächsten Hops|**Virtuelles Gerät**|
    |Adresse des nächsten Hops|die private IP-Adresse der Firewall, die Sie in der vorherigen Aufgabe identifiziert haben|
@@ -174,7 +174,7 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 11.  Klicken Sie auf **Hinzufügen**, um die Route hinzuzufügen. 
 
 
-#### Aufgabe 4: Konfigurieren einer Anwendungsregel
+#### Aufgabe 4: Konfigurieren einer Anwendungsregel
 
 In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff auf `www.bing.com` ermöglicht.
 
@@ -182,7 +182,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff au
 
 2. Klicken Sie auf dem Blatt **Test-FW01** im Abschnitt **Einstellungen** auf **Regeln (klassisch)** .
 
-3. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Anwendungsregelsammlung** und dann auf **+ Anwendungsregelsammlung hinzufügen**.
+3. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Anwendungsregelsammlung** und dann auf **+ Anwendungsregelsammlung hinzufügen**.
 
 4. Geben Sie auf dem Blatt **Anwendungsregelsammlung hinzufügen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
@@ -206,13 +206,13 @@ In dieser Aufgabe erstellen Sie eine Anwendungsregel, die ausgehenden Zugriff au
 
     >**Hinweis**: Azure Firewall enthält eine integrierte Regelsammlung für Infrastruktur-FQDNs, die standardmäßig zulässig sind. Diese FQDNs sind plattformspezifisch und können nicht für andere Zwecke verwendet werden. 
 
-#### Aufgabe 5: Konfigurieren einer Netzwerkregel
+#### Aufgabe 5: Konfigurieren einer Netzwerkregel
 
-In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf zwei IP-Adressen an Port 53 (DNS) zulässt.
+In dieser Aufgabe erstellen Sie eine Netzwerkregel, die ausgehenden Zugriff auf zwei IP-Adressen an Port 53 (DNS) zulässt.
 
 1. Navigieren Sie im Azure-Portal zurück zum Blatt **Test-FW01 \|Regeln (klassisch)** .
 
-2. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Netzwerkregelsammlung** und dann auf **+ Netzwerkregelsammlung hinzufügen**.
+2. Klicken Sie auf dem Blatt **Test-FW01 \|Regeln (klassisch)** auf die Registerkarte **Netzwerkregelsammlung** und dann auf **+ Netzwerkregelsammlung hinzufügen**.
 
 3. Geben Sie auf dem Blatt **Netzwerkregelsammlung hinzufügen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
@@ -248,7 +248,7 @@ In dieser Aufgabe konfigurieren Sie die primären und sekundären DNS-Adressen f
 
 3. Klicken Sie auf dem Blatt **Srv-Work** auf **Netzwerke**.
 
-4. Klicken Sie auf dem Blatt **Srv-Work \| Netzwerk** auf den Link neben dem Eintrag **Netzwerkschnittstelle**.
+4. Klicken Sie auf dem Blatt **Srv-Work \| Netzwerk-Einstellungen** auf den Link neben dem Eintrag **Netzwerkschnittstelle**.
 
 5. Klicken Sie auf dem Blatt „Netzwerkschnittstelle“ im Abschnitt **Einstellungen** auf **DNS-Server**, wählen Sie die Option **Benutzerdefiniert** aus, fügen Sie die beiden DNS-Server hinzu, auf die in der Netzwerkregel **209.244.0.3** und **209.244.0.4** verwiesen wird, und klicken Sie auf **Speichern**, um die Änderung zu speichern.
 
@@ -258,7 +258,7 @@ In dieser Aufgabe konfigurieren Sie die primären und sekundären DNS-Adressen f
 
     >**Hinweis**: Durch Aktualisieren der DNS-Server für eine Netzwerkschnittstelle wird der virtuelle Computer, an den die Schnittstelle angefügt ist, automatisch neu gestartet. Gegebenenfalls werden auch alle anderen virtuellen Computer in derselben Verfügbarkeitsgruppe neu gestartet.
 
-#### Aufgabe 7: Testen der Firewall
+#### Aufgabe 7: Testen der Firewall
 
 In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie erwartet funktioniert.
 
@@ -273,7 +273,7 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**localadmin**|
-   |Kennwort|Das sichere Kennwort, das Sie während der Bereitstellung der benutzerdefinierten Vorlage in Schritt 6 von Aufgabe 1 ausgewählt haben.|
+   |Kennwort|Das sichere Kennwort, das Sie während der Bereitstellung der benutzerdefinierten Vorlage in Schritt 6 von Aufgabe 1 ausgewählt haben.|
 
     >**Hinweis**: Die folgenden Schritte werden in der Remotedesktopsitzung mit der Azure-Computer-VM **Srv-Jump** ausgeführt. 
 
@@ -290,7 +290,7 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**localadmin**|
-   |Kennwort|Das sichere Kennwort, das Sie während der Bereitstellung der benutzerdefinierten Vorlage in Schritt 6 von Aufgabe 1 ausgewählt haben.|
+   |Kennwort|Das sichere Kennwort, das Sie während der Bereitstellung der benutzerdefinierten Vorlage in Schritt 6 von Aufgabe 1 ausgewählt haben.|
 
     >**Hinweis**: Warten Sie, bis die Remotedesktopsitzung eingerichtet und die Server-Manager Schnittstelle geladen wurde.
 

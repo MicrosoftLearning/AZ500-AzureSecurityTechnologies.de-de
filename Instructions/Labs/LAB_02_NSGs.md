@@ -34,7 +34,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ### Übung 1: Erstellen der virtuellen Netzwerkinfrastruktur
 
-### Geschätzte Zeit: 20 Minuten
+### Geschätzte Zeit: 20 Minuten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
@@ -55,7 +55,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
 
 2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Netzwerke** ein, und drücken Sie die **EINGABETASTE**.
 
-3. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf **+ Erstellen**.
+3. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf **+ Erstellen**.
 
 4. Geben Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **Grundeinstellungen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen), und klicken Sie auf **Weiter: IP-Adressen**:
 
@@ -97,7 +97,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
 
 4. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
 
-5. Navigieren Sie zurück zum Blatt **Anwendungssicherheitsgruppen** und klicken Sie auf **+ Erstellen**.
+5. Navigieren Sie zurück zum Blatt **Anwendungssicherheitsgruppen** und klicken Sie auf **+ Erstellen**.
 
 6. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundlagen** des Blatts **Anwendungssicherheitsgruppe erstellen** an: 
 
@@ -177,7 +177,7 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
 ### Übung 2: Bereitstellen virtueller Computer und Testen der Netzwerkfilter
 
-### Geschätzte Zeit: 25 Minuten
+### Geschätzte Zeit: 25 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -204,7 +204,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver ver
    |Region|**(USA) USA, Osten**|
    |Verfügbarkeitsoptionen|**Keine Infrastrukturredundanz erforderlich**
    |Sicherheitstyp|**Standard**
-   |Abbildung|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
+   |Abbildung|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
    |Kennwort|**Erstellen Sie Ihr eigenes Kennwort, und notieren Sie es für spätere Zwecke in den nachfolgenden Übungen**|
@@ -242,12 +242,12 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVMMgmt**|
    |Region|(USA) USA, Osten|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
+   |Image|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 2 > Aufgabe 1 > Schritt 3 erstellt haben.**|
    |Öffentliche Eingangsports|**None**|
-   |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
+   |Sie verfügen bereits über eine Windows Server-Lizenz|**Nein**|
 
     >**Hinweis**: Für öffentliche eingehende Ports verwenden wir die vorab erstellte Netzwerksicherheitsgruppe. 
 
@@ -298,7 +298,7 @@ In dieser Aufgabe testen Sie die Filter für den Netzwerkdatenverkehr. Sie sollt
    |Einstellung|Wert|
    |---|---|
    |Benutzername|**Kursteilnehmer**|
-   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
+   |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 1 > Aufgabe 1 > Schritt 9 erstellt haben.**|
 
     >**Hinweis**: Stellen Sie sicher, dass die Remotedesktopverbindung erfolgreich hergestellt wurde. An diesem Punkt haben Sie sich vergewissert, dass Sie eine Verbindung zu „myVMMgmt“ über Remotedesktop herstellen können.
 
