@@ -4,7 +4,7 @@ lab:
   module: 'Module 01 - Secure compute, storage, and databases'
 ---
 
-# Lab 04: Konfigurieren und Schützen von ACR und AKS
+# Lab 04: Konfigurieren und Schützen von ACR und AKS
 # Lab-Handbuch für Kursteilnehmer
 
 ## Labszenario
@@ -22,7 +22,7 @@ Sie wurden gebeten, einen Proof of Concept mit Azure Container Registry und Azur
 
 In diesem Lab führen Sie die folgende Übung aus:
 
-- Übung 1: Konfigurieren und Schützen von ACR und AKS
+- Übung 1: Konfigurieren und Schützen von ACR und AKS
 
 ## Diagramm zum Konfigurieren und Sichern von ACR und AKS
 
@@ -35,9 +35,9 @@ In diesem Lab führen Sie die folgende Übung aus:
 - **\\Allfiles\\Labs\\09\\nginxexternal.yaml**
 - **\\Allfiles\\Labs\\09\\nginxinternal.yaml**
 
-### Übung 1: Konfigurieren und Schützen von ACR und AKS
+### Übung 1: Konfigurieren und Schützen von ACR und AKS
 
-### Geschätzte Zeit: 45 Minuten
+### Geschätzte Zeit: 45 Minuten
 
 > Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
 
@@ -132,7 +132,7 @@ In dieser Aufgabe erstellen Sie einen Azure Kubernetes-Dienst und überprüfen d
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Kubernetes-Dienste** ein, und drücken Sie die **EINGABETASTE**.
 
-2. Klicken Sie auf dem Blatt **Kubernetes-Dienste** auf **+ Erstellen,** und dann im Dropdownmenü auf **+ Create a Kubernetes cluster** (+ Kubernetes-Cluster hinzufügen).
+2. Klicken Sie auf dem Blatt **Kubernetes-Dienste** auf **+ Erstellen,** und dann im Dropdownmenü auf **+ Create a Kubernetes cluster** (+ Kubernetes-Cluster hinzufügen).
 
 3. Wählen Sie auf der Registerkarte **Grundlagen** auf dem Blatt **Kubernetes-Cluster erstellen** die Option **Vordefinierte Konfiguration des Clusters** und dann **Dev/Test ($)** aus. Geben Sie nun die folgenden Einstellungen an (übernehmen Sie für andere die Standardwerte):
 

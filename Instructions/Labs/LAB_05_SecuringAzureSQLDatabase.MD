@@ -4,12 +4,12 @@ lab:
   module: Module 02 - Plan and implement security for Azure SQL Database and Azure SQL Managed Instance
 ---
 
-# Lab 05: Schützen von Azure SQL-Datenbank
+# Lab 05: Schützen von Azure SQL-Datenbank
 # Lab-Handbuch für Kursteilnehmer
 
 ## Labszenario
 
-Sie sollen die Sicherheitsfeatures für Azure SQL-Datenbank überprüfen. Insbesondere interessieren Sie sich für Folgendes:
+Sie sollen die Sicherheitsfeatures für Azure SQL-Datenbank überprüfen. Insbesondere interessieren Sie sich für Folgendes:
 
 - Schutz vor Angriffen wie die Einschleusung von SQL-Befehlen und Datenexfiltration. 
 - Möglichkeit zum Erkennen und Klassifizieren von Datenbankinformationen in Kategorien wie „Vertraulich“. 
@@ -21,7 +21,7 @@ Sie sollen die Sicherheitsfeatures für Azure SQL-Datenbank überprüfen. Insbe
 
 In diesem Lab führen Sie die folgende Übung aus:
 
-- Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
+- Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
 
 ## Schützen von Azure SQL-Datenbank (Diagramm)
 
@@ -33,18 +33,18 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 - **\\Allfiles\\Labs\\11\\azuredeploy.json**
 
-### Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
+### Übung 1: Implementieren von Sicherheitsfeatures für SQL-Datenbank
 
-### Geschätzte Dauer: 30 Minuten
+### Geschätzte Dauer: 30 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Bereitstellen einer Azure SQL-Datenbank-Instanz
-- Aufgabe 2: Konfigurieren von Advanced Data Protection
-- Aufgabe 3: Konfigurieren der Datenklassifizierung
-- Aufgabe 4: Konfigurieren der Überwachung
+- Aufgabe 1: Bereitstellen einer Azure SQL-Datenbank-Instanz
+- Aufgabe 2: Konfigurieren von Advanced Data Protection
+- Aufgabe 3: Konfigurieren der Datenklassifizierung
+- Aufgabe 4: Konfigurieren der Überwachung
 
-#### Aufgabe 1: Bereitstellen einer Azure SQL-Datenbank-Instanz
+#### Aufgabe 1: Bereitstellen einer Azure SQL-Datenbank-Instanz
 
 In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzustellen. 
 
@@ -58,7 +58,7 @@ In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzust
 
 4. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, navigieren Sie zu **\\Allfiles\\Labs\\11\\azuredeploy.json**, und klicken Sie auf **Öffnen**.
 
-    >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und achten Sie darauf, dass damit eine Azure SQL-Datenbank bereitgestellt wird.
+    >**Hinweis**: Überprüfen Sie den Inhalt der Vorlage, und achten Sie darauf, dass damit eine Azure SQL-Datenbank bereitgestellt wird.
 
 5. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Speichern**.
 
@@ -74,13 +74,13 @@ In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzust
 
     >**Hinweis**: Warten Sie, bis die Bereitstellung abgeschlossen ist. 
 
-#### Aufgabe 2: Konfigurieren von Advanced Data Protection
+#### Aufgabe 2: Konfigurieren von Advanced Data Protection
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
 
 2. Klicken Sie auf dem Blatt **Ressourcengruppen** in der Liste der Ressourcengruppen auf den Eintrag **AZ500LAB11**.
 
-3. Klicken Sie auf dem Blatt **AZ500LAB11** auf den Eintrag, der die neu erstellte SQL Server-Instanz darstellt.
+3. Klicken Sie auf dem Blatt **AZ500LAB11** auf den Eintrag, der die neu erstellte SQL Server-Instanz darstellt.
 
 4. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf **Microsoft Defender für Cloud**, und wählen Sie **Enable Microsoft Defender for SQL** (Microsoft Defender für SQL aktivieren) aus.
 
@@ -94,10 +94,10 @@ In dieser Aufgabe verwenden Sie eine Vorlage, um die Labinfrastruktur bereitzust
 
 7. Überprüfen Sie auf dem Blatt **Microsoft Defender für Cloud** die **Empfehlungen** und **Sicherheitswarnungen**.
 
-      >**Hinweis**: Es kann 10-15 Minuten dauern, bis auf dem Blatt **Microsoft Defender für Cloud** Empfehlungen angezeigt werden. Anstatt zu warten, können Sie mit der nächsten Aufgabe fortfahren. Kehren Sie aber zu diesem Blatt zurück, sobald Sie alle verbleibenden Aufgaben abgeschlossen haben.
+      >**Hinweis**: Es kann 10-15 Minuten dauern, bis auf dem Blatt **Microsoft Defender für Cloud** Empfehlungen angezeigt werden. Anstatt zu warten, können Sie mit der nächsten Aufgabe fortfahren. Kehren Sie aber zu diesem Blatt zurück, sobald Sie alle verbleibenden Aufgaben abgeschlossen haben.
 
 
-#### Aufgabe 3: Konfigurieren der Datenklassifizierung
+#### Aufgabe 3: Konfigurieren der Datenklassifizierung
 
 In dieser Aufgabe ermitteln und klassifizieren Sie Informationen in SQL-Datenbank in Bezug auf DSGVO- und Datenschutzcompliance.
 
@@ -111,7 +111,7 @@ In dieser Aufgabe ermitteln und klassifizieren Sie Informationen in SQL-Datenban
 
     >**Hinweis**: Das Klassifizierungsmodul überprüft Ihre Datenbank auf Spalten, die potenziell vertrauliche Daten enthalten, und erstellt eine Liste der empfohlenen Spaltenklassifizierungen.
 
-5. Klicken Sie auf die Textmeldung **Wir haben 15 Spalten mit Klassifizierungsempfehlungen gefunden**, die oben auf dem Blatt auf der blauen Leiste angezeigt wird.
+5. Klicken Sie auf die Textmeldung **Wir haben 15 Spalten mit Klassifizierungsempfehlungen gefunden**, die oben auf dem Blatt auf der blauen Leiste angezeigt wird.
 
 6. Überprüfen Sie die aufgelisteten Spalten und die empfohlene Vertraulichkeitsbezeichnung. 
 
@@ -127,13 +127,13 @@ In dieser Aufgabe ermitteln und klassifizieren Sie Informationen in SQL-Datenban
 
 9. Beachten Sie auf dem Blatt **Data Discovery & Classification** (Datenermittlung und -klassifizierung) auf der Registerkarte **Übersicht**, dass die Aktualisierung unter Berücksichtigung der neuesten Klassifizierungsinformationen durchgeführt wurde. 
 
-#### Aufgabe 4: Konfigurieren der Überwachung 
+#### Aufgabe 4: Konfigurieren der Überwachung 
 
 In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und dann die Überwachung auf Datenbankebene. 
 
-1. Navigieren Sie im Azure-Portal zurück zum Blatt „SQL Server“.
+1. Navigieren Sie im Azure-Portal zurück zum Blatt „SQL Server“.
 
-2. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf **Überwachung**.
+2. Klicken Sie auf dem Blatt „SQL Server“ im Abschnitt **Sicherheit** auf **Überwachung**.
 
     >**Hinweis**: Dies ist die Überwachung auf Serverebene. Die Standardüberwachungseinstellungen umfassen alle für die Datenbank ausgeführten Abfragen und gespeicherten Prozeduren sowie erfolgreiche und fehlerhafte Anmeldungen.
 
@@ -145,7 +145,7 @@ In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und 
 
 6. Klicken Sie auf **Speicherkonto**, und wählen Sie **Neu erstellen** aus.
 
-7. Geben Sie auf dem Blatt **Speicherkonto erstellen** im Feld **Name** einen global eindeutigen Namen ein, der aus 3 bis 24 Kleinbuchstaben und Ziffern besteht, und klicken Sie auf **OK**. 
+7. Geben Sie auf dem Blatt **Speicherkonto erstellen** im Feld **Name** einen global eindeutigen Namen ein, der aus 3 bis 24 Kleinbuchstaben und Ziffern besteht, und klicken Sie auf **OK**. 
 
     >**Hinweis**: Möglicherweise müssen Sie den Browser aktualisieren, bevor das Speicherkonto verfügbar wird.
 
@@ -166,13 +166,13 @@ In dieser Aufgabe konfigurieren Sie zuerst die Überwachung auf Serverebene und 
     >**Hinweis**: Überwachungen können in ein Azure-Speicherkonto, in einen Log Analytics-Arbeitsbereich oder in den Event Hub geschrieben werden. Sie können eine beliebige Kombination dieser Optionen konfigurieren.
 
     >**Hinweis**: Wenn die speicherbasierte Überwachung auf dem Server aktiviert ist, wird sie unabhängig von den Datenbankeinstellungen immer auf die Datenbank angewendet.
-13. Wählen Sie auf Ihrer SQL-Datenbank-Übersichtsseite im Azure-Portal im linken Menü den **Abfrage-Editor (Vorschau)** aus. Versuchen Sie, sich anzumelden. Verwenden Sie ein falsches Kennwort, versuchen Sie, die Firewallregel für Ihre IP-Adresse auszulösen – es wird alles überwacht. Testen Sie auch eine erfolgreiche Anmeldung. Führen Sie die Abfrage aus. Möglicherweise finden Sie dann weitere Details in den Überwachungsprotokollen.
+13. Wählen Sie auf Ihrer SQL-Datenbank-Übersichtsseite im Azure-Portal im linken Menü den **Abfrage-Editor (Vorschau)** aus. Versuchen Sie, sich anzumelden. Verwenden Sie ein falsches Kennwort, versuchen Sie, die Firewallregel für Ihre IP-Adresse auszulösen – es wird alles überwacht. Testen Sie auch eine erfolgreiche Anmeldung. Führen Sie die Abfrage aus. Möglicherweise finden Sie dann weitere Details in den Überwachungsprotokollen.
 
 14. Wechseln Sie zurück zu Datenbank, Überwachung und klicken Sie auf **Überwachungsprotokolle anzeigen**.
 
 15. Beachten Sie auf dem Blatt **Überwachungsdatensätze**, dass Sie zwischen Serverüberwachung und Datenbanküberwachung wechseln können. 
 
-> Ergebnisse: Sie haben eine SQL Server-Instanz und eine SQL-Datenbank erstellt sowie die Datenklassifizierung und die Überwachung konfiguriert. 
+> Ergebnisse: Sie haben eine SQL Server-Instanz und eine SQL-Datenbank erstellt sowie die Datenklassifizierung und die Überwachung konfiguriert. 
 
 
 **Bereinigen von Ressourcen**
