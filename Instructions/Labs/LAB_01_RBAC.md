@@ -4,7 +4,7 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
-# Lab 01: Rollenbasierte Zugriffssteuerung
+# Lab 01: Rollenbasierte Zugriffssteuerung
 # Lab-Handbuch für Kursteilnehmer
 
 ## Labszenario
@@ -22,10 +22,10 @@ Sie wurden aufgefordert, einen Proof of Concept zu erstellen, der zeigt, wie Azu
 
 In diesem Lab führen Sie die folgenden Übungen aus:
 
-- Übung 1: Erstellen der Gruppe „Senior Admins“ mit dem Benutzerkonto Joseph Price als Mitglied (Azure-Portal). 
-- Übung 2: Erstellen der Gruppe „Junior Admins“ mit dem Benutzerkonto Isabel Garcia als Mitglied (PowerShell).
-- Übung 3: Erstellen der Gruppe „Service Desk“ mit dem Benutzer Dylan Williams als Mitglied (Azure CLI). 
-- Übung 4: Zuweisen der Rolle „VM-Mitwirkender“ zur Gruppe „Service Desk“.
+- Übung 1: Erstellen der Gruppe „Senior Admins“ mit dem Benutzerkonto Joseph Price als Mitglied (Azure-Portal). 
+- Übung 2: Erstellen der Gruppe „Junior Admins“ mit dem Benutzerkonto Isabel Garcia als Mitglied (PowerShell).
+- Übung 3: Erstellen der Gruppe „Service Desk“ mit dem Benutzer Dylan Williams als Mitglied (Azure CLI). 
+- Übung 4: Zuweisen der Rolle „VM-Mitwirkender“ zur Gruppe „Service Desk“.
 
 ## Architekturdiagramm der rollenbasierten Zugriffssteuerung
 
@@ -33,16 +33,16 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Anweisungen
 
-### Übung 1: Erstellen der Gruppe „Senior Admins“ mit dem Benutzerkonto Joseph Price als Mitglied. 
+### Übung 1: Erstellen der Gruppe „Senior Admins“ mit dem Benutzerkonto Joseph Price als Mitglied. 
 
-#### Geschätzte Zeit: 10 Minuten
+#### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Verwenden des Azure-Portals, um ein Benutzerkonto für Joseph Price zu erstellen.
-- Aufgabe 2: Verwenden des Azure-Portals, um eine Gruppe „Senior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Joseph Price hinzuzufügen.
+- Aufgabe 2: Verwenden des Azure-Portals, um eine Gruppe „Senior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Joseph Price hinzuzufügen.
 
-#### Aufgabe 1: Verwenden des Azure-Portals, um ein Benutzerkonto für Joseph Price zu erstellen 
+#### Aufgabe 1: Verwenden des Azure-Portals, um ein Benutzerkonto für Joseph Price zu erstellen 
 
 In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price. 
 
@@ -50,9 +50,9 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
     >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, das in dem Azure-Abonnement, das Sie für dieses Lab verwenden, über die Rolle „Besitzer“ oder „Mitwirkender“ und die Rolle „Globaler Administrator“ im Microsoft Entra-Mandanten verfügt, der diesem Abonnement zugeordnet ist.
 
-2. Geben Sie oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Microsoft Entra ID** ein und drücken Sie die **EINGABETASTE**.
+2. Geben Sie oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Microsoft Entra ID** ein und drücken Sie die **EINGABETASTE**.
 
-3. Wählen Sie auf dem Blatt **Übersicht** des Microsoft Entra ID-Mandanten im Abschnitt **Verwalten** die Option **Benutzer*innen** und dann **+ Neue*r Benutzer*in** aus.
+3. Wählen Sie auf dem Blatt **Übersicht** des Microsoft Entra ID-Mandanten im Abschnitt **Verwalten** die Option **Benutzer*innen** und dann **+ Neue*r Benutzer*in** aus.
 
 4. Stellen Sie auf dem Blatt **Neuer Benutzer** sicher, dass die Option **Benutzer erstellen** ausgewählt ist, und geben Sie die folgenden Einstellungen an:
 
@@ -69,11 +69,11 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
 8. Aktualisieren Sie das Blatt **Benutzer \| Alle Benutzer**, um zu überprüfen, ob der neue Benutzer in Ihrem Microsoft Entra-Mandanten erstellt wurde.
 
-#### Aufgabe 2: Verwenden des Azure-Portals, um eine Gruppe „Senior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Joseph Price hinzuzufügen.
+#### Aufgabe 2: Verwenden des Azure-Portals, um eine Gruppe „Senior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Joseph Price hinzuzufügen.
 
 In dieser Aufgabe erstellen Sie die Gruppe *Senior Admins*, fügen der Gruppe das Benutzerkonto von Joseph Price hinzu und konfigurieren es als Gruppenbesitzer.
 
-1. Navigieren Sie im Azure-Portal zurück zu dem Blatt, das Ihren Microsoft Entra ID-Mandanten anzeigt. 
+1. Navigieren Sie im Azure-Portal zurück zu dem Blatt, das Ihren Microsoft Entra ID-Mandanten anzeigt. 
 
 2. Klicken Sie im Abschnitt **Verwalten** auf **Gruppen**, und wählen Sie dann **+ Neue Gruppe** aus.
  
@@ -93,16 +93,16 @@ In dieser Aufgabe erstellen Sie die Gruppe *Senior Admins*, fügen der Gruppe da
 
 > Ergebnis: Sie haben das Azure-Portal verwendet, um einen Benutzer und eine Gruppe zu erstellen, und den Benutzer der Gruppe zugewiesen. 
 
-### Übung 2: Erstellen Sie eine Gruppe „Junior Admins“, die das Benutzerkonto von Isabel Garcia als Mitglied enthält.
+### Übung 2: Erstellen Sie eine Gruppe „Junior Admins“, die das Benutzerkonto von Isabel Garcia als Mitglied enthält.
 
-#### Geschätzte Zeit: 10 Minuten
+#### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Verwenden von PowerShell zum Erstellen eines Benutzerkontos für Isabel Garcia.
+- Aufgabe 1: Verwenden von PowerShell zum Erstellen eines Benutzerkontos für Isabel Garcia.
 - Aufgabe 2: Verwenden von PowerShell, um die Gruppe „Junior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Isabel Garcia hinzuzufügen. 
 
-#### Aufgabe 1: Verwenden von PowerShell zum Erstellen eines Benutzerkontos für Isabel Garcia.
+#### Aufgabe 1: Verwenden von PowerShell zum Erstellen eines Benutzerkontos für Isabel Garcia.
 
 In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für Isabel Garcia.
 
@@ -125,7 +125,7 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
     $passwordProfile.Password = "Pa55w.rd1234"
     ```
 
-6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Microsoft Entra ID herzustellen:
+6. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um eine Verbindung mit Microsoft Entra ID herzustellen:
 
     ```powershell
     Connect-AzureAD
@@ -149,7 +149,7 @@ In dieser Aufgabe erstellen Sie mithilfe von PowerShell ein Benutzerkonto für I
     Get-AzureADUser -All $true | Where-Object {$_.UserPrincipalName -like "*43846135@LOD*"} 
     ```
 
-#### Aufgabe 2: Verwenden von PowerShell, um die Gruppe „Junior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Isabel Garcia hinzuzufügen.
+#### Aufgabe 2: Verwenden von PowerShell, um die Gruppe „Junior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Isabel Garcia hinzuzufügen.
 
 In dieser Aufgabe erstellen Sie die Gruppe „Junior Admins“ und fügen der Gruppe das Benutzerkonto von Isabel Garcia mit PowerShell hinzu.
 
@@ -184,16 +184,16 @@ In dieser Aufgabe erstellen Sie die Gruppe „Junior Admins“ und fügen der Gr
    
 > Ergebnis: Sie haben PowerShell verwendet, um einen Benutzer und ein Gruppenkonto zu erstellen, und das Benutzerkonto dem Gruppenkonto hinzugefügt. 
 
-### Übung 3: Erstellen Sie eine Gruppe „Service Desk“, die das Benutzerkonto von Dylan Williams als Mitglied enthält.
+### Übung 3: Erstellen Sie eine Gruppe „Service Desk“, die das Benutzerkonto von Dylan Williams als Mitglied enthält.
 
-#### Geschätzte Zeit: 10 Minuten
+#### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Verwenden der Azure CLI, um ein Benutzerkonto für Dylan Williams zu erstellen.
-- Aufgabe 2: Verwenden der Azure CLI, um die Gruppe „Service Desk“ zu erstellen der Gruppe und das Benutzerkonto von Dylan hinzuzufügen. 
+- Aufgabe 1: Verwenden der Azure CLI, um ein Benutzerkonto für Dylan Williams zu erstellen.
+- Aufgabe 2: Verwenden der Azure CLI, um die Gruppe „Service Desk“ zu erstellen der Gruppe und das Benutzerkonto von Dylan hinzuzufügen. 
 
-#### Aufgabe 1: Verwenden der Azure CLI, um ein Benutzerkonto für Dylan Williams zu erstellen.
+#### Aufgabe 1: Verwenden der Azure CLI, um ein Benutzerkonto für Dylan Williams zu erstellen.
 
 In dieser Aufgabe erstellen Sie ein Benutzerkonto für Dylan Williams.
 
@@ -217,7 +217,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Dylan Williams.
     az ad user list --output table
     ```
 
-#### Aufgabe 2: Verwenden der Azure CLI, um die Gruppe „Service Desk“ zu erstellen der Gruppe und das Benutzerkonto von Dylan hinzuzufügen. 
+#### Aufgabe 2: Verwenden der Azure CLI, um die Gruppe „Service Desk“ zu erstellen der Gruppe und das Benutzerkonto von Dylan hinzuzufügen. 
 
 In dieser Aufgabe erstellen Sie die Gruppe „Service Desk“ und weisen der Gruppe Dylan zu. 
 
@@ -262,16 +262,16 @@ In dieser Aufgabe erstellen Sie die Gruppe „Service Desk“ und weisen der Gru
 > Ergebnis: Mit der Azure CLI haben Sie einen Benutzer und ein Gruppenkonto erstellt und der Gruppe das Benutzerkonto hinzugefügt. 
 
 
-### Übung 4: Zuweisen der Rolle „VM-Mitwirkender“ zur Gruppe „Service Desk“.
+### Übung 4: Zuweisen der Rolle „VM-Mitwirkender“ zur Gruppe „Service Desk“.
 
-#### Geschätzte Zeit: 10 Minuten
+#### Geschätzte Zeit: 10 Minuten
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Erstellen einer Ressourcengruppe. 
-- Aufgabe 2: Zuweisen der Service Desk-Berechtigung „VM-Mitwirkender“ zur Ressourcengruppe.  
+- Aufgabe 1: Erstellen einer Ressourcengruppe. 
+- Aufgabe 2: Zuweisen der Service Desk-Berechtigung „VM-Mitwirkender“ zur Ressourcengruppe.  
 
-#### Aufgabe 1: Erstellen einer Ressourcengruppe
+#### Aufgabe 1: Erstellen einer Ressourcengruppe
 
 1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Ressourcengruppen** ein, und drücken Sie die **EINGABETASTE**.
 
@@ -283,20 +283,20 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
    |Ressourcengruppenname|**AZ500Lab01**|
    |Location|**USA, Osten**|
 
-3. Klicken Sie auf **Überprüfen + erstellen** und danach auf **Erstellen**.
+3. Klicken Sie auf **Überprüfen + erstellen** und danach auf **Erstellen**.
 
    >**Hinweis**: Warten Sie, bis die Ressourcengruppe bereitgestellt wurde. Verwenden Sie das **Benachrichtigungssymbol** (oben rechts), um den Fortschritt des Bereitstellungsstatus nachzuverfolgen.
 
 4. Aktualisieren Sie auf dem Blatt **Ressourcengruppen** die Seite, und vergewissern Sie sich, dass Ihre neue Ressourcengruppe in der Liste der Ressourcengruppen angezeigt wird.
 
 
-#### Aufgabe 2: Zuweisen der Service Desk-Berechtigungen „VM-Mitwirkender“. 
+#### Aufgabe 2: Zuweisen der Service Desk-Berechtigungen „VM-Mitwirkender“. 
 
 1. Klicken Sie auf dem Blatt **Ressourcengruppen** auf den Ressourcengruppeneintrag **AZ500LAB01**.
 
 2. Klicken Sie auf dem Blatt **AZ500Lab01** im mittleren Bereich auf **Zugriffssteuerung (IAM)** .
 
-3. Klicken Sie auf dem Blatt **AZ500Lab01 \| Zugriffssteuerung (IAM)** auf **+ Hinzufügen** und dann im Dropdownmenü auf **Rollenzuweisung hinzufügen**.
+3. Klicken Sie auf dem Blatt **AZ500Lab01 \| Zugriffssteuerung (IAM)** auf **+ Hinzufügen** und dann im Dropdownmenü auf **Rollenzuweisung hinzufügen**.
 
 4. Nehmen Sie auf dem Blatt **Rollenzuweisung hinzufügen** die folgenden Einstellungen vor, bevor Sie auf „Weiter“ klicken:
 
