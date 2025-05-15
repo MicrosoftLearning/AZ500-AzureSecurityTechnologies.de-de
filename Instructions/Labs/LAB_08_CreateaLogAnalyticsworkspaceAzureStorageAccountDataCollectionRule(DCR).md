@@ -33,19 +33,23 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
-- Aufgabe 1: Bereitstellen eine Azure-VM 
-
 #### Aufgabe 1: Bereitstellen eines virtuellen Azure-Computers
 
 1. Melden Sie sich am Azure-Portal ( **`https://portal.azure.com/`** ) an.
 
     >**Hinweis**: Melden Sie sich am Azure-Portal mit einem Konto an, das über die Rolle „Besitzer“ oder „Mitwirkender“ in dem Azure-Abonnement verfügt, das Sie für dieses Lab nutzen.
 
-2. Öffnen Sie Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, wählen Sie **PowerShell** und dann **Speicher erstellen** aus.
+2. Öffnen Sie die Cloud Shell, indem Sie oben rechts im Azure-Portal auf das erste Symbol klicken. Wenn Sie dazu aufgefordert werden, wählen Sie **PowerShell** aus.
 
 3. Stellen Sie sicher, dass oben links im Bereich „Cloud Shell“ im Dropdownmenü der Eintrag **PowerShell** ausgewählt ist.
 
-4. Führen Sie in der PowerShell-Sitzung im Bereich „Cloud Shell“ den folgenden Code zum Erstellen einer Ressourcengruppe aus, die Sie in diesem Lab verwenden:
+4. Lassen Sie im Fenster **Erste Schritte** die Standardeinstellung unverändert: **Wählen Sie ein Abonnement aus, um zu beginnen. Optional können Sie ein Speicherkonto einbinden, um Dateien zwischen Sitzungen beizubehalten. Kein Speicherkonto erforderlich.**
+
+5. Wählen Sie aus dem Dropdown-Menü **Abonnement** Ihr **Abonnement aus.**
+
+6. Lassen Sie **Ein vorhandenes privates virtuelles Netzwerk verwenden** deaktiviert und klicken Sie dann auf **Anwenden.**
+
+7. Führen Sie in der PowerShell-Sitzung im Bereich „Cloud Shell“ den folgenden Code zum Erstellen einer Ressourcengruppe aus, die Sie in diesem Lab verwenden:
   
     ```powershell
     New-AzResourceGroup -Name AZ500LAB131415 -Location 'EastUS'
@@ -53,7 +57,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
     >**Hinweis:** Diese Ressourcengruppe wird für die Labs 8, 9 und 10 verwendet.
 
-5. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Verschlüsselung auf dem Host (EAH) zu aktivieren.
+8. Führen Sie in der PowerShell-Sitzung im Cloud Shell-Bereich Folgendes aus, um die Verschlüsselung auf dem Host (EAH) zu aktivieren.
    
    ```powershell
     Register-AzProviderFeature -FeatureName "EncryptionAtHost" -ProviderNamespace Microsoft.Compute 
@@ -88,8 +92,6 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 In dieser Übung führen Sie die folgenden Aufgaben aus: 
 
-- Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
-
 #### Aufgabe 1: Erstellen eines Log Analytics-Arbeitsbereichs
 
 In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich. 
@@ -117,8 +119,6 @@ In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Erstellen eines Azure-Speicherkontos
-
 #### Aufgabe 1: Erstellen eines Azure-Speicherkontos
 
 In dieser Aufgabe erstellen Sie ein Speicherkonto.
@@ -127,22 +127,18 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto.
 
 2. Klicken Sie auf dem Blatt **Speicherkonten** im Azure-Portal auf die Schaltfläche **+ Erstellen**, um ein neues Speicherkonto zu erstellen.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/73eb9241-d642-455a-a1ff-b504670395c0)
-
 3. Geben Sie auf der Registerkarte **Grundeinstellungen** des Blatts **Speicherkonto erstellen** die folgenden Einstellungen an (übernehmen Sie die Standardwerte für andere Einstellungen):
 
     |Einstellung|Wert|
     |---|---|
     |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
     |Resource group|**AZ500LAB131415**|
-    |Speicherkontoname|Ein beliebiger global eindeutiger Name, der zwischen 3 und 24 Zeichen lang ist und aus Buchstaben und Ziffern besteht.|
-    |Location|**(USA) USA, Osten**|
-    |Leistung|**Standard (allgemeines v2-Konto)**|
+    **Instanzdetails** |Speicherkonto-Name| beliebiger global eindeutiger Name mit einer Länge zwischen 3 und 24 Zeichen, bestehend aus Buchstaben und Ziffern| |Region|**(US) EastUS**|
+    |Primärer Dienst|**Azure Blob Storage oder Azure Data Lake Storage Gen 2**|
+    |Leistung|**Standard (allgemeiner Zweck v2-Konto)**|
     |Redundanz|**Lokal redundanter Speicher (LRS)**|
 
-4. Klicken Sie in der Registerkarte **Grundeinstellungen** auf dem Blatt **Speicherkonto erstellen** auf **Review**, warten Sie, bis der Überprüfungsprozess abgeschlossen ist, und klicken Sie dann auf **Erstellen**.
-
-     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d443821c-2ddf-4794-87fa-bfc092980eba)
+5. Klicken Sie auf der Registerkarte **Grundlagen** der **Speicherkonto erstellen** Klinge auf **Prüfen + Erstellen.** Klicken Sie nach Abschluss des Validierungsprozesses auf **Erstellen.**.
 
     >**Hinweis**: Warten Sie, bis das Speicherkonto erstellt wurde. Dieser Vorgang dauert etwa zwei Minuten.
 
@@ -152,8 +148,6 @@ In dieser Aufgabe erstellen Sie ein Speicherkonto.
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Erstellen einer Datensammlungsregel
-
 #### Aufgabe 1: Erstellen einer Datensammlungsregel
 
 In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
@@ -162,37 +156,32 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
 2. Klicken Sie auf dem Blatt **Überwachungseinstellungen** auf  **Datensammlungsregeln**.
 
-  ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d43e8f94-efb2-4255-9320-210c976fd45e)
-
-
 3. Klicken Sie auf die Schaltfläche **+ Erstellen**, um eine neue Regel für die Datensammlung zu erstellen.
 
 4. Geben Sie die folgenden Einstellungen auf der Registerkarte **Grundeinstellungen** des Blatts **Datensammlung erstellen** an:
   
     |Einstellung|Wert|
     |---|---|
-    |**Regeldetails**|
-    |Regelname|**DCR1**|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
-    |Ressourcengruppe|**AZ500LAB131415**|
+    **Regeldetails** |Regelname|**DCR1**|
+    |Abonnement| der Name des Azure-Abonnements, das Sie in diesem Lab verwenden| |Ressourcengruppe|**AZ500LAB131415**|
     |Region|**USA, Osten**|
-    |Plattformtyp|**Windows**|
-    |Datensammlungsendpunkt|*Nicht ausfüllen*|
+    |Plattformtyp| **Windows**|
+    |Datensammlungsendpunkt| *Leer lassen*|
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
 
 
-4. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ressourcen >** , um fortzufahren.
+5. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ressourcen >** , um fortzufahren.
    
-6. Wählen Sie auf der Registerkarte „Ressourcen“ die Option **+ Ressourcen hinzufügen**, und aktivieren Sie **Datensammlungsendpunkte aktivieren**. Aktivieren Sie in der Vorlage „Bereich auswählen“ **AZ500LAB131415**, und klicken Sie auf **Anwenden**.
+6. Wählen Sie auf der Seite **Ressourcen** die Option **+ Ressourcen hinzufügen** aus.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/d4191115-11bc-43ec-9bee-e84b9b95a821)
+7. Aktivieren Sie in der Vorlage **Bereich auswählen** das Kontrollkästchen **Abonnement** im Bereich **Umfang**.
 
-10. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Sammeln und Übermitteln >** , um fortzufahren.
+8. Klicken Sie unten in der Vorlage **Wählen Sie einen Bereich aus** auf **Anwenden**.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/8294d300-f910-4757-ad52-43c7594ac822)
+9. Wählen Sie unten auf der Seite **Ressourcen** die Option **Weiter: Sammeln und liefern >** aus.
 
-11. Klicken Sie auf **+ Datenquelle hinzufügen** und ändern Sie dann auf der Seite **Datenquelle hinzufügen** das Dropdownmenü **Datenquellentyp** auf **Leistungsindikatoren**. Behalten Sie die folgenden Standardeinstellungen bei:
+10. Klicken Sie auf **+ Datenquelle hinzufügen** und ändern Sie dann auf der Seite **Datenquelle hinzufügen** das Dropdownmenü **Datenquellentyp** auf **Leistungsindikatoren**. Behalten Sie die folgenden Standardeinstellungen bei:
 
     |Einstellung|Wert|
     |---|---|
@@ -208,17 +197,15 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
   
 12. Klicken Sie auf **+ Ziel hinzufügen** und ändern Sie das Dropdown-Menü **Zieltyp**, um **Azure Monitor-Protokolle anzuzeigen.** Stellen Sie im Fenster **Abonnement** sicher, dass Ihr *Abonnement* angezeigt wird, und ändern Sie dann das Dropdownmenü **Konto oder Namespace** auf Ihren zuvor erstellten Log Analytics-Arbeitsbereich.
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/481843f5-94c4-4a8f-bf51-a10d49130bf8)
-
-11. Wählen Sie unten auf der Seite **Datenquelle hinzufügen** aus.
+13. Wählen Sie unten auf der Seite **Datenquelle hinzufügen** aus.
     
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
 
-13. Klicken Sie auf **Überprüfen + erstellen**.
+14. Klicken Sie auf **Überprüfen + erstellen**.
 
     ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
 
-14. Klicken Sie auf **Erstellen**.
+15. Klicken Sie auf **Erstellen**.
 
 > Ergebnisse: Sie haben eine Azure-VM, einen Log Analytics-Arbeitsbereich, ein Azure-Speicherkonto und eine Datensammlungsregel bereitgestellt, um mit dem Azure Monitor-Agent Ereignisse und Leistungsindikatoren von VMs zu sammeln.
 
