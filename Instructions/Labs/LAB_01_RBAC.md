@@ -4,6 +4,7 @@ lab:
   module: Module 01 - Manage Identity and Access
 ---
 
+
 # Lab 01: Rollenbasierte Zugriffssteuerung
 # Lab-Handbuch für Kursteilnehmer
 
