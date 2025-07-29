@@ -161,13 +161,14 @@ In dieser Aufgabe erstellen Sie eine Standardroute für das Subnetz **Workload-S
 
 10. Geben Sie auf dem Blatt **Route hinzufügen** die folgenden Einstellungen an:  
 
-   |Einstellung|Wert|
-   |---|---|
-   |Routenname|**FW-DG**|
-   |Zieltyp|**IP-Adresse**|
-   |Ziel-IP-Adressen/CIDR-Bereiche|**0.0.0.0/0**
-   |Typ des nächsten Hops|**Virtuelles Gerät**|
-   |Adresse des nächsten Hops|die private IP-Adresse der Firewall, die Sie in der vorherigen Aufgabe identifiziert haben|
+    |Einstellung|Wert|
+    |---|---|
+    |Routenname|**FW-DG**|
+    |Zieltyp|**IP-Adresse**|
+    |Ziel-IP-Adressen/CIDR-Bereiche|**0.0.0.0/0**
+    |Typ des nächsten Hops|**Virtuelles Gerät**|
+    |Adresse des nächsten Hops|die private IP-Adresse der Firewall, die Sie in der vorherigen Aufgabe identifiziert haben|
+
 
     >**Hinweis**: Azure Firewall ist eigentlich ein verwalteter Dienst, in dieser Situation kann aber „Virtuelles Gerät“ verwendet werden.
     
@@ -266,9 +267,9 @@ In dieser Aufgabe testen Sie die Firewall, um sich zu vergewissern, dass sie wie
 
 2. Klicken Sie auf dem Blatt **AZ500LAB08** in der Liste der Ressourcen auf den virtuellen Computer **Srv-Jump**.
 
-3. Klicken Sie auf dem Blatt **Srv-Jump** auf **Verbinden** und dann im Dropdownmenü auf **RDP**. 
+3. Klicken Sie auf dem Blatt **Srv-Jump** auf **Verbinden** und dann im Dropdownmenü auf **Verbinden**. 
 
-4. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit eine Verbindung mit der Azure-VM **Srv-Jump** über Remotedesktop her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+4. Laden Sie die RDP-Datei herunter, und stellen Sie damit über Remotedesktop eine Verbindung mit der Azure-VM **Srv-Jump** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
    |Einstellung|Wert|
    |---|---|

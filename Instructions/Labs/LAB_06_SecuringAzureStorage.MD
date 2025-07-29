@@ -399,9 +399,9 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
 
 2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf den Eintrag **myVMPrivate**.
 
-3. Klicken Sie auf dem Blatt **myVMPrivate** auf **Verbinden**, und klicken Sie dann im Dropdownmenü auf **RDP**. 
+3. Klicken Sie auf dem Blatt **myVMPrivate** auf **Verbinden** und dann im Dropdownmenü auf **Verbinden**. 
 
-4. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **myVMPrivate** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+4. Laden Sie die RDP-Datei herunter, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **myVMPrivate** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
     |Einstellung|Wert|
     |---|---|
@@ -450,9 +450,9 @@ In dieser Aufgabe stellen Sie über Remotedesktop eine Verbindung mit dem virtue
 
 2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf den Eintrag **myVMPublic**.
 
-3. Klicken Sie auf dem Blatt **myVMPublic** auf **Verbinden**, und klicken Sie dann im Dropdownmenü auf **RDP**. 
+3. Klicken Sie auf dem Blatt **myVMPublic** auf **Verbinden** und dann im Dropdownmenü auf **Verbinden**. 
 
-4. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **myVMPublic** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+4. Klicken Sie auf **Verbindung herstellen über RDP**, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **myVMPublic** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
     |Einstellung|Wert|
     |---|---|
