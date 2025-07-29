@@ -256,7 +256,7 @@ In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azu
 
 8. Geben Sie im Bereich **Geheimen Clientschlüssel hinzufügen** die folgenden Einstellungen an:
 
-    |Einstellung|Wert|
+    |Einstellung|value|
     |----|----|
     |BESCHREIBUNG|**Key1**|
     |Läuft ab|**12 Monate**|
@@ -347,9 +347,9 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Serv
 
     >**Hinweis**: Dadurch werden die Firewalleinstellungen des Servers geändert, sodass Verbindungen mit der Datenbank „medical“ über die öffentliche IP-Adresse des virtuellen Azure-Computers zulässig sind, den Sie in diesem Lab bereitgestellt haben.
 
-4. Navigieren Sie zurück zum Blatt **az500-10-vm1**, und klicken Sie auf **Übersicht**. Klicken Sie auf **Verbinden**, und klicken Sie dann im Dropdownmenü auf **RDP**. 
+4. Navigieren Sie zurück zum Blatt **az500-10-vm1**, und klicken Sie auf **Übersicht**. Klicken Sie auf **Verbinden** und dann im Dropdownmenü auf **Verbinden**. 
 
-5. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **az500-10-vm1** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+5. Laden Sie die RDP-Datei herunter, und stellen Sie damit über Remotedesktop eine Verbindung mit dem virtuellen Azure-Computer **az500-10-vm1** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
     |Einstellung|Wert|
     |---|---|

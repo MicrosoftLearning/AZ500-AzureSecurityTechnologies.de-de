@@ -242,7 +242,9 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
    |Resource group|**AZ500LAB07**|
    |Name des virtuellen Computers|**myVMMgmt**|
    |Region|(USA) USA, Osten|
-   |Image|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
+   |Verfügbarkeitsoptionen|**Keine Infrastrukturredundanz erforderlich**
+   |Sicherheitstyp|**Standard**
+   |Abbildung|**Windows Server 2022 Datacenter: Azure Edition – x64 Gen2**|
    |Size|**Standard D2s v3**|
    |Username|**Kursteilnehmer**|
    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 2 > Aufgabe 1 > Schritt 3 erstellt haben.**|
@@ -251,19 +253,19 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
 
     >**Hinweis**: Für öffentliche eingehende Ports verwenden wir die vorab erstellte Netzwerksicherheitsgruppe. 
 
-3. Klicken Sie auf **Weiter: Datenträger >** , und legen Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Datenträger** den **Typ des Betriebssystemdatenträgers** auf **HDD Standard** fest, und klicken Sie dann auf **Weiter: Netzwerk >** .
+4. Klicken Sie auf **Weiter: Datenträger >** , und legen Sie auf dem Blatt **Virtuellen Computer erstellen** auf der Registerkarte **Datenträger** den **Typ des Betriebssystemdatenträgers** auf **HDD Standard** fest, und klicken Sie dann auf **Weiter: Netzwerk >** .
 
-4. Wählen Sie auf der Registerkarte **Netzwerk** des Blatts **Virtuellen Computer erstellen** das zuvor erstellte Netzwerk **myVirtualNetwork** aus.
+5. Wählen Sie auf der Registerkarte **Netzwerk** des Blatts **Virtuellen Computer erstellen** das zuvor erstellte Netzwerk **myVirtualNetwork** aus.
 
-5. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
+6. Wählen Sie unter **NIC-Netzwerksicherheitsgruppe** die Option **Keine** aus.
 
-6. Klicken Sie auf **Next: Verwaltung >**, und klicken Sie dann auf **Weiter: Überwachung >**. Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
+7. Klicken Sie auf **Next: Verwaltung >**, und klicken Sie dann auf **Weiter: Überwachung >**. Stellen Sie auf der Registerkarte **Verwaltung** auf dem Blatt **VM erstellen** sicher, dass die folgende Einstellung definiert ist:
 
    |Einstellung|Wert|
    |---|---|
    |Startdiagnose|**Mit verwaltetem Speicherkonto aktiviert (empfohlen)**|
 
-7. Klicken Sie auf **Überprüfen + erstellen**. Vergewissern Sie sich auf dem Blatt **Überprüfen + erstellen**, dass die Überprüfung erfolgreich war, und klicken Sie auf **Erstellen**.
+8. Klicken Sie auf **Überprüfen + erstellen**. Vergewissern Sie sich auf dem Blatt **Überprüfen + erstellen**, dass die Überprüfung erfolgreich war, und klicken Sie auf **Erstellen**.
 
     >**Hinweis**: Warten Sie, bis beide virtuellen Computer bereitgestellt wurden, bevor Sie fortfahren. 
 
@@ -291,9 +293,9 @@ In dieser Aufgabe testen Sie die Filter für den Netzwerkdatenverkehr. Sie sollt
 
 1. Navigieren Sie zurück zum Blatt **myVMMgmt** des virtuellen Computers.
 
-2. Klicken Sie auf dem Blatt **myVMMgmt** auf **Verbinden** und dann im Dropdownmenü auf **RDP**. 
+2. Klicken Sie auf dem Blatt mit der Übersicht über **myVMMgmt** auf **Verbinden** und dann im Dropdownmenü auf **Verbinden**. 
 
-3. Klicken Sie auf **RDP-Datei herunterladen**, und stellen Sie damit eine Verbindung mit der Azure-VM **myVMMgmt** über Remotedesktop her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
+3. Laden Sie die RDP-Datei herunter, und stellen Sie damit über Remotedesktop eine Verbindung mit der Azure-VM **myVMMgmt** her. Wenn Sie zur Authentifizierung aufgefordert werden, geben Sie die folgenden Anmeldeinformationen an:
 
    |Einstellung|Wert|
    |---|---|
