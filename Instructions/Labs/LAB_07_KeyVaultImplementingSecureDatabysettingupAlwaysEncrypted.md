@@ -74,7 +74,6 @@ In dieser Aufgabe stellen Sie eine Azure-VM bereit, auf der Visual Studio 2019 u
    |Username|**Kursteilnehmer**|
    |Kennwort|**Verwenden Sie Ihr persönliches Kennwort, das Sie in Lab 02 > Übung 2 > Aufgabe 1 > Schritt 3 erstellt haben.**|
    
-   
     >**Hinweis**: Sie können zwar die für die Anmeldung beim virtuellen Computer verwendeten Administratoranmeldeinformationen ändern, dies ist jedoch nicht erforderlich.
 
     >**Hinweis**: Informationen zum Identifizieren von Azure-Regionen, in denen Sie Azure-VMs bereitstellen können, finden Sie unter [ **https://azure.microsoft.com/en-us/regions/offers/** ](https://azure.microsoft.com/en-us/regions/offers/).
@@ -84,6 +83,18 @@ In dieser Aufgabe stellen Sie eine Azure-VM bereit, auf der Visual Studio 2019 u
     >**Hinweis**: Dadurch wird die Bereitstellung des virtuellen Azure-Computers und der Azure SQL-Datenbank initiiert, die für dieses Lab erforderlich sind. 
 
     >**Hinweis**: Warten Sie nicht, bis die ARM-Vorlagenbereitstellung abgeschlossen ist, sondern fahren Sie stattdessen mit der nächsten Übung fort. Die Bereitstellung kann **20 bis25 Minuten** dauern. 
+
+#### Installieren der benutzerdefinierten Vorlage „az500-10-DB.json“
+
+1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Text **Benutzerdefinierte Vorlage bereitstellen** ein, und drücken Sie die **EINGABETASTE**.
+
+2. Klicken Sie auf dem Blatt **Benutzerdefinierte Bereitstellung** auf die Option **Eigene Vorlage im Editor erstellen**.
+
+3. Klicken Sie auf dem Blatt **Vorlage bearbeiten** auf **Datei laden**, suchen Sie die Datei **\Allfiles\Labs\10\az-500-10_DB.json**, und klicken Sie auf **Öffnen**.
+
+4. Stellen Sie sicher, dass die richtige Ressourcengruppe ausgewählt ist.
+
+5. Legen Sie das **Administratorkennwort** auf dasselbe Kennwort fest, das Sie im vorherigen Schritt verwendet haben.
 
 ### Übung 2: Konfigurieren der Key Vault-Ressource mit einem Schlüssel und einem Geheimnis
 
@@ -418,14 +429,35 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Serv
 
     >**Hinweis**: Der Unterknoten **Always Encrypted-Schlüssel** enthält die Unterordner **Spaltenhauptschlüssel** und **Spaltenverschlüsselungsschlüssel**.
 
-
 ### Übung 4: Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
+- Aufgabe 1: Installieren von Visutal Studio 2022
+- Aufgabe 2: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
-#### Aufgabe 1: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
+#### Aufgabe 1: Installieren von Visual Studio 2022
+
+1. Wechseln Sie zu Ihrem virtuellen Servercomputer, wenn Sie nicht bereits dort sind.
+
+2. Öffnen Sie den Server-Manager.
+
+3. Wählen Sie „Lokale Server“ aus.
+
+4. Legen Sie **IE-verstärkte Sicherheitskonfiguration** auf **Aus** fest.
+
+5. Öffnen Sie den Browser, und umgehen Sie die Warnung, dass IE ESC ausgeschaltet wird.
+
+6. Wechseln Sie zu https://visualstudio.microsoft.com/downloads.
+
+7. Wählen Sie im Feld **Visual Studio 2022** unter **Community** die Option **Kostenloser Download** aus.
+
+8. Wenn der Download abgeschlossen ist, wählen Sie **Datei öffnen** aus.
+
+9. Wählen Sie „Weiter“ aus, um die Installation zu starten.
+  - Die Installation dauert etwa 10 Minuten.
+
+#### Aufgabe 2: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
 Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschlüsselten Spalten zu laden und dann sicher auf diese Daten zuzugreifen, indem eine Verbindungszeichenfolge verwendet wird, die auf den Schlüssel in der Key Vault-Instanz zugreift.
 
