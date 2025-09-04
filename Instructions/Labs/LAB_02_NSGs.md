@@ -28,7 +28,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Diagramm zu Netzwerk- und Anwendungssicherheitsgruppen
 
-![image](https://user-images.githubusercontent.com/91347931/157526438-6da4f68b-db88-4931-a041-8474e66d3fe5.png)
+![Diagramm, das den Prozessablauf der Labaufgaben zeigt.](../media/network-and-application-security-groups-diagram.png)
 
 ## Anweisungen
 
@@ -53,7 +53,7 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
 
     >**Hinweis**: Melden Sie sich beim Azure-Portal mit einem Konto an, dem in dem Azure-Abonnement, das Sie für dieses Lab verwenden, die Rolle „Besitzer“ oder „Mitwirkender“ zugewiesen ist.
 
-2. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Netzwerke** ein, und drücken Sie die **EINGABETASTE**.
+2. Geben Sie im Azure-Portal oben auf der Seite für das Azure-Portal im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** +++Virtuelle Netzwerke+++ ein, und drücken Sie die **EINGABETASTE**.
 
 3. Klicken Sie auf dem Blatt **Virtuelle Netzwerke** auf **+ Erstellen**.
 
@@ -61,10 +61,10 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
-    |Resource group|Klicken Sie auf **Neu erstellen**, und geben Sie den Namen **AZ500LAB07** ein.|
-    |Name|**myVirtualNetwork**|
-    |Region|**USA, Osten**|
+    |Subscription | Name des Azure-Abonnements, das Sie in diesem Lab verwenden |
+    |Ressourcengruppe | Verwenden Sie die angegebene Ressourcengruppe mit dem Namen **AZ500LAB07**. |
+    |Name| +++myVirtualNetwork+++ |
+    |Region| **USA, Osten** |
 
 5. Legen Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **IP-Adressen** den **IPv4-Adressraum** auf **10.0.0.0/16** fest. Klicken Sie, falls erforderlich, in der Spalte **Subnetzname** auf **Standard**, geben Sie auf dem Blatt **Subnetz bearbeiten** die folgenden Einstellungen an, und klicken Sie dann auf **Speichern**:
 
@@ -73,15 +73,15 @@ In dieser Aufgabe erstellen Sie ein virtuelles Netzwerk für die Verwendung mit 
     |Subnetzname|**default**|
     |Subnetzadressbereich|**10.0.0.0/24**|
 
-6. Klicken Sie anschließend auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **IP-Adressen** auf **Überprüfen und erstellen**.
+6. Klicken Sie wieder auf der Registerkarte **IP-Adressen** des Bildschirms **Virtuelles Netzwerk erstellen** auf **Überprüfen + erstellen**.
 
-7. Klicken Sie auf dem Blatt **Virtuelles Netzwerk erstellen** auf der Registerkarte **Überprüfen + erstellen** auf **Erstellen**.
+7. Klicken Sie auf der Registerkarte **Überprüfen + erstellen** des Bildschirms **Virtuelles Netzwerk erstellen** auf **Erstellen**.
 
 #### Aufgabe 2: Erstellen von Anwendungssicherheitsgruppen
 
 In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Anwendungssicherheitsgruppen** ein, und drücken Sie die **EINGABETASTE**.
+1. Geben Sie im Azure-Portal oben auf der Seite für das Azure-Portal im Textfeld **Nach Ressourcen, Diensten und Dokumenten durchsuchen** +++Anwendungssicherheitsgruppen+++ ein, und drücken Sie die **EINGABETASTE**.
 
 2. Klicken Sie auf dem Blatt **Anwendungssicherheitsgruppen** auf **+ Erstellen**.
 
@@ -89,9 +89,9 @@ In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
 
     |Einstellung|Wert|
     |---|---|
-    |Resource group|**AZ500LAB07**|
-    |Name|**myAsgWebServers**|
-    |Region|**USA, Osten**|
+    | Resource group | **AZ500LAB07** |
+    | Name | +++myAsgWebServers+++ |
+    | Region | **USA, Osten** |
 
     >**Hinweis:** Diese Gruppe ist für die Webserver vorgesehen.
 
@@ -104,7 +104,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
     |Einstellung|Wert|
     |---|---|
     |Resource group|**AZ500LAB07**|
-    |Name|**myAsgMgmtServers**|
+    |Name| +++myAsgMgmtServers+++ |
     |Region|**USA, Osten**|
 
     >**Hinweis:** Diese Gruppe ist für die Verwaltungsserver vorgesehen.
@@ -115,7 +115,7 @@ In dieser Aufgabe erstellen Sie eine Anwendungssicherheitsgruppe.
 
 In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe. 
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Netzwerksicherheitsgruppen** ein, und drücken Sie die **EINGABETASTE**.
+1. Geben Sie im Azure-Portal oben auf der Seite für das Azure-Portal im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** +++Netzwerksicherheitsgruppen+++ ein, und drücken Sie die **EINGABETASTE**.
 
 2. Klicken Sie auf dem Blatt **Netzwerksicherheitsgruppen** auf **+ Erstellen**.
 
@@ -123,18 +123,18 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
     |Einstellung|Wert|
     |---|---|
-    |Subscription|Der Name des Azure-Abonnements, das Sie in diesem Lab verwenden.|
-    |Resource group|**AZ500LAB07**|
-    |Name|**myNsg**|
-    |Region|**USA, Osten**|
+    | Subscription | Name des Azure-Abonnements, das Sie in diesem Lab verwenden |
+    | Ressourcengruppe | **AZ500LAB07** |
+    | Name | +++myNsg+++ |
+    | Region | **USA, Osten** |
 
 4. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**.
 
-5. Navigieren Sie im Azure-Portal zurück zum Blatt **Netzwerksicherheitsgruppen**, und klicken Sie auf den Eintrag **myNsg**.
+5. Navigieren Sie im Azure-Portal wieder zum Blatt **Netzwerksicherheitsgruppen**, und wählen Sie den Eintrag **myNsg** aus. Wählen Sie alternativ die Option **Zu Ressource wechseln**, sofern diese verfügbar ist.
 
-6. Klicken Sie auf dem Blatt **myNsg** im Abschnitt **Einstellungen** auf **Subnetze** und dann auf **+ Zuordnen**. 
+6. Klicken Sie auf dem Blatt **myNsg** im Abschnitt **Einstellungen** auf **Subnetze**, und wählen Sie dann **+ Zuordnen** aus. 
 
-7. Geben Sie auf dem Blatt **Subnetz zuordnen** die folgenden Einstellungen an, und klicken Sie auf **OK**:
+7. Geben Sie auf dem Blatt **Subnetz zuordnen** die folgenden Einstellungen an, und wählen Sie **OK** aus:
 
     |Einstellung|Wert|
     |---|---|
@@ -151,13 +151,17 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
     |Einstellung|Wert|
     |---|---|
+    | Quelle | **Alle** |
+    | Quellportbereiche | * |
     |Destination|Wählen Sie in der Dropdownliste **Anwendungssicherheitsgruppe** aus, und klicken Sie dann auf **myAsgWebServers**.|
+    | Dienst | **Benutzerdefiniert** |
     |Zielportbereiche|**80, 443**|
     |Protokoll|**TCP**|
-    |Priority|**100**|                                                    
+    | Aktion | **Zulassen** |
+    |Priorität|**100**|
     |Name|**Allow-Web-All**|
 
-4. Klicken Sie auf dem Blatt **Sicherheitsregel für eingehenden Datenverkehr hinzufügen** auf **Hinzufügen**, um die neue Regel für eingehenden Datenverkehr zu erstellen. 
+4. Wählen Sie auf der Seite **Eingangssicherheitsregel hinzufügen** die Schaltfläche **Hinzufügen** aus, um die neue Eingangsregel zu erstellen.
 
 5. Klicken Sie auf dem Blatt **myNsg** im Abschnitt **Einstellungen** auf **Sicherheitsregeln für eingehenden Datenverkehr**, und klicken Sie dann auf **+ Hinzufügen**.
 
@@ -165,13 +169,17 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 
     |Einstellung|Wert|
     |---|---|
+    | Quelle | **Alle** |
+    | Quellportbereiche | * |
     |Destination|Wählen Sie in der Dropdownliste **Anwendungssicherheitsgruppe** aus, und klicken Sie dann auf **myAsgMgmtServers**.|
+    | Dienst | **Benutzerdefiniert** |
     |Zielportbereiche|**3389**|
     |Protokoll|**TCP**|
-    |Priority|**110**|                                                    
+    | Aktion | **Zulassen** |
+    |Priorität|**110**|
     |Name|**Allow-RDP-All**|
 
-7. Klicken Sie auf dem Blatt **Sicherheitsregel für eingehenden Datenverkehr hinzufügen** auf **Hinzufügen**, um die neue Regel für eingehenden Datenverkehr zu erstellen. 
+7. Wählen Sie auf der Seite **Eingangssicherheitsregel hinzufügen** die Option **Hinzufügen** aus, um die neue Eingangsregel zu erstellen. 
 
 > Ergebnis: Sie haben ein virtuelles Netzwerk, Netzwerksicherheit mit Sicherheitsregeln für eingehenden Datenverkehr und zwei Anwendungssicherheitsgruppen bereitgestellt. 
 
@@ -182,15 +190,15 @@ In dieser Aufgabe erstellen Sie eine Netzwerksicherheitsgruppe.
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 - Aufgabe 1: Erstellen eines virtuellen Computers, der als Webserver verwendet werden soll.
-- Aufgabe 2: Erstellen eines virtuellen Computers, der als Verwaltungsserver verwendet werden soll. 
+- Aufgabe 2: Erstellen eines virtuellen Computers, der als Verwaltungsserver verwendet werden soll.
 - Aufgabe 3: Zuordnen der einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe.
 - Aufgabe 4: Testen der Filterung des Netzwerkdatenverkehrs.
 
-#### Aufgabe 1: Erstellen eines virtuellen Computers, der als Webserver verwendet werden soll.
+#### Aufgabe 1: Erstellen eines virtuellen Computers zur Verwendung als Webserver
 
 In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Webserver verwendet werden soll.
 
-1. Geben Sie im Azure-Portal oben auf der Azure-Portalseite im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** den Begriff **Virtuelle Computer** ein, und drücken Sie die **EINGABETASTE**.
+1. Geben Sie im Azure-Portal oben auf der Seite für das Azure-Portal im Textfeld **Nach Ressourcen, Diensten und Dokumenten suchen** +++Virtuelle Computer+++ ein, und drücken Sie die **EINGABETASTE**.
 
 2. Klicken Sie auf dem Blatt **Virtuelle Computer** auf **+ Erstellen**, und klicken Sie in der Dropdownliste auf **+ Virtueller Azure-Computer**.
 
