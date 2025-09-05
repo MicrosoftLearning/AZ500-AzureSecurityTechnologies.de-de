@@ -30,7 +30,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Key Vault-Diagramm
 
-![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/38c4ba6d-2fc7-45e5-b9a2-d5dbb4fbbcbc)
+![Diagramm, das den Prozessflow der Aufgaben in diesem Lab zeigt.](../media/key-vault-diagram.png)
 
 ## Anweisungen
 
@@ -145,7 +145,7 @@ In dieser Aufgabe erstellen Sie eine Azure Key Vault-Ressource. Außerdem konfig
     |Schlüsselberechtigungen/Kryptografische Vorgänge|Klicken Sie auf **Signieren**, was zu insgesamt **1 ausgewählten** Berechtigung führt.|
     |Berechtigungen für Geheimnis|Klicken Sie auf **Alle auswählen**, was zu insgesamt **7 ausgewählten** Berechtigungen führt.|
     |Zertifikatberechtigungen|Klicken Sie auf **Alle auswählen**, was zu insgesamt **15 ausgewählten** Berechtigungen führt.|
-    |Prinzipal auswählen|Klicken Sie auf **Nichts ausgewählt**, wählen Sie auf dem Blatt **Prinzipal** Ihr Benutzerkonto aus, und klicken Sie dann auf **Weiter**.|
+    |Prinzipal auswählen|Wählen Sie auf dem Blatt **Prinzipal** Ihr Benutzerkonto aus, und klicken Sie dann auf **Weiter**.|
     |Anwendung (optional)|click **Weiter**|
     |Bewerten + erstellen|Klicken Sie auf **Erstellen**.|
     
@@ -267,7 +267,7 @@ In dieser Aufgabe ermöglichen Sie einer Clientanwendung den Zugriff auf den Azu
 
 8. Geben Sie im Bereich **Geheimen Clientschlüssel hinzufügen** die folgenden Einstellungen an:
 
-    |Einstellung|value|
+    |Einstellung|Wert|
     |----|----|
     |BESCHREIBUNG|**Key1**|
     |Läuft ab|**12 Monate**|
