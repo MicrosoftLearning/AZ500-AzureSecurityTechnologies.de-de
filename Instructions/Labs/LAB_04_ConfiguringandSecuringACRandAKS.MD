@@ -26,7 +26,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Diagramm zum Konfigurieren und Sichern von ACR und AKS
 
-![image](https://user-images.githubusercontent.com/91347931/157532250-1104a829-792a-4b6d-beff-fe976e2d5d4b.png)
+![Diagramm, das den Prozessflow der Aufgaben in diesem Lab zeigt.](../media/configuring-and-securing-acr-and-aks-diagram.png)
 
 ## Anweisungen
 
@@ -81,6 +81,11 @@ In dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab und eine Azur
     ```sh
     az acr create --resource-group AZ500LAB09 --name az500$RANDOM$RANDOM --sku Basic
     ```
+    > **Hinweis** Registrieren Sie den Azure Container Registry-Ressourcenanbieter. Wenn beim Ausführen von `az acr create` ein Fehler auftritt, liegt dies wahrscheinlich daran, dass der Dienst **Azure Container Registry** noch nicht für Ihr Abonnement registriert wurde. Um dies zu beheben, können Sie den Dienst registrieren und Ihre Registrierung mit einem einzigen Befehl erstellen:
+    
+    > ```sh
+    > az provider register --namespace Microsoft.ContainerRegistry
+    > ```
 
 7. Führen Sie in der Bash-Sitzung im Cloud Shell-Bereich den folgenden Code aus, um zu überprüfen, ob die neue ACR-Instanz erstellt wurde:
 
