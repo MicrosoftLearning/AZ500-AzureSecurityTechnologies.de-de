@@ -38,4 +38,4 @@ Als Azure-Technische Fachkraft für Sicherheit für ein globales E-Commerce-Unte
  
    ![image](https://github.com/user-attachments/assets/de434a75-345a-4023-83f1-fa53fcb5f288)
    
-> **Ergebnisse**: Sie müssen Defender for Servers Plan 2 in Ihrem Abonnement aktivieren.
+> **Ergebnisse**: Sie müssen Microsoft Defender for Servers Plan 2 in Ihrem Abonnement aktivieren.
