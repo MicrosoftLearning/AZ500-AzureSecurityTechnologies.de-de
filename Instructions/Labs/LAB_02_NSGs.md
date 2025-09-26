@@ -293,7 +293,7 @@ In dieser Aufgabe ordnen Sie die einzelnen Netzwerkschnittstellen virtueller Com
 
 6. Klicken Sie auf dem Blatt **myVMMgmt** im Abschnitt **Netzwerk** auf **Netzwerkeinstellungen** und dann auf dem Blatt **myVMMgmt\| Netzwerkeinstellungen** auf die Registerkarte **Anwendungssicherheitsgruppen**.
 
-7. Klicken Sie auf **+ Anwendungssicherheitsgruppen hinzufügen**, wählen Sie in der Dropdownliste **Anwendungssicherheitsgruppe** die Option **myAsgMgmtServers** aus, und klicken Sie dann auf **Speichern**.
+7. Klicken Sie auf **+ Anwendungssicherheitsgruppen hinzufügen**, wählen Sie in der Liste **Anwendungssicherheitsgruppe** die Option **myAsgMgmtServers** aus, und klicken Sie dann auf **Speichern**.
 
 #### Aufgabe 4: Testen der Filterung des Netzwerkdatenverkehrs
 
