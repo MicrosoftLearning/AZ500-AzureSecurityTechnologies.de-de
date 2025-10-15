@@ -25,7 +25,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Schützen von Azure SQL-Datenbank (Diagramm)
 
-![image](https://user-images.githubusercontent.com/91347931/157533836-7250fa58-a109-4882-a55b-d3fa3baf34ab.png)
+![Diagramm, das den Prozessflow der Aufgaben in diesem Lab zeigt.](../media/securing-azure-sql-database-diagram.png)
 
 ## Anweisungen
 
