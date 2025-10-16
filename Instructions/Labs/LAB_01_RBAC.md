@@ -30,7 +30,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ## Architekturdiagramm der rollenbasierten Zugriffssteuerung
 
-![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/506cde9c-5242-4438-a793-f88a5434a2b2)
+![Diagramm mit dem Systemlayout für dieses Lab und dem Prozessflow der Labs](../media/role-based-access-control-architecture-diagram.png)
 
 ## Anweisungen
 
@@ -68,7 +68,7 @@ In dieser Aufgabe erstellen Sie ein Benutzerkonto für Joseph Price.
 
 7. Klicken Sie auf **Erstellen**.
 
-8. Aktualisieren Sie das Blatt **Benutzer \| Alle Benutzer**, um zu überprüfen, ob der neue Benutzer in Ihrem Microsoft Entra-Mandanten erstellt wurde.
+8. Aktualisieren Sie das Blatt **Benutzer | Alle Benutzer**, um zu überprüfen, ob der neue Benutzer in Ihrem Microsoft Entra-Mandanten erstellt wurde.
 
 #### Aufgabe 2: Verwenden des Azure-Portals, um eine Gruppe „Senior Admins“ zu erstellen und der Gruppe das Benutzerkonto von Joseph Price hinzuzufügen.
 

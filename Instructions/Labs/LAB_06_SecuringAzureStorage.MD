@@ -25,7 +25,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Diagramm zu Dienstendpunkten und Schützen von Speicher
 
-![image](https://user-images.githubusercontent.com/91347931/157534883-29664a05-85d1-4c70-99a7-f16d2360755d.png)
+![Diagramm, das den Prozessflow von Aufgaben im Lab zeigt](../media/service-endpoints-and-securing-storage-diagram.png)
 
 ## Anweisungen
 
