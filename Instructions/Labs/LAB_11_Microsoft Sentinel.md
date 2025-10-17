@@ -27,7 +27,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Microsoft Sentinel-Diagramm
 
-![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/509aa70d-de11-4470-a289-877fbfecbc00)
+![Diagramm des Prozessflow von Aufgaben für dieses Lab](../media/microsoft-sentinel-diagram.png)
 
 ## Anweisungen
 

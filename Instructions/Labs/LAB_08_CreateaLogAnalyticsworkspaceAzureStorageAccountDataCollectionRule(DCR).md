@@ -168,7 +168,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
     |Plattformtyp| **Windows**|
     |Datensammlungsendpunkt| *Leer lassen*|
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/9b58c4ce-b7a8-4acf-8289-d95b270a6083)
+    ![Screenshot der Registerkarte „Grundlagen der Datensammlungsregel erstellen“](../media/crete-a-data-collection-rule-basics-tab.png)
 
 
 5. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ressourcen >** , um fortzufahren.
@@ -191,7 +191,7 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
     |Datenträger|60|
     |Network|60|
 
-   ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/a24e44ad-1d10-4533-80e2-bae1b3f6564d)
+   ![Screenshot der Registerkarte „Sammeln und übermitteln“ der Datensammlungsregel](../media/crete-a-data-collection-rule-collectanddeliver-tab.png)
 
 11. Klicken Sie auf die Schaltfläche mit dem Text **Weiter: Ziel >** , um fortzufahren.
   
@@ -199,11 +199,11 @@ In dieser Aufgabe erstellen Sie eine Datensammlungsregel.
 
 13. Wählen Sie unten auf der Seite **Datenquelle hinzufügen** aus.
     
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/964091e7-bbbc-4ca8-8383-bb2871a1e7f0)
+    ![Screenshot der Seite „Datenquelle hinzufügen“ auf der Seite „Datensammlungsregel“](../media/crete-a-data-collection-rule-add-datasource.png)
 
 14. Klicken Sie auf **Überprüfen + erstellen**.
 
-    ![image](https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies/assets/91347931/50dd8407-a106-4540-9e14-ae40a3c04830)
+    ![Screenshot der Registerkarte „Überprüfen + Erstellen“ des Assistenten „Datensammlungsregel“](../media/crete-a-data-collection-rule-reviewcreate-tab.png)
 
 15. Klicken Sie auf **Erstellen**.
 

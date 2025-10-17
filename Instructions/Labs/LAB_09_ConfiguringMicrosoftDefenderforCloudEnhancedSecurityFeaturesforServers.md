@@ -26,7 +26,7 @@ Als Azure-Technische Fachkraft für Sicherheit für ein globales E-Commerce-Unte
 
 2. Gehen Sie auf **Microsoft Defender for Cloud**, **Verwaltungsblatt**, zu den **Umgebungseinstellungen**. Erweitern Sie die Ordner für die Umgebungseinstellungen, bis der Abschnitt **Abonnement** angezeigt wird, und klicken Sie dann auf das **Abonnement**, um Details anzuzeigen.
 
-   ![image](https://github.com/user-attachments/assets/3b25dd82-e09e-4f8a-b85e-c9bc6c4bd488)
+   ![Screenshot der Umgebungseinstellungen von Microsoft Defender for Cloud](../media/defender-for-cloud-environment-settings.png)
    
 3. Erweitern Sie im Blatt **Einstellungen** unter **Defender-Pläne** **Cloud Workload Protection (CWP)“**.
 
@@ -36,6 +36,6 @@ Als Azure-Technische Fachkraft für Sicherheit für ein globales E-Commerce-Unte
 
    Hinweis: Wenn Sie den Cloud Workload Protection (CWP)-Serverplan von „Aus“ auf „Ein“ setzen, wird der „Microsoft Defender for Servers Plan 2“ aktiviert.
  
-   ![image](https://github.com/user-attachments/assets/de434a75-345a-4023-83f1-fa53fcb5f288)
+   ![Screenshot der Auswahlseite des Microsoft Defender for Cloud-Plans](../media/defender-for-cloud-plan-selection.png)
    
 > **Ergebnisse**: Sie müssen Microsoft Defender for Servers Plan 2 in Ihrem Abonnement aktivieren.

@@ -53,7 +53,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
    - Klicken Sie auf der Registerkarte **Konfiguriert** mit der rechten Maustaste auf die VM, zu der Sie einen Port hinzufügen möchten, und wählen Sie „Bearbeiten“ aus.
 
-   ![image](https://github.com/user-attachments/assets/aa4ded55-c5b1-4d40-b5a0-a4c33b9eb81b)
+   ![Screenshot des Just-in-Time-Zugriffs für den VM-Konfigurationsbildschirm](../media/just-in-time-vm-access.png)
    
    - Unter **JIT-VM-Zugriffskonfiguration** können Sie die vorhandenen Einstellungen eines bereits geschützten Ports bearbeiten oder einen neuen benutzerdefinierten Port hinzufügen.
    - Wenn Sie die Bearbeitung der Ports abgeschlossen haben, wählen Sie **Speichern** aus.   
@@ -72,6 +72,6 @@ In diesem Lab führen Sie die folgenden Übungen aus:
     
         - Wenn JIT aktiviert ist, wählen Sie **Zugriff anfordern** aus, um eine Zugriffsanforderung mit der anfordernden IP-Adresse, dem Zeitbereich und den Ports zu übergeben, die für diese VM konfiguriert wurden.
     
-   ![image](https://github.com/user-attachments/assets/f5d0b67c-7731-4261-b0eb-a56c505dadd4)
+   ![Screenshot der Verbindung mit einem virtuellen Computer mithilfe von JIT](../media/vm-connection-for-vm1.png)
 
 > **Ergebnisse**: Sie haben verschiedene Methoden zum Aktivieren von JIT auf Ihren VMs und zum Anfordern von Zugriff auf VMs untersucht, bei denen JIT in Microsoft Defender for Cloud aktiviert ist.
