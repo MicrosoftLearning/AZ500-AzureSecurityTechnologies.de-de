@@ -84,11 +84,11 @@ In dieser Aufgabe konfigurieren Sie Sentinel für die Verwendung des Azure-Aktiv
 
 7. Lesen Sie in Schritt 2 **Verbinden Sie Ihre Abonnements über die Diagnoseeinstellungen „neue Pipeline“** die Anleitungen unter „Starten Sie den Azure Policy-Zuweisungs-Assistenten, und führen Sie diese Schritte aus“. Klicken Sie dann auf **Azure Policy-Zuweisungs-Assistent starten\>** .
 
-8. Klicken Sie auf der Registerkarte **Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren** (Seite „Richtlinie zuweisen“) **Grundlagen** auf die Schaltfläche mit den Auslassungspunkten **Bereich (...)** . Wählen Sie auf der Seite **Bereich** in der Dropdownliste „Abonnement“ Ihr Abonnement aus, und klicken Sie unten auf der Seite auf die Schaltfläche **Auswählen**.
+8. Klicken Sie auf der Registerkarte **Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren** (Seite „Richtlinie zuweisen“) **Grundlagen** auf die Schaltfläche mit den Auslassungspunkten **Bereich (...)**. Wählen Sie auf der Seite **Bereich** in der Dropdownliste „Abonnement“ Ihr Abonnement aus, und klicken Sie unten auf der Seite auf die Schaltfläche **Auswählen**.
 
     >**Hinweis**:Wählen Sie *keine* Ressourcengruppe aus.
 
-9. Klicken Sie am unteren Rand der Registerkarte **Grundlagen** zweimal auf die Schaltfläche **Weiter**, um zur Registerkarte **Parameter** zu wechseln. Klicken Sie auf der Registerkarte **Parameter** auf die Schaltfläche **Primärer Log Analytics-Arbeitsbereich Auslassungspunkte (...)**. Vergewissern Sie sich auf der Seite **Primärer Log Analytics-Arbeitsbereich**, dass Ihr Abonnement ausgewählt ist, und wählen Sie im Dropdown-Listenfeld **Arbeitsbereiche** den Log Analytics-Arbeitsbereich aus, den Sie für Sentinel verwenden. Klicken Sie anschließend unten auf der Seite auf die Schaltfläche **Auswählen**.
+9. Klicken Sie am unteren Rand der Registerkarte **Grundlagen** zweimal auf die Schaltfläche **Weiter**, um zur Registerkarte **Parameter** zu wechseln. Klicken Sie auf der Registerkarte **Parameter** auf die Schaltfläche **Primärer Log Analytics-Arbeitsbereich (...)** mit den Auslassungspunkten. Vergewissern Sie sich auf der Seite **Primärer Log Analytics-Arbeitsbereich**, dass Ihr Abonnement ausgewählt ist, und wählen Sie im Dropdown-Listenfeld **Arbeitsbereiche** den Log Analytics-Arbeitsbereich aus, den Sie für Sentinel verwenden. Klicken Sie anschließend unten auf der Seite auf die Schaltfläche **Auswählen**.
 
 10. Klicken Sie unten auf der Registerkarte **Parameter** auf die Schaltfläche **Weiter**, um zur Registerkarte **Wartung** zu wechseln. Aktivieren Sie auf der Registerkarte **Wartung** das Kontrollkästchen **Wartungstask erstellen**. Dadurch wird in der Dropdownliste **Zu korrigierende Richtlinie** die Option „Azure-Aktivitätsprotokolle zum Streaming an den angegebenen Log Analytics-Arbeitsbereich konfigurieren“ aktiviert. Wählen Sie in der Dropdownliste **Standort der systemseitig zugewiesenen Identität** die Region (z. B. „USA, Osten“) aus, die Sie zuvor für Ihren Log Analytics-Arbeitsbereich ausgewählt haben.
 
@@ -228,7 +228,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 14. Klicken Sie auf der Registerkarte **Automatisierte Antwort** des Blatts **Analyseregelassistent – Neue geplante Regel erstellen** auf **Weiter: Überprüfen und erstellen >**, und klicken Sie auf **Speichern**
 
-    >**Hinweis**: Sie haben jetzt die neue aktive Regel **Playbook-Demo**. Wenn ein von der Regellogik des identifiziertes Ereignis eintritt, führt dies zu einer Warnung mit mittlerem Schweregrad, die einen entsprechenden Incident generiert.
+    >**Hinweis**: Sie haben jetzt die neue aktive Regel **Playbook-Demo**. Wenn ein durch die Regellogik identifiziertes Ereignis eintritt, führt das zu einer Warnung mit mittlerem Schweregrad, die einen entsprechenden Incident generiert.
 
 #### Aufgabe 6: Aufrufen eines Incidents und Überprüfen der zugeordneten Aktionen
 
@@ -248,7 +248,7 @@ In dieser Aufgabe erstellen Sie ein Playbook. Ein Sicherheitsplaybook ist eine S
 
 6. Navigieren Sie zum Blatt **Aktivitätsprotokoll**, und notieren Sie sich den Eintrag **JIT-Netzwerkzugriffsrichtlinien löschen**. 
 
-    >**Hinweis:** Es kann einige Minuten dauern, bis dies angezeigt wird. **Aktualisieren** Sie die Seite, wenn sie nicht angezeigt werden.
+    >**Hinweis:** Es kann einige Minuten dauern, bis dies angezeigt wird. Aktualisieren Sie die Seite, wenn sie nicht angezeigt werden.
 
 7. Navigieren Sie im Azure-Portal zurück zum Blatt **Microsoft Sentinel \| Übersicht**.
 
