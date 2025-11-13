@@ -30,7 +30,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ## Anweisungen
 
-## Lab-Dateien:
+## Labdateien:
 
 - **\\Allfiles\\Labs\\09\\nginxexternal.yaml**
 - **\\Allfiles\\Labs\\09\\nginxinternal.yaml**
@@ -39,7 +39,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ### Geschätzte Zeit: 45 Minuten
 
-> Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
+> Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei der Kursleitung, dass dies die Region ist, die für Ihren Kurs verwendet werden soll. 
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -54,7 +54,7 @@ In dieser Übung führen Sie die folgenden Aufgaben aus:
 
 #### Aufgabe 1: Erstellen einer Azure Container Registry-Instanz
 
-In dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab und eine Azure Container Registry-Instanz.
+Bei dieser Aufgabe erstellen Sie eine Ressourcengruppe für das Lab und eine Azure Container Registry-Instanz.
 
 1. Melden Sie sich beim Azure-Portal ( **`https://portal.azure.com/`** ) an.
 

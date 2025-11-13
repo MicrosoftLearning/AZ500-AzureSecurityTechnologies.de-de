@@ -98,7 +98,7 @@ In dieser Aufgabe stellen Sie eine Azure-VM bereit, auf der Visual Studio 2019 u
 
 ### Übung 2: Konfigurieren der Key Vault-Ressource mit einem Schlüssel und einem Geheimnis
 
->**Hinweis**: Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
+>**Hinweis**: Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei der Kursleitung, dass dies die Region ist, die für Ihren Kurs verwendet werden soll. 
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -415,7 +415,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Serv
 
 15. Wählen Sie auf der Seite **Spaltenauswahl** die Spalten **SSN** und **Geburtsdatum** aus, legen Sie den **Verschlüsselungstyp** der Spalte **SSN** auf **Deterministisch** und den der Spalte **Geburtsdatum** auf **Zufällig** fest, und klicken Sie dann auf **Weiter**.
 
-    >**Hinweis:** Wenn während der Verschlüsselung ein Fehler wie **Exception has been thrown by the target of an innvocation** (Eine Ausnahme wurde vom Ziel eines Aufrufs ausgelöst) im Zusammenhang mit **Rotary(Microsoft.SQLServer.Management.ServiceManagement)** ausgelöst wurde, stellen Sie sicher, dass die Werte der **Rotationsrichtlinienvorgänge** für die **Schlüsselberechtigung** **nicht aktiviert** sind. Andernfalls sollten Sie im Azure-Portal zu **Schlüsseltresor** >> **Zugriffsberechtigungen** >> **Schlüsselberechtigungen** navigieren. Deaktivieren Sie dort alle Werte unter den **Rotationsrichtlinienvorgängen** sowie unter **Vorgänge mit privilegiertem Schlüssel** die Option **Veröffentlichen**.
+    >**Hinweis:** Wenn während der Verschlüsselung ein Fehler wie **Eine Ausnahme wurde vom Ziel eines Aufrufs ausgelöst** im Zusammenhang mit **Rotary(Microsoft.SQLServer.Management.ServiceManagement)** ausgelöst wurde, vergewissern Sie sich, dass die Werte von **Schlüsselberechtigung** für **Rotationsrichtlinienvorgänge** **deaktiviert** sind. Andernfalls sollten Sie im Azure-Portal zu **Key Vault** >> **Zugriffsrichtlinien** >> **Schlüsselberechtigungen** navigieren und dort alle Werte unter **Rotationsrichtlinienvorgänge** > **Vorgänge mit privilegiertem Schlüssel** > **Veröffentlichen** deaktivieren.
 
 16. Wählen Sie auf der Seite **Konfiguration des Hauptschlüssels** die Option **Azure Key Vault** aus, und klicken Sie auf **Anmelden**. Authentifizieren Sie sich bei entsprechender Aufforderung mit demselben Benutzerkonto, das Sie zuvor in diesem Lab zum Bereitstellen der Azure Key Vault-Instanz verwendet haben. Stellen Sie sicher, dass diese Key Vault-Instanz in der Dropdownliste **Azure Key Vault-Instanz auswählen** angezeigt wird, und klicken Sie auf **Weiter**.
 
@@ -433,7 +433,7 @@ In dieser Aufgabe stellen Sie eine Verbindung mit der SQL-Datenbank mit SQL Serv
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
-- Aufgabe 1: Installieren von Visutal Studio 2022
+- Aufgabe 1: Installieren von Visual Studio 2022
 - Aufgabe 2: Ausführen einer datengesteuerten Anwendung zum Veranschaulichen der Verwendung von Azure Key Vault beim Verschlüsseln der Azure SQL-Datenbank
 
 #### Aufgabe 1: Installieren von Visual Studio 2022
@@ -463,7 +463,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl�
 
 1. Starten Sie in der RDP-Sitzung mit **az500-10-vm1** über das **Startmenü** die Anwendung **Visual Studio 2019**.
 
-2. Wechseln Sie zu dem Fenster, in dem die Visual Studio 2019-Willkommensnachricht angezeigt wird, klicken Sie auf die Schaltfläche **Anmelden**, und geben Sie bei entsprechender Aufforderung die Anmeldeinformationen an, die Sie für die Authentifizierung bei dem in diesem Lab verwendeten Azure-Abonnement verwendet haben.
+2. Wechseln Sie zu dem Fenster, in dem die Visual Studio 2019-Willkommensnachricht angezeigt wird, klicken Sie auf die Schaltfläche **Anmelden**, und geben Sie bei entsprechender Aufforderung die Anmeldeinformationen an, die Sie für die Authentifizierung bei dem Azure-Abonnement verwendet haben, das Sie in diesem Lab verwenden.
 
 3. Klicken Sie auf der Seite **Erste Schritte** auf **Neues Projekt erstellen**. 
 
@@ -495,7 +495,7 @@ Sie erstellen mit Visual Studio eine Konsolenanwendung, um Daten in die verschl�
 
 10. Kehren Sie zur RDP-Sitzung zurück, klicken Sie in der Visual Studio-Konsole im Fenster **Projektmappen-Explorer** auf **Program.cs**, und ersetzen Sie den Inhalt der Datei durch den Code, den Sie in die Zwischenablage kopiert haben.
 
-11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Placeholder `{your_password}` durch das Kennwort, das Sie in der Bereitstellung in Übung 1 angegeben haben. Wenn Sie die Zeichenfolge auf dem Lab-Computer gespeichert haben, müssen Sie möglicherweise die RDP-Sitzung verlassen, um die ADO-Zeichenfolge zu kopieren, und dann zum virtuellen Azure-Computer zurückkehren, um sie einzufügen.
+11. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 15 den Platzhalter `<connection string noted earlier>` durch die **ADO.NET**-Verbindungszeichenfolge für Azure SQL-Datenbank, die Sie sich zuvor im Lab notiert haben. Ersetzen Sie in der Verbindungszeichenfolge den Platzhalter `{your_password}` durch das Kennwort, das Sie in der Bereitstellung in Übung 1 angegeben haben. Wenn Sie die Zeichenfolge auf dem Lab-Computer gespeichert haben, müssen Sie möglicherweise die RDP-Sitzung verlassen, um die ADO-Zeichenfolge zu kopieren, und dann zum virtuellen Azure-Computer zurückkehren, um sie einzufügen.
 
 12. Ersetzen Sie im Visual Studio-Fenster im Bereich **Program.cs** in Zeile 16 den Platzhalter `<client id noted earlier>` durch den Wert der **Anwendungs-ID (Client-ID)** der registrierten App, die Sie sich zuvor im Lab notiert haben. 
 

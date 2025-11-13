@@ -12,7 +12,7 @@ lab:
 Sie wurden aufgefordert, Azure Firewall zu installieren. Damit möchte Ihre Organisation den ein- und ausgehenden Netzwerkzugriff steuern. Dies ist ein wichtiger Bestandteil eines allgemeinen Netzwerksicherheitsplans. Insbesondere sollen Sie die folgenden Infrastrukturkomponenten erstellen und testen:
 
 - Ein virtuelles Netzwerk mit einem Workloadsubnetz und einem Bastion Host-Subnetz.
-- Eine VM in jedem Subnetz. 
+- Ein virtueller Computer in jedem Subnetz 
 - Eine benutzerdefinierte Route, die sicherstellt, dass der gesamte ausgehende Workloaddatenverkehr aus dem Workloadsubnetz die Firewall durchlaufen muss.
 - Firewallanwendungsregeln, die nur ausgehenden Datenverkehr an „www.bing.com“ zulassen. 
 - Firewallnetzwerkregeln, die die externe DNS-Serversuche zulassen.
@@ -39,7 +39,7 @@ In diesem Lab führen Sie die folgende Übung aus:
 
 ### Geschätzte Zeit: 40 Minuten
 
-> Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
+> Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei der Kursleitung, dass dies die Region ist, die für Ihren Kurs verwendet werden soll. 
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -105,7 +105,7 @@ In dieser Aufgabe stellen Sie die Azure-Firewall im virtuellen Netzwerk bereit.
    |Firewallverwaltung|**Use Firewall rules (classic) to manage this firewall** (Firewallregeln (klassisch) zum Verwalten dieser Firewall verwenden)|
    |Virtuelles Netzwerk auswählen|Klicken Sie auf die Option **Vorhandene verwenden**, und wählen Sie in der Dropdownliste **Test-FW-VN** aus.|
    |Firewall Management NIC|Um diese Funktion zu deaktivieren, **deaktivieren** Sie die Option **Firewall Management NIC aktivieren**.|
-   |Öffentliche IP-Adresse|Klicken Sie auf **Neue hinzufügen**, geben Sie den Namen **TEST-FW-PIP** ein, und klicken Sie auf **OK**.|
+   |Öffentliche IP-Adresse|Klicken Sie auf **Neu hinzufügen**, geben Sie den Namen **TEST-FW-PIP** ein, und klicken Sie auf **OK**.|
 
 5. Klicken Sie auf **Überprüfen + erstellen** und dann auf **Erstellen**. 
 

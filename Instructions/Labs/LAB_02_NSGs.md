@@ -36,7 +36,7 @@ In diesem Lab führen Sie die folgenden Übungen aus:
 
 ### Geschätzte Zeit: 20 Minuten
 
-> Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei Ihrem Kursleiter, dass dies die Region ist, die für den Kurs verwendet werden soll. 
+> Für alle Ressourcen in diesem Lab verwenden wir die Region **USA, Osten**. Vergewissern Sie sich bei der Kursleitung, dass dies die Region ist, die für Ihren Kurs verwendet werden soll. 
 
 In dieser Übung führen Sie die folgenden Aufgaben aus:
 
@@ -277,7 +277,7 @@ In dieser Aufgabe erstellen Sie einen virtuellen Computer, der als Verwaltungsse
 
     >**Hinweis**: Warten Sie, bis beide virtuellen Computer bereitgestellt wurden, bevor Sie fortfahren. 
 
-#### Aufgabe 3: Zuordnen der einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe.
+#### Aufgabe 3: Zuordnen der einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe
 
 In dieser Aufgabe ordnen Sie die einzelnen Netzwerkschnittstellen virtueller Computer zur entsprechenden Anwendungssicherheitsgruppe zu. Die Schnittstelle des virtuellen Computers „myVMWeb“ wird der ASG „myAsgWebServers“ zugeordnet. Die Schnittstelle des virtuellen Computers „myVMMgmt“ wird der ASG „myAsgMgmtServers“ zugeordnet. 
 

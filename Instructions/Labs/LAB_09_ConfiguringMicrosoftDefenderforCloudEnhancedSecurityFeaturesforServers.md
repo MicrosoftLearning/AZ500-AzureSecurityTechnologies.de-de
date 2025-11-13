@@ -16,7 +16,7 @@ Als Azure-Technische Fachkraft für Sicherheit für ein globales E-Commerce-Unte
 
 - Konfigurieren von Features von Microsoft Defender for Cloud für erhöhte Sicherheit für Server
   
-- Überprüfen der erweiterten Sicherheitsfeatures für Microsoft Defender for Server Plan 2
+- Überprüfen der erweiterten Sicherheitsfeatures für Microsoft Defender for Servers Plan 2
 
 ## Übungsanweisungen
 
